@@ -137,3 +137,8 @@ if (RTYPE_INSTALL)
     export(EXPORT ${PROJECT_NAME}Targets FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Targets.cmake")
 
 endif ()
+
+
+if (RTYPE_CPACK)
+    include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPackConfig.cmake)
+endif ()
