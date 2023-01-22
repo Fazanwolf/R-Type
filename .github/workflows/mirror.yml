@@ -1,0 +1,22 @@
+name: To Epitech Github
+
+on:
+  push:
+    branches: [ master, main, dev, setup/mirror ]
+    workflow_dispatch:
+
+  jobs:
+    to_epitech:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+          with:
+            fetch-depth: 0
+        - name: Push to Epitech Github
+          uses: pixta-dev/repository-mirroring-action@v1.1.1
+          with:
+            target_repo_url:
+              ${{ secrets.EPITECH_GITHUB }}
+            ssh_private_key:
+              ${{ secrets.SSH_TO_EPITECH }}
