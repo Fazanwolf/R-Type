@@ -2,7 +2,7 @@ name: To Epitech Github
 
 on:
   push:
-    branches: [ master, main, dev, setup/mirror ]
+    branches: [ master, main, dev ]
     workflow_dispatch:
 
 jobs:
