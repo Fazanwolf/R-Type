@@ -8,7 +8,7 @@
 #include "byte.hpp"
 
 void ChangeBits::player_paquet(int idplayer, int move, int collide, int shoot)
-{
+{//
     if (idplayer == 1)
         paquet <<= 1;
     if (idplayer == 2)
