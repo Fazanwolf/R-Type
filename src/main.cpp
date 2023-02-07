@@ -1,30 +1,21 @@
-#include "Rtype.hpp"
+/*
+** EPITECH PROJECT, 2023
+** B-CPP-500-RUN-5-2-rtype-lucas.miranville
+** File description:
+** main
+*/
 
-/**
- * SFML Code
- * Code to test SFML Library with cmake
- */
-void sfml_test()
+#include "../include/Engine/Engine.hpp"
+#include "../include/Engine/Error.hpp"
+
+int main(void)
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Test!");
-
-    sf::Event event;
-    while (window.isOpen())
-    {
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        window.clear();
-        window.display();
+    try {
+        StateManager state;
     }
-}
-
-int main()
-{
-    Skaldi::Skaldi g = Skaldi::Skaldi();
-    g.createUDPServer(5000);
-    sfml_test();
-    return 0;
+    catch (Error &error) {
+        std::cerr << error.what() << std::endl;
+        return (84);
+    }
+    return (0);
 }
