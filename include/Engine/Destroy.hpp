@@ -8,7 +8,7 @@
 #ifndef DESTROY_HPP_
 #define DESTROY_HPP_
 
-#include "Engine.hpp"
+#include "Engine/Engine.hpp"
 
 class Destroy {
     public:

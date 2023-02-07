@@ -8,6 +8,7 @@
 #pragma once
 
 #include "Engine.hpp"
+#include <list>
 
 enum controller {
     Z,
@@ -17,6 +18,7 @@ enum controller {
     ECHAP,
     SPACE
 };
+
 
 class Event {
     public:
@@ -30,6 +32,7 @@ class Event {
         void MakeSpriteMovable(sf::Sprite &asset);
         void GetMousePos(sf::Event event);
         void GetMousePressed(sf::Event event);
+        std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
 
     protected:
     private:

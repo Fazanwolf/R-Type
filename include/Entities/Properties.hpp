@@ -8,18 +8,18 @@
 #ifndef PROPERTIES_HPP_
 #define PROPERTIES_HPP_
 
-#include "Engine.hpp"
+#include "Engine/Engine.hpp"
 
-class Properties {
+class Entity {
     public:
         /*
         * @brief Default constructor
         */
-        Properties();
+        Entity();
         /*
         * @brief Default destructor
         */
-        ~Properties();
+        ~Entity();
         /*
         * @brief Return the position of the entity in 2D
         */

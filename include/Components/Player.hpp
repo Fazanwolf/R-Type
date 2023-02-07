@@ -8,7 +8,7 @@
 #ifndef PLAYER_HPP_
 #define PLAYER_HPP_
 
-#include "Properties.hpp"
+#include "Entities/Properties.hpp"
 
 class Player {
     public:

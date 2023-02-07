@@ -21,12 +21,23 @@ class Window {
         bool HandleEvent(const sf::Event::EventType &type);
         void CreateWindow(sf::VideoMode mode, std::string name);
 
+        void t_clock()
+        {
+            this->winTimer = this->winClock.getElapsedTime();
+            std::cerr<<winTimer.asSeconds()<<std::endl;
+            if (this->winTimer.asSeconds() > 1.f)
+                winClock.restart();
+        };
+
     protected:
     private:
         std::string window_name;
         sf::VideoMode window_mode;
         sf::Event window_event;
         sf::RenderWindow window;
+        sf::Clock winClock;
+        sf::Time winTimer;
+
 };
 
 #endif /* !WINDOW_HPP_ */

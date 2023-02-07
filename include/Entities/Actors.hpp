@@ -8,11 +8,15 @@
 #ifndef ACTORS_HPP_
 #define ACTORS_HPP_
 
-class Actors {
+class Actors : public Entity
+{
     public:
         Actors();
         ~Actors();
-        
+
+        std::string getTag() {return this->tag}
+        std::string getName()
+        int getID();
 
     protected:
     private:

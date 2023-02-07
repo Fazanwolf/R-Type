@@ -26,8 +26,8 @@
 #include "Draw.hpp"
 #include "Event.hpp"
 #include "StateManager.hpp"
-#include "EntitiesManager.hpp"
-#include "Bullets.hpp"
+#include "Entities/EntitiesManager.hpp"
+#include "Components/Bullets.hpp"
 
 class Engine {
     public:

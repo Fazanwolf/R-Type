@@ -20,7 +20,14 @@ option(USE_CLANG_TIDY_WITH_FIX "Use clang-tidy with fix" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF) # Fix dll issues on Windows
 
 add_executable(${PROJECT_NAME}
+        src/Bullets.cpp
         src/main.cpp
+        src/Draw.cpp
+        src/EntitiesManager.cpp
+        src/Event.cpp
+        src/Player.cpp
+        src/StateManager.cpp
+        src/Window.cpp
 )
 
 target_include_directories(${PROJECT_NAME}

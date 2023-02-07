@@ -5,7 +5,9 @@
 ** Event
 */
 
-#include "../include/Engine/Event.hpp"
+#include "Engine/Engine.hpp"
+#include "Engine/Event.hpp"
+
 
 Event::Event()
 {
@@ -29,6 +31,29 @@ void Event::MakeObjectMovable(sf::RectangleShape &obj_pos)
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         obj_pos.move(sf::Vector2f{0, 50});
     }
+}
+
+std::list<sf::RectangleShape> Event::ShotBullet(std::list<sf::RectangleShape> &og)
+{
+    std::list<sf::RectangleShape> bullets = og;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+    {
+        sf::RectangleShape bullet;
+        bullet.setFillColor(sf::Color::White);
+        bullet.setPosition(sf::Vector2f(100,100));
+        bullet.setSize(sf::Vector2f(50,40));
+        // bullet.scale(sf::Vector2f(50,40));
+        bullets.push_back(bullet);
+    }
+    if (!bullets.empty())
+    {
+        for (auto &ammo : bullets)
+        {
+            ammo.move(sf::Vector2f{50, 0});
+        }
+        std::cerr<<"bullets"<<std::endl;
+    }
+    return bullets;
 }
 
 void Event::MakeSpriteMovable(sf::Sprite &asset)
