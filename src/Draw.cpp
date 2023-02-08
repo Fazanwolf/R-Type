@@ -5,7 +5,7 @@
 ** Draw
 */
 
-#include "../include/Engine/Draw.hpp"
+#include "Engine/Draw.hpp"
 
 using namespace rtype::engine;
 

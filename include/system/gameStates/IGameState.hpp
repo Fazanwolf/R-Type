@@ -6,7 +6,7 @@
 */
 
 
-#include "../../Entities/EntitiesManager.hpp"
+#include "Entities/EntitiesManager.hpp"
 // #include ""
 
 #ifndef IGAMESTATE_HPP_

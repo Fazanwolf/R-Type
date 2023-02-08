@@ -7,7 +7,8 @@
 
 #pragma once
 
-#include "gameStates/SGamePlay.hpp"
+#include "system/gameStates/SGamePlay.hpp"
+#include <Skaldi.hpp>
 
 #ifndef GAMEENGINE_HPP_
 #define GAMEENGINE_HPP_
@@ -30,9 +31,19 @@ namespace rtype
                 // game::SGamePlay gameplay;
                 // states.push_back(&gameplay);
                 // states.back()->init();
-                cursState.init();
-                win.CreateWindow({920, 620}, "R-Type");
+//                cursState.init();
+//                win.CreateWindow({920, 620}, "R-Type");
             };
+
+            void createWindow()
+            {
+                win.CreateWindow({920, 620}, "R-Type");
+            }
+
+            void init()
+            {
+                cursState.init();
+            }
 
             ~GameEngine()
             {
@@ -63,17 +74,17 @@ namespace rtype
 
             void handleEvent()
             {
-                std::cerr<<"handle event"<<std::endl;
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     this->win.close();
-                cursState.handleEvent(this->win, this->event);
+                cursState.handleEvent(this->win, this->event, this->clt);
                 // if (!states.empty())
                 //     states.back()->handleEvent(this->win, this->ev);
             };
 
-        engine::Window win;
-        STATES gState;
-        engine::Event event;
+            engine::Window win;
+            STATES gState;
+            engine::Event event;
+            sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
 
     protected:
         game::SGamePlay cursState;

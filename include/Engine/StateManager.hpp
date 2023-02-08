@@ -8,8 +8,8 @@
 #ifndef STATEMANAGER_HPP_
 #define STATEMANAGER_HPP_
 
-#include "Engine.hpp"
-#include "Window.hpp"
+#include "Engine/Engine.hpp"
+#include "Engine/Window.hpp"
 
 namespace rtype::engine {
     enum StateManage {

@@ -8,7 +8,7 @@
 #ifndef ENEMY_HPP_
 #define ENEMY_HPP_
 
-#include "Properties.hpp"
+#include "Entities/Properties.hpp"
 
 class Enemy {
     public:

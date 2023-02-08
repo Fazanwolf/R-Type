@@ -5,7 +5,8 @@
 ** IGameState
 */
 
-#include "IGameState.hpp"
+#include "system/gameStates/IGameState.hpp"
+#include <Skaldi.hpp>
 
 #ifndef SGAMEPLAY_HPP_
 #define SGAMEPLAY_HPP_
@@ -27,9 +28,9 @@ namespace rtype::game {
             void init_base(int nb_players) {
                 //players
                 for (int i = 0; i != nb_players; i++)
-                    this->EManager.NewEntity("assets/ovni.png", {100, 100}, {0.1, 0.1});
+                    this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
                 //FirstEntities
-                this->EManager.NewEntity("assets/ovni.png", {600, 100}, {0.2, 0.2});
+                this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
             }
 
             void init() override
@@ -54,15 +55,16 @@ namespace rtype::game {
             void pause() override {}; //later
             void resume() override {}; //later
 
-            int handleEvent(rtype::engine::Window &w, engine::Event &ev) override
+            int handleEvent(rtype::engine::Window &w, engine::Event &ev, sk::Skaldi<sk::client::UDP, sk::server::UDP> &clt)
             {
                 //retrieve and handle server input here
-                while (w.UpdateEvent())
-                {
+//                while (w.UpdateEvent())
+//                {
                     ev.MakeSpriteMovable(EManager.getSprite(0)); // idx 0 == player character
                     this->playerProjectile.ShootBullet(EManager.getSprite(0));
+                    clt.client->send("test");
                     //close window
-                }
+//                }
                 return 0;
             };
 

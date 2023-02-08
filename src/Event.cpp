@@ -5,8 +5,8 @@
 ** Event
 */
 
-#include "Engine.hpp"
-#include "Event.hpp"
+#include "Engine/Engine.hpp"
+#include "Engine/Event.hpp"
 
 using namespace rtype::engine;
 

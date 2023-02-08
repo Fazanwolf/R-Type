@@ -5,17 +5,22 @@
 ** Destroy
 */
 
-#include "Destroy.hpp"
+#include "Engine/Destroy.hpp"
 
-Destroy::Destroy()
-{
-}
+namespace rtype::engine {
 
-Destroy::~Destroy()
-{
-}
 
-void Destroy::DestroyWindow(sf::RenderWindow win)
-{
-    
+    Destroy::Destroy()
+    {
+    }
+
+    Destroy::~Destroy()
+    {
+    }
+
+    void Destroy::DestroyWindow(sf::RenderWindow win)
+    {
+
+    }
+
 }

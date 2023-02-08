@@ -8,7 +8,7 @@
 #ifndef PROPERTIES_HPP_
 #define PROPERTIES_HPP_
 
-#include "Engine.hpp"
+#include "Engine/Engine.hpp"
 
 namespace rtype::entities {
 

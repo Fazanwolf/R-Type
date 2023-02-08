@@ -5,7 +5,7 @@
 ** Player
 */
 
-#include "../include/Components/Player.hpp"
+#include "Components/Player.hpp"
 
 Player::Player()
 {

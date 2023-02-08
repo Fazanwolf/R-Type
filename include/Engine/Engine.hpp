@@ -22,12 +22,12 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <exception>
-#include "Window.hpp"
-#include "Draw.hpp"
-#include "Event.hpp"
-#include "StateManager.hpp"
-#include "EntitiesManager.hpp"
-#include "Bullets.hpp"
+#include "Engine/Window.hpp"
+#include "Engine/Draw.hpp"
+#include "Engine/Event.hpp"
+#include "Engine/StateManager.hpp"
+#include "Entities/EntitiesManager.hpp"
+#include "Components/Bullets.hpp"
 
 namespace rtype::engine {
     class Engine {

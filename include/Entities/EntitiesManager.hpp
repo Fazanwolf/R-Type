@@ -8,7 +8,7 @@
 #ifndef ENTITIESMANAGER_HPP_
 #define ENTITIESMANAGER_HPP_
 
-#include "Engine.hpp"
+#include "Engine/Engine.hpp"
 #include <array>
 
 namespace rtype::entities {

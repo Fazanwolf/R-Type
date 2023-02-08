@@ -5,7 +5,7 @@
 ** Bullets
 */
 
-#include "../include/Components/Bullets.hpp"
+#include "Components/Bullets.hpp"
 
 using namespace rtype::components;
 

@@ -8,7 +8,7 @@
 #ifndef TEXT_HPP_
 #define TEXT_HPP_
 
-#include "Engine.hpp"
+#include "Engine/Engine.hpp"
 
 namespace rtype::engine {
 

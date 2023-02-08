@@ -5,8 +5,8 @@
 ** StateManager
 */
 
-#include "../include/Engine/StateManager.hpp"
-#include "../include/system/GameEngine.hpp"
+#include "Engine/StateManager.hpp"
+#include "system/GameEngine.hpp"
 
 using namespace rtype::engine;
 
