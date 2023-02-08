@@ -5,9 +5,10 @@
 ** Event
 */
 
-#include "Engine/Engine.hpp"
-#include "Engine/Event.hpp"
+#include "Engine.hpp"
+#include "Event.hpp"
 
+using namespace rtype::engine;
 
 Event::Event()
 {

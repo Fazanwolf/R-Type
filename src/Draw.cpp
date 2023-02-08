@@ -7,6 +7,8 @@
 
 #include "../include/Engine/Draw.hpp"
 
+using namespace rtype::engine;
+
 Draw::Draw()
 {
 }

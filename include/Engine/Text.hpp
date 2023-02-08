@@ -10,16 +10,19 @@
 
 #include "Engine.hpp"
 
-class Text {
-    public:
-        Text();
-        ~Text();
+namespace rtype::engine {
 
-    protected:
-    private:
-        sf::Text text_content;
-        sf::Vector2f text_pos;
-        sf::Font text_font;
-};
+    class Text {
+        public:
+            Text();
+            ~Text();
+
+        protected:
+        private:
+            sf::Text text_content;
+            sf::Vector2f text_pos;
+            sf::Font text_font;
+    };
+}
 
 #endif /* !TEXT_HPP_ */

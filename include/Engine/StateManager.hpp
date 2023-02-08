@@ -9,23 +9,26 @@
 #define STATEMANAGER_HPP_
 
 #include "Engine.hpp"
+#include "Window.hpp"
 
-enum StateManage {
-    MENU,
-    END,
-    GAME,
-};
+namespace rtype::engine {
+    enum StateManage {
+        MENU,
+        END,
+        GAME,
+    };
 
-class StateManager {
-    public:
-        StateManager();
-        ~StateManager();
-        void Menu(void);
-        void GameRun(void);
-        void End(void);
+    class StateManager {
+        public:
+            StateManager();
+            ~StateManager();
+            void Menu(void);
+            void GameRun(void);
+            void End(void);
 
-    protected:
-    private:
-};
+        protected:
+        private:
+    };
+}
 
 #endif /* !STATEMANAGER_HPP_ */

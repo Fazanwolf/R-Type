@@ -8,13 +8,16 @@
 #ifndef PARTICULESMANAGER_HPP_
 #define PARTICULESMANAGER_HPP_
 
-class ParticulesManager {
-    public:
-        ParticulesManager();
-        ~ParticulesManager();
+namespace rtype::entities {
 
-    protected:
-    private:
-};
+    class ParticulesManager {
+        public:
+            ParticulesManager();
+            ~ParticulesManager();
+
+        protected:
+        private:
+    };
+}
 
 #endif /* !PARTICULESMANAGER_HPP_ */

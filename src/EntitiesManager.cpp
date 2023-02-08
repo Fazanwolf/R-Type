@@ -7,6 +7,8 @@
 
 #include "../include/Entities/EntitiesManager.hpp"
 
+using namespace rtype::entities;
+
 EntitiesManager::EntitiesManager()
 {
 }

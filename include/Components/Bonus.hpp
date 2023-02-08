@@ -10,22 +10,25 @@
 
 #include "Engine.hpp"
 
-enum BonusTraits {
-    SHIELD,
-    SHOTGUN,
-    SLAVE,
-};
+namespace rtype::components {
 
-class Bonus {
-    public:
-        Bonus();
-        ~Bonus();
+    enum BonusTraits {
+        SHIELD,
+        SHOTGUN,
+        SLAVE,
+    };
 
-    protected:
-    private:
-        sf::RectangleShape bonus_rect;
-        sf::Sprite bonus_asset;
-        sf::Vector2f bonus_pos;
-};
+    class Bonus {
+        public:
+            Bonus();
+            ~Bonus();
+
+        protected:
+        private:
+            sf::RectangleShape bonus_rect;
+            sf::Sprite bonus_asset;
+            sf::Vector2f bonus_pos;
+    };
+}
 
 #endif /* !BONUS_HPP_ */

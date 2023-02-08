@@ -7,6 +7,8 @@
 
 #include "../include/Components/Bullets.hpp"
 
+using namespace rtype::components;
+
 Bullets::Bullets()
 {
 }

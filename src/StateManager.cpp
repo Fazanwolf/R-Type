@@ -6,13 +6,13 @@
 */
 
 #include "../include/Engine/StateManager.hpp"
+#include "../include/system/GameEngine.hpp"
+
+using namespace rtype::engine;
 
 StateManager::StateManager()
 {
-    Window window;
-
-    window.CreateWindow({920, 620}, "R-Type");
-    window.DisplayWindow();
+    // window.DisplayWindow();
 }
 
 StateManager::~StateManager()
@@ -21,7 +21,9 @@ StateManager::~StateManager()
 
 void StateManager::GameRun()
 {
+    rtype::GameEngine g;
 
+    g.win.CreateWindow({920, 620}, "R-Type");
 }
 
 // StateManager::Pause()

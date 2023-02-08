@@ -8,18 +8,21 @@
 #ifndef DESTROY_HPP_
 #define DESTROY_HPP_
 
-#include "Engine/Engine.hpp"
+#include "Engine.hpp"
 
-class Destroy {
-    public:
-        Destroy();
-        ~Destroy();
-        void DestroyWindow(sf::RenderWindow win);
-        void DestroyAssets(sf::Texture texture);
-        void DestroyAudio(sf::Sound audio);
+namespace rtype::engine {
 
-    protected:
-    private:
-};
+    class Destroy {
+        public:
+            Destroy();
+            ~Destroy();
+            void DestroyWindow(sf::RenderWindow win);
+            void DestroyAssets(sf::Texture texture);
+            void DestroyAudio(sf::Sound audio);
+
+        protected:
+        private:
+    };
+}
 
 #endif /* !DESTROY_HPP_ */

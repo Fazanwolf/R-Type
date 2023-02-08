@@ -10,15 +10,17 @@
 
 #include "Engine.hpp"
 
-class Map {
-    public:
-        Map();
-        ~Map();
+namespace rtype::engine {
+    class Map {
+        public:
+            Map();
+            ~Map();
 
-    protected:
-    private:
-        sf::Vector2f m_map;
-        sf::Vector2f m_collision;
-};
+        protected:
+        private:
+            sf::Vector2f m_map;
+            sf::Vector2f m_collision;
+    };
+}
 
 #endif /* !MAP_HPP_ */

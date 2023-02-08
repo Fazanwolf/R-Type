@@ -10,15 +10,18 @@
 
 #include "Engine.hpp"
 
-class Audio {
-    public:
-        Audio();
-        ~Audio();
-        void CreateSound(sf::Sound audio);
+namespace rtype::engine {
 
-    protected:
-    private:
-        sf::Sound a_sound;
-};
+    class Audio {
+        public:
+            Audio();
+            ~Audio();
+            void CreateSound(sf::Sound audio);
+
+        protected:
+        private:
+            sf::Sound a_sound;
+    };
+}
 
 #endif /* !AUDIO_HPP_ */

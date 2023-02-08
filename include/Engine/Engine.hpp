@@ -26,16 +26,18 @@
 #include "Draw.hpp"
 #include "Event.hpp"
 #include "StateManager.hpp"
-#include "Entities/EntitiesManager.hpp"
-#include "Components/Bullets.hpp"
+#include "EntitiesManager.hpp"
+#include "Bullets.hpp"
 
-class Engine {
-    public:
-        Engine();
-        ~Engine();
+namespace rtype::engine {
+    class Engine {
+        public:
+            Engine();
+            ~Engine();
 
-    protected:
-    private:
-};
+        protected:
+        private:
+    };
+}
 
 #endif /* !Engine_HPP_ */
