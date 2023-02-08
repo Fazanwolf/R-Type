@@ -9,6 +9,7 @@
 
 #include "Engine/Engine.hpp"
 #include <list>
+#include <Skaldi.hpp>
 
 namespace rtype::engine {
     enum controller {
@@ -23,7 +24,7 @@ namespace rtype::engine {
 
     class Event {
         public:
-            Event();
+            Event(sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt);
             ~Event();
             void handleEvent();
             void handleInput();
@@ -38,5 +39,6 @@ namespace rtype::engine {
         protected:
         private:
             float velocity;
+            sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
     };
 }

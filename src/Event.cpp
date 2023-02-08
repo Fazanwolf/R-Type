@@ -10,8 +10,9 @@
 
 using namespace rtype::engine;
 
-Event::Event()
+Event::Event(sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt)
 {
+    this->clt = clt;
 }
 
 Event::~Event()
@@ -60,15 +61,19 @@ std::list<sf::RectangleShape> Event::ShotBullet(std::list<sf::RectangleShape> &o
 void Event::MakeSpriteMovable(sf::Sprite &asset)
 {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        this->clt->client->send("move right");
         asset.move(sf::Vector2f{30.f, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+        this->clt->client->send("move left");
         asset.move(sf::Vector2f{-30.f, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
+        this->clt->client->send("move forward");
         asset.move(sf::Vector2f{0, -30.f});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        this->clt->client->send("move down");
         asset.move(sf::Vector2f{0, 30.f});
     }
 }

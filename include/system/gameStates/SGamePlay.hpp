@@ -55,14 +55,13 @@ namespace rtype::game {
             void pause() override {}; //later
             void resume() override {}; //later
 
-            int handleEvent(rtype::engine::Window &w, engine::Event &ev, sk::Skaldi<sk::client::UDP, sk::server::UDP> &clt)
+            int handleEvent(rtype::engine::Window &w, engine::Event &ev)
             {
                 //retrieve and handle server input here
 //                while (w.UpdateEvent())
 //                {
                     ev.MakeSpriteMovable(EManager.getSprite(0)); // idx 0 == player character
                     this->playerProjectile.ShootBullet(EManager.getSprite(0));
-                    clt.client->send("test");
                     //close window
 //                }
                 return 0;

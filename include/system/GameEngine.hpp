@@ -43,6 +43,7 @@ namespace rtype
             void init()
             {
                 cursState.init();
+                event = engine::Event(this->clt);
             }
 
             ~GameEngine()
@@ -76,14 +77,14 @@ namespace rtype
             {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                     this->win.close();
-                cursState.handleEvent(this->win, this->event, this->clt);
+                cursState.handleEvent(this->win, this->event);
                 // if (!states.empty())
                 //     states.back()->handleEvent(this->win, this->ev);
             };
 
             engine::Window win;
             STATES gState;
-            engine::Event event;
+            engine::Event event = nullptr;
             sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
 
     protected:
