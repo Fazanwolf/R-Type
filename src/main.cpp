@@ -38,8 +38,7 @@ int main(void)
                 g.handleEvent();
                 g.update();
                 g.draw();
-                g.clt->client->receive();
-                spdlog::info("msg: {}", g.clt->client->getBuffer());
+//                std::cout << "data: " <<  g.clt->client->getBuffer() << std::endl;
             }
         });
         t.detach();
