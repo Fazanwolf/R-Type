@@ -5,8 +5,8 @@ include(InstallRequiredSystemLibraries) # include any runtime libraries that are
 set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_CONTACT "Fazanwolf")
 set(CPACK_PACKAGE_VENDOR "Fazanwolf")
-set(CPACK_PACKAGE_DESCRIPTION "R-Type description")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "R-Type summary description")
+set(CPACK_PACKAGE_DESCRIPTION "R-Type Server description")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "R-Type Server summary description")
 set(CPACK_PACKAGE_HOMEPAGE_URL "${PROJECT_HOMEPAGE_URL}")
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${PROJECT_VERSION}-${CMAKE_SYSTEM_NAME}") # Default
 

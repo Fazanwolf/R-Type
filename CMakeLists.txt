@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
 project(
-        rtype
+        rtype-server
         VERSION 0.0.1.0
-        DESCRIPTION "R-Type game"
+        DESCRIPTION "R-Type server game"
         HOMEPAGE_URL "https://github.com/Fazanwolf/R-Type"
         LANGUAGES CXX
 )
@@ -19,15 +19,8 @@ option(USE_CLANG_TIDY_WITH_ERRORS "Use clang tidy but all warnings are errors" O
 option(USE_CLANG_TIDY_WITH_FIX "Use clang-tidy with fix" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF) # Fix dll issues on Windows
 
-add_executable(${PROJECT_NAME}
-        src/Bullets.cpp
-        src/main.cpp
-        src/Draw.cpp
-        src/EntitiesManager.cpp
-        src/Event.cpp
-        src/Player.cpp
-        src/StateManager.cpp
-        src/Window.cpp
+add_executable(${PROJECT_NAME}  src/main.cpp
+        src/utilities/Check.cpp src/utilities/Transform.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
@@ -39,14 +32,11 @@ target_include_directories(${PROJECT_NAME}
 )
 
 find_package(Skaldi 0.0.1.0 REQUIRED)
-find_package(SFML 2.6 REQUIRED COMPONENTS graphics window)
-
 
 # Link all libraries
 target_link_libraries(${PROJECT_NAME}
         PUBLIC
             Skaldi
-            sfml-graphics sfml-audio sfml-system sfml-window
 )
 
 target_compile_options(${PROJECT_NAME} PRIVATE
@@ -87,7 +77,7 @@ if (USE_CLANG_TIDY OR USE_CLANG_TIDY_WITH_ERRORS OR USE_CLANG_TIDY_WITH_FIX)
     endif ()
 endif ()
 
-if (RTYPE_INSTALL OR RTYPE_CPACK)
+if (RTYPE_SERVER_INSTALL OR RTYPE_SERVER_CPACK)
     # Specify the files to be installed
     message(STATUS "Installing ${PROJECT_NAME}")
     get_target_property(${PROJECT_NAME}_deps ${PROJECT_NAME} INTERFACE_LINK_LIBRARIES)
@@ -135,6 +125,6 @@ if (RTYPE_INSTALL OR RTYPE_CPACK)
     export(EXPORT ${PROJECT_NAME}Targets FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Targets.cmake")
 endif ()
 
-if (RTYPE_CPACK)
+if (RTYPE_SERVER_CPACK)
     include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPackConfig.cmake)
 endif ()

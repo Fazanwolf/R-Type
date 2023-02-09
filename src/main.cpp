@@ -5,40 +5,17 @@
 ** main
 */
 
-#include "Engine/Engine.hpp"
-#include "Engine/Error.hpp"
-#include "system/gameStates/SGamePlay.hpp"
-#include "system/GameEngine.hpp"
+#include "Server.hpp"
 
-int main(void)
+int main(int ac, char **av)
 {
-    try {
-        // rtype::engine::StateManager state;
-        // rtype::engine::Window win;
-        rtype::GameEngine g;
-        g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
-        g.clt->client->receive();
-
-        // state.GameRun();
-        // while (win.IsOpen()) {
-        //     win.UpdateEvent();
-        // }
-        // state.GameRun();
-        std::thread t([&]() {
-            g.createWindow();
-            g.init();
-            while (g.win.IsOpen())
-            {
-                g.handleEvent();
-                g.update();
-                g.draw();
-            }
-        });
-        t.detach();
-        g.clt->run();
-    } catch (Error &error) {
-        std::cerr << error.what() << std::endl;
-        return (84);
+    if (ac != 2 || !utilities::Check::isPort(av[1])) {
+        std::cerr << "Usage: ./server port" << std::endl;
+        return (-84);
     }
+    sk::Skaldi<sk::client::UDP, sk::server::UDP> skaldi(std::stoi(av[1]));
+    skaldi.server->setBroadcasting(true);
+    skaldi.server->getInput();
+    skaldi.run();
     return (0);
 }
