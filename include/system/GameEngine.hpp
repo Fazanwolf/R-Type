@@ -61,6 +61,8 @@ namespace rtype
 
             void update()
             {
+                this->clt->client->receive();
+                std::cout << this->clt->client->getBuffer() << std::endl;
                 cursState.update();
                 this->win.clear();
                 // states.back()->update();
