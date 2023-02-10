@@ -37,6 +37,11 @@ namespace rtype::entities {
             */
             void NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale);
 
+            /**
+             * @brief return a ID
+             *
+             * @return std::list<int8_t>
+             */
             std::list<int8_t> getIDs() {
                 return IDs;
             };
@@ -44,10 +49,20 @@ namespace rtype::entities {
             void setPId(int id) { this->pId = id;}
             int8_t getPId() {return this->pId;}
 
+            /**
+             * @brief Get the Entities List object
+             *
+             * @return std::array<sf::Sprite, 100>
+             */
             std::array<sf::Sprite, 100> getEntitiesList() {
                 return entities;
             };
-
+            /**
+             * @brief Get the Sprite object and his ID
+             *
+             * @param id
+             * @return sf::Sprite&
+             */
             sf::Sprite &getSprite(int8_t id) {
                 //check if valid
                 return this->entities[id];
