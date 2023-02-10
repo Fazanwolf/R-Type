@@ -9,6 +9,7 @@
 
 #include "system/gameStates/SGamePlay.hpp"
 #include <Skaldi.hpp>
+#include <queue>
 
 #ifndef GAMEENGINE_HPP_
 #define GAMEENGINE_HPP_
@@ -42,8 +43,10 @@ namespace rtype
 
             void init()
             {
-                cursState.init();
                 event = engine::Event(this->clt);
+                std::string tmp = clt->client->getBuffer();
+                if (!tmp.empty()) std::cout<<"PID ? "<<tmp<<std::endl;
+                cursState.init(std::stoi(tmp));
             }
 
             ~GameEngine()
@@ -77,16 +80,25 @@ namespace rtype
 
             void handleEvent()
             {
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                // this->clt.getInput();
+                // std::string tmp = this->clt->client->getBuffer();
+                // if (!tmp.empty()){
+                //     std::cout<<"Cli Buffer : "<<tmp<<std::endl;
+                //     this->server_updates.push(tmp);
+                // }
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
                     this->win.close();
+                    exit(0);
+                }
+                if (this->cursState.getLocalPlayerID() == -1)
+                    return;
                 cursState.handleEvent(this->win, this->event);
-                // if (!states.empty())
-                //     states.back()->handleEvent(this->win, this->ev);
             };
 
             engine::Window win;
             STATES gState;
             engine::Event event = nullptr;
+            std::queue<std::string> server_updates;
             sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
 
     protected:

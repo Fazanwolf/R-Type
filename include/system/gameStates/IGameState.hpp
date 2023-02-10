@@ -7,7 +7,7 @@
 
 
 #include "Entities/EntitiesManager.hpp"
-// #include ""
+#include "Utils/String.hpp"
 
 #ifndef IGAMESTATE_HPP_
 #define IGAMESTATE_HPP_

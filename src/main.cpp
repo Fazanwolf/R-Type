@@ -16,29 +16,18 @@ int main(void)
         // rtype::engine::StateManager state;
         // rtype::engine::Window win;
         rtype::GameEngine g;
-//        std::thread t([&]() {
-            g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
-            g.clt->client->receive();
-            g.clt->client->setDebugging(false);
-            g.clt->client->setFirstConnection(true);
-            g.clt->client->firstConnection("?");
-//        });
-//        t.detach();
-
-         // state.GameRun();
-        // while (win.IsOpen()) {
-        //     win.UpdateEvent();
-        // }
-        // state.GameRun();
+        g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
+        g.clt->client->setFirstConnection(true);
+        g.clt->client->firstConnection("?");
 
         std::thread t([&]() {
             g.createWindow();
             g.init();
-            while (g.win.IsOpen()) {
+            while (g.win.IsOpen())
+            {
                 g.handleEvent();
                 g.update();
                 g.draw();
-//                std::cout << "data: " <<  g.clt->client->getBuffer() << std::endl;
             }
         });
         t.detach();
