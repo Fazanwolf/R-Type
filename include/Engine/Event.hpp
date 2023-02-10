@@ -21,7 +21,6 @@ namespace rtype::engine {
         SPACE
     };
 
-
     class Event {
         public:
             Event(sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt);
@@ -31,10 +30,11 @@ namespace rtype::engine {
             void update();
             void MakeObjectMovable(sf::RectangleShape &obj_pos);
             void MakeObjectClickable(sf::RectangleShape button);
-            void MakeSpriteMovable(sf::Sprite &asset);
+            void MakeSpriteMovable(sf::Sprite &asset); //player move on input
             void GetMousePos(sf::Event event);
             void GetMousePressed(sf::Event event);
-            std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
+
+            // std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
 
         protected:
         private:

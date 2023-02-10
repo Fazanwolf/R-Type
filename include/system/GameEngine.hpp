@@ -9,6 +9,7 @@
 
 #include "system/gameStates/SGamePlay.hpp"
 #include <Skaldi.hpp>
+#include <queue>
 
 #ifndef GAMEENGINE_HPP_
 #define GAMEENGINE_HPP_
@@ -75,8 +76,10 @@ namespace rtype
 
             void handleEvent()
             {
-                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
                     this->win.close();
+                    exit(0);
+                }
                 cursState.handleEvent(this->win, this->event);
                 // if (!states.empty())
                 //     states.back()->handleEvent(this->win, this->ev);
@@ -85,6 +88,7 @@ namespace rtype
             engine::Window win;
             STATES gState;
             engine::Event event = nullptr;
+            std::queue<std::string> server_updates;
             sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
 
     protected:

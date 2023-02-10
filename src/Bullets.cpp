@@ -69,6 +69,7 @@ bool Bullets::update(sf::FloatRect bounds)
     }
     return false;
 }
+
 // void Bullets::SetBullets(float radius, sf::Vector2f velocity, float maxSpeed)
 // {
 //     this->bullet_maxSpeed = maxSpeed;

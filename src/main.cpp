@@ -19,11 +19,6 @@ int main(void)
         g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
         g.clt->client->receive();
 
-        // state.GameRun();
-        // while (win.IsOpen()) {
-        //     win.UpdateEvent();
-        // }
-        // state.GameRun();
         std::thread t([&]() {
             g.createWindow();
             g.init();
