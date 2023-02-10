@@ -26,7 +26,12 @@ namespace rtype::components {
             Bullets();
             ~Bullets();
             sf::CircleShape CreateBullet(sf::Vector2f pos);
-            std::list<sf::CircleShape> ShootBullet(sf::Sprite sprite);
+            bool ShootBullet(int id, sf::Sprite sprite);
+            bool ServerShootBullet(int id, sf::Sprite sprite)
+            {
+                sf::Vector2f newPlaypos = sf::Vector2f(sprite.getPosition().x + 10, sprite.getPosition().y);
+                bullets_list.push_back(CreateBullet(newPlaypos));
+            }
             bool collided(sf::FloatRect bounds)
             {
                 for (auto& ammo : this->bullets_list)

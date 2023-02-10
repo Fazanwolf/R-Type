@@ -17,7 +17,8 @@ int main(void)
         // rtype::engine::Window win;
         rtype::GameEngine g;
         g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
-        g.clt->client->receive();
+        g.clt->client->setFirstConnection(true);
+        g.clt->client->firstConnection("?");
 
         std::thread t([&]() {
             g.createWindow();

@@ -41,6 +41,9 @@ namespace rtype::entities {
                 return IDs;
             };
 
+            void setPId(int id) { this->pId = id;}
+            int8_t getPId() {return this->pId;}
+
             std::array<sf::Sprite, 100> getEntitiesList() {
                 return entities;
             };

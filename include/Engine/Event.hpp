@@ -9,6 +9,7 @@
 
 #include "Engine/Engine.hpp"
 #include <list>
+#include <queue>
 #include <Skaldi.hpp>
 
 namespace rtype::engine {
@@ -21,6 +22,16 @@ namespace rtype::engine {
         SPACE
     };
 
+    enum EventType
+    {
+        MV_LEFT,
+        MV_RIGHT,
+        MV_UP,
+        MV_DOWN,
+        FIRE,
+        NONE
+    };
+
     class Event {
         public:
             Event(sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt);
@@ -28,13 +39,26 @@ namespace rtype::engine {
             void handleEvent();
             void handleInput();
             void update();
-            void MakeObjectMovable(sf::RectangleShape &obj_pos);
+            EventType ServerPlayerAction(sf::Transformable &obj_pos, EventType action);
+            void MakeObjectMovable(sf::Transformable &obj_pos);
             void MakeObjectClickable(sf::RectangleShape button);
             void MakeSpriteMovable(sf::Sprite &asset); //player move on input
+            void MakeSpriteMovable_Bis(sf::Sprite &asset); //player move on input test only
             void GetMousePos(sf::Event event);
             void GetMousePressed(sf::Event event);
 
+            std::string getClientBuffer()
+            {
+                return this->clt->client->getBuffer();
+            }
+
+            void sendMessage(std::string msg)
+            {
+                this->clt->client->send(msg);
+            }
+
             // std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
+            std::queue<std::string> server_updates;
 
         protected:
         private:
