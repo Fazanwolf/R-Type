@@ -27,11 +27,7 @@ namespace rtype::components {
             ~Bullets();
             sf::CircleShape CreateBullet(sf::Vector2f pos);
             bool ShootBullet(int id, sf::Sprite sprite);
-            bool ServerShootBullet(int id, sf::Sprite sprite)
-            {
-                sf::Vector2f newPlaypos = sf::Vector2f(sprite.getPosition().x + 10, sprite.getPosition().y);
-                bullets_list.push_back(CreateBullet(newPlaypos));
-            }
+            bool ServerShootBullet(int id, sf::Sprite sprite);
             bool collided(sf::FloatRect bounds)
             {
                 for (auto& ammo : this->bullets_list)

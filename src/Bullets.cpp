@@ -40,6 +40,15 @@ bool Bullets::ShootBullet(int id, sf::Sprite sprite)//(sf::Vector2f spawnPoint)
     return false;
 }
 
+bool Bullets::ServerShootBullet(int id, sf::Sprite sprite)
+{
+    sf::Vector2f newPlaypos = sf::Vector2f(sprite.getPosition().x + 10, sprite.getPosition().y);
+    std::list<sf::CircleShape> bullets = this->bullets_list;
+    bullets.push_back(CreateBullet(newPlaypos));
+    this->bullets_list = bullets;
+    return true;
+}
+
 // std::list<sf::CircleShape> Bullets::ShootBullet(sf::Vector2f spawnPoint)
 // {
 //     std::list<sf::CircleShape> bullets = this->bullets_list;

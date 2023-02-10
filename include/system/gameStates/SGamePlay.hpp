@@ -60,6 +60,9 @@ namespace rtype::game {
                 if (playerProjectile.update(EManager.getSprite(2).getGlobalBounds())) {
                     EManager.getSprite(2).setScale(sf::Vector2f(0,0));
                 }
+                if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
+                    EManager.getSprite(2).setScale(sf::Vector2f(0,0));
+                }
             };
 
             void clear() override
@@ -84,34 +87,35 @@ namespace rtype::game {
 
             void serverEvents(engine::Event &ev, std::string &str)
             {
-                std::cout<<str<<" | start test tmp:"<<str<<":"<<std::endl;
+                // std::cout<<str<<" | start test tmp:"<<str<<":"<<std::endl;
                 auto tmp = str.empty()? std::vector<std::string>() : StringUtils::split(str, ' ');
                 if (tmp.size() <= 1 || tmp[1].compare("?") == true) return;
                 int eID = (pID == 1) ? 0:1;
                 //if (eID == pID) return;
                 std::cout<<str<<" | mid tmp:"<<tmp[1]<<":"<<std::endl;
-                if (tmp[1].compare("move") == true)
+                if (std::strcmp(tmp[1].c_str() ,"move") == 0)
                 {
-                    std::cout<<str<<" move tmp: "<<tmp[1]<<std::endl;
-                    if (tmp[2].compare("left") == true)
-                       event_queue.push(engine::MV_LEFT);
-                    if (tmp[2].compare("right") == true)
-                       event_queue.push(engine::MV_RIGHT);
-                    if (tmp[2].compare("up") == true)
-                       event_queue.push(engine::MV_UP);
-                    if (tmp[2].compare("down") == true)
-                       event_queue.push(engine::MV_DOWN);
+                    if (tmp[2].compare("left") == 0)
+                        EManager.getSprite(eID).move(sf::Vector2f{-50, 0});
+                    //    event_queue.push(engine::MV_LEFT);
+                    if (tmp[2].compare("right") == 0)
+                        EManager.getSprite(eID).move(sf::Vector2f{50, 0});
+                    //    event_queue.push(engine::MV_RIGHT);
+                    if (tmp[2].compare("up") == 0)
+                        EManager.getSprite(eID).move(sf::Vector2f{0, -50});
+                    //    event_queue.push(engine::MV_UP);
+                    if (tmp[2].compare("down") == 0)
+                        EManager.getSprite(eID).move(sf::Vector2f{0, 50});
                     std::cout<<"direction: "<<tmp[2]<<std::endl;
 
-                } else if (tmp[1].compare("fire") == true)
-                    event_queue.push(engine::FIRE);
-                std::cout<<eID<<" tmp: "<<tmp[1]<<std::endl;
-                ev.ServerPlayerAction(EManager.getSprite(eID), event_queue.front());
-                    // if (!event_queue.empty()) {
-                    //     if (ev.ServerPlayerAction(EManager.getSprite(eID), event_queue.front()) == engine::FIRE)
-                    //         this->serverProjectiles.ServerShootBullet(eID, EManager.getSprite(eID));
-                    //     event_queue.pop();
-                    // }
+                } else if (tmp[1].compare("fire") == 0)
+                    this->serverProjectiles.ServerShootBullet(eID, EManager.getSprite(eID));
+                    //event_queue.push(engine::FIRE);
+                // std::cout<<eID<<" tmp: "<<tmp[1]<<std::endl;
+                // if (!event_queue.empty()) {
+                //     if (ev.ServerPlayerAction(EManager.getSprite(eID), event_queue.front()) == engine::FIRE)
+                //     // event_queue.pop();
+                //     // ev.ServerPlayerAction(EManager.getSprite(eID), event_queue.front());
                 // }
             }
 
@@ -131,6 +135,8 @@ namespace rtype::game {
                     w.Draw(this->EManager.getSprite(e));
                 for (auto& ammo : playerProjectile.getBulletList())
                     w.Draw(ammo);
+                for (auto& ammo : serverProjectiles.getBulletList())
+                    w.Draw(ammo);
             };
 
         private:
@@ -138,7 +144,6 @@ namespace rtype::game {
             std::queue<rtype::engine::EventType> event_queue;
             rtype::components::Bullets playerProjectile;
             rtype::components::Bullets serverProjectiles;
-
     };
 
 }
