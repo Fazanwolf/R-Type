@@ -16,6 +16,11 @@ namespace rtype::engine {
         public:
             Audio();
             ~Audio();
+            /**
+             * @brief Create a Sound object
+             *
+             * @param audio
+             */
             void CreateSound(sf::Sound audio);
 
         protected:

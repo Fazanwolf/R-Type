@@ -49,6 +49,19 @@ namespace rtype
                 cursState.init(std::stoi(tmp));
             }
 
+            sf::Sprite CreateEntitie(std::string filename, sf::Vector2f pos, sf::Vector2f scale)
+            {
+                sf::Sprite asset;
+
+                if (!texture.loadFromFile(filename))
+                    std::cout << "error" << std::endl;
+                asset.setTexture(texture);
+                asset.setPosition(pos);
+                asset.scale(scale);
+                event.MakeSpriteMovable(asset);
+                return asset;
+            }
+
             ~GameEngine()
             {
             };
@@ -100,6 +113,7 @@ namespace rtype
             engine::Event event = nullptr;
             std::queue<std::string> server_updates;
             sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
+            sf::Texture texture;
 
     protected:
         game::SGamePlay cursState;
