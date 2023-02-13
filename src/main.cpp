@@ -13,9 +13,9 @@ int main(int ac, char **av)
         std::cerr << "Usage: ./server port" << std::endl;
         return (-84);
     }
-    sk::Skaldi<sk::client::UDP, sk::server::UDP> skaldi(std::stoi(av[1]));
-    skaldi.server->setBroadcasting(true);
-    skaldi.server->getInput();
-    skaldi.run();
+    sk::Server<sk::server::UDP> server(std::stoi(av[1]));
+    server.setBroadcasting(true);
+    server.getInput();
+    server.run();
     return (0);
 }
