@@ -25,9 +25,38 @@ namespace rtype::components {
         public:
             Bullets();
             ~Bullets();
+            /**
+             * @brief Create a Bullet object
+             *
+             * @param pos
+             * @return sf::CircleShape
+             */
             sf::CircleShape CreateBullet(sf::Vector2f pos);
+            /**
+             * @brief Call it to make your entity able to shoot bullet
+             *
+             * @param id
+             * @param sprite
+             * @return true
+             * @return false
+             */
             bool ShootBullet(int id, sf::Sprite sprite);
+            /**
+             * @brief Function to call CreateBullet for the server
+             *
+             * @param id
+             * @param sprite
+             * @return true
+             * @return false
+             */
             bool ServerShootBullet(int id, sf::Sprite sprite);
+            /**
+             * @brief Make collision between Bullet and an Entity
+             *
+             * @param bounds
+             * @return true
+             * @return false
+             */
             bool collided(sf::FloatRect bounds)
             {
                 for (auto& ammo : this->bullets_list)
@@ -40,7 +69,19 @@ namespace rtype::components {
                 return false;
             };
 
+            /**
+            * @brief Draw all the bullets
+            *
+            * @param win
+            */
             void drawBullets(sf::Window &win);
+            /**
+             * @brief Update the frame for the bullet
+             *
+             * @param bounds
+             * @return true
+             * @return false
+             */
             bool update(sf::FloatRect bounds);
 
             // void SetBullets(float radius, sf::Vector2f velocity, float maxSpeed);

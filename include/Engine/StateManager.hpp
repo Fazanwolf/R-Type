@@ -22,8 +22,20 @@ namespace rtype::engine {
         public:
             StateManager();
             ~StateManager();
+            /**
+             * @brief Create a menu
+             *
+             */
             void Menu(void);
+            /**
+             * @brief Launch the game
+             *
+             */
             void GameRun(void);
+            /**
+             * @brief Init a end game
+             *
+             */
             void End(void);
 
         protected:

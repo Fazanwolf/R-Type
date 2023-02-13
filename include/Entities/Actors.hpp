@@ -13,7 +13,6 @@ class Actors : public Entity
     public:
         Actors();
         ~Actors();
-
         std::string getTag() {return this->tag}
         std::string getName()
         int getID();
