@@ -28,6 +28,7 @@ add_executable(${PROJECT_NAME}
         src/Player.cpp
         src/StateManager.cpp
         src/Window.cpp
+        src/GameArchi.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
