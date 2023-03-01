@@ -19,9 +19,9 @@ class IGameState {
     public:
         virtual void init() = 0;
         virtual void update() = 0;
-        virtual void clear() = 0;
-        virtual void pause() = 0;
-        virtual void resume() = 0;
+        // virtual void clear() = 0;
+        // virtual void pause() = 0;
+        // virtual void resume() = 0;
         virtual int handleEvent(rtype::engine::Window &w,  engine::Event &ev) = 0;
         virtual void draw(rtype::engine::Window &w) = 0;
 
@@ -39,9 +39,6 @@ class GameState : public IGameState {
         ~GameState() {};
         void init() override { return;}
         void update() override {return;}
-        void clear() override {return;}
-        void pause() override {return;}
-        void resume() override {return;};
         int handleEvent(rtype::engine::Window &w,  engine::Event &ev) override {
             w;
             sf::Event ed;

@@ -8,6 +8,12 @@
 #ifndef WINDOW_HPP_
 #define WINDOW_HPP_
 
+//SCREEN SIZE
+#define WINDOWED_SMALL sf::Vector2f(920,420)
+#define WINDOWED sf::Vector2f(0,0)
+#define WINDOWED_BIG sf::Vector2f(0,0)
+#define FULLSCREEN sf::Vector2f(1920,1080)
+
 #include "Engine/Engine.hpp"
 
 namespace rtype::engine {

@@ -30,22 +30,48 @@ namespace rtype::game {
 
             };
 
+            void init_base(int nb_players) {
+                //players
+                for (int i = 0; i != nb_players; i++)
+                    this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
+                //FirstEntities
+                this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
+            }
+
             void init() override
             {
                 //init sprites;
                 init_base(2);
             };
 
+            void init(int pID)
+            {
+                //init sprites;
+                this->EManager.setPId(pID);
+                this->pID = pID;
+                init_base(2);
+                event_queue.push(engine::NONE);
+            };
+
             void update() override
             {
                 // update client to server data
                 //pop event queue here after rework
+                if (playerProjectile.update(EManager.getSprite(2).getGlobalBounds())) {
+                    EManager.getSprite(2).setScale(sf::Vector2f(0,0));
+                }
+                if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
+                    EManager.getSprite(2).setScale(sf::Vector2f(0,0));
+                }
             };
 
             void clear() override
             {
                 return;//later
             };
+
+            void pause() override {}; //later
+            void resume() override {}; //later
 
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
 

@@ -23,9 +23,7 @@
 #include <stdlib.h>
 #include <exception>
 #include "Engine/Window.hpp"
-#include "Engine/Draw.hpp"
 #include "Engine/Event.hpp"
-#include "Engine/StateManager.hpp"
 #include "Entities/EntitiesManager.hpp"
 #include "Components/Bullets.hpp"
 

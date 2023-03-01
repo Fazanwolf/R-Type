@@ -8,7 +8,10 @@
 #ifndef STEST_HPP_
 #define STEST_HPP_
 #include "IGameState.hpp"
-namespace rtype::game{
+#include "Components/Bouton.hpp"
+
+namespace rtype::game
+{
 
 class SMenu : public GameState {
     public:
@@ -19,11 +22,11 @@ class SMenu : public GameState {
             this->name = "Menu";
         };
         ~SMenu() {};
-        void init() override { return;}
+        void init() override {
+            return;}
+
         void update() override {return;}
-        void clear() override {return;}
-        void pause() override {return;}
-        void resume() override {return;};
+
         int handleEvent(rtype::engine::Window &w,  engine::Event &ev) override {
             w;
             sf::Event ed;
@@ -33,7 +36,7 @@ class SMenu : public GameState {
         void draw(rtype::engine::Window &w) override
         {
             w.clear();
-
+            this->EManager.draw()
             w.getWindow().display();
         };
     protected:
