@@ -12,29 +12,36 @@
 
 int main(void)
 {
-    try {
-        // rtype::engine::StateManager state;
-        // rtype::engine::Window win;
-        rtype::GameEngine g;
-        g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
-        g.clt->client->setFirstConnection(true);
-        g.clt->client->firstConnection("?");
+    // try {
+    //     // rtype::engine::StateManager state;
+    //     // rtype::engine::Window win;
+    //     rtype::GameEngine g;
+    //     g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
+    //     g.clt->client->setFirstConnection(true);
+    //     g.clt->client->firstConnection("?");
 
-        std::thread t([&]() {
-            g.createWindow();
-            g.init();
-            while (g.win.IsOpen())
-            {
-                g.handleEvent();
-                g.update();
-                g.draw();
-            }
-        });
-        t.detach();
-        g.clt->run();
-    } catch (Error &error) {
-        std::cerr << error.what() << std::endl;
-        return (84);
-    }
+    //     std::thread t([&]() {
+    //         g.createWindow();
+    //         g.init();
+    //         while (g.win.IsOpen())
+    //         {
+    //             g.handleEvent();
+    //             g.update();
+    //             g.draw();
+    //         }
+    //     });
+    //     t.detach();
+    //     g.clt->run();
+    // } catch (Error &error) {
+    //     std::cerr << error.what() << std::endl;
+    //     return (84);
+    // }
+    rtype::GameEngine g;
+    // g.win.CreateWindow({920, 620}, "R-Type");
+    g.init();
+
+    g.runState(new rtype::game::SMenu);
+    
+    g.win.close();
     return (0);
 }

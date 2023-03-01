@@ -22,7 +22,7 @@ namespace rtype::game {
         public:
             SGamePlay()
             {
-
+                this->name = "GamePlay";
             };
 
             ~SGamePlay()
@@ -81,8 +81,8 @@ namespace rtype::game {
                     ev.MakeSpriteMovable_Bis(EManager.getSprite(this->pID)); // idx 0 == player character
                 else
                     ev.MakeSpriteMovable(EManager.getSprite(this->pID)); // idx 0 == player character
-                if (this->playerProjectile.ShootBullet(pID, EManager.getSprite(this->pID)) == true)
-                    ev.sendMessage("fire") ;
+                // if (this->playerProjectile.ShootBullet(pID, EManager.getSprite(this->pID)) == true)
+                    // ev.sendMessage("fire") ;
             }
 
             void serverEvents(engine::Event &ev, std::string &str)
@@ -122,8 +122,8 @@ namespace rtype::game {
             int handleEvent(rtype::engine::Window &w, engine::Event &ev)
             {
                 //retrieve and handle server input here
-                std::string str = ev.getClientBuffer();
-                serverEvents(ev, str);
+                // std::string str = ev.getClientBuffer();
+                // serverEvents(ev, str);
                 playerEvent(ev);
                 return 0;
             };
@@ -131,12 +131,14 @@ namespace rtype::game {
             void draw(rtype::engine::Window &w) override
             {
                 //draw entities
-                for (auto& e : this->EManager.getIDs())
-                    w.Draw(this->EManager.getSprite(e));
-                for (auto& ammo : playerProjectile.getBulletList())
-                    w.Draw(ammo);
-                for (auto& ammo : serverProjectiles.getBulletList())
-                    w.Draw(ammo);
+                w.clear();
+                std::cout<<"draw"<<std::endl;
+                // for (auto& e : this->EManager.getIDs())
+                //     w.Draw(this->EManager.getSprite(e));
+                // for (auto& ammo : playerProjectile.getBulletList())
+                //     w.Draw(ammo);
+                // for (auto& ammo : serverProjectiles.getBulletList())
+                //     w.Draw(ammo);
             };
 
         private:

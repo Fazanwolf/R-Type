@@ -26,7 +26,9 @@ namespace rtype::engine {
 
             void clear() { this->window.clear(sf::Color::Black); };
             void close() {this->window.close();};
-
+            sf::RenderWindow &getWindow() {
+                return this->window;
+            }
             void t_clock()
             {
                 this->winTimer = this->winClock.getElapsedTime();

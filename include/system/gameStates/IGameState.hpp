@@ -32,7 +32,9 @@ class IGameState {
 
 class GameState : public IGameState {
     public:
-
+        std::string getName(){
+            return name;
+        }
         GameState() {};
         ~GameState() {};
         void init() override { return;}
@@ -50,6 +52,8 @@ class GameState : public IGameState {
         {
             w;
         };
+    protected:
+        std::string name;
 };
 
 }

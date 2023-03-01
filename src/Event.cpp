@@ -12,7 +12,7 @@ using namespace rtype::engine;
 
 Event::Event(sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt)
 {
-    this->clt = clt;
+    // this->clt = clt;
     // std::cout<<"client buffer = "<<this->clt->client->getBuffer()<<std::endl;
 }
 
@@ -22,6 +22,7 @@ Event::~Event()
 
 EventType Event::ServerPlayerAction(sf::Transformable &obj_pos, EventType action)
 {
+    
     switch(action)
     {
         case(MV_UP):
@@ -82,20 +83,37 @@ void Event::MakeObjectMovable(sf::Transformable &obj_pos)
 
 void Event::MakeSpriteMovable(sf::Sprite &asset)
 {
+    if (asset.getPosition().x < 20) {
+        asset.setPosition(sf::Vector2f(20, asset.getPosition().y));
+        return;
+    }
+    
+    if (asset.getPosition().x > 840) {
+        asset.setPosition(sf::Vector2f(840, asset.getPosition().y));
+        return;
+    }
+    if (asset.getPosition().y < 20) {
+        asset.setPosition(sf::Vector2f(asset.getPosition().x, 20));
+        return;
+    }
+    if (asset.getPosition().y > 560) {
+        asset.setPosition(sf::Vector2f(asset.getPosition().x, 560));
+        return;
+    }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        this->clt->client->send("move right");
+        // this->clt->client->send("move right");
         asset.move(sf::Vector2f{30.f, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-        this->clt->client->send("move left");
+        // this->clt->client->send("move left");
         asset.move(sf::Vector2f{-30.f, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
-        this->clt->client->send("move up");
+        // this->clt->client->send("move up");
         asset.move(sf::Vector2f{0, -30.f});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        this->clt->client->send("move down");
+        // this->clt->client->send("move down");
         asset.move(sf::Vector2f{0, 30.f});
     }
 }
@@ -103,20 +121,21 @@ void Event::MakeSpriteMovable(sf::Sprite &asset)
 //test only
 void Event::MakeSpriteMovable_Bis(sf::Sprite &asset)
 {
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        this->clt->client->send("move right");
+        // this->clt->client->send("move right");
         asset.move(sf::Vector2f{30.f, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        this->clt->client->send("move left");
+        // this->clt->client->send("move left");
         asset.move(sf::Vector2f{-30.f, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        this->clt->client->send("move forward");
+        // this->clt->client->send("move forward");
         asset.move(sf::Vector2f{0, -30.f});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        this->clt->client->send("move down");
+        // this->clt->client->send("move down");
         asset.move(sf::Vector2f{0, 30.f});
     }
 }
