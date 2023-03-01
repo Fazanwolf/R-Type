@@ -27,6 +27,7 @@ namespace rtype {
             void GameRun(void);
             void End(void);
             void Menu(void);
+            void CreateText(std::string name, int size, std::string fontpath, sf::Vector2f pos, sf::Color);
 
         protected:
         private:

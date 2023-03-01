@@ -41,6 +41,8 @@ int main(void)
                         archi.CloseWindow();
                 }
                 archi.ClearWindow();
+                archi.CreateText("R-type", 50, "assets/arial.ttf", {300, 100}, sf::Color::White);
+                archi.Menu();
                 archi.DisplayWindow();
             }
         // });

@@ -77,4 +77,34 @@ namespace rtype {
     {
         this->window.display();
     }
+
+    void GameArchi::CreateText(std::string name, int size, std::string fontpath, sf::Vector2f pos, sf::Color color)
+    {
+        sf::Text text;
+        sf::Font font;
+
+        if (!font.loadFromFile(fontpath))
+            std::cout << "error" << std::endl;
+        text.setFont(font);
+        text.setString(name);
+        text.setCharacterSize(size);
+        text.setFillColor(color);
+        text.setPosition(pos);
+        this->window.draw(text);
+    }
+
+    void GameArchi::Menu()
+    {
+        sf::Mouse mouse;
+
+        CreateText("Join a Session", 50, "assets/arial.ttf", {300, 300}, sf::Color::White);
+        CreateText("Quit", 50, "assets/arial.ttf", {300, 500}, sf::Color::White);
+        if (mouse.getPosition(this->window).x >= 200 && mouse.getPosition(this->window).x <= 300 && mouse.getPosition(this->window).y >= 100 && mouse.getPosition(this->window).y <= 150) {
+            CreateText("Join a Session", 50, "assets/arial.ttf", {300, 300}, sf::Color::Red);
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                std::cout << "youhou" << std::endl;
+            }
+        }
+        this->window.display();
+    }
 }
