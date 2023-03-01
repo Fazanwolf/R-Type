@@ -22,6 +22,7 @@ Event::~Event()
 
 EventType Event::ServerPlayerAction(sf::Transformable &obj_pos, EventType action)
 {
+    
     switch(action)
     {
         case(MV_UP):
@@ -82,6 +83,23 @@ void Event::MakeObjectMovable(sf::Transformable &obj_pos)
 
 void Event::MakeSpriteMovable(sf::Sprite &asset)
 {
+    if (asset.getPosition().x < 20) {
+        asset.setPosition(sf::Vector2f(20, asset.getPosition().y));
+        return;
+    }
+    
+    if (asset.getPosition().x > 840) {
+        asset.setPosition(sf::Vector2f(840, asset.getPosition().y));
+        return;
+    }
+    if (asset.getPosition().y < 20) {
+        asset.setPosition(sf::Vector2f(asset.getPosition().x, 20));
+        return;
+    }
+    if (asset.getPosition().y > 560) {
+        asset.setPosition(sf::Vector2f(asset.getPosition().x, 560));
+        return;
+    }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         this->clt->client->send("move right");
         asset.move(sf::Vector2f{30.f, 0});
@@ -103,6 +121,7 @@ void Event::MakeSpriteMovable(sf::Sprite &asset)
 //test only
 void Event::MakeSpriteMovable_Bis(sf::Sprite &asset)
 {
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         this->clt->client->send("move right");
         asset.move(sf::Vector2f{30.f, 0});
