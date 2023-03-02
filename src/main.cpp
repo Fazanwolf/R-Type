@@ -34,17 +34,20 @@ int main(void)
             //     g.update();
             //     g.draw();
             // }
-            while (archi.IsOpen()) {
-                while (archi.UpdateEvent()) {
-                    // Do your Event
-                    if (archi.HandleEvent(sf::Event::Closed))
-                        archi.CloseWindow();
-                }
-                archi.ClearWindow();
-                archi.CreateText("R-type", 50, "assets/arial.ttf", {300, 100}, sf::Color::White);
-                archi.Menu();
-                archi.DisplayWindow();
+
+            // sprite.setPosition(0, 0);
+
+        while (archi.IsOpen()) {
+            while (archi.UpdateEvent()) {
+                // Do your Event
+                if (archi.HandleEvent(sf::Event::Closed))
+                    archi.CloseWindow();
             }
+            archi.CreateText("R-type", 50, "assets/arial.ttf", {300, 100}, sf::Color::White);
+            // archi.Menu();
+            archi.CreateBackground("assets/para.jpg");
+            archi.DisplayWindow();
+        }
         // });
         // t.detach();
         // g.clt->run();

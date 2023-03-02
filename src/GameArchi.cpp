@@ -70,7 +70,7 @@ namespace rtype {
 
     void GameArchi::ClearWindow()
     {
-        this->window.clear();
+        this->window.clear(sf::Color::Black);
     }
 
     void GameArchi::DisplayWindow()
@@ -106,5 +106,25 @@ namespace rtype {
             }
         }
         this->window.display();
+    }
+
+    void GameArchi::CreateBackground(std::string filename)
+    {
+        static sf::Texture texture;
+        static sf::Sprite sprite;
+        static sf::Time timer;
+
+        if (!texture.loadFromFile(filename))
+            std::cout << "error" << std::endl;
+        timer = this->winClock.getElapsedTime();
+        sprite.setTexture(texture);
+        sprite.setScale(1.5, 1.5);
+        if (timer.asMilliseconds() >= 0.4) {
+            std::cout << "pass" << std::endl;
+            sprite.setPosition(sprite.getPosition().x - 10, sprite.getPosition().y);
+            this->winClock.restart();
+        }
+
+        this->window.draw(sprite);
     }
 }

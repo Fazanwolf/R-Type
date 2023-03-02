@@ -28,14 +28,15 @@ namespace rtype {
             void End(void);
             void Menu(void);
             void CreateText(std::string name, int size, std::string fontpath, sf::Vector2f pos, sf::Color);
+            void CreateBackground(std::string filename);
+            sf::Clock winClock;
+            sf::RenderWindow window;
 
         protected:
         private:
             sf::Texture texture;
             sf::VideoMode window_mode;
             std::string window_name;
-            sf::RenderWindow window;
-            sf::Clock winClock;
             sf::Event win_event;
     };
 }
