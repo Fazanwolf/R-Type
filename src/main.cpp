@@ -15,6 +15,7 @@ int main(void)
     try {
         // rtype::engine::StateManager state;
         // rtype::engine::Window win;
+        rtype::entities::EntitiesManager ent;
         rtype::GameEngine g;
         g.clt = new sk::Skaldi<sk::client::UDP, sk::server::UDP>("0.0.0.0", "5000");
         g.clt->client->setFirstConnection(true);
@@ -22,7 +23,10 @@ int main(void)
 
         std::thread t([&]() {
             g.createWindow();
-            g.init(2, 50);
+            ent.initTexture("assets/ovni.png", 0);
+            ent.initTexture("assets/truc.png", 1);
+            g.init(2, "assets/ovni.png");
+            g.makeEnemies(5, "assets/truc.png");
             while (g.win.IsOpen()) {
                 g.handleEvent();
                 g.update();

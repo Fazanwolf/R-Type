@@ -21,13 +21,13 @@ class ChangeBits
         int idenemy = 0;
         int paquet2 = 0;
         int paquet3 = 0;
-        
+
         ChangeBits();
         ~ChangeBits();
-        
+
         void player_paquet(int idplayer, int move, int collide, int shoot);
         void mob_paquet(int idennemis, int shoot, int move, int death);
-        void game_paquet(int endgame, int score);     
+        void game_paquet(int endgame, int score);
 };
 
 ChangeBits::ChangeBits()

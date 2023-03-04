@@ -16,6 +16,7 @@ namespace rtype::entities {
 
     static int8_t idx;
     static int8_t idxE;
+    static int8_t idxTexture;
     class EntitiesManager {
         public:
             EntitiesManager();
@@ -37,7 +38,9 @@ namespace rtype::entities {
             */
             void NewEntity(std::string fpath, bool isEnemie);
 
-            void updateEnemies(std::string fpath, bool isEnemie);
+            void updateEnemies(std::string fpath, bool isEnemie, int nbE);
+            void initTexture(std::string fpath, int idx);
+            void initTextures(std::vector<std::string> list);
 
             std::list<int8_t> getIDs() {
                 return IDs;
@@ -69,6 +72,7 @@ namespace rtype::entities {
             int8_t pId; //player ID used to get local input relative to player pos in entity array
             std::array<sf::Sprite, 100> entities;
             std::array<sf::Sprite, 10000> entitiesE;
+            std::array<sf::Texture, 100> textures;
             sf::Texture texture;
             std::list<int8_t> IDs;
             sf::RenderWindow window;

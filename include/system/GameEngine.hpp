@@ -41,13 +41,17 @@ namespace rtype
                 win.CreateWindow({920, 620}, "R-Type");
             }
 
-            void init(int nbPlayers, int nbEnemies)
+            void init(int nbPlayers, std::string fpath)
             {
-                this->nbEnemis = nbEnemies;
                 event = engine::Event(this->clt);
                 std::string tmp = clt->client->getBuffer();
                 if (!tmp.empty()) std::cout<<"PID ? "<<tmp<<std::endl;
-                cursState.init(std::stoi(tmp), nbPlayers, nbEnemies);
+                cursState.initP(std::stoi(tmp), nbPlayers, fpath);
+            }
+
+            void makeEnemies(int nbEnemies, std::string fpath)
+            {
+                cursState.initE(nbEnemies, fpath);
             }
 
             ~GameEngine()
@@ -96,11 +100,6 @@ namespace rtype
                 cursState.handleEvent(this->win, this->event);
             };
 
-            int getNbEnemie() {
-                return nbEnemis;
-            }
-
-            int nbEnemis;
             engine::Window win;
             STATES gState;
             engine::Event event = nullptr;

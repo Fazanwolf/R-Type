@@ -7,6 +7,7 @@
 
 #include "Entities/EntitiesManager.hpp"
 #include "system/GameEngine.hpp"
+#include <vector>
 
 using namespace rtype::entities;
 
@@ -19,20 +20,37 @@ EntitiesManager::~EntitiesManager()
 {
 }
 
+void EntitiesManager::initTexture(std::string fpath, int i)
+{
+    // Check if index is empty
+    // idx++;
+    if (!textures[i].loadFromFile(fpath))
+        std::cout << "error" << std::endl;
+}
+
+void EntitiesManager::initTextures(std::vector<std::string> list)
+{
+
+}
+
 sf::Sprite EntitiesManager::CreateEntitie(std::string filename, bool isEnemie)
 {
     sf::Sprite asset;
 
-    if (!texture.loadFromFile(filename))
-        std::cout << "error" << std::endl;
-    asset.setTexture(texture);
+    // if (!texture.loadFromFile(filename))
+    //     std::cout << "error" << std::endl;
     if (isEnemie == false) {
+        asset.setTexture(textures[0]);
+        // asset.setTexture(texture);
         asset.setPosition(100, 100);
+        asset.scale({0.1, 0.1});
     } else {
+        asset.setTexture(textures[1]);
+        // asset.setTexture(texture);
         float yveltal = rand() % 620;
         asset.setPosition(this->window.getSize().x + 500.f, yveltal);
+        asset.scale({0.3, 0.3});
     }
-    asset.scale({0.3, 0.3});
 
     return asset;
 }
@@ -50,13 +68,36 @@ void EntitiesManager::NewEntity(std::string fpath, bool isEnemie)
     }
 }
 
-void EntitiesManager::updateEnemies(std::string fpath, bool isEnemie)
+void EntitiesManager::updateEnemies(std::string fpath, bool isEnemie, int nbE)
 {
+    components::Bullets bull;
+
 	// Updating the timer for enemy spawning
-	if (50 >= this->enemySpawnMax) {
-		// Spawn the enemy and reset the timer
-		this->NewEntity(fpath, isEnemie);
-		this->enemySpawnMax++;
+	if (nbE >= this->enemySpawnMax) {
+        // Timer du bled 1 chance sur 10 de spawn enemie
+        switch (rand() % 10) {
+	    case 0:
+	    	break;
+        case 1:
+	    	break;
+        case 2:
+	    	break;
+        case 3:
+	    	break;
+        case 4:
+	    	break;
+        case 5:
+	    	break;
+        case 6:
+	    	break;
+        case 7:
+	    	break;
+        case 8:
+	    	break;
+	    default:
+	    	this->NewEntity(fpath, isEnemie);
+	    	this->enemySpawnMax++;
+	    }
 	}
 
 	// Moving and updating enemies

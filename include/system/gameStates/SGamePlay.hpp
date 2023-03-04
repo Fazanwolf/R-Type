@@ -30,13 +30,10 @@ namespace rtype::game {
 
             };
 
-            void init_base(int nbPlayers, int nbnemies) {
+            void initPlayer(int nbPlayers, std::string fpath) {
                 //players
                 for (int i = 0; i != nbPlayers; i++)
-                    this->EManager.NewEntity("./assets/ovni.png", false);
-                // FirstEntities
-                // for (int i = 0; i != nbnemies; i++)
-                    // this->EManager.spawnEnemy("./assets/ovni.png", true);
+                    this->EManager.NewEntity(fpath, false);
             }
 
             void init() override
@@ -45,13 +42,20 @@ namespace rtype::game {
                 // init_base(2, 1);
             };
 
-            void init(int pID, int nbPlayers, int nbEnemies)
+            void initP(int pID, int nbPlayers, std::string fpath)
             {
                 //init sprites;
                 this->EManager.setPId(pID);
                 this->pID = pID;
-                init_base(nbPlayers, nbEnemies);
+                initPlayer(nbPlayers, fpath);
                 event_queue.push(engine::NONE);
+            };
+
+            void initE(int nbEnemies, std::string fpath)
+            {
+                //init sprites;
+                this->nbEnemies = nbEnemies;
+                this->fpath = fpath;
             };
 
             void update() override
@@ -64,7 +68,7 @@ namespace rtype::game {
                 if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
                     EManager.getSprite(2).setScale(sf::Vector2f(0,0));
                 }
-                this->EManager.updateEnemies("./assets/ovni.png", true);
+                this->EManager.updateEnemies(this->fpath, true, this->nbEnemies);
             };
 
             void clear() override
@@ -144,6 +148,8 @@ namespace rtype::game {
             };
 
         private:
+            std::string fpath;
+            int nbEnemies;
             int8_t pID;
             std::queue<rtype::engine::EventType> event_queue;
             rtype::components::Bullets playerProjectile;
