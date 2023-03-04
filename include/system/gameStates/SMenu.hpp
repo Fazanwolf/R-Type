@@ -36,7 +36,7 @@ class SMenu : public GameState {
         void draw(rtype::engine::Window &w) override
         {
             w.clear();
-            this->EManager.draw()
+            this->EManager.Draw();
             w.getWindow().display();
         };
     protected:

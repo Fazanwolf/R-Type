@@ -13,44 +13,53 @@
 
 class IButton
 {
-    bool OnClick() = 0;
-    bool OnHover() = 0;
-    bool OnLeave() = 0;
-}
+    public:
+        virtual bool OnClick() = 0;
+        virtual bool OnHover() = 0;
+        virtual bool OnLeave() = 0;
+};
 
 class Bouton : public IButton {
     public:
         // Bouton(std::string path, std::string text) {
             // 
         // };
-        Bouton(sf::Color color, std::string text) {
-            _shape.setFillColor(color);
-            _text.setString(text);
-            _shape.setSize(sf::Vector2f(100, 100));
-        };
-        Bouton();
-        ~Bouton();
 
-        void setPosition(sf::Vector2f nPos) { this->_shape.move };
+        Bouton(sf::Color color, std::string text) {
+            this->text.setString(text);
+            this->rShape.setFillColor(color);
+            this->rShape.setScale(sf::Vector2f(100, 100));
+        };
+
+        Bouton() {};
+        ~Bouton() {};
+
+        void setPosition(sf::Vector2f nPos) { this->rShape.move(nPos); };
 
         template <typename T, typename fpara>
-        void OnClick(fpara parameter, std::function<T(fpara)> func) {
+        bool OnClick(fpara parameter, std::function<T(fpara)> func) {
             //update button appearance here
             return func(parameter);
         };
 
+        bool OnLeave() override {
+            return false;
+        }
 
-        void OnLeave() override {}
-        void OnClick() override {}
-        void OnHover() override {
+        bool OnClick() override {
+            return false;
+        }
+
+        bool OnHover() override {
             //update button appearance here
-            return;
+            return false;
         };
     
     protected:
-        Sf::Shape _shape;
-        Sf::Text _text;
-        Sf::Texture _texture;
+        sf::RectangleShape rShape;
+        sf::CircleShape cShape;
+        sf::Text text;
+        sf::Texture texture;
         
 };
 

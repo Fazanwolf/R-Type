@@ -25,6 +25,12 @@ namespace rtype::game {
                 this->name = "GamePlay";
             };
 
+            SGamePlay(int nb_players)
+            {
+                this->nb_players = nb_players;
+                this->name = "GamePlay";
+            };
+
             ~SGamePlay()
             {
 
@@ -33,7 +39,10 @@ namespace rtype::game {
             void init() override
             {
                 //init sprites;
-                init_base(2);
+                for (int i = 0; i != 2; i++)
+                    this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
+                //FirstEntities
+                this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
             };
 
             void update() override
@@ -42,10 +51,6 @@ namespace rtype::game {
                 //pop event queue here after rework
             };
 
-            void clear() override
-            {
-                return;//later
-            };
 
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
 
@@ -117,6 +122,7 @@ namespace rtype::game {
 
         private:
             int8_t pID;
+            int8_t nb_players;
             std::queue<rtype::engine::EventType> event_queue;
             rtype::components::Bullets playerProjectile;
             rtype::components::Bullets serverProjectiles;
