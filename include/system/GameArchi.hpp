@@ -29,6 +29,7 @@ namespace rtype {
             void Menu(void);
             void CreateText(std::string name, int size, std::string fontpath, sf::Vector2f pos, sf::Color);
             void CreateBackground(std::string filename);
+            void CreateAudio(std::string filename, int volume, bool islooping);
             sf::Clock winClock;
             sf::RenderWindow window;
 

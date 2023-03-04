@@ -127,4 +127,18 @@ namespace rtype {
 
         this->window.draw(sprite);
     }
+
+    void GameArchi::CreateAudio(std::string filename, int volume, bool islooping)
+    {
+        static sf::Music music;
+
+        if (!music.openFromFile(filename))
+            std::cout << "error" << std::endl;
+        music.setVolume(volume);
+        if (islooping == true) {
+            music.setLoop(islooping);
+            music.play();
+        } else
+            music.play();
+    }
 }
