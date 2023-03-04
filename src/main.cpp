@@ -23,10 +23,8 @@ int main(void)
 
         std::thread t([&]() {
             g.createWindow();
-            ent.initTexture("assets/ovni.png", 0);
-            ent.initTexture("assets/truc.png", 1);
-            g.init(2, "assets/ovni.png");
-            g.makeEnemies(5, "assets/truc.png");
+            g.init(2, "assets/ovni.png", 0);
+            g.makeEnemies(50, "assets/truc.png", 1);
             while (g.win.IsOpen()) {
                 g.handleEvent();
                 g.update();

@@ -30,10 +30,10 @@ namespace rtype::game {
 
             };
 
-            void initPlayer(int nbPlayers, std::string fpath) {
+            void initPlayer(int nbPlayers, std::string fpath, int idx) {
                 //players
                 for (int i = 0; i != nbPlayers; i++)
-                    this->EManager.NewEntity(fpath, false);
+                    this->EManager.NewEntity(fpath, false, idx);
             }
 
             void init() override
@@ -42,20 +42,21 @@ namespace rtype::game {
                 // init_base(2, 1);
             };
 
-            void initP(int pID, int nbPlayers, std::string fpath)
+            void initP(int pID, int nbPlayers, std::string fpath, int idx)
             {
                 //init sprites;
                 this->EManager.setPId(pID);
                 this->pID = pID;
-                initPlayer(nbPlayers, fpath);
+                initPlayer(nbPlayers, fpath, idx);
                 event_queue.push(engine::NONE);
             };
 
-            void initE(int nbEnemies, std::string fpath)
+            void initE(int nbEnemies, std::string fpath, int idx)
             {
                 //init sprites;
                 this->nbEnemies = nbEnemies;
                 this->fpath = fpath;
+                this->idxE = idx;
             };
 
             void update() override
@@ -68,7 +69,7 @@ namespace rtype::game {
                 if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
                     EManager.getSprite(2).setScale(sf::Vector2f(0,0));
                 }
-                this->EManager.updateEnemies(this->fpath, true, this->nbEnemies);
+                this->EManager.updateEnemies(this->fpath, true, this->nbEnemies, this->idxE);
             };
 
             void clear() override
@@ -116,13 +117,6 @@ namespace rtype::game {
 
                 } else if (tmp[1].compare("fire") == 0)
                     this->serverProjectiles.ServerShootBullet(eID, EManager.getSprite(eID));
-                    //event_queue.push(engine::FIRE);
-                // std::cout<<eID<<" tmp: "<<tmp[1]<<std::endl;
-                // if (!event_queue.empty()) {
-                //     if (ev.ServerPlayerAction(EManager.getSprite(eID), event_queue.front()) == engine::FIRE)
-                //     // event_queue.pop();
-                //     // ev.ServerPlayerAction(EManager.getSprite(eID), event_queue.front());
-                // }
             }
 
             int handleEvent(rtype::engine::Window &w, engine::Event &ev)
@@ -149,6 +143,7 @@ namespace rtype::game {
 
         private:
             std::string fpath;
+            int idxE;
             int nbEnemies;
             int8_t pID;
             std::queue<rtype::engine::EventType> event_queue;

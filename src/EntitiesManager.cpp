@@ -22,8 +22,6 @@ EntitiesManager::~EntitiesManager()
 
 void EntitiesManager::initTexture(std::string fpath, int i)
 {
-    // Check if index is empty
-    // idx++;
     if (!textures[i].loadFromFile(fpath))
         std::cout << "error" << std::endl;
 }
@@ -33,20 +31,16 @@ void EntitiesManager::initTextures(std::vector<std::string> list)
 
 }
 
-sf::Sprite EntitiesManager::CreateEntitie(std::string filename, bool isEnemie)
+sf::Sprite EntitiesManager::CreateEntitie(std::string filename, bool isEnemie, int i)
 {
     sf::Sprite asset;
-
-    // if (!texture.loadFromFile(filename))
-    //     std::cout << "error" << std::endl;
+    initTexture(filename, i);
     if (isEnemie == false) {
-        asset.setTexture(textures[0]);
-        // asset.setTexture(texture);
+        asset.setTexture(textures[i]);
         asset.setPosition(100, 100);
         asset.scale({0.1, 0.1});
     } else {
-        asset.setTexture(textures[1]);
-        // asset.setTexture(texture);
+        asset.setTexture(textures[i]);
         float yveltal = rand() % 620;
         asset.setPosition(this->window.getSize().x + 500.f, yveltal);
         asset.scale({0.3, 0.3});
@@ -55,50 +49,31 @@ sf::Sprite EntitiesManager::CreateEntitie(std::string filename, bool isEnemie)
     return asset;
 }
 
-void EntitiesManager::NewEntity(std::string fpath, bool isEnemie)
+void EntitiesManager::NewEntity(std::string fpath, bool isEnemie, int i)
 {
     if (isEnemie == false) {
-        this->entities[idx] = this->CreateEntitie(fpath, false);
+        this->entities[idx] = this->CreateEntitie(fpath, false, i);
         IDs.push_back(idx);
         idx++;
     } else {
-        this->entitiesE[idxE] = this->CreateEntitie(fpath, true);
+        this->entitiesE[idxE] = this->CreateEntitie(fpath, true, i);
         IDs.push_back(idxE);
         idxE++;
     }
 }
 
-void EntitiesManager::updateEnemies(std::string fpath, bool isEnemie, int nbE)
+void EntitiesManager::updateEnemies(std::string fpath, bool isEnemie, int nbE, int i)
 {
     components::Bullets bull;
 
 	// Updating the timer for enemy spawning
-	if (nbE >= this->enemySpawnMax) {
-        // Timer du bled 1 chance sur 10 de spawn enemie
-        switch (rand() % 10) {
-	    case 0:
-	    	break;
-        case 1:
-	    	break;
-        case 2:
-	    	break;
-        case 3:
-	    	break;
-        case 4:
-	    	break;
-        case 5:
-	    	break;
-        case 6:
-	    	break;
-        case 7:
-	    	break;
-        case 8:
-	    	break;
-	    default:
-	    	this->NewEntity(fpath, isEnemie);
-	    	this->enemySpawnMax++;
-	    }
-	}
+	if (nbE > this->enemySpawnMax) {
+        int iSecret = rand() % 10 + 1;
+        if (iSecret==1) {
+            this->NewEntity(fpath, isEnemie, i);
+	        	this->enemySpawnMax++;
+        }
+    }
 
 	// Moving and updating enemies
 	for (int i = 0; i < this->entitiesE.size(); i++) {

@@ -28,7 +28,7 @@ namespace rtype::entities {
             * @param scale his scale in the window
             * @return return a sprite
             */
-            sf::Sprite CreateEntitie(std::string filename, bool isEnemie);
+            sf::Sprite CreateEntitie(std::string filename, bool isEnemie, int i);
 
             /*
             * @brief Create an entity with the fonction CreateEntities with an ID, this fonction is used for multiplayer games
@@ -36,9 +36,9 @@ namespace rtype::entities {
             * @param pos the position of your entity in the window
             * @param scale his scale in the window
             */
-            void NewEntity(std::string fpath, bool isEnemie);
+            void NewEntity(std::string fpath, bool isEnemie, int i);
 
-            void updateEnemies(std::string fpath, bool isEnemie, int nbE);
+            void updateEnemies(std::string fpath, bool isEnemie, int nbE, int i);
             void initTexture(std::string fpath, int idx);
             void initTextures(std::vector<std::string> list);
 
@@ -73,7 +73,6 @@ namespace rtype::entities {
             std::array<sf::Sprite, 100> entities;
             std::array<sf::Sprite, 10000> entitiesE;
             std::array<sf::Texture, 100> textures;
-            sf::Texture texture;
             std::list<int8_t> IDs;
             sf::RenderWindow window;
     };
