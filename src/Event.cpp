@@ -58,29 +58,6 @@ void Event::MakeObjectMovable(sf::Transformable &obj_pos)
     }
 }
 
-// std::list<sf::RectangleShape> Event::ShotBullet(std::list<sf::RectangleShape> &og)
-// {
-//     std::list<sf::RectangleShape> bullets = og;
-//     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-//     {
-//         sf::RectangleShape bullet;
-//         bullet.setFillColor(sf::Color::White);
-//         bullet.setPosition(sf::Vector2f(100,100));
-//         bullet.setSize(sf::Vector2f(50,40));
-//         // bullet.scale(sf::Vector2f(50,40));
-//         bullets.push_back(bullet);
-//     }
-//     if (!bullets.empty())
-//     {
-//         for (auto &ammo : bullets)
-//         {
-//             ammo.move(sf::Vector2f{50, 0});
-//         }
-//         std::cerr<<"bullets"<<std::endl;
-//     }
-//     return bullets;
-// }
-
 void Event::MakeSpriteMovable(sf::Sprite &asset)
 {
     if (asset.getPosition().x < 20) {
@@ -118,33 +95,12 @@ void Event::MakeSpriteMovable(sf::Sprite &asset)
     }
 }
 
-//test only
-void Event::MakeSpriteMovable_Bis(sf::Sprite &asset)
+sf::Vector2f Event::GetMousePos(sf::RenderWindow &w)
 {
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        // this->clt->client->send("move right");
-        asset.move(sf::Vector2f{30.f, 0});
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        // this->clt->client->send("move left");
-        asset.move(sf::Vector2f{-30.f, 0});
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        // this->clt->client->send("move forward");
-        asset.move(sf::Vector2f{0, -30.f});
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        // this->clt->client->send("move down");
-        asset.move(sf::Vector2f{0, 30.f});
-    }
+    sf::Vector2i mousePos = sf::Mouse::getPosition(w);
+    return w.mapPixelToCoords(mousePos);
 }
-
-// void Event::MakeObjectClickable(sf::RectangleShape button)
-// {
-//     sf::Mouse mouse;
-
-// }
 
 void Event::GetMousePos(sf::Event event)
 {

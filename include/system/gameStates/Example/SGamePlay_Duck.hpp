@@ -71,9 +71,6 @@ namespace rtype::game {
             {
                 //draw entities
                 w.clear();
-                for (auto& e : this->EManager.getIDs())
-                    w.Draw(this->EManager.getSprite(e));
-                w.getWindow().display();
                 std::cout<<"draw"<<std::endl;
             };
 
@@ -83,8 +80,7 @@ namespace rtype::game {
                 //keyboard Input
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                 {
-                    return 1;
-                    // return rtype::STATES::QUIT;
+                    return STATES::QUIT;
                 }
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
                 {

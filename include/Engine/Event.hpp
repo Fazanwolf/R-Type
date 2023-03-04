@@ -44,6 +44,7 @@ namespace rtype::engine {
             void MakeObjectClickable(sf::RectangleShape button);
             void MakeSpriteMovable(sf::Sprite &asset); //player move on input
             void MakeSpriteMovable_Bis(sf::Sprite &asset); //player move on input test only
+            sf::Vector2f GetMousePos(sf::RenderWindow &w);
             void GetMousePos(sf::Event event);
             void GetMousePressed(sf::Event event);
 

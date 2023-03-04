@@ -54,10 +54,11 @@ namespace rtype
             switch (state)
             {
                 case STATES::PLAY :
-                    std::cout<<"PLAY lol"<<std::endl;
-                    isRunning = false;
-                    exit(0);
-                    break;
+                    std::cout<<"PLAY"<<std::endl;
+                    return new rtype::game::SGamePlay();
+                    // isRunning = false;
+                    // exit(0);
+                    // break;
                 case STATES::QUIT :
                     std::cout<<"QUIT"<<std::endl;
                     isRunning = false;

@@ -60,6 +60,7 @@ class GameState : public IGameState {
         {
             w;
         };
+
     protected:
         std::string name;
 };
