@@ -73,6 +73,8 @@ namespace rtype::components
             }
     
             bool OnClick() override {
+                std::string s(this->text.getString().toAnsiString());
+                std::cout<<s<<std::endl;
                 return false;
             }
     
@@ -83,7 +85,7 @@ namespace rtype::components
             
             STATEBUTTONS getType()
             {
-                std::string s(this->text.getString());
+                std::string s(this->text.getString().toAnsiString());
 
                 if (s.compare("PLAY") == 0)
                     return PLAY;

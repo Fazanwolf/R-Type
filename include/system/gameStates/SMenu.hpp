@@ -93,6 +93,7 @@ class SMenu : public GameState {
                 sf::Vector2i mousePos = sf::Mouse::getPosition();
                 for (auto &btn : btns) {
                     if (btn.isPointInside({mousePos.x, mousePos.y}) && btn.getType() != components::STATEBUTTONS::NONE)
+                        btn.OnClick();
                         return btn.getType();
                 }
             }

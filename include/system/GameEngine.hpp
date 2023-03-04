@@ -50,6 +50,7 @@ namespace rtype
             {
                 case STATES::PLAY :
                     std::cout<<"PLAY"<<std::endl;
+                    isRunning = false;
                     break;
                     // return new GameState();
                 case STATES::QUIT :
@@ -99,6 +100,7 @@ namespace rtype
                 }
                 // this->states.front()->handleEvent(win, event);
                 auto swapState = this->states.front()->handleEvent(this);
+                std::cout<<swapState<<std::endl;
                 if (swapState != STATES::NONE) {
                     std::cout<<"runNew\n";
                     runState(swapState);
