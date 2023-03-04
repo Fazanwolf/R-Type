@@ -58,10 +58,12 @@ namespace rtype::entities {
                 return;
             }
 
+            std::vector<sf::Texture> getTextureVector() { return this->textures;}
         private:
             int8_t pId; //player ID used to get local input relative to player pos in entity array
             std::array<sf::Sprite, 100> entities;
             sf::Texture texture;
+            std::vector<sf::Texture> textures;
             std::list<int8_t> IDs;
             sf::RenderWindow window;
     };

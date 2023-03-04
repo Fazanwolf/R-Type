@@ -7,7 +7,6 @@
 
 #include "Engine/Engine.hpp"
 #include "Engine/Error.hpp"
-#include "system/gameStates/SGamePlay.hpp"
 #include "system/GameEngine.hpp"
 
 int main(void)
@@ -40,7 +39,7 @@ int main(void)
     // g.win.CreateWindow({920, 620}, "R-Type");
     g.init();
 
-    g.runState(new rtype::game::SMenu);
+    g.runState(rtype::STATES::MENU);
     
     g.win.close();
     return (0);

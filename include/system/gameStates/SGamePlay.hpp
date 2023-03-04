@@ -5,7 +5,9 @@
 ** IGameState
 */
 
-#include "system/gameStates/IGameState.hpp"
+#pragma once
+
+#include "IGameState.hpp"
 #include <queue>
 #include <string>
 #include <cstring>
