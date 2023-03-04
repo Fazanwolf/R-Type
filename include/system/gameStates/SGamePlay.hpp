@@ -30,26 +30,27 @@ namespace rtype::game {
 
             };
 
-            void init_base(int nb_players) {
+            void init_base(int nbPlayers, int nbnemies) {
                 //players
-                for (int i = 0; i != nb_players; i++)
-                    this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
-                //FirstEntities
-                this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
+                for (int i = 0; i != nbPlayers; i++)
+                    this->EManager.NewEntity("./assets/ovni.png", false);
+                // FirstEntities
+                // for (int i = 0; i != nbnemies; i++)
+                    // this->EManager.spawnEnemy("./assets/ovni.png", true);
             }
 
             void init() override
             {
                 //init sprites;
-                init_base(2);
+                // init_base(2, 1);
             };
 
-            void init(int pID)
+            void init(int pID, int nbPlayers, int nbEnemies)
             {
                 //init sprites;
                 this->EManager.setPId(pID);
                 this->pID = pID;
-                init_base(2);
+                init_base(nbPlayers, nbEnemies);
                 event_queue.push(engine::NONE);
             };
 
@@ -63,6 +64,7 @@ namespace rtype::game {
                 if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
                     EManager.getSprite(2).setScale(sf::Vector2f(0,0));
                 }
+                this->EManager.updateEnemies("./assets/ovni.png", true);
             };
 
             void clear() override
@@ -133,6 +135,8 @@ namespace rtype::game {
                 //draw entities
                 for (auto& e : this->EManager.getIDs())
                     w.Draw(this->EManager.getSprite(e));
+                for (auto& e : this->EManager.getIDs())
+                    w.Draw(this->EManager.getSpriteE(e));
                 for (auto& ammo : playerProjectile.getBulletList())
                     w.Draw(ammo);
                 for (auto& ammo : serverProjectiles.getBulletList())
@@ -145,7 +149,6 @@ namespace rtype::game {
             rtype::components::Bullets playerProjectile;
             rtype::components::Bullets serverProjectiles;
     };
-
 }
 
 #endif /* !SGAMEPLAY_HPP_ */

@@ -22,9 +22,8 @@ int main(void)
 
         std::thread t([&]() {
             g.createWindow();
-            g.init();
-            while (g.win.IsOpen())
-            {
+            g.init(2, 50);
+            while (g.win.IsOpen()) {
                 g.handleEvent();
                 g.update();
                 g.draw();
