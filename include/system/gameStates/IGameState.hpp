@@ -64,6 +64,13 @@ class GameState : public IGameState {
         std::string name;
 };
 
+class NULLState : public GameState
+{
+    public:
+        NULLState() {};
+        ~NULLState() {};
+};
+
 }
 
 #endif /* !IGAMESTATE_HPP_ */

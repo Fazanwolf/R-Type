@@ -27,6 +27,14 @@
 #include "Entities/EntitiesManager.hpp"
 #include "Components/Bullets.hpp"
 
+static sf::RectangleShape createSmallRect(sf::Vector2f pos)
+{
+    sf::RectangleShape tmp;
+    tmp.setSize({1,1});
+    tmp.setPosition(pos);
+    return tmp;
+}
+
 namespace rtype::engine {
     class Engine {
         public:

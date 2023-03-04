@@ -48,10 +48,11 @@ namespace rtype::components
     
             Bouton() {};
             ~Bouton() {};
-    
+
             bool isPointInside(sf::Vector2f point) override
             {
                 return this->rShape.getGlobalBounds().contains(point);
+                // return this->rShape.getLocalBounds().contains(point);
             }
 
             void Draw(rtype::engine::Window &w) override {

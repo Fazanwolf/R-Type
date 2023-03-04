@@ -41,7 +41,7 @@ class SMenu : public GameState {
             //init standard textureless buttons;
             sf::Vector2f pos({460-100, 200});
             btns.push_back(components::Bouton(sf::Color::Green, "PLAY", pos, {200,60}));
-            btns.push_back(components::Bouton(sf::Color::Red, "QUIT", {pos.x, pos.y + 120}, {200,60}));
+            // btns.push_back(components::Bouton(sf::Color::Red, "QUIT", {pos.x, pos.y + 120}, {200,60}));
         
             return;
         }
@@ -49,55 +49,39 @@ class SMenu : public GameState {
         void update() override {return;}
 
         int handleEvent(rtype::engine::Window &w, engine::Event &ev) override {
-            w;            
-            sf::Event ed;
-            ev.GetMousePos(ed);
-
-            //click handler
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
-            {
-                sf::Vector2i mousePos = sf::Mouse::getPosition();
+           if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+                std::cout<<"Mouse Pressed"<<std::endl;
+                sf::Vector2i mousePos = sf::Mouse::getPosition(w.getWindow());
                 for (auto &btn : btns) {
-                    if (btn.isPointInside({mousePos.x, mousePos.y}) )
-                    {
-                        switch (btn.getType())
-                        {
-                            case components::PLAY :
-                                break;
-                            case components::QUIT :
-                                break;
-                            case components::OPTION :
-                                break;
-                            case components::WELCOME :
-                                break;
-                            case components::MENU :
-                                break;
-                            case components::LOBBY :
-                                break;
-                        default:
-                            break;
-                        }
-                    }
+                    std::cout<< "Point Inside ? "<< ( btn.isPointInside(w.getWindow().mapPixelToCoords(mousePos)) == true ? "true":"false") <<std::endl;
+                    // if (btn.isPointInside({mousePos.x, mousePos.y}) == true)
+                        // btn.OnClick();
+                     //&& btn.getType() != components::STATEBUTTONS::NONE)
+                        // return btn.getType();
                 }
-
-
             }
-            //Keyboard handler
+            // //Keyboard handler
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
+                return components::QUIT;
             return components::NONE;
         };
 
         int handleEvent(rtype::GameEngine *g) override {
             //click handler
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
-            {
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+                std::cout<<"Mouse Pressed"<<std::endl;
                 sf::Vector2i mousePos = sf::Mouse::getPosition();
                 for (auto &btn : btns) {
-                    if (btn.isPointInside({mousePos.x, mousePos.y}) && btn.getType() != components::STATEBUTTONS::NONE)
-                        btn.OnClick();
-                        return btn.getType();
+                    // std::cout<< "Point Inside ? "<< ( btn.isPointInside(g->win.getWindow().mapPixelToCoords(mousePos)) == true ? "true":"false") <<std::endl;
+                    // if (btn.isPointInside({mousePos.x, mousePos.y}) == true)
+                        // btn.OnClick();
+                     //&& btn.getType() != components::STATEBUTTONS::NONE)
+                        // return btn.getType();
                 }
             }
-            //Keyboard handler
+            // //Keyboard handler
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))
+                return components::QUIT;
             return components::NONE;
         };
 

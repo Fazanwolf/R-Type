@@ -27,6 +27,11 @@ namespace rtype
         NONE
     };
 
+    template<typename Base, typename T>
+    inline bool instanceof(const T *ptr) {
+        return dynamic_cast<const Base*>(ptr) != nullptr;
+    }
+
     class GameEngine {
     public:
         GameEngine()
@@ -49,10 +54,10 @@ namespace rtype
             switch (state)
             {
                 case STATES::PLAY :
-                    std::cout<<"PLAY"<<std::endl;
+                    std::cout<<"PLAY lol"<<std::endl;
                     isRunning = false;
+                    exit(0);
                     break;
-                    // return new GameState();
                 case STATES::QUIT :
                     std::cout<<"QUIT"<<std::endl;
                     isRunning = false;
@@ -69,6 +74,7 @@ namespace rtype
             default:
                 break;
             }
+            return new rtype::NULLState();
         }
 
         bool loadState(GameState *new_state)
@@ -93,18 +99,23 @@ namespace rtype
             if (state != STATES::NONE) {
                 loadState(createState(state));
             }
-            
+
+            int swapState = STATES::NONE;
             while (this->isRunning && this->win.IsOpen()) {
+
                 if (states.empty()) {
                     return;
                 }
-                // this->states.front()->handleEvent(win, event);
-                auto swapState = this->states.front()->handleEvent(this);
-                std::cout<<swapState<<std::endl;
-                if (swapState != STATES::NONE) {
+                swapState = this->states.front()->handleEvent(win, event);
+                // swapState = this->states.front()->handleEvent(this);
+                // std::cout<<swapState<<std::endl;
+                if (swapState == STATES::QUIT) {
+                    setIsRunning(false);    
+                } else if (swapState != STATES::NONE) {
                     std::cout<<"runNew\n";
                     runState(swapState);
                 }
+
                 this->states.front()->update();
                 // std::cout << "2" << std::endl;
                 this->states.front()->draw(this->win);
