@@ -7,6 +7,7 @@ var searchData=
   ['r_2dtype_4',['R-Type',['../index.html',1,'']]],
   ['readme_2emd_5',['README.md',['../README_8md.html',1,'']]],
   ['resume_6',['resume',['../classrtype_1_1IGameState.html#ac7e161bf8c89048b2cb19c6aaa493268',1,'rtype::IGameState::resume()'],['../classrtype_1_1GameState.html#a846853eb60a177f2831fbea5652d7de5',1,'rtype::GameState::resume()'],['../classrtype_1_1game_1_1SGamePlay.html#aa99f1b32503730b1a50997dc7ed029fa',1,'rtype::game::SGamePlay::resume()']]],
-  ['rocket_7',['ROCKET',['../namespacertype_1_1components.html#af9e3c51721c56dac8f7e52beb06c6b22a98dbc91e7281d76a2948d3b93d42c29a',1,'rtype::components']]],
-  ['rtype_8',['rtype',['../namespacertype.html',1,'']]]
+  ['right_7',['RIGHT',['../classPlayerProtocol.html#a3b3f08437063d5fb76cd9161e6b40ec6af9b59377c2305a6feec0407bae48308e',1,'PlayerProtocol']]],
+  ['rocket_8',['ROCKET',['../namespacertype_1_1components.html#af9e3c51721c56dac8f7e52beb06c6b22a98dbc91e7281d76a2948d3b93d42c29a',1,'rtype::components']]],
+  ['rtype_9',['rtype',['../namespacertype.html',1,'']]]
 ];

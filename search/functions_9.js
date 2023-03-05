@@ -6,6 +6,5 @@ var searchData=
   ['makespritemovable_3',['MakeSpriteMovable',['../classrtype_1_1engine_1_1Event.html#a46a9c1d801466e8e7b73ae2bfdb2d0bc',1,'rtype::engine::Event']]],
   ['makespritemovable_5fbis_4',['MakeSpriteMovable_Bis',['../classrtype_1_1engine_1_1Event.html#a3763a88355fafbab1408abf7185557b8',1,'rtype::engine::Event']]],
   ['map_5',['Map',['../classrtype_1_1engine_1_1Map.html#ab3db58d6781bb6297cdb5d586d488e9d',1,'rtype::engine::Map']]],
-  ['menu_6',['Menu',['../classrtype_1_1engine_1_1StateManager.html#a2718e61cd76b99067d5aa8da26bc8174',1,'rtype::engine::StateManager']]],
-  ['mob_5fpaquet_7',['mob_paquet',['../classChangeBits.html#ac136c4f2135e7208c77984fa36f5da28',1,'ChangeBits']]]
+  ['menu_6',['Menu',['../classrtype_1_1engine_1_1StateManager.html#a2718e61cd76b99067d5aa8da26bc8174',1,'rtype::engine::StateManager']]]
 ];

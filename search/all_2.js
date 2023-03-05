@@ -14,6 +14,5 @@ var searchData=
   ['bullets_2ecpp_11',['Bullets.cpp',['../Bullets_8cpp.html',1,'']]],
   ['bullets_2ehpp_12',['Bullets.hpp',['../Bullets_8hpp.html',1,'']]],
   ['bullets_5flist_13',['bullets_list',['../classrtype_1_1components_1_1Bullets.html#a041b5ae085a8824b2aa00cc18f394c80',1,'rtype::components::Bullets']]],
-  ['bullettype_14',['BulletType',['../namespacertype_1_1components.html#af9e3c51721c56dac8f7e52beb06c6b22',1,'rtype::components']]],
-  ['byte_2ehpp_15',['byte.hpp',['../byte_8hpp.html',1,'']]]
+  ['bullettype_14',['BulletType',['../namespacertype_1_1components.html#af9e3c51721c56dac8f7e52beb06c6b22',1,'rtype::components']]]
 ];

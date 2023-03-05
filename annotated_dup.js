@@ -33,12 +33,12 @@ var annotated_dup =
       [ "Transform", "classutilities_1_1Transform.html", "classutilities_1_1Transform" ]
     ] ],
     [ "Actors", "classActors.html", "classActors" ],
-    [ "ChangeBits", "classChangeBits.html", "classChangeBits" ],
     [ "DestroyError", "classDestroyError.html", "classDestroyError" ],
     [ "Enemy", "classEnemy.html", "classEnemy" ],
     [ "Entity", "classEntity.html", null ],
     [ "Error", "classError.html", "classError" ],
     [ "LoadError", "classLoadError.html", "classLoadError" ],
     [ "Player", "classPlayer.html", "classPlayer" ],
+    [ "PlayerProtocol", "classPlayerProtocol.html", "classPlayerProtocol" ],
     [ "WindowError", "classWindowError.html", "classWindowError" ]
 ];

@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "ChangeBits", "classChangeBits.html", null ],
     [ "Enemy", "classEnemy.html", null ],
     [ "Entity", "classEntity.html", [
       [ "Actors", "classActors.html", null ]
@@ -25,6 +24,9 @@ var hierarchy =
       [ "rtype::GameState", "classrtype_1_1GameState.html", [
         [ "rtype::game::SGamePlay", "classrtype_1_1game_1_1SGamePlay.html", null ]
       ] ]
+    ] ],
+    [ "sk::proto::BinaryManipulation", null, [
+      [ "PlayerProtocol", "classPlayerProtocol.html", null ]
     ] ],
     [ "std::exception", null, [
       [ "DestroyError", "classDestroyError.html", null ],
