@@ -1,0 +1,32 @@
+<map id="/github/workspace/client/include/Engine/Engine.hpp" name="/github/workspace/client/include/Engine/Engine.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="1647,5,1824,45"/>
+<area shape="rect" id="node2" href="$Bonus_8hpp.html" title=" " alt="" coords="29,189,239,229"/>
+<area shape="rect" id="node3" href="$include_8hpp.html" title=" " alt="" coords="525,291,687,331"/>
+<area shape="rect" id="node4" href="$Bullets_8hpp.html" title=" " alt="" coords="351,93,563,133"/>
+<area shape="rect" id="node6" href="$Audio_8hpp.html" title=" " alt="" coords="1922,93,2093,133"/>
+<area shape="rect" id="node7" href="$Destroy_8hpp.html" title=" " alt="" coords="2117,93,2300,133"/>
+<area shape="rect" id="node9" href="$Draw_8hpp.html" title=" " alt="" coords="2325,93,2493,133"/>
+<area shape="rect" id="node11" href="$Error_8hpp.html" title=" " alt="" coords="1450,93,1615,133"/>
+<area shape="rect" id="node13" href="$client_2src_2main_8cpp.html" title=" " alt="" coords="1233,475,1395,515"/>
+<area shape="rect" id="node14" href="$Event_8hpp.html" title=" " alt="" coords="2567,93,2738,133"/>
+<area shape="rect" id="node15" href="$Event_8cpp.html" title=" " alt="" coords="2566,189,2729,229"/>
+<area shape="rect" id="node16" href="$Map_8hpp.html" title=" " alt="" coords="2762,93,2925,133"/>
+<area shape="rect" id="node17" href="$StateManager_8hpp.html" title=" " alt="" coords="1757,189,1975,229"/>
+<area shape="rect" id="node19" href="$Text_8hpp.html" title=" " alt="" coords="2949,93,3111,133"/>
+<area shape="rect" id="node20" href="$Window_8hpp.html" title=" " alt="" coords="1714,93,1898,133"/>
+<area shape="rect" id="node22" href="$EntitiesManager_8hpp.html" title=" " alt="" coords="1191,93,1426,133"/>
+<area shape="rect" id="node27" href="$Properties_8hpp.html" title=" " alt="" coords="719,93,920,133"/>
+<area shape="rect" id="node5" href="$Bullets_8cpp.html" title=" " alt="" coords="314,189,477,229"/>
+<area shape="rect" id="node8" href="$Destroy_8cpp.html" title=" " alt="" coords="2186,189,2349,229"/>
+<area shape="rect" id="node10" href="$Draw_8cpp.html" title=" " alt="" coords="2373,189,2535,229"/>
+<area shape="rect" id="node12" href="$Error_8cpp.html" title=" " alt="" coords="1570,189,1733,229"/>
+<area shape="rect" id="node18" href="$StateManager_8cpp.html" title=" " alt="" coords="1531,475,1694,515"/>
+<area shape="rect" id="node21" href="$Window_8cpp.html" title=" " alt="" coords="1999,189,2162,229"/>
+<area shape="rect" id="node23" href="$IGameState_8hpp.html" title=" " alt="" coords="1309,181,1495,236"/>
+<area shape="rect" id="node26" href="$EntitiesManager_8cpp.html" title=" " alt="" coords="1069,189,1234,229"/>
+<area shape="rect" id="node24" href="$SGamePlay_8hpp.html" title=" " alt="" coords="1294,284,1481,339"/>
+<area shape="rect" id="node25" href="$GameEngine_8hpp.html" title=" " alt="" coords="1280,387,1495,427"/>
+<area shape="rect" id="node28" href="$Enemy_8hpp.html" title=" " alt="" coords="501,189,711,229"/>
+<area shape="rect" id="node29" href="$Player_8hpp.html" title=" " alt="" coords="786,189,994,229"/>
+<area shape="rect" id="node30" href="$Player_8cpp.html" title=" " alt="" coords="809,291,971,331"/>
+</map>

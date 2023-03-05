@@ -1,0 +1,12 @@
+<map id="rtype::components::Bullets" name="rtype::components::Bullets">
+<area shape="rect" id="node1" title=" " alt="" coords="188,328,335,515"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,211,64,251"/>
+<area shape="rect" id="node3" title=" " alt="" coords="95,211,150,251"/>
+<area shape="rect" id="node4" title=" " alt="" coords="175,211,233,251"/>
+<area shape="rect" id="node5" title=" " alt="" coords="257,211,433,251"/>
+<area shape="rect" id="node6" title=" " alt="" coords="243,108,339,148"/>
+<area shape="rect" id="node7" title=" " alt="" coords="363,108,461,148"/>
+<area shape="rect" id="node8" title=" " alt="" coords="393,5,431,45"/>
+<area shape="rect" id="node9" title=" " alt="" coords="457,211,532,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="571,211,621,251"/>
+</map>
