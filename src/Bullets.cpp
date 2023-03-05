@@ -26,23 +26,27 @@ sf::CircleShape Bullets::CreateBullet(sf::Vector2f pos)
     return bullet;
 }
 
-std::list<sf::CircleShape> Bullets::ShootBullet(sf::Sprite sprite)//(sf::Vector2f spawnPoint)
+bool Bullets::ShootBullet(int id, sf::Sprite sprite)//(sf::Vector2f spawnPoint)
 {
-    sf::Vector2f playpos = sf::Vector2f(sprite.getPosition().x + 10, sprite.getPosition().y);
+    sf::Vector2f newPlaypos = sf::Vector2f(sprite.getPosition().x + 10, sprite.getPosition().y);
     std::list<sf::CircleShape> bullets = this->bullets_list;
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+    if ( (sf::Keyboard::isKeyPressed(sf::Keyboard::RControl) && id == 1)
+        || (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && id == 0 ) )
     {
-        bullets.push_back(CreateBullet(playpos));
+        bullets.push_back(CreateBullet(newPlaypos));
+        this->bullets_list = bullets;
+        return true;
     }
-    if (!bullets.empty())
-    {
-        for (auto &ammo : bullets)
-        {
-            ammo.move(sf::Vector2f{20, 0});
-        }
-    }
+    return false;
+}
+
+bool Bullets::ServerShootBullet(int id, sf::Sprite sprite)
+{
+    sf::Vector2f newPlaypos = sf::Vector2f(sprite.getPosition().x + 10, sprite.getPosition().y);
+    std::list<sf::CircleShape> bullets = this->bullets_list;
+    bullets.push_back(CreateBullet(newPlaypos));
     this->bullets_list = bullets;
-    return bullets;
+    return true;
 }
 
 // std::list<sf::CircleShape> Bullets::ShootBullet(sf::Vector2f spawnPoint)
@@ -65,10 +69,12 @@ bool Bullets::update(sf::FloatRect bounds)
             ammo.move(bullet_velocity);
             if (collided(bounds))
                 return true;
+            ammo.move(sf::Vector2f{20, 0});
         }
     }
     return false;
 }
+
 // void Bullets::SetBullets(float radius, sf::Vector2f velocity, float maxSpeed)
 // {
 //     this->bullet_maxSpeed = maxSpeed;

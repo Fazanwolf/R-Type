@@ -8,8 +8,9 @@
 #ifndef ENTITIESMANAGER_HPP_
 #define ENTITIESMANAGER_HPP_
 
-#include "Engine/Engine.hpp"
+#include "../Engine/Engine.hpp"
 #include <array>
+#include <vector>
 
 namespace rtype::entities {
 
@@ -40,6 +41,9 @@ namespace rtype::entities {
                 return IDs;
             };
 
+            void setPId(int id) { this->pId = id;}
+            int8_t getPId() {return this->pId;}
+
             std::array<sf::Sprite, 100> getEntitiesList() {
                 return entities;
             };
@@ -49,9 +53,8 @@ namespace rtype::entities {
                 return this->entities[id];
             };
 
-
         private:
-            // static int8_t idx;
+            int8_t pId; //player ID used to get local input relative to player pos in entity array
             std::array<sf::Sprite, 100> entities;
             sf::Texture texture;
             std::list<int8_t> IDs;

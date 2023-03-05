@@ -11,6 +11,7 @@ using namespace rtype::entities;
 
 EntitiesManager::EntitiesManager()
 {
+    this->setPId(-1);
 }
 
 EntitiesManager::~EntitiesManager()
