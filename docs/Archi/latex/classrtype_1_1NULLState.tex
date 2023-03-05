@@ -1,0 +1,101 @@
+\hypertarget{classrtype_1_1NULLState}{}\doxysection{rtype\+::NULLState Class Reference}
+\label{classrtype_1_1NULLState}\index{rtype::NULLState@{rtype::NULLState}}
+
+
+The class \mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}} of the game state.  
+
+
+
+
+{\ttfamily \#include $<$IGame\+State.\+hpp$>$}
+
+Inheritance diagram for rtype\+::NULLState\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrtype_1_1NULLState}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrtype_1_1NULLState_a6d670e46fc6722d90988695559648be2}{NULLState}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1NULLState_a82c41f48f2e24fa8555dd75549fa4b6d}{$\sim$\+NULLState}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrtype_1_1GameState}{rtype\+::\+Game\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classrtype_1_1GameState_a247860fe7ca26715b134e06d524e6a76}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1GameState_af01bcf061ab7881efe5b6af4300d4aee}{Game\+State}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Game State object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1GameState_a36f50e344165eb744ed418c724bfb3ec}{$\sim$\+Game\+State}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Game State object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameState_addd2de9d06b7fc31ec72d8b606a8015f}{init}} () override
+\begin{DoxyCompactList}\small\item\em Init the game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameState_ab74eef592005aadecf18c9b8851d4c33}{update}} () override
+\begin{DoxyCompactList}\small\item\em Update the game state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrtype_1_1GameState_aa3540d88b205a3be32419d84e1b85be2}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$g) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrtype_1_1GameState_aefa431667bf7987b1633fd43eff2f64f}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w, \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&ev) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameState_a0c8ba731cfe6ac2ec9b51b508faa30b3}{draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w) override
+\begin{DoxyCompactList}\small\item\em Draw the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em Init the game state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em Update the game state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w, \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&ev)=0
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$g)=0
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}{draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w)=0
+\begin{DoxyCompactList}\small\item\em Draw the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classrtype_1_1GameState}{rtype\+::\+Game\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}\label{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}} 
+std\+::string {\bfseries name}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classrtype_1_1IGameState}{rtype\+::\+IGame\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1IGameState_a1887ab1b681a3254d8ceead76e978ae5}\label{classrtype_1_1IGameState_a1887ab1b681a3254d8ceead76e978ae5}} 
+\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{entities\+::\+Entities\+Manager}} {\bfseries EManager}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class \mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}} of the game state. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrtype_1_1NULLState_a6d670e46fc6722d90988695559648be2}\label{classrtype_1_1NULLState_a6d670e46fc6722d90988695559648be2}} 
+\index{rtype::NULLState@{rtype::NULLState}!NULLState@{NULLState}}
+\index{NULLState@{NULLState}!rtype::NULLState@{rtype::NULLState}}
+\doxysubsubsection{\texorpdfstring{NULLState()}{NULLState()}}
+{\footnotesize\ttfamily rtype\+::\+NULLState\+::\+NULLState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}} object. 
+
+\mbox{\Hypertarget{classrtype_1_1NULLState_a82c41f48f2e24fa8555dd75549fa4b6d}\label{classrtype_1_1NULLState_a82c41f48f2e24fa8555dd75549fa4b6d}} 
+\index{rtype::NULLState@{rtype::NULLState}!````~NULLState@{$\sim$NULLState}}
+\index{````~NULLState@{$\sim$NULLState}!rtype::NULLState@{rtype::NULLState}}
+\doxysubsubsection{\texorpdfstring{$\sim$NULLState()}{~NULLState()}}
+{\footnotesize\ttfamily rtype\+::\+NULLState\+::$\sim$\+NULLState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the \mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}} object. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IGame\+State.\+hpp\end{DoxyCompactItemize}

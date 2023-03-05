@@ -1,0 +1,98 @@
+\hypertarget{SMenu__Duck_8hpp_source}{}\doxysection{SMenu\+\_\+\+Duck.\+hpp}
+\label{SMenu__Duck_8hpp_source}\index{include/system/gameStates/Example/SMenu\_Duck.hpp@{include/system/gameStates/Example/SMenu\_Duck.hpp}}
+\mbox{\hyperlink{SMenu__Duck_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R-\/Type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Stest}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ SMENU\_HPP\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ SMENU\_HPP\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGameState_8hpp}{IGameState.hpp}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Bouton_8hpp}{Components/Bouton.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacertype}{rtype}};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1game}{rtype::game}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1game_1_1SMenu}{SMenu}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrtype_1_1GameState}{GameState}}\ \{}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:\ \textcolor{comment}{//data\ declared\ here\ are\ suggested\ to\ behave\ differently\ in\ the\ next\ patch\ due\ to\ ECS\ updates}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<rtype::components::Bouton>\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6a678c072f45b2d5cf5624799b3e9542}{btns}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::vector<sf::Texture>\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_ab3520ce92df65e7720807c61cae82243}{textures}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a8e9dbe9695c03e722c3560e46c6daf46}{getName}}()\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0c012d281bd273f0a6dd7639fb2baad6}{name}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a396357ec5c1cd2a42f0a55cea0188f53}{SMenu}}()\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0c012d281bd273f0a6dd7639fb2baad6}{name}}\ =\ \textcolor{stringliteral}{"{}Menu"{}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0323e6c51fd3c7d6150e6ae1e6494629}{\string~SMenu}}()\ \{\};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1aaf50a66b3e13be36c4950168e96c49}{init}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//init\ Textures}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//init\ standard\ textureless\ buttons;}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ pos(\{460-\/100,\ 200\});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6a678c072f45b2d5cf5624799b3e9542}{btns}}.push\_back(\mbox{\hyperlink{classrtype_1_1components_1_1Bouton}{components::Bouton}}(sf::Color::Green,\ \textcolor{stringliteral}{"{}PLAY"{}},\ pos,\ \{200,60\}));}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6a678c072f45b2d5cf5624799b3e9542}{btns}}.push\_back(\mbox{\hyperlink{classrtype_1_1components_1_1Bouton}{components::Bouton}}(sf::Color::Red,\ \textcolor{stringliteral}{"{}QUIT"{}},\ \{pos.x,\ pos.y\ +\ 120\},\ \{200,60\}));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a4917a039e284b3d0adafb620a7d4b7cc}{update}}()\textcolor{keyword}{\ override\ }\{\textcolor{keywordflow}{return};\}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6d21f8711f8bbba96d23fe106747b5db}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w,\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \&ev)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Mouse\ Pressed"{}}<<std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2i\ mousePos\ =\ sf::Mouse::getPosition(w.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}{getWindow}}());}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&btn\ :\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6a678c072f45b2d5cf5624799b3e9542}{btns}})\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\ \textcolor{stringliteral}{"{}Point\ Inside\ ?\ "{}}<<\ (\ btn.isPointInside(w.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}{getWindow}}().mapPixelToCoords(mousePos))\ ==\ \textcolor{keyword}{true}\ ?\ \textcolor{stringliteral}{"{}true"{}}:\textcolor{stringliteral}{"{}false"{}})\ <<std::endl;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (btn.isPointInside(\{mousePos.x,\ mousePos.y\})\ ==\ \textcolor{keyword}{true}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ btn.getType()\ !=\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a2e89e8a371d7b54c2303b139ccac475c}{components::STATEBUTTONS::NONE}})\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btn.OnClick();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ btn.getType();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ //Keyboard\ handler}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a4932a3edba2c82bdb0a635071c58a90f}{components::QUIT}};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a2e89e8a371d7b54c2303b139ccac475c}{components::NONE}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0ee6adc16a4965f795dc640a198b4221}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype::GameEngine}}\ *g)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//click\ handler}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Mouse\ Pressed"{}}<<std::endl;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2i\ mousePos\ =\ sf::Mouse::getPosition();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&btn\ :\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6a678c072f45b2d5cf5624799b3e9542}{btns}})\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout<<\ "{}Point\ Inside\ ?\ "{}<<\ (\ btn.isPointInside(g-\/>win.getWindow().mapPixelToCoords(mousePos))\ ==\ true\ ?\ "{}true"{}:"{}false"{})\ <<std::endl;}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (btn.isPointInside(\{mousePos.x,\ mousePos.y\})\ ==\ true)}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btn.OnClick();}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\&\&\ btn.getType()\ !=\ components::STATEBUTTONS::NONE)}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ btn.getType();}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ //Keyboard\ handler}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape))}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a4932a3edba2c82bdb0a635071c58a90f}{components::QUIT}};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a2e89e8a371d7b54c2303b139ccac475c}{components::NONE}};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1ea070b901d6eeab9ca5b05587960fa8}{draw}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00128\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ w.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_aeefb5e840f6aebf661d73d9717502141}{clear}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this-\/>EManager.Draw();}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ btn:\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6a678c072f45b2d5cf5624799b3e9542}{btns}})\ \{\ btn.Draw(w);\}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ w.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}{getWindow}}().display();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0c012d281bd273f0a6dd7639fb2baad6}{name}};}
+\DoxyCodeLine{00137\ \};}
+\DoxyCodeLine{00138\ \}}
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !SMENU\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

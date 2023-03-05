@@ -15,6 +15,11 @@
 #ifndef IGAMESTATE_HPP_
 #define IGAMESTATE_HPP_
 
+/**
+ * @defgroup GAMESTATE
+ * @{
+ */
+
 class GameEngine;
 /**
  * @brief The namespace of the game
@@ -156,4 +161,5 @@ class NULLState : public GameState
 
 }
 
+/** @} */
 #endif /* !IGAMESTATE_HPP_ */

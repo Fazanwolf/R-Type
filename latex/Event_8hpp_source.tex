@@ -1,0 +1,89 @@
+\hypertarget{Event_8hpp_source}{}\doxysection{Event.\+hpp}
+\label{Event_8hpp_source}\index{include/Engine/Event.hpp@{include/Engine/Event.hpp}}
+\mbox{\hyperlink{Event_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Event}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Engine_8hpp}{Engine/Engine.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <Skaldi.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1engine}{rtype::engine}}\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183}{controller}}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183a98e8207ea938d70c385b718bcbcedf9c}{Z}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183a0fb7227e379b07240cfe792c86c4c89b}{Q}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183a330f0fb6b574511d477bba78abf206c6}{S}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183a7a0532a8123e8835e98c3f4c07e691be}{D}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183ac8b755de981fef1311ec52651c35dbbd}{ECHAP}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_ac3b45d34ae2d3edb3649709e05dc6183a99eef6de2bba695bd03c221d2b87b177}{SPACE}}}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{EventType}}}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514a52c3350aed94bdcd69c13318b4ab05a8}{MV\_LEFT}},}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514a3d1223a4bbddf95042164d81bcd24528}{MV\_RIGHT}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514a54ce550f8d0e75c180fb2113638b4605}{MV\_UP}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514a7a8bb5b452a24c26bb5bf1efc7a83317}{MV\_DOWN}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514ac3c88df6e8d73b5887d2978ecc7dee37}{FIRE}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514a0d49f1c16a1de1c188e88dc1a6863b66}{NONE}}}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}}\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_afed7b4fc95b0b1a94aab536954fb63cb}{Event}}(sk::Skaldi<sk::client::UDP,\ sk::server::UDP>\ *\mbox{\hyperlink{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}{clt}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_ab7fd2c4bc2f64f9a7dd347a58e015d96}{\string~Event}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a19b69041b38d57b8dd23c5f7ef438e74}{handleEvent}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a2e28cbceb07ec12a8ca625bd07a62693}{handleInput}}();}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a448fe413712fcade282d50f44eaeff1a}{update}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{EventType}}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a57f2a5b4754c343a2f919a91c4a09e40}{ServerPlayerAction}}(sf::Transformable\ \&obj\_pos,\ \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{EventType}}\ action);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a1e1b3e798ad314803882191a0f54e14a}{MakeObjectMovable}}(sf::Transformable\ \&obj\_pos);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a371caa57d819462b4b83ea17bd3f5a58}{MakeObjectClickable}}(sf::RectangleShape\ button);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_aaaa10d73c15299d020592aadb04a665b}{MakeSpriteMovable}}(sf::Sprite\ \&asset);\ \textcolor{comment}{//player\ move\ on\ input}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a40d262e1a6d44b1d8c093de750b6b15a}{MakeSpriteMovable\_Bis}}(sf::Sprite\ \&asset);\ \textcolor{comment}{//player\ move\ on\ input\ test\ only}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_aeb689e6f77860e60aa993544b2479787}{GetMousePos}}(sf::RenderWindow\ \&w);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a2283f597b24064d9b46ea90fe3cfbc9c}{GetMousePos}}(sf::Event\ event);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_ae65fc2d611dddfb8890309926ccb9adf}{GetMousePressed}}(sf::Event\ event);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_abb10157a6c064afc9725e43df0577189}{getClientBuffer}}()}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}{clt}}-\/>client-\/>getBuffer();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_ae699badaf77aa6e3c5dda3452b5ba05a}{sendMessage}}(std::string\ msg)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}{clt}}-\/>client-\/>send(msg);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::list<sf::RectangleShape>\ ShotBullet(std::list<sf::RectangleShape>\ \&bullets);}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ std::queue<std::string>\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a6a03fa02926b32585c3ac151fa6c6831}{server\_updates}};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_adeda6ad71c3d8ddbdb6a246aa34e24c9}{velocity}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ sk::Skaldi<sk::client::UDP,\ sk::server::UDP>\ *\mbox{\hyperlink{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}{clt}};}
+\DoxyCodeLine{00164\ \ \ \ \ \};}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}

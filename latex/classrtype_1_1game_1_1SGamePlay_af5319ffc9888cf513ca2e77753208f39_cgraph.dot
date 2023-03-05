@@ -1,0 +1,19 @@
+digraph "rtype::game::SGamePlay::draw"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="rtype::game::SGamePlay\l::draw",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Draw on the window."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="rtype::engine::Window\l::clear",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Window.html#aeefb5e840f6aebf661d73d9717502141",tooltip="Function to clear a window."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="rtype::engine::Window\l::Draw",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Window.html#a2297bd7d62060d54b0fc637bcfef214d",tooltip="Function to draw on the windows."];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="rtype::entities::Entities\lManager::getIDs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1entities_1_1EntitiesManager.html#a00013a40d5fc61c5c85319af009e0fcd",tooltip="This function is used to get the list of all the entities."];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="rtype::entities::Entities\lManager::getSprite",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88",tooltip="This function is used to get the sprite of an entity."];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="rtype::engine::Window\l::getWindow",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Window.html#a18775971083ab9b5d395f3598aa8d6b7",tooltip="Function to render a window."];
+}

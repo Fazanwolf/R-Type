@@ -1,0 +1,130 @@
+\hypertarget{classrtype_1_1entities_1_1Entity}{}\doxysection{rtype\+::entities\+::Entity Class Reference}
+\label{classrtype_1_1entities_1_1Entity}\index{rtype::entities::Entity@{rtype::entities::Entity}}
+
+
+{\ttfamily \#include $<$Properties.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a1ce5ba5e741806868a0291ecabdc0bc0}{Entity}} ()
+\item 
+\mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a10d1e501858d08865ba31105159cf770}{$\sim$\+Entity}} ()
+\item 
+virtual sf\+::\+Vector2f \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_aaac1f031c55cc29441c2b67944ad9d15}{get\+Pos}} (void)=0
+\item 
+virtual float \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_ad35e0d477a8e28706b5ce1feb0151cd4}{getX}} (void)=0
+\item 
+virtual float \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a2e99b4b740fe70a1fff1052c43fe4c6c}{getY}} (void)=0
+\item 
+virtual float \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a5181881c317aebfcdc4e6b97fd01c5db}{get\+Velocity}} (void)=0
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a219411e35392dedf9f9d2e75839ee552}{set\+Position}} (sf\+::\+Vector2f const \&position)=0
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_aa6dede217a5afdd68a65ca602b9fe361}{set\+Velocity}} (sf\+::\+Vector2f const \&velocity)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_af39fb74c5631801f23813274c20150c2}{e\+\_\+rect}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a734dd47d5956c845906ebd0cd4d50c64}{e\+\_\+asset}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_aea40632676bbbbf08246cb20f75849b8}{e\+\_\+position}}
+\item 
+int \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a16d95b5e2d17d4bf2800ed0b9bc480f6}{e\+\_\+health}}
+\item 
+int \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a4ea34dd8f4f894aa9e1ca96deba9c0e2}{e\+\_\+max\+Bonus}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a1ce5ba5e741806868a0291ecabdc0bc0}\label{classrtype_1_1entities_1_1Entity_a1ce5ba5e741806868a0291ecabdc0bc0}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily rtype\+::entities\+::\+Entity\+::\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a10d1e501858d08865ba31105159cf770}\label{classrtype_1_1entities_1_1Entity_a10d1e501858d08865ba31105159cf770}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!````~Entity@{$\sim$Entity}}
+\index{````~Entity@{$\sim$Entity}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{$\sim$Entity()}{~Entity()}}
+{\footnotesize\ttfamily rtype\+::entities\+::\+Entity\+::$\sim$\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_aaac1f031c55cc29441c2b67944ad9d15}\label{classrtype_1_1entities_1_1Entity_aaac1f031c55cc29441c2b67944ad9d15}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!getPos@{getPos}}
+\index{getPos@{getPos}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily virtual sf\+::\+Vector2f rtype\+::entities\+::\+Entity\+::get\+Pos (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a5181881c317aebfcdc4e6b97fd01c5db}\label{classrtype_1_1entities_1_1Entity_a5181881c317aebfcdc4e6b97fd01c5db}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!getVelocity@{getVelocity}}
+\index{getVelocity@{getVelocity}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{getVelocity()}{getVelocity()}}
+{\footnotesize\ttfamily virtual float rtype\+::entities\+::\+Entity\+::get\+Velocity (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_ad35e0d477a8e28706b5ce1feb0151cd4}\label{classrtype_1_1entities_1_1Entity_ad35e0d477a8e28706b5ce1feb0151cd4}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!getX@{getX}}
+\index{getX@{getX}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily virtual float rtype\+::entities\+::\+Entity\+::getX (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a2e99b4b740fe70a1fff1052c43fe4c6c}\label{classrtype_1_1entities_1_1Entity_a2e99b4b740fe70a1fff1052c43fe4c6c}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!getY@{getY}}
+\index{getY@{getY}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily virtual float rtype\+::entities\+::\+Entity\+::getY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a219411e35392dedf9f9d2e75839ee552}\label{classrtype_1_1entities_1_1Entity_a219411e35392dedf9f9d2e75839ee552}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily virtual void rtype\+::entities\+::\+Entity\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f const \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_aa6dede217a5afdd68a65ca602b9fe361}\label{classrtype_1_1entities_1_1Entity_aa6dede217a5afdd68a65ca602b9fe361}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!setVelocity@{setVelocity}}
+\index{setVelocity@{setVelocity}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{setVelocity()}{setVelocity()}}
+{\footnotesize\ttfamily virtual void rtype\+::entities\+::\+Entity\+::set\+Velocity (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f const \&}]{velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a734dd47d5956c845906ebd0cd4d50c64}\label{classrtype_1_1entities_1_1Entity_a734dd47d5956c845906ebd0cd4d50c64}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!e\_asset@{e\_asset}}
+\index{e\_asset@{e\_asset}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{e\_asset}{e\_asset}}
+{\footnotesize\ttfamily sf\+::\+Sprite rtype\+::entities\+::\+Entity\+::e\+\_\+asset\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a16d95b5e2d17d4bf2800ed0b9bc480f6}\label{classrtype_1_1entities_1_1Entity_a16d95b5e2d17d4bf2800ed0b9bc480f6}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!e\_health@{e\_health}}
+\index{e\_health@{e\_health}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{e\_health}{e\_health}}
+{\footnotesize\ttfamily int rtype\+::entities\+::\+Entity\+::e\+\_\+health\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_a4ea34dd8f4f894aa9e1ca96deba9c0e2}\label{classrtype_1_1entities_1_1Entity_a4ea34dd8f4f894aa9e1ca96deba9c0e2}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!e\_maxBonus@{e\_maxBonus}}
+\index{e\_maxBonus@{e\_maxBonus}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{e\_maxBonus}{e\_maxBonus}}
+{\footnotesize\ttfamily int rtype\+::entities\+::\+Entity\+::e\+\_\+max\+Bonus\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_aea40632676bbbbf08246cb20f75849b8}\label{classrtype_1_1entities_1_1Entity_aea40632676bbbbf08246cb20f75849b8}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!e\_position@{e\_position}}
+\index{e\_position@{e\_position}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{e\_position}{e\_position}}
+{\footnotesize\ttfamily sf\+::\+Vector2f rtype\+::entities\+::\+Entity\+::e\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrtype_1_1entities_1_1Entity_af39fb74c5631801f23813274c20150c2}\label{classrtype_1_1entities_1_1Entity_af39fb74c5631801f23813274c20150c2}} 
+\index{rtype::entities::Entity@{rtype::entities::Entity}!e\_rect@{e\_rect}}
+\index{e\_rect@{e\_rect}!rtype::entities::Entity@{rtype::entities::Entity}}
+\doxysubsubsection{\texorpdfstring{e\_rect}{e\_rect}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape rtype\+::entities\+::\+Entity\+::e\+\_\+rect\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Entities/\mbox{\hyperlink{Properties_8hpp}{Properties.\+hpp}}\end{DoxyCompactItemize}

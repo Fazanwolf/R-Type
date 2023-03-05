@@ -1,0 +1,180 @@
+\hypertarget{classrtype_1_1GameEngine}{}\doxysection{rtype\+::Game\+Engine Class Reference}
+\label{classrtype_1_1GameEngine}\index{rtype::GameEngine@{rtype::GameEngine}}
+
+
+The class of the \mbox{\hyperlink{classrtype_1_1GameEngine}{Game\+Engine}}.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Engine.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrtype_1_1GameEngine_a242d1f0cf1172b2a40081897c6c0a523}{Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Game Engine object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1GameEngine_abd89a4cb369cdae2230e906eac434d58}{$\sim$\+Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Game Engine object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameEngine_a8c29754cf5453367aace862df5e828c6}{init}} ()
+\begin{DoxyCompactList}\small\item\em Init the game engine. \end{DoxyCompactList}\item 
+Game\+State $\ast$ \mbox{\hyperlink{classrtype_1_1GameEngine_a8447f3579007aab3f3c27718d0dba4be}{create\+State}} (int state)
+\begin{DoxyCompactList}\small\item\em Create a State object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1GameEngine_a2765771a67fd0413c06adf70d63f80b2}{load\+State}} (Game\+State $\ast$new\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Load a state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameEngine_a3b9fa539d5aa4d1d5344b8f0d54aaa04}{run\+State}} (int state)
+\begin{DoxyCompactList}\small\item\em Run a state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1GameEngine_a7eadbcedbe2f4680649bb2e6bb04f4dd}{get\+Is\+Running}} ()
+\begin{DoxyCompactList}\small\item\em Get the Is Running object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameEngine_af1081200de81a574a8349e5cf332c11e}{set\+Is\+Running}} (bool state)
+\begin{DoxyCompactList}\small\item\em Set the Is Running object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}\label{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}} 
+engine\+::\+Window {\bfseries win}
+\item 
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a435dae9d701d85be173ee68f0a2b9730}\label{classrtype_1_1GameEngine_a435dae9d701d85be173ee68f0a2b9730}} 
+engine\+::\+Event {\bfseries event} = nullptr
+\item 
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a187773f036a044621ef959cefcff515e}\label{classrtype_1_1GameEngine_a187773f036a044621ef959cefcff515e}} 
+std\+::queue$<$ std\+::string $>$ {\bfseries server\+\_\+updates}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}\label{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}} 
+bool {\bfseries is\+Running}
+\item 
+\mbox{\Hypertarget{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}\label{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}} 
+std\+::queue$<$ Game\+State $\ast$ $>$ {\bfseries states}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class of the \mbox{\hyperlink{classrtype_1_1GameEngine}{Game\+Engine}}. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a242d1f0cf1172b2a40081897c6c0a523}\label{classrtype_1_1GameEngine_a242d1f0cf1172b2a40081897c6c0a523}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!GameEngine@{GameEngine}}
+\index{GameEngine@{GameEngine}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}}
+{\footnotesize\ttfamily rtype\+::\+Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Game Engine object. 
+
+\mbox{\Hypertarget{classrtype_1_1GameEngine_abd89a4cb369cdae2230e906eac434d58}\label{classrtype_1_1GameEngine_abd89a4cb369cdae2230e906eac434d58}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!````~GameEngine@{$\sim$GameEngine}}
+\index{````~GameEngine@{$\sim$GameEngine}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameEngine()}{~GameEngine()}}
+{\footnotesize\ttfamily rtype\+::\+Game\+Engine\+::$\sim$\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Game Engine object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a8447f3579007aab3f3c27718d0dba4be}\label{classrtype_1_1GameEngine_a8447f3579007aab3f3c27718d0dba4be}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!createState@{createState}}
+\index{createState@{createState}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{createState()}{createState()}}
+{\footnotesize\ttfamily Game\+State $\ast$ rtype\+::\+Game\+Engine\+::create\+State (\begin{DoxyParamCaption}\item[{int}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a State object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Game\+State$\ast$ A state 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a7eadbcedbe2f4680649bb2e6bb04f4dd}\label{classrtype_1_1GameEngine_a7eadbcedbe2f4680649bb2e6bb04f4dd}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!getIsRunning@{getIsRunning}}
+\index{getIsRunning@{getIsRunning}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{getIsRunning()}{getIsRunning()}}
+{\footnotesize\ttfamily bool rtype\+::\+Game\+Engine\+::get\+Is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Is Running object. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a8c29754cf5453367aace862df5e828c6}\label{classrtype_1_1GameEngine_a8c29754cf5453367aace862df5e828c6}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!init@{init}}
+\index{init@{init}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void rtype\+::\+Game\+Engine\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Init the game engine. 
+
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a2765771a67fd0413c06adf70d63f80b2}\label{classrtype_1_1GameEngine_a2765771a67fd0413c06adf70d63f80b2}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!loadState@{loadState}}
+\index{loadState@{loadState}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{loadState()}{loadState()}}
+{\footnotesize\ttfamily bool rtype\+::\+Game\+Engine\+::load\+State (\begin{DoxyParamCaption}\item[{Game\+State $\ast$}]{new\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Load a state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1GameEngine_a3b9fa539d5aa4d1d5344b8f0d54aaa04}\label{classrtype_1_1GameEngine_a3b9fa539d5aa4d1d5344b8f0d54aaa04}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!runState@{runState}}
+\index{runState@{runState}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{runState()}{runState()}}
+{\footnotesize\ttfamily void rtype\+::\+Game\+Engine\+::run\+State (\begin{DoxyParamCaption}\item[{int}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Run a state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1GameEngine_af1081200de81a574a8349e5cf332c11e}\label{classrtype_1_1GameEngine_af1081200de81a574a8349e5cf332c11e}} 
+\index{rtype::GameEngine@{rtype::GameEngine}!setIsRunning@{setIsRunning}}
+\index{setIsRunning@{setIsRunning}!rtype::GameEngine@{rtype::GameEngine}}
+\doxysubsubsection{\texorpdfstring{setIsRunning()}{setIsRunning()}}
+{\footnotesize\ttfamily void rtype\+::\+Game\+Engine\+::set\+Is\+Running (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Is Running object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Engine.\+hpp\end{DoxyCompactItemize}

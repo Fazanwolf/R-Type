@@ -1,0 +1,167 @@
+\hypertarget{classrtype_1_1components_1_1Bullets}{}\doxysection{rtype\+::components\+::Bullets Class Reference}
+\label{classrtype_1_1components_1_1Bullets}\index{rtype::components::Bullets@{rtype::components::Bullets}}
+
+
+This class is the base class for all the bullets.  
+
+
+
+
+{\ttfamily \#include $<$Bullets.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_a4bcf76daf1def5b40a4663dc8ddaad2e}\label{classrtype_1_1components_1_1Bullets_a4bcf76daf1def5b40a4663dc8ddaad2e}} 
+{\bfseries Bullets} ()
+\begin{DoxyCompactList}\small\item\em Constructor for class \mbox{\hyperlink{classrtype_1_1components_1_1Bullets}{Bullets}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_aaa92aebf953b6113b63b32d052390db9}\label{classrtype_1_1components_1_1Bullets_aaa92aebf953b6113b63b32d052390db9}} 
+{\bfseries $\sim$\+Bullets} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \mbox{\hyperlink{classrtype_1_1components_1_1Bullets}{Bullets}}. \end{DoxyCompactList}\item 
+sf\+::\+Circle\+Shape \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a9765b683ec295911d61aa8f7aec9bd2e}{Create\+Bullet}} (sf\+::\+Vector2f pos)
+\begin{DoxyCompactList}\small\item\em Function to create a bullet at a pos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a0f052d22f5b5f91954ca7ae223710971}{Shoot\+Bullet}} (int id, sf\+::\+Sprite sprite)
+\begin{DoxyCompactList}\small\item\em Function to shoot a bullet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_af3019968c88c7d5a2e6bbc3033b82930}{Server\+Shoot\+Bullet}} (int id, sf\+::\+Sprite sprite)
+\begin{DoxyCompactList}\small\item\em Function to shoot a bullet for the server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_ae70a7e92dddf697c777af19ca5efcaf5}{collided}} (sf\+::\+Float\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Function to know if a bullet collide to somethings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a555be70da0be170c4a8b93a029fc8c61}{draw\+Bullets}} (sf\+::\+Window \&win)
+\begin{DoxyCompactList}\small\item\em Function to draw a bullet on a window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aa3ee2b45a6c28fb0102967a18146ab8e}{update}} (sf\+::\+Float\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Function to update the bullet. \end{DoxyCompactList}\item 
+std\+::list$<$ sf\+::\+Circle\+Shape $>$ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aefefb2de136a97a473b078afc4817f16}{get\+Bullet\+List}} ()
+\begin{DoxyCompactList}\small\item\em Function to get the list of bullet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the base class for all the bullets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_ae70a7e92dddf697c777af19ca5efcaf5}\label{classrtype_1_1components_1_1Bullets_ae70a7e92dddf697c777af19ca5efcaf5}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!collided@{collided}}
+\index{collided@{collided}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{collided()}{collided()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bullets\+::collided (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to know if a bullet collide to somethings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & bounds to check if collide\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a true if collide ans false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_a9765b683ec295911d61aa8f7aec9bd2e}\label{classrtype_1_1components_1_1Bullets_a9765b683ec295911d61aa8f7aec9bd2e}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!CreateBullet@{CreateBullet}}
+\index{CreateBullet@{CreateBullet}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{CreateBullet()}{CreateBullet()}}
+{\footnotesize\ttfamily sf\+::\+Circle\+Shape rtype\+::components\+::\+Bullets\+::\+Create\+Bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function to create a bullet at a pos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position of the bullet to start\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a circle shape 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_a555be70da0be170c4a8b93a029fc8c61}\label{classrtype_1_1components_1_1Bullets_a555be70da0be170c4a8b93a029fc8c61}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!drawBullets@{drawBullets}}
+\index{drawBullets@{drawBullets}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{drawBullets()}{drawBullets()}}
+{\footnotesize\ttfamily void rtype\+::components\+::\+Bullets\+::draw\+Bullets (\begin{DoxyParamCaption}\item[{sf\+::\+Window \&}]{win }\end{DoxyParamCaption})}
+
+
+
+Function to draw a bullet on a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & Window of the game \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_aefefb2de136a97a473b078afc4817f16}\label{classrtype_1_1components_1_1Bullets_aefefb2de136a97a473b078afc4817f16}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!getBulletList@{getBulletList}}
+\index{getBulletList@{getBulletList}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{getBulletList()}{getBulletList()}}
+{\footnotesize\ttfamily std\+::list$<$ sf\+::\+Circle\+Shape $>$ rtype\+::components\+::\+Bullets\+::get\+Bullet\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to get the list of bullet. 
+
+\begin{DoxyReturn}{Returns}
+Return a circle shape list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_af3019968c88c7d5a2e6bbc3033b82930}\label{classrtype_1_1components_1_1Bullets_af3019968c88c7d5a2e6bbc3033b82930}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!ServerShootBullet@{ServerShootBullet}}
+\index{ServerShootBullet@{ServerShootBullet}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{ServerShootBullet()}{ServerShootBullet()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bullets\+::\+Server\+Shoot\+Bullet (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{sf\+::\+Sprite}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Function to shoot a bullet for the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the entitie who shoot \\
+\hline
+{\em sprite} & Sprite of the entitie who shoot\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return True if bullet shoot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_a0f052d22f5b5f91954ca7ae223710971}\label{classrtype_1_1components_1_1Bullets_a0f052d22f5b5f91954ca7ae223710971}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!ShootBullet@{ShootBullet}}
+\index{ShootBullet@{ShootBullet}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{ShootBullet()}{ShootBullet()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bullets\+::\+Shoot\+Bullet (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{sf\+::\+Sprite}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Function to shoot a bullet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id of the entitie who shoot \\
+\hline
+{\em sprite} & Sprite of the entitie who shoot\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return True if bullet shoot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bullets_aa3ee2b45a6c28fb0102967a18146ab8e}\label{classrtype_1_1components_1_1Bullets_aa3ee2b45a6c28fb0102967a18146ab8e}} 
+\index{rtype::components::Bullets@{rtype::components::Bullets}!update@{update}}
+\index{update@{update}!rtype::components::Bullets@{rtype::components::Bullets}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bullets\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{bounds }\end{DoxyParamCaption})}
+
+
+
+Function to update the bullet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & bounds to check if collide\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return False when finish 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Bullets.\+hpp\end{DoxyCompactItemize}

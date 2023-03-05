@@ -1,0 +1,221 @@
+\hypertarget{classrtype_1_1components_1_1Bouton}{}\doxysection{rtype\+::components\+::Bouton Class Reference}
+\label{classrtype_1_1components_1_1Bouton}\index{rtype::components::Bouton@{rtype::components::Bouton}}
+
+
+This class is the base class for all the bonus in the game.  
+
+
+
+
+{\ttfamily \#include $<$Bouton.\+hpp$>$}
+
+Inheritance diagram for rtype\+::components\+::Bouton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrtype_1_1components_1_1Bouton}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_acd77ec23e0b09e7d988a605d9163a5b0}{Bouton}} (sf\+::\+Color color, std\+::string text, sf\+::\+Vector2f pos, sf\+::\+Vector2f size)
+\begin{DoxyCompactList}\small\item\em Simple funtion to create a Button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_ad778c90d6e967abc58963e8c46416d32}\label{classrtype_1_1components_1_1Bouton_ad778c90d6e967abc58963e8c46416d32}} 
+{\bfseries Bouton} ()
+\begin{DoxyCompactList}\small\item\em Constructor for class Button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a347c5eac80477e0933764d65bd701731}\label{classrtype_1_1components_1_1Bouton_a347c5eac80477e0933764d65bd701731}} 
+{\bfseries $\sim$\+Bouton} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class Button. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a72e515b2009e25c4f42a0e34ae35ac64}{is\+Point\+Inside}} (sf\+::\+Vector2f point) override
+\begin{DoxyCompactList}\small\item\em Function to check if coordinate is on a shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a5ae1a99263e707ad9cdc84dec83e7985}{Draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w) override
+\begin{DoxyCompactList}\small\item\em Override draw. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a833b2c87d6e35f96ea6123db9d26bfc1}{set\+Position}} (sf\+::\+Vector2f n\+Pos)
+\begin{DoxyCompactList}\small\item\em Set Position of an object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a6d9e00da34ff1a42ba70518e15bebe1a}{On\+Leave}} () override
+\begin{DoxyCompactList}\small\item\em Override On\+Leave. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a85568630bad343228aa7d90a62b8ebd4}{On\+Click}} () override
+\begin{DoxyCompactList}\small\item\em Override On\+Click. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a0ae7889a4d7082b5c0976defbda3ca69}{On\+Hover}} () override
+\begin{DoxyCompactList}\small\item\em Override On\+Hover. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Bouton_8hpp_a4b715fdcd6f581e5f209b74dcd5a4574}{STATEBUTTONS}} \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a93d4cae85585fbbb913c2cbc4271acc9}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a13c373949db78e8a2d6f2f55d6539bff}{On\+Click}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a5363194b2742c1217b6bccc03167daba}{On\+Hover}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a9528312cc8d09cf94a13550c9fb4d8a4}{On\+Leave}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a9a7b87f6d0e8e3c15d339aa15727f65c}{Draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w)=0
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_aec9e8ef9ecb571547af4c9a31c77ba7b}{is\+Point\+Inside}} (sf\+::\+Vector2f point)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a5351cbbdcd83c79c7689682db66b9332}\label{classrtype_1_1components_1_1Bouton_a5351cbbdcd83c79c7689682db66b9332}} 
+\mbox{\hyperlink{Bouton_8hpp_a4b715fdcd6f581e5f209b74dcd5a4574}{STATEBUTTONS}} {\bfseries type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}\label{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}} 
+sf\+::\+Rectangle\+Shape {\bfseries r\+Shape}
+\item 
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}\label{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}} 
+sf\+::\+Text {\bfseries text}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the base class for all the bonus in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_acd77ec23e0b09e7d988a605d9163a5b0}\label{classrtype_1_1components_1_1Bouton_acd77ec23e0b09e7d988a605d9163a5b0}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!Bouton@{Bouton}}
+\index{Bouton@{Bouton}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{Bouton()}{Bouton()}}
+{\footnotesize\ttfamily rtype\+::components\+::\+Bouton\+::\+Bouton (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{color,  }\item[{std\+::string}]{text,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{sf\+::\+Vector2f}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Simple funtion to create a Button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & Color of the shape of the button \\
+\hline
+{\em text} & Text write for a button \\
+\hline
+{\em pos} & Position of the button on the screen \\
+\hline
+{\em size} & Size of the button \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a5ae1a99263e707ad9cdc84dec83e7985}\label{classrtype_1_1components_1_1Bouton_a5ae1a99263e707ad9cdc84dec83e7985}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!Draw@{Draw}}
+\index{Draw@{Draw}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void rtype\+::components\+::\+Bouton\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Override draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Windows to draw in \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1components_1_1IButton}{rtype\+::components\+::\+IButton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a93d4cae85585fbbb913c2cbc4271acc9}\label{classrtype_1_1components_1_1Bouton_a93d4cae85585fbbb913c2cbc4271acc9}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!getType@{getType}}
+\index{getType@{getType}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Bouton_8hpp_a4b715fdcd6f581e5f209b74dcd5a4574}{STATEBUTTONS}} rtype\+::components\+::\+Bouton\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the type of the button. 
+
+\begin{DoxyReturn}{Returns}
+Return the state of a button 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a72e515b2009e25c4f42a0e34ae35ac64}\label{classrtype_1_1components_1_1Bouton_a72e515b2009e25c4f42a0e34ae35ac64}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!isPointInside@{isPointInside}}
+\index{isPointInside@{isPointInside}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{isPointInside()}{isPointInside()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bouton\+::is\+Point\+Inside (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Function to check if coordinate is on a shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & Coordinate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a Booleen 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1components_1_1IButton}{rtype\+::components\+::\+IButton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a85568630bad343228aa7d90a62b8ebd4}\label{classrtype_1_1components_1_1Bouton_a85568630bad343228aa7d90a62b8ebd4}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!OnClick@{OnClick}}
+\index{OnClick@{OnClick}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{OnClick()}{OnClick()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bouton\+::\+On\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Override On\+Click. 
+
+\begin{DoxyReturn}{Returns}
+Return a Booleen 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1components_1_1IButton}{rtype\+::components\+::\+IButton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a0ae7889a4d7082b5c0976defbda3ca69}\label{classrtype_1_1components_1_1Bouton_a0ae7889a4d7082b5c0976defbda3ca69}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!OnHover@{OnHover}}
+\index{OnHover@{OnHover}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{OnHover()}{OnHover()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bouton\+::\+On\+Hover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Override On\+Hover. 
+
+
+
+Implements \mbox{\hyperlink{classrtype_1_1components_1_1IButton}{rtype\+::components\+::\+IButton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a6d9e00da34ff1a42ba70518e15bebe1a}\label{classrtype_1_1components_1_1Bouton_a6d9e00da34ff1a42ba70518e15bebe1a}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!OnLeave@{OnLeave}}
+\index{OnLeave@{OnLeave}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{OnLeave()}{OnLeave()}}
+{\footnotesize\ttfamily bool rtype\+::components\+::\+Bouton\+::\+On\+Leave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Override On\+Leave. 
+
+\begin{DoxyReturn}{Returns}
+Return a Booleen 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1components_1_1IButton}{rtype\+::components\+::\+IButton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1Bouton_a833b2c87d6e35f96ea6123db9d26bfc1}\label{classrtype_1_1components_1_1Bouton_a833b2c87d6e35f96ea6123db9d26bfc1}} 
+\index{rtype::components::Bouton@{rtype::components::Bouton}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!rtype::components::Bouton@{rtype::components::Bouton}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void rtype\+::components\+::\+Bouton\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{n\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set Position of an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Pos} & Position to objetc to go \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Bouton_8hpp}{Bouton.\+hpp}}\end{DoxyCompactItemize}

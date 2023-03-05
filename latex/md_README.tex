@@ -1,0 +1,56 @@
+R-\/\+Type is a 2D space shooter game. The goal is to destroy all the enemies and bosses to win the game.\hypertarget{md_README_autotoc_md17}{}\doxysection{Description}\label{md_README_autotoc_md17}
+R-\/\+Type is a 2D space shooter game. The goal is to destroy all the enemies and bosses to win the game. The player can move in all directions and shoot in all directions. The player can also use a special weapon to destroy all the enemies on the screen. The player can also use a shield to protect himself from the enemies\textquotesingle{} bullets. The player can also use a special weapon to destroy all the enemies on the screen. The player can also use a shield to protect himself from the enemies\textquotesingle{} bullets.
+
+Particularities\+:
+\begin{DoxyItemize}
+\item Multiplayer\+: up to 4 player
+\item ...
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md18}{}\doxysection{Getting Started}\label{md_README_autotoc_md18}
+\hypertarget{md_README_autotoc_md19}{}\doxysubsection{Dependencies}\label{md_README_autotoc_md19}
+Languages\+:
+\begin{DoxyItemize}
+\item \href{https://en.cppreference.com/w/cpp/17}{\texttt{ C++17}} -\/ C++17 is the latest version of the C++ programming language, standardized by the International Organization for Standardization (ISO) in 2017.
+\end{DoxyItemize}
+
+Libraries\+:
+\begin{DoxyItemize}
+\item \href{https://www.sfml-dev.org/}{\texttt{ SFML}} -\/ Simple and Fast Multimedia Library is a cross-\/platform multimedia library designed to provide a simple application programming interface (API) to various components of your PC, to ease the development of games and multimedia applications.
+\item \href{https://github.com/Fazanwolf/Skaldi}{\texttt{ Skaldi}} -\/ Skaldi is a simple C++ library to handle TCP \& UDP networking.
+\end{DoxyItemize}
+
+Tools\+:
+\begin{DoxyItemize}
+\item \href{https://git-scm.com/}{\texttt{ Git}} -\/ Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+\item \href{https://cmake.org/}{\texttt{ CMake}} -\/ CMake is an open-\/source, cross-\/platform family of tools designed to build, test and package software.
+\item \href{https://www.doxygen.nl/index.html}{\texttt{ Doxygen}} -\/ Doxygen is a documentation system for C++, C, Java, Objective-\/C, Python, IDL (Corba, Microsoft, and UNO/\+Open\+Office flavors), Fortran, VHDL, PHP, C\#, and to some extent D.
+\item \href{https://www.docker.com/}{\texttt{ Docker}} -\/ Docker is a set of platform as a service (PaaS) products that use OS-\/level virtualization to deliver software in packages called containers.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md20}{}\doxysubsection{Building}\label{md_README_autotoc_md20}
+\hypertarget{md_README_autotoc_md21}{}\doxysubsubsection{Manually}\label{md_README_autotoc_md21}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/B\ build\ -\/S\ .}
+\DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md22}{}\doxysubsubsection{With docker}\label{md_README_autotoc_md22}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Building\ the\ image}
+\DoxyCodeLine{docker\ build\ -\/t\ rtype-\/image\ .}
+\DoxyCodeLine{\#\ Running\ the\ container}
+\DoxyCodeLine{docker\ run\ -\/it\ -\/-\/rm\ -\/-\/name\ rtype\ rtype-\/image}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md23}{}\doxysubsection{Executing program}\label{md_README_autotoc_md23}
+...\hypertarget{md_README_autotoc_md24}{}\doxysection{Help}\label{md_README_autotoc_md24}
+If you have any questions, feel free open an issue on the \href{https://github.com/Fazanwolf/Skaldi/issues}{\texttt{ Git\+Hub repository}}\hypertarget{md_README_autotoc_md25}{}\doxysection{Contributors}\label{md_README_autotoc_md25}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/Fazanwolf}{\texttt{ Fazanwolf}}
+\item \href{https://github.com/gost-byte}{\texttt{ Pierre Cardia}}
+\item \href{https://github.com/JonathanALBC}{\texttt{ Jonathan\+ALBC}}
+\item \href{https://github.com/KnightFaith}{\texttt{ Knight\+Faith}}
+\item \href{https://github.com/theotrp}{\texttt{ Théo TURPIN}}
+\item \href{https://github.com/Yannjoubert}{\texttt{ Yannjoubert}}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md26}{}\doxysection{License}\label{md_README_autotoc_md26}
+This project is licensed under the \mbox{[}MIT License\mbox{]}(LICENSE) -\/ see the LICENSE file for details. 

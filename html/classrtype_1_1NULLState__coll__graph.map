@@ -1,0 +1,6 @@
+<map id="rtype::NULLState" name="rtype::NULLState">
+<area shape="rect" id="node1" title="The class NULLState of the game state." alt="" coords="20,257,145,283"/>
+<area shape="rect" id="node2" href="$classrtype_1_1GameState.html" title="The class of the game state." alt="" coords="19,183,146,208"/>
+<area shape="rect" id="node3" href="$classrtype_1_1IGameState.html" title="The class of the game state." alt="" coords="17,108,148,133"/>
+<area shape="rect" id="node4" href="$classrtype_1_1entities_1_1EntitiesManager.html" title="This class create an entity and set it a sprite, set up the position of the entity and his scale." alt="" coords="5,5,160,45"/>
+</map>

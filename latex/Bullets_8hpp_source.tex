@@ -1,0 +1,73 @@
+\hypertarget{Bullets_8hpp_source}{}\doxysection{Bullets.\+hpp}
+\label{Bullets_8hpp_source}\index{include/Components/Bullets.hpp@{include/Components/Bullets.hpp}}
+\mbox{\hyperlink{Bullets_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Bullets}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ BULLETS\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ BULLETS\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Engine_8hpp}{Engine/Engine.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}math.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1components}{rtype::components}}\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacertype_1_1components_af9e3c51721c56dac8f7e52beb06c6b22}{BulletType}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_af9e3c51721c56dac8f7e52beb06c6b22a366df34495208e06c59c7a8c2bf25c78}{SIMPLE}},\ \textcolor{comment}{//small\ fireball}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_af9e3c51721c56dac8f7e52beb06c6b22a98dbc91e7281d76a2948d3b93d42c29a}{ROCKET}},\ \textcolor{comment}{//rocket}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_af9e3c51721c56dac8f7e52beb06c6b22ac3b4d350b8fbd686d6ebfead6215adf9}{BEAM}},\ \textcolor{comment}{//laser\ beam}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_af9e3c51721c56dac8f7e52beb06c6b22a9c50909558bc2e39a50c933a442a7c87}{NOVA}}\ \textcolor{comment}{//bigass\ fireball}}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1components_1_1Bullets}{Bullets}}\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a4bcf76daf1def5b40a4663dc8ddaad2e}{Bullets}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aaa92aebf953b6113b63b32d052390db9}{\string~Bullets}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ sf::CircleShape\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a9765b683ec295911d61aa8f7aec9bd2e}{CreateBullet}}(sf::Vector2f\ pos);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a0f052d22f5b5f91954ca7ae223710971}{ShootBullet}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ sf::Sprite\ sprite);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_af3019968c88c7d5a2e6bbc3033b82930}{ServerShootBullet}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ sf::Sprite\ sprite);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_ae70a7e92dddf697c777af19ca5efcaf5}{collided}}(sf::FloatRect\ bounds)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ ammo\ :\ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a041b5ae085a8824b2aa00cc18f394c80}{bullets\_list}})}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ammo.getGlobalBounds().intersects(bounds))\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bullets\_list.remove(ammo);}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a555be70da0be170c4a8b93a029fc8c61}{drawBullets}}(sf::Window\ \&win);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aa3ee2b45a6c28fb0102967a18146ab8e}{update}}(sf::FloatRect\ bounds);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ SetBullets(float\ radius,\ sf::Vector2f\ velocity,\ float\ maxSpeed);}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ std::list<sf::CircleShape>\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aefefb2de136a97a473b078afc4817f16}{getBulletList}}()\ \{\textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a041b5ae085a8824b2aa00cc18f394c80}{bullets\_list}};\};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Clock\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a9f6b414f1ca22c7e32e4f4317ec76a85}{selfClock}};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Time\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a755b8be69095fb36a1ea8b0e99b81d2f}{mtime}};}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ std::int8\_t\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a85e1085080d289b4405a67af3e3b578e}{ownerID}};}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ std::list<sf::CircleShape>\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a041b5ae085a8824b2aa00cc18f394c80}{bullets\_list}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_ac8ffdfa716378f5636522573b46c1d16}{bullet\_velocity}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a83b692a25c3c366d5d1a97571cadfb07}{bullet\_pos}};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets_a8a6a5d354475d4e720c01ac583c6dda6}{bullet\_maxSpeed}};}
+\DoxyCodeLine{00134\ \ \ \ \ \};}
+\DoxyCodeLine{00135\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !BULLETS\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

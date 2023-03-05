@@ -1,0 +1,13 @@
+digraph "rtype::engine::Window::Draw"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="rtype::engine::Window\l::Draw",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Function to draw on the windows."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="rtype::components::\lBouton::Draw",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1components_1_1Bouton.html#a5ae1a99263e707ad9cdc84dec83e7985",tooltip="Override draw."];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="rtype::game::SGamePlay\l::draw",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1game_1_1SGamePlay.html#af5319ffc9888cf513ca2e77753208f39",tooltip="Draw on the window."];
+}

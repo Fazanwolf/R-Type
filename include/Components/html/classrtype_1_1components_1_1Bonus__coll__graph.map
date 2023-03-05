@@ -1,0 +1,3 @@
+<map id="rtype::components::Bonus" name="rtype::components::Bonus">
+<area shape="rect" id="node1" title="This class is the base class for all the bonus in the game." alt="" coords="5,5,144,112"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="rtype::entities::EntitiesManager::getPId" name="rtype::entities::EntitiesManager::getPId">
+<area shape="rect" id="node1" title="This function is used to get the player ID." alt="" coords="224,5,379,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#aba4827ee31e04e88e79d5cba3f02a1ff" title="Get the Local Player I D object." alt="" coords="5,5,176,45"/>
+</map>

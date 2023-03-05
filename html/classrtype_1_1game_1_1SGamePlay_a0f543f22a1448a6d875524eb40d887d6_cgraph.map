@@ -1,0 +1,6 @@
+<map id="rtype::game::SGamePlay::serverEvents" name="rtype::game::SGamePlay::serverEvents">
+<area shape="rect" id="node1" title=" " alt="" coords="5,69,176,109"/>
+<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88" title="This function is used to get the sprite of an entity." alt="" coords="234,5,389,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1components_1_1Bullets.html#af3019968c88c7d5a2e6bbc3033b82930" title="Function to shoot a bullet for the server." alt="" coords="224,69,399,109"/>
+<area shape="rect" id="node4" href="$classStringUtils.html#aaced9fe8e9f4888632792cff439e9497" title="Split a string." alt="" coords="254,134,369,159"/>
+</map>

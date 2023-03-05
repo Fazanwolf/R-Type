@@ -1,0 +1,5 @@
+<map id="rtype::entities::EntitiesManager::NewEntity" name="rtype::entities::EntitiesManager::NewEntity">
+<area shape="rect" id="node1" title="Create an entity with the fonction CreateEntities with an ID, this fonction is used for multiplayer g..." alt="" coords="443,5,597,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#ad9f065a7c17c69786c5efa840795fa89" title="Init the game state." alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1game_1_1SGamePlay.html#a608f78704a99d59f04dd2467fa02405e" title=" " alt="" coords="224,33,395,73"/>
+</map>

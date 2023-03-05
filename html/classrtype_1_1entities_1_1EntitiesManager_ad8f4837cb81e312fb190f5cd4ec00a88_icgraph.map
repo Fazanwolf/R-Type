@@ -1,0 +1,10 @@
+<map id="rtype::entities::EntitiesManager::getSprite" name="rtype::entities::EntitiesManager::getSprite">
+<area shape="rect" id="node1" title="This function is used to get the sprite of an entity." alt="" coords="443,133,597,173"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#af5319ffc9888cf513ca2e77753208f39" title="Draw on the window." alt="" coords="224,5,395,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1game_1_1SGamePlay.html#a0a73ef31be41ff4af9cab9d2850d6cf4" title="Get the Input." alt="" coords="224,69,395,109"/>
+<area shape="rect" id="node5" href="$classrtype_1_1game_1_1SGamePlay.html#a3103c94497c54e5723275d96edc4168d" title=" " alt="" coords="224,133,395,173"/>
+<area shape="rect" id="node7" href="$classrtype_1_1game_1_1SGamePlay.html#a0f543f22a1448a6d875524eb40d887d6" title=" " alt="" coords="224,197,395,237"/>
+<area shape="rect" id="node8" href="$classrtype_1_1game_1_1SGamePlay.html#ab1b356c5159cb47acf6e121ec4f336a9" title="Update the game state." alt="" coords="224,261,395,301"/>
+<area shape="rect" id="node4" href="$classrtype_1_1game_1_1SGamePlay.html#a59cd95121c1bc67b23157f2fe1529331" title="Handle the event." alt="" coords="5,69,176,109"/>
+<area shape="rect" id="node6" href="$classrtype_1_1game_1_1SGamePlay.html#a221313b876696334d7f371a9ace54ad5" title="Handle the event." alt="" coords="5,133,176,173"/>
+</map>

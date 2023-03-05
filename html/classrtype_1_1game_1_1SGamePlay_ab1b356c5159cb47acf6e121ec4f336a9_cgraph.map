@@ -1,0 +1,5 @@
+<map id="rtype::game::SGamePlay::update" name="rtype::game::SGamePlay::update">
+<area shape="rect" id="node1" title="Update the game state." alt="" coords="5,37,176,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88" title="This function is used to get the sprite of an entity." alt="" coords="224,5,379,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1components_1_1Bullets.html#aa3ee2b45a6c28fb0102967a18146ab8e" title="Function to update the bullet." alt="" coords="232,69,371,109"/>
+</map>

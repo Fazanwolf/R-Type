@@ -1,0 +1,68 @@
+\hypertarget{Properties_8hpp_source}{}\doxysection{Properties.\+hpp}
+\label{Properties_8hpp_source}\index{include/Entities/Properties.hpp@{include/Entities/Properties.hpp}}
+\mbox{\hyperlink{Properties_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Properties}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ PROPERTIES\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ PROPERTIES\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Engine_8hpp}{Engine/Engine.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1entities}{rtype::entities}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1entities_1_1Entity}{Entity}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Default\ constructor}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a1ce5ba5e741806868a0291ecabdc0bc0}{Entity}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Default\ destructor}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a10d1e501858d08865ba31105159cf770}{\string~Entity}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Return\ the\ position\ of\ the\ entity\ in\ 2D}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ sf::Vector2f\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_aaac1f031c55cc29441c2b67944ad9d15}{getPos}}(\textcolor{keywordtype}{void})\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Return\ the\ X\ position\ of\ the\ entity}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_ad35e0d477a8e28706b5ce1feb0151cd4}{getX}}(\textcolor{keywordtype}{void})\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Return\ the\ Y\ position\ of\ the\ entity}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a2e99b4b740fe70a1fff1052c43fe4c6c}{getY}}(\textcolor{keywordtype}{void})\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Get\ the\ current\ Velocity\ of\ the\ entity}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a5181881c317aebfcdc4e6b97fd01c5db}{getVelocity}}(\textcolor{keywordtype}{void})\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Set\ the\ Position\ of\ the\ entity}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @param\ Position\ of\ the\ entity}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a219411e35392dedf9f9d2e75839ee552}{setPosition}}(sf::Vector2f\ \textcolor{keyword}{const}\ \&position)\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @brief\ Set\ the\ Velocity\ of\ the\ entity}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ *\ @param\ Velocity\ of\ the\ entity}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_aa6dede217a5afdd68a65ca602b9fe361}{setVelocity}}(sf::Vector2f\ \textcolor{keyword}{const}\ \&velocity)\ =\ 0;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_af39fb74c5631801f23813274c20150c2}{e\_rect}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a734dd47d5956c845906ebd0cd4d50c64}{e\_asset}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_aea40632676bbbbf08246cb20f75849b8}{e\_position}};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a16d95b5e2d17d4bf2800ed0b9bc480f6}{e\_health}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1entities_1_1Entity_a4ea34dd8f4f894aa9e1ca96deba9c0e2}{e\_maxBonus}};}
+\DoxyCodeLine{00059\ \ \ \ \ \};}
+\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !PROPERTIES\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

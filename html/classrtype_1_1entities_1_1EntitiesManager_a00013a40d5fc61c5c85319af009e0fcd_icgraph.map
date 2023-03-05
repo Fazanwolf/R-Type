@@ -1,0 +1,4 @@
+<map id="rtype::entities::EntitiesManager::getIDs" name="rtype::entities::EntitiesManager::getIDs">
+<area shape="rect" id="node1" title="This function is used to get the list of all the entities." alt="" coords="224,5,379,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#af5319ffc9888cf513ca2e77753208f39" title="Draw on the window." alt="" coords="5,5,176,45"/>
+</map>

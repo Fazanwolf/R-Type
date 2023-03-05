@@ -1,0 +1,10 @@
+digraph "rtype::components::Bouton"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="rtype::components::\lBouton",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This class is the base class for all the bonus in the game."];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="rtype::components::\lIButton",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classrtype_1_1components_1_1IButton.html",tooltip="This class is the base class for all the button interface."];
+}

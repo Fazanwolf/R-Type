@@ -1,0 +1,4 @@
+<map id="rtype::engine::Event::GetMousePos" name="rtype::engine::Event::GetMousePos">
+<area shape="rect" id="node1" title="Function to get the position of the mouse." alt="" coords="225,5,364,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1GameState.html#aefa431667bf7987b1633fd43eff2f64f" title="Handle the event." alt="" coords="5,5,177,45"/>
+</map>

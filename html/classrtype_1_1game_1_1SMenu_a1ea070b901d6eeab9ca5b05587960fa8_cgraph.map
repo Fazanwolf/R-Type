@@ -1,0 +1,5 @@
+<map id="rtype::game::SMenu::draw" name="rtype::game::SMenu::draw">
+<area shape="rect" id="node1" title="Draw the menu." alt="" coords="5,37,147,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1engine_1_1Window.html#aeefb5e840f6aebf661d73d9717502141" title="Function to clear a window." alt="" coords="195,5,348,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1engine_1_1Window.html#a18775971083ab9b5d395f3598aa8d6b7" title="Function to render a window." alt="" coords="195,69,348,109"/>
+</map>

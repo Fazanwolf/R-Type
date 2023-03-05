@@ -1,0 +1,6 @@
+<map id="rtype::game::SGamePlay::init" name="rtype::game::SGamePlay::init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,37,176,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#a608f78704a99d59f04dd2467fa02405e" title=" " alt="" coords="224,5,395,45"/>
+<area shape="rect" id="node4" href="$classrtype_1_1entities_1_1EntitiesManager.html#a93a552058ac4de6601ada4a8d3acdbeb" title="This function is used to set the player ID." alt="" coords="232,69,387,109"/>
+<area shape="rect" id="node3" href="$classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30" title="Create an entity with the fonction CreateEntities with an ID, this fonction is used for multiplayer g..." alt="" coords="443,5,597,45"/>
+</map>

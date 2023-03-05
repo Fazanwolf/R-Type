@@ -1,0 +1,25 @@
+digraph "include/system/gameStates/SGamePlay.hpp"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="include/system/gameStates\l/SGamePlay.hpp",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="include/system/gameStates\l/States.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$States_8hpp.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="include/system/GameEngine.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$GameEngine_8hpp.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="include/system/gameStates\l/IGameState.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$IGameState_8hpp.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="include/system/gameStates\l/Example/SGamePlay_Duck.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$SGamePlay__Duck_8hpp.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="include/system/gameStates\l/Example/SMenu_Duck.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$SMenu__Duck_8hpp.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="steelblue1",style="solid"];
+  Node4 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="include/system/gameStates\l/SMenu.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$SMenu_8hpp.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node4 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node4 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="include/system/gameStates\l/old_SGamePlay copy.hpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$old__SGamePlay_01copy_8hpp.html",tooltip=" "];
+}

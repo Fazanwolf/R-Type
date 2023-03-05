@@ -1,0 +1,11 @@
+digraph "rtype::components::Bullets::ServerShootBullet"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="rtype::components::\lBullets::ServerShootBullet",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Function to shoot a bullet for the server."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="rtype::game::SGamePlay\l::serverEvents",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1game_1_1SGamePlay.html#a0f543f22a1448a6d875524eb40d887d6",tooltip=" "];
+}

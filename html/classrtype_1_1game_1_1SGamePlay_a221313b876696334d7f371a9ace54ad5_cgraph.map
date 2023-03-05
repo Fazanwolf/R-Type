@@ -1,0 +1,7 @@
+<map id="rtype::game::SGamePlay::handleEvent" name="rtype::game::SGamePlay::handleEvent">
+<area shape="rect" id="node1" title="Handle the event." alt="" coords="5,69,176,109"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#a3103c94497c54e5723275d96edc4168d" title=" " alt="" coords="224,69,395,109"/>
+<area shape="rect" id="node3" href="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88" title="This function is used to get the sprite of an entity." alt="" coords="450,5,605,45"/>
+<area shape="rect" id="node4" href="$classrtype_1_1engine_1_1Event.html#aaaa10d73c15299d020592aadb04a665b" title="Function to make an sprite movable." alt="" coords="456,69,599,109"/>
+<area shape="rect" id="node5" href="$classrtype_1_1engine_1_1Event.html#a40d262e1a6d44b1d8c093de750b6b15a" title="Function to make an sprite movable (bis)" alt="" coords="443,133,612,173"/>
+</map>

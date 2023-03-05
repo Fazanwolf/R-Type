@@ -1,0 +1,76 @@
+\hypertarget{IGameState_8hpp_source}{}\doxysection{IGame\+State.\+hpp}
+\label{IGameState_8hpp_source}\index{include/system/gameStates/IGameState.hpp@{include/system/gameStates/IGameState.hpp}}
+\mbox{\hyperlink{IGameState_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IGameState}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntitiesManager_8hpp}{Entities/EntitiesManager.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{String_8hpp}{Utils/String.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GameEngine_8hpp}{system/GameEngine.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ IGAMESTATE\_HPP\_}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ IGAMESTATE\_HPP\_}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }GameEngine;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype}{rtype}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }GameEngine;}
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1IGameState}{IGameState}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}{init}}()\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}{update}}()\ =\ 0;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ void\ clear()\ =\ 0;}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ void\ pause()\ =\ 0;}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ virtual\ void\ resume()\ =\ 0;}}
+\DoxyCodeLine{00057\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w,\ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \&ev)\ =\ 0;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype::GameEngine}}\ *g)\ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}{draw}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w)\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{entities::EntitiesManager}}\ \mbox{\hyperlink{classrtype_1_1IGameState_a1887ab1b681a3254d8ceead76e978ae5}{EManager}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00080\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1GameState}{GameState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrtype_1_1IGameState}{IGameState}}\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classrtype_1_1GameState_a247860fe7ca26715b134e06d524e6a76}{getName}}()\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}{name}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameState_af01bcf061ab7881efe5b6af4300d4aee}{GameState}}()\ \{\};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameState_a36f50e344165eb744ed418c724bfb3ec}{\string~GameState}}()\ \{\};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1GameState_addd2de9d06b7fc31ec72d8b606a8015f}{init}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return};\}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1GameState_ab74eef592005aadecf18c9b8851d4c33}{update}}()\textcolor{keyword}{\ override\ }\{\textcolor{keywordflow}{return};\}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1GameState_aa3540d88b205a3be32419d84e1b85be2}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype::GameEngine}}\ *g)\textcolor{keyword}{\ override\ }\{\ g;\ \textcolor{keywordflow}{return}\ -\/1;\ \};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1GameState_aefa431667bf7987b1633fd43eff2f64f}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w,\ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \&ev)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ w;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Event\ ed;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ ev.\mbox{\hyperlink{classrtype_1_1engine_1_1Event_aeb689e6f77860e60aa993544b2479787}{GetMousePos}}(ed);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1GameState_a0c8ba731cfe6ac2ec9b51b508faa30b3}{draw}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00136\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ w;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}{name}};}
+\DoxyCodeLine{00142\ \};}
+\DoxyCodeLine{00147\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1NULLState}{NULLState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrtype_1_1GameState}{GameState}}}
+\DoxyCodeLine{00148\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1NULLState_a6d670e46fc6722d90988695559648be2}{NULLState}}()\ \{\};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1NULLState_a82c41f48f2e24fa8555dd75549fa4b6d}{\string~NULLState}}()\ \{\};}
+\DoxyCodeLine{00160\ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !IGAMESTATE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,303 @@
+\hypertarget{classrtype_1_1engine_1_1Event}{}\doxysection{rtype\+::engine\+::Event Class Reference}
+\label{classrtype_1_1engine_1_1Event}\index{rtype::engine::Event@{rtype::engine::Event}}
+
+
+This class is the base class for all the \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}}.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrtype_1_1engine_1_1Event_afed7b4fc95b0b1a94aab536954fb63cb}{Event}} (sk\+::\+Skaldi$<$ sk\+::client\+::\+UDP, sk\+::server\+::\+UDP $>$ $\ast$\mbox{\hyperlink{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}{clt}})
+\begin{DoxyCompactList}\small\item\em Constructor for class Button to set the server and the client. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1engine_1_1Event_ab7fd2c4bc2f64f9a7dd347a58e015d96}{$\sim$\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a19b69041b38d57b8dd23c5f7ef438e74}{handle\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a2e28cbceb07ec12a8ca625bd07a62693}{handle\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Function to handle input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a448fe413712fcade282d50f44eaeff1a}{update}} ()
+\begin{DoxyCompactList}\small\item\em Function to update event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{Event\+Type}} \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a57f2a5b4754c343a2f919a91c4a09e40}{Server\+Player\+Action}} (sf\+::\+Transformable \&obj\+\_\+pos, \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{Event\+Type}} action)
+\begin{DoxyCompactList}\small\item\em Function for the server to return an event type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a1e1b3e798ad314803882191a0f54e14a}{Make\+Object\+Movable}} (sf\+::\+Transformable \&obj\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Function to make an object movable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a371caa57d819462b4b83ea17bd3f5a58}{Make\+Object\+Clickable}} (sf\+::\+Rectangle\+Shape button)
+\begin{DoxyCompactList}\small\item\em Function to make an object clickable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_aaaa10d73c15299d020592aadb04a665b}{Make\+Sprite\+Movable}} (sf\+::\+Sprite \&asset)
+\begin{DoxyCompactList}\small\item\em Function to make an sprite movable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a40d262e1a6d44b1d8c093de750b6b15a}{Make\+Sprite\+Movable\+\_\+\+Bis}} (sf\+::\+Sprite \&asset)
+\begin{DoxyCompactList}\small\item\em Function to make an sprite movable (bis) \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{classrtype_1_1engine_1_1Event_aeb689e6f77860e60aa993544b2479787}{Get\+Mouse\+Pos}} (sf\+::\+Render\+Window \&w)
+\begin{DoxyCompactList}\small\item\em Function to get the position of the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a2283f597b24064d9b46ea90fe3cfbc9c}{Get\+Mouse\+Pos}} (sf\+::\+Event event)
+\begin{DoxyCompactList}\small\item\em Function to get the position of the mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_ae65fc2d611dddfb8890309926ccb9adf}{Get\+Mouse\+Pressed}} (sf\+::\+Event event)
+\begin{DoxyCompactList}\small\item\em Function to know if the mouse pressed. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classrtype_1_1engine_1_1Event_abb10157a6c064afc9725e43df0577189}{get\+Client\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Function to get the client buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Event_ae699badaf77aa6e3c5dda3452b5ba05a}{send\+Message}} (std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Function to know send a message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ std\+::string $>$ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a6a03fa02926b32585c3ac151fa6c6831}{server\+\_\+updates}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classrtype_1_1engine_1_1Event_adeda6ad71c3d8ddbdb6a246aa34e24c9}{velocity}}
+\item 
+sk\+::\+Skaldi$<$ sk\+::client\+::\+UDP, sk\+::server\+::\+UDP $>$ $\ast$ \mbox{\hyperlink{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}{clt}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the base class for all the \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_afed7b4fc95b0b1a94aab536954fb63cb}\label{classrtype_1_1engine_1_1Event_afed7b4fc95b0b1a94aab536954fb63cb}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!Event@{Event}}
+\index{Event@{Event}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}}
+{\footnotesize\ttfamily rtype\+::engine\+::\+Event\+::\+Event (\begin{DoxyParamCaption}\item[{sk\+::\+Skaldi$<$ sk\+::client\+::\+UDP, sk\+::server\+::\+UDP $>$ $\ast$}]{clt }\end{DoxyParamCaption})}
+
+
+
+Constructor for class Button to set the server and the client. 
+
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_ab7fd2c4bc2f64f9a7dd347a58e015d96}\label{classrtype_1_1engine_1_1Event_ab7fd2c4bc2f64f9a7dd347a58e015d96}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!````~Event@{$\sim$Event}}
+\index{````~Event@{$\sim$Event}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{$\sim$Event()}{~Event()}}
+{\footnotesize\ttfamily rtype\+::engine\+::\+Event\+::$\sim$\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for class \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_abb10157a6c064afc9725e43df0577189}\label{classrtype_1_1engine_1_1Event_abb10157a6c064afc9725e43df0577189}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!getClientBuffer@{getClientBuffer}}
+\index{getClientBuffer@{getClientBuffer}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{getClientBuffer()}{getClientBuffer()}}
+{\footnotesize\ttfamily std\+::string rtype\+::engine\+::\+Event\+::get\+Client\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to get the client buffer. 
+
+\begin{DoxyReturn}{Returns}
+Return the client buffer in a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a2283f597b24064d9b46ea90fe3cfbc9c}\label{classrtype_1_1engine_1_1Event_a2283f597b24064d9b46ea90fe3cfbc9c}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!GetMousePos@{GetMousePos}}
+\index{GetMousePos@{GetMousePos}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{GetMousePos()}{GetMousePos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::\+Get\+Mouse\+Pos (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event }\end{DoxyParamCaption})}
+
+
+
+Function to get the position of the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_aeb689e6f77860e60aa993544b2479787}\label{classrtype_1_1engine_1_1Event_aeb689e6f77860e60aa993544b2479787}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!GetMousePos@{GetMousePos}}
+\index{GetMousePos@{GetMousePos}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{GetMousePos()}{GetMousePos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::\+Vector2f rtype\+::engine\+::\+Event\+::\+Get\+Mouse\+Pos (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{w }\end{DoxyParamCaption})}
+
+
+
+Function to get the position of the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \mbox{\hyperlink{classrtype_1_1engine_1_1Window}{Window}} of the game\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the mouse in a Vector2f 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_ae65fc2d611dddfb8890309926ccb9adf}\label{classrtype_1_1engine_1_1Event_ae65fc2d611dddfb8890309926ccb9adf}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!GetMousePressed@{GetMousePressed}}
+\index{GetMousePressed@{GetMousePressed}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{GetMousePressed()}{GetMousePressed()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::\+Get\+Mouse\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Event}]{event }\end{DoxyParamCaption})}
+
+
+
+Function to know if the mouse pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}} class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a19b69041b38d57b8dd23c5f7ef438e74}\label{classrtype_1_1engine_1_1Event_a19b69041b38d57b8dd23c5f7ef438e74}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::handle\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle event. 
+
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a2e28cbceb07ec12a8ca625bd07a62693}\label{classrtype_1_1engine_1_1Event_a2e28cbceb07ec12a8ca625bd07a62693}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to handle input. 
+
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a371caa57d819462b4b83ea17bd3f5a58}\label{classrtype_1_1engine_1_1Event_a371caa57d819462b4b83ea17bd3f5a58}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!MakeObjectClickable@{MakeObjectClickable}}
+\index{MakeObjectClickable@{MakeObjectClickable}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{MakeObjectClickable()}{MakeObjectClickable()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::\+Make\+Object\+Clickable (\begin{DoxyParamCaption}\item[{sf\+::\+Rectangle\+Shape}]{button }\end{DoxyParamCaption})}
+
+
+
+Function to make an object clickable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Rectangle shape of a button \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a1e1b3e798ad314803882191a0f54e14a}\label{classrtype_1_1engine_1_1Event_a1e1b3e798ad314803882191a0f54e14a}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!MakeObjectMovable@{MakeObjectMovable}}
+\index{MakeObjectMovable@{MakeObjectMovable}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{MakeObjectMovable()}{MakeObjectMovable()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::\+Make\+Object\+Movable (\begin{DoxyParamCaption}\item[{sf\+::\+Transformable \&}]{obj\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Function to make an object movable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+\_\+pos} & Position of the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_aaaa10d73c15299d020592aadb04a665b}\label{classrtype_1_1engine_1_1Event_aaaa10d73c15299d020592aadb04a665b}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!MakeSpriteMovable@{MakeSpriteMovable}}
+\index{MakeSpriteMovable@{MakeSpriteMovable}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{MakeSpriteMovable()}{MakeSpriteMovable()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::\+Make\+Sprite\+Movable (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite \&}]{asset }\end{DoxyParamCaption})}
+
+
+
+Function to make an sprite movable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & Asset to move \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a40d262e1a6d44b1d8c093de750b6b15a}\label{classrtype_1_1engine_1_1Event_a40d262e1a6d44b1d8c093de750b6b15a}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!MakeSpriteMovable\_Bis@{MakeSpriteMovable\_Bis}}
+\index{MakeSpriteMovable\_Bis@{MakeSpriteMovable\_Bis}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{MakeSpriteMovable\_Bis()}{MakeSpriteMovable\_Bis()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::\+Make\+Sprite\+Movable\+\_\+\+Bis (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite \&}]{asset }\end{DoxyParamCaption})}
+
+
+
+Function to make an sprite movable (bis) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & Asset to move \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_ae699badaf77aa6e3c5dda3452b5ba05a}\label{classrtype_1_1engine_1_1Event_ae699badaf77aa6e3c5dda3452b5ba05a}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::send\+Message (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to know send a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to send \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a57f2a5b4754c343a2f919a91c4a09e40}\label{classrtype_1_1engine_1_1Event_a57f2a5b4754c343a2f919a91c4a09e40}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!ServerPlayerAction@{ServerPlayerAction}}
+\index{ServerPlayerAction@{ServerPlayerAction}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{ServerPlayerAction()}{ServerPlayerAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{Event\+Type}} rtype\+::engine\+::\+Event\+::\+Server\+Player\+Action (\begin{DoxyParamCaption}\item[{sf\+::\+Transformable \&}]{obj\+\_\+pos,  }\item[{\mbox{\hyperlink{namespacertype_1_1engine_a5278403770a686a1cffb33e88233a514}{Event\+Type}}}]{action }\end{DoxyParamCaption})}
+
+
+
+Function for the server to return an event type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+\_\+pos} & Position of the object \\
+\hline
+{\em action} & Action to do\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return an event type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a448fe413712fcade282d50f44eaeff1a}\label{classrtype_1_1engine_1_1Event_a448fe413712fcade282d50f44eaeff1a}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!update@{update}}
+\index{update@{update}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Event\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to update event. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}\label{classrtype_1_1engine_1_1Event_a5747bd59e26e2ad2328c004f7a95d8b9}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!clt@{clt}}
+\index{clt@{clt}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{clt}{clt}}
+{\footnotesize\ttfamily sk\+::\+Skaldi$<$sk\+::client\+::\+UDP, sk\+::server\+::\+UDP$>$$\ast$ rtype\+::engine\+::\+Event\+::clt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_a6a03fa02926b32585c3ac151fa6c6831}\label{classrtype_1_1engine_1_1Event_a6a03fa02926b32585c3ac151fa6c6831}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!server\_updates@{server\_updates}}
+\index{server\_updates@{server\_updates}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{server\_updates}{server\_updates}}
+{\footnotesize\ttfamily std\+::queue$<$std\+::string$>$ rtype\+::engine\+::\+Event\+::server\+\_\+updates}
+
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Event_adeda6ad71c3d8ddbdb6a246aa34e24c9}\label{classrtype_1_1engine_1_1Event_adeda6ad71c3d8ddbdb6a246aa34e24c9}} 
+\index{rtype::engine::Event@{rtype::engine::Event}!velocity@{velocity}}
+\index{velocity@{velocity}!rtype::engine::Event@{rtype::engine::Event}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily float rtype\+::engine\+::\+Event\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Engine/\mbox{\hyperlink{Event_8hpp}{Event.\+hpp}}\end{DoxyCompactItemize}

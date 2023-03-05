@@ -1,0 +1,144 @@
+\hypertarget{GameEngine_8hpp_source}{}\doxysection{Game\+Engine.\+hpp}
+\label{GameEngine_8hpp_source}\index{include/system/GameEngine.hpp@{include/system/GameEngine.hpp}}
+\mbox{\hyperlink{GameEngine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ GameEngine}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{States_8hpp}{gameStates/States.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \#include\ <Skaldi.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ GAMEENGINE\_HPP\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ GAMEENGINE\_HPP\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype}{rtype}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2}{STATES}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a8b75f488ee3d8b854b0893f5ee4cb028}{PLAY}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2aaad58ee4ccb53268ce2141a4f0c96e1e}{QUIT}},\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a695598a291f3bfea01ea8b9e679b3c5a}{OPTION}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a5787388635c27b0135968edc85cbda46}{MENU}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a2a75a61d44e7e5390aab4c0145272f4e}{LOBBY}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2ae4f4f7fdb84343ebe86e244006c89e5e}{WELCOME}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a4f2f1aa335c09861b55a6d84aa38e87e}{NONE}}}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Base,\ \textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacertype_a97a20cd5d52664415aecbe2da3046c42}{instanceof}}(\textcolor{keyword}{const}\ T\ *ptr)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{dynamic\_cast<}\textcolor{keyword}{const\ }Base*\textcolor{keyword}{>}(ptr)\ !=\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1GameEngine}{GameEngine}}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_a242d1f0cf1172b2a40081897c6c0a523}{GameEngine}}()}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_abd89a4cb369cdae2230e906eac434d58}{\string~GameEngine}}()}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1GameEngine_a8c29754cf5453367aace862df5e828c6}{init}}()}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}{win}}.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_ae49c0b10050f91bf937687831f4741f9}{CreateWindow}}(\{920,\ 620\},\ \textcolor{stringliteral}{"{}R-\/Type"{}});}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ event\ =\ engine::Event(this-\/>clt);}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::string\ tmp\ =\ clt-\/>client-\/>getBuffer();}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (!tmp.empty())\ std::cout<<"{}PID\ ?\ "{}<<tmp<<std::endl;}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//done}}
+\DoxyCodeLine{00084\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameState}{GameState}}\ *\mbox{\hyperlink{classrtype_1_1GameEngine_a8447f3579007aab3f3c27718d0dba4be}{createState}}(\textcolor{keywordtype}{int}\ state)}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (state)}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a8b75f488ee3d8b854b0893f5ee4cb028}{STATES::PLAY}}\ :}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}PLAY"{}}<<std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay}{rtype::game::SGamePlay}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ isRunning\ =\ false;}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ exit(0);}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ break;}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2aaad58ee4ccb53268ce2141a4f0c96e1e}{STATES::QUIT}}\ :}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}QUIT"{}}<<std::endl;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}{isRunning}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a695598a291f3bfea01ea8b9e679b3c5a}{STATES::OPTION}}\ :}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2ae4f4f7fdb84343ebe86e244006c89e5e}{STATES::WELCOME}}\ :}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a5787388635c27b0135968edc85cbda46}{STATES::MENU}}\ :}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}MENU"{}}<<std::endl;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classrtype_1_1game_1_1SMenu}{rtype::game::SMenu}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a2a75a61d44e7e5390aab4c0145272f4e}{STATES::LOBBY}}\ :}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classrtype_1_1NULLState}{rtype::NULLState}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1GameEngine_a2765771a67fd0413c06adf70d63f80b2}{loadState}}(\mbox{\hyperlink{classrtype_1_1GameState}{GameState}}\ *new\_state)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.push(new\_state);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}loadstate"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.empty())\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.size()\ >\ 1)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.pop();}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.front()-\/>init();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.front()-\/>getName()\ <<\ std::endl;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}{isRunning}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ runState(GameState\ *state)}}
+\DoxyCodeLine{00141\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1GameEngine_a3b9fa539d5aa4d1d5344b8f0d54aaa04}{runState}}(\textcolor{keywordtype}{int}\ state)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (state\ !=\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a4f2f1aa335c09861b55a6d84aa38e87e}{STATES::NONE}})\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_a2765771a67fd0413c06adf70d63f80b2}{loadState}}(\mbox{\hyperlink{classrtype_1_1GameEngine_a8447f3579007aab3f3c27718d0dba4be}{createState}}(state));}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ swapState\ =\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a4f2f1aa335c09861b55a6d84aa38e87e}{STATES::NONE}};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}{isRunning}}\ \&\&\ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}{win}}.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7df057835a5fe3673614790ffb5d65c1}{IsOpen}}())\ \{}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.empty())\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ swapState\ =\ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.front()-\/>handleEvent(\mbox{\hyperlink{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}{win}},\ \mbox{\hyperlink{classrtype_1_1GameEngine_a435dae9d701d85be173ee68f0a2b9730}{event}});}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ swapState\ =\ this-\/>states.front()-\/>handleEvent(this);}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout<<swapState<<std::endl;}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (swapState\ ==\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2aaad58ee4ccb53268ce2141a4f0c96e1e}{STATES::QUIT}})\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_af1081200de81a574a8349e5cf332c11e}{setIsRunning}}(\textcolor{keyword}{false});\ \ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (swapState\ !=\ \mbox{\hyperlink{namespacertype_adb8a61cb54691e579bf465f8f442faf2a4f2f1aa335c09861b55a6d84aa38e87e}{STATES::NONE}})\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}runNew\(\backslash\)n"{}};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1GameEngine_a3b9fa539d5aa4d1d5344b8f0d54aaa04}{runState}}(swapState);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.front()-\/>update();}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}2"{}\ <<\ std::endl;}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}}.front()-\/>draw(this-\/>\mbox{\hyperlink{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}{win}});}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout\ <<\ "{}3"{}\ <<\ std::endl;}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1GameEngine_a7eadbcedbe2f4680649bb2e6bb04f4dd}{getIsRunning}}()\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}{isRunning}};\}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1GameEngine_af1081200de81a574a8349e5cf332c11e}{setIsRunning}}(\textcolor{keywordtype}{bool}\ state)\ \{\mbox{\hyperlink{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}{isRunning}}\ =\ state;\}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Window}{engine::Window}}\ \mbox{\hyperlink{classrtype_1_1GameEngine_a2e82593867b975713a75849ce52aecf5}{win}};}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ STATES\ gState;}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \textcolor{keyword}{event}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ std::queue<std::string>\ \mbox{\hyperlink{classrtype_1_1GameEngine_a187773f036a044621ef959cefcff515e}{server\_updates}};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ sk::Skaldi<sk::client::UDP,\ sk::server::UDP>\ *clt;}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1GameEngine_abc0b780be87b425f8312319685106461}{isRunning}};}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ GameEngine\ self()\ \{return\ *this\};}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ std::queue<GameState*>\ \mbox{\hyperlink{classrtype_1_1GameEngine_ad70895e55279595f870009578bf202ae}{states}};}
+\DoxyCodeLine{00193\ \ \ \ \ \};}
+\DoxyCodeLine{00194\ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !GAMEENGINE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="rtype::game::SMenu::handleEvent" name="rtype::game::SMenu::handleEvent">
+<area shape="rect" id="node1" title="Handle the events of the menu." alt="" coords="5,5,147,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1engine_1_1Window.html#a18775971083ab9b5d395f3598aa8d6b7" title="Function to render a window." alt="" coords="195,5,348,45"/>
+</map>

@@ -1,0 +1,15 @@
+digraph "rtype::game::SGamePlay::init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="rtype::game::SGamePlay\l::init",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="rtype::game::SGamePlay\l::init_base",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1game_1_1SGamePlay.html#a608f78704a99d59f04dd2467fa02405e",tooltip=" "];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="rtype::entities::Entities\lManager::NewEntity",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30",tooltip="Create an entity with the fonction CreateEntities with an ID, this fonction is used for multiplayer g..."];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="rtype::entities::Entities\lManager::setPId",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1entities_1_1EntitiesManager.html#a93a552058ac4de6601ada4a8d3acdbeb",tooltip="This function is used to set the player ID."];
+}

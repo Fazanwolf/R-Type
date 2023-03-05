@@ -1,0 +1,5 @@
+<map id="rtype::game::SGamePlay::LocalInput" name="rtype::game::SGamePlay::LocalInput">
+<area shape="rect" id="node1" title="check a input" alt="" coords="5,37,176,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88" title="This function is used to get the sprite of an entity." alt="" coords="224,5,379,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1engine_1_1Event.html#aaaa10d73c15299d020592aadb04a665b" title="Function to make an sprite movable." alt="" coords="230,69,373,109"/>
+</map>

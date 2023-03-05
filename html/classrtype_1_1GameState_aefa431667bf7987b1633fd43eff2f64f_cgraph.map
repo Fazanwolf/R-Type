@@ -1,0 +1,4 @@
+<map id="rtype::GameState::handleEvent" name="rtype::GameState::handleEvent">
+<area shape="rect" id="node1" title="Handle the event." alt="" coords="5,5,177,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1engine_1_1Event.html#aeb689e6f77860e60aa993544b2479787" title="Function to get the position of the mouse." alt="" coords="225,5,364,45"/>
+</map>

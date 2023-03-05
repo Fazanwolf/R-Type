@@ -1,0 +1,4 @@
+<map id="rtype::components::Bullets::update" name="rtype::components::Bullets::update">
+<area shape="rect" id="node1" title="Function to update the bullet." alt="" coords="224,5,363,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#ab1b356c5159cb47acf6e121ec4f336a9" title="Update the game state." alt="" coords="5,5,176,45"/>
+</map>

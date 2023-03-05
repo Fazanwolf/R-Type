@@ -1,0 +1,11 @@
+digraph "rtype::entities::EntitiesManager::getPId"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="rtype::entities::Entities\lManager::getPId",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This function is used to get the player ID."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="rtype::game::SGamePlay\l::getLocalPlayerID",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1game_1_1SGamePlay.html#aba4827ee31e04e88e79d5cba3f02a1ff",tooltip="Get the Local Player I D object."];
+}

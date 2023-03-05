@@ -1,0 +1,91 @@
+\hypertarget{classrtype_1_1components_1_1IButton}{}\doxysection{rtype\+::components\+::IButton Class Reference}
+\label{classrtype_1_1components_1_1IButton}\index{rtype::components::IButton@{rtype::components::IButton}}
+
+
+This class is the base class for all the button interface.  
+
+
+
+
+{\ttfamily \#include $<$Bouton.\+hpp$>$}
+
+Inheritance diagram for rtype\+::components\+::IButton\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classrtype_1_1components_1_1IButton}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a13c373949db78e8a2d6f2f55d6539bff}{On\+Click}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a5363194b2742c1217b6bccc03167daba}{On\+Hover}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a9528312cc8d09cf94a13550c9fb4d8a4}{On\+Leave}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a9a7b87f6d0e8e3c15d339aa15727f65c}{Draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w)=0
+\item 
+virtual bool \mbox{\hyperlink{classrtype_1_1components_1_1IButton_aec9e8ef9ecb571547af4c9a31c77ba7b}{is\+Point\+Inside}} (sf\+::\+Vector2f point)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the base class for all the button interface. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1components_1_1IButton_a9a7b87f6d0e8e3c15d339aa15727f65c}\label{classrtype_1_1components_1_1IButton_a9a7b87f6d0e8e3c15d339aa15727f65c}} 
+\index{rtype::components::IButton@{rtype::components::IButton}!Draw@{Draw}}
+\index{Draw@{Draw}!rtype::components::IButton@{rtype::components::IButton}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily virtual void rtype\+::components\+::\+IButton\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a5ae1a99263e707ad9cdc84dec83e7985}{rtype\+::components\+::\+Bouton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1IButton_aec9e8ef9ecb571547af4c9a31c77ba7b}\label{classrtype_1_1components_1_1IButton_aec9e8ef9ecb571547af4c9a31c77ba7b}} 
+\index{rtype::components::IButton@{rtype::components::IButton}!isPointInside@{isPointInside}}
+\index{isPointInside@{isPointInside}!rtype::components::IButton@{rtype::components::IButton}}
+\doxysubsubsection{\texorpdfstring{isPointInside()}{isPointInside()}}
+{\footnotesize\ttfamily virtual bool rtype\+::components\+::\+IButton\+::is\+Point\+Inside (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a72e515b2009e25c4f42a0e34ae35ac64}{rtype\+::components\+::\+Bouton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1IButton_a13c373949db78e8a2d6f2f55d6539bff}\label{classrtype_1_1components_1_1IButton_a13c373949db78e8a2d6f2f55d6539bff}} 
+\index{rtype::components::IButton@{rtype::components::IButton}!OnClick@{OnClick}}
+\index{OnClick@{OnClick}!rtype::components::IButton@{rtype::components::IButton}}
+\doxysubsubsection{\texorpdfstring{OnClick()}{OnClick()}}
+{\footnotesize\ttfamily virtual bool rtype\+::components\+::\+IButton\+::\+On\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a85568630bad343228aa7d90a62b8ebd4}{rtype\+::components\+::\+Bouton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1IButton_a5363194b2742c1217b6bccc03167daba}\label{classrtype_1_1components_1_1IButton_a5363194b2742c1217b6bccc03167daba}} 
+\index{rtype::components::IButton@{rtype::components::IButton}!OnHover@{OnHover}}
+\index{OnHover@{OnHover}!rtype::components::IButton@{rtype::components::IButton}}
+\doxysubsubsection{\texorpdfstring{OnHover()}{OnHover()}}
+{\footnotesize\ttfamily virtual bool rtype\+::components\+::\+IButton\+::\+On\+Hover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a0ae7889a4d7082b5c0976defbda3ca69}{rtype\+::components\+::\+Bouton}}.
+
+\mbox{\Hypertarget{classrtype_1_1components_1_1IButton_a9528312cc8d09cf94a13550c9fb4d8a4}\label{classrtype_1_1components_1_1IButton_a9528312cc8d09cf94a13550c9fb4d8a4}} 
+\index{rtype::components::IButton@{rtype::components::IButton}!OnLeave@{OnLeave}}
+\index{OnLeave@{OnLeave}!rtype::components::IButton@{rtype::components::IButton}}
+\doxysubsubsection{\texorpdfstring{OnLeave()}{OnLeave()}}
+{\footnotesize\ttfamily virtual bool rtype\+::components\+::\+IButton\+::\+On\+Leave (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a6d9e00da34ff1a42ba70518e15bebe1a}{rtype\+::components\+::\+Bouton}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Bouton_8hpp}{Bouton.\+hpp}}\end{DoxyCompactItemize}

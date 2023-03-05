@@ -1,0 +1,159 @@
+\hypertarget{classrtype_1_1entities_1_1EntitiesManager}{}\doxysection{rtype\+::entities\+::Entities\+Manager Class Reference}
+\label{classrtype_1_1entities_1_1EntitiesManager}\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+
+
+This class create an entity and set it a sprite, set up the position of the entity and his scale.  
+
+
+
+
+{\ttfamily \#include $<$Entities\+Manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a3931375bd881e8a29c84aceebc0ed803}{Create\+Entitie}} (std\+::string filename, sf\+::\+Vector2f pos, sf\+::\+Vector2f scale)
+\begin{DoxyCompactList}\small\item\em Create an entity and set it a sprite, set up the position of the entity and his scale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_abe67303c48924aed78d21677fc985a30}{New\+Entity}} (std\+::string fpath, sf\+::\+Vector2f pos, sf\+::\+Vector2f scale)
+\begin{DoxyCompactList}\small\item\em Create an entity with the fonction Create\+Entities with an ID, this fonction is used for multiplayer games. \end{DoxyCompactList}\item 
+std\+::list$<$ int8\+\_\+t $>$ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a00013a40d5fc61c5c85319af009e0fcd}{get\+IDs}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the list of all the entities. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_a93a552058ac4de6601ada4a8d3acdbeb}\label{classrtype_1_1entities_1_1EntitiesManager_a93a552058ac4de6601ada4a8d3acdbeb}} 
+void {\bfseries set\+PId} (int id)
+\begin{DoxyCompactList}\small\item\em This function is used to set the player ID. \end{DoxyCompactList}\item 
+int8\+\_\+t \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a3fbac4eaddd76b31a2005d28fc890a45}{get\+PId}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the player ID. \end{DoxyCompactList}\item 
+std\+::array$<$ sf\+::\+Sprite, 100 $>$ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_af96a3f00db045751633db37af8d774a1}{get\+Entities\+List}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to get the list of all the entities. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \& \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{get\+Sprite}} (int8\+\_\+t id)
+\begin{DoxyCompactList}\small\item\em This function is used to get the sprite of an entity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_a3f8c60ba56f2a0f0f80a48e9031885f8}\label{classrtype_1_1entities_1_1EntitiesManager_a3f8c60ba56f2a0f0f80a48e9031885f8}} 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em This function draw all the entities. \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_aebe05100420bdc1b8f88a839d2692362}{get\+Texture\+Vector}} ()
+\begin{DoxyCompactList}\small\item\em Get the Texture Vector object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class create an entity and set it a sprite, set up the position of the entity and his scale. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_a3931375bd881e8a29c84aceebc0ed803}\label{classrtype_1_1entities_1_1EntitiesManager_a3931375bd881e8a29c84aceebc0ed803}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!CreateEntitie@{CreateEntitie}}
+\index{CreateEntitie@{CreateEntitie}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{CreateEntitie()}{CreateEntitie()}}
+{\footnotesize\ttfamily sf\+::\+Sprite rtype\+::entities\+::\+Entities\+Manager\+::\+Create\+Entitie (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})}
+
+
+
+Create an entity and set it a sprite, set up the position of the entity and his scale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filemane} & path to your asset \\
+\hline
+{\em pos} & the position of your entity in the window \\
+\hline
+{\em scale} & his scale in the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return a sprite 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_af96a3f00db045751633db37af8d774a1}\label{classrtype_1_1entities_1_1EntitiesManager_af96a3f00db045751633db37af8d774a1}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!getEntitiesList@{getEntitiesList}}
+\index{getEntitiesList@{getEntitiesList}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{getEntitiesList()}{getEntitiesList()}}
+{\footnotesize\ttfamily std\+::array$<$ sf\+::\+Sprite, 100 $>$ rtype\+::entities\+::\+Entities\+Manager\+::get\+Entities\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is used to get the list of all the entities. 
+
+\begin{DoxyReturn}{Returns}
+Return a list of all the entities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_a00013a40d5fc61c5c85319af009e0fcd}\label{classrtype_1_1entities_1_1EntitiesManager_a00013a40d5fc61c5c85319af009e0fcd}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!getIDs@{getIDs}}
+\index{getIDs@{getIDs}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{getIDs()}{getIDs()}}
+{\footnotesize\ttfamily std\+::list$<$ int8\+\_\+t $>$ rtype\+::entities\+::\+Entities\+Manager\+::get\+IDs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is used to get the list of all the entities. 
+
+\begin{DoxyReturn}{Returns}
+Return a list of all the entities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_a3fbac4eaddd76b31a2005d28fc890a45}\label{classrtype_1_1entities_1_1EntitiesManager_a3fbac4eaddd76b31a2005d28fc890a45}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!getPId@{getPId}}
+\index{getPId@{getPId}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{getPId()}{getPId()}}
+{\footnotesize\ttfamily int8\+\_\+t rtype\+::entities\+::\+Entities\+Manager\+::get\+PId (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is used to get the player ID. 
+
+\begin{DoxyReturn}{Returns}
+Return the player ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}\label{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite \& rtype\+::entities\+::\+Entities\+Manager\+::get\+Sprite (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is used to get the sprite of an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the sprite of the entity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_aebe05100420bdc1b8f88a839d2692362}\label{classrtype_1_1entities_1_1EntitiesManager_aebe05100420bdc1b8f88a839d2692362}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!getTextureVector@{getTextureVector}}
+\index{getTextureVector@{getTextureVector}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{getTextureVector()}{getTextureVector()}}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Texture $>$ rtype\+::entities\+::\+Entities\+Manager\+::get\+Texture\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Texture Vector object. 
+
+\begin{DoxyReturn}{Returns}
+Return std\+::vector$<$sf\+::\+Texture$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1entities_1_1EntitiesManager_abe67303c48924aed78d21677fc985a30}\label{classrtype_1_1entities_1_1EntitiesManager_abe67303c48924aed78d21677fc985a30}} 
+\index{rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}!NewEntity@{NewEntity}}
+\index{NewEntity@{NewEntity}!rtype::entities::EntitiesManager@{rtype::entities::EntitiesManager}}
+\doxysubsubsection{\texorpdfstring{NewEntity()}{NewEntity()}}
+{\footnotesize\ttfamily void rtype\+::entities\+::\+Entities\+Manager\+::\+New\+Entity (\begin{DoxyParamCaption}\item[{std\+::string}]{fpath,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})}
+
+
+
+Create an entity with the fonction Create\+Entities with an ID, this fonction is used for multiplayer games. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fpath} & path to your asset \\
+\hline
+{\em pos} & the position of your entity in the window \\
+\hline
+{\em scale} & his scale in the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return a sprite 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Entities\+Manager.\+hpp\end{DoxyCompactItemize}

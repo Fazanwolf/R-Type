@@ -1,0 +1,7 @@
+<map id="rtype::GameEngine::runState" name="rtype::GameEngine::runState">
+<area shape="rect" id="node1" title="Run a state." alt="" coords="5,101,148,141"/>
+<area shape="rect" id="node2" href="$classrtype_1_1GameEngine.html#a8447f3579007aab3f3c27718d0dba4be" title="Create a State object." alt="" coords="201,5,344,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1engine_1_1Window.html#a7df057835a5fe3673614790ffb5d65c1" title="Function to check if the window is open." alt="" coords="196,69,349,109"/>
+<area shape="rect" id="node4" href="$classrtype_1_1GameEngine.html#a2765771a67fd0413c06adf70d63f80b2" title="Load a state." alt="" coords="201,133,344,173"/>
+<area shape="rect" id="node5" href="$classrtype_1_1GameEngine.html#af1081200de81a574a8349e5cf332c11e" title="Set the Is Running object." alt="" coords="201,197,344,237"/>
+</map>

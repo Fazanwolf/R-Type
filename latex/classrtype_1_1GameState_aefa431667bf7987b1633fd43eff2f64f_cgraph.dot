@@ -1,0 +1,11 @@
+digraph "rtype::GameState::handleEvent"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="rtype::GameState::handle\lEvent",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handle the event."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="rtype::engine::Event\l::GetMousePos",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Event.html#aeb689e6f77860e60aa993544b2479787",tooltip="Function to get the position of the mouse."];
+}

@@ -1,0 +1,142 @@
+\hypertarget{classrtype_1_1IGameState}{}\doxysection{rtype\+::IGame\+State Class Reference}
+\label{classrtype_1_1IGameState}\index{rtype::IGameState@{rtype::IGameState}}
+
+
+The class of the game state.  
+
+
+
+
+{\ttfamily \#include $<$IGame\+State.\+hpp$>$}
+
+Inheritance diagram for rtype\+::IGame\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classrtype_1_1IGameState}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em Init the game state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em Update the game state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w, \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&ev)=0
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$g)=0
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}{draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w)=0
+\begin{DoxyCompactList}\small\item\em Draw the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1IGameState_a1887ab1b681a3254d8ceead76e978ae5}\label{classrtype_1_1IGameState_a1887ab1b681a3254d8ceead76e978ae5}} 
+\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{entities\+::\+Entities\+Manager}} {\bfseries EManager}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class of the game state. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}\label{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}} 
+\index{rtype::IGameState@{rtype::IGameState}!draw@{draw}}
+\index{draw@{draw}!rtype::IGameState@{rtype::IGameState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void rtype\+::\+IGame\+State\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draw the game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1GameState_a0c8ba731cfe6ac2ec9b51b508faa30b3}{rtype\+::\+Game\+State}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_af5319ffc9888cf513ca2e77753208f39}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_af5319ffc9888cf513ca2e77753208f39}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_af5319ffc9888cf513ca2e77753208f39}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1ea070b901d6eeab9ca5b05587960fa8}{rtype\+::game\+::\+SMenu}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1ea070b901d6eeab9ca5b05587960fa8}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}\label{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}} 
+\index{rtype::IGameState@{rtype::IGameState}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!rtype::IGameState@{rtype::IGameState}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int rtype\+::\+IGame\+State\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&}]{w,  }\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the Name object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em ev} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_a59cd95121c1bc67b23157f2fe1529331}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_a59cd95121c1bc67b23157f2fe1529331}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_a221313b876696334d7f371a9ace54ad5}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1GameState_aefa431667bf7987b1633fd43eff2f64f}{rtype\+::\+Game\+State}}, \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6d21f8711f8bbba96d23fe106747b5db}{rtype\+::game\+::\+SMenu}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6d21f8711f8bbba96d23fe106747b5db}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}\label{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}} 
+\index{rtype::IGameState@{rtype::IGameState}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!rtype::IGameState@{rtype::IGameState}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int rtype\+::\+IGame\+State\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & the game state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1GameState_aa3540d88b205a3be32419d84e1b85be2}{rtype\+::\+Game\+State}}, \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0ee6adc16a4965f795dc640a198b4221}{rtype\+::game\+::\+SMenu}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0ee6adc16a4965f795dc640a198b4221}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}\label{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}} 
+\index{rtype::IGameState@{rtype::IGameState}!init@{init}}
+\index{init@{init}!rtype::IGameState@{rtype::IGameState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void rtype\+::\+IGame\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Init the game state. 
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1GameState_addd2de9d06b7fc31ec72d8b606a8015f}{rtype\+::\+Game\+State}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1aaf50a66b3e13be36c4950168e96c49}{rtype\+::game\+::\+SMenu}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1aaf50a66b3e13be36c4950168e96c49}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}\label{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}} 
+\index{rtype::IGameState@{rtype::IGameState}!update@{update}}
+\index{update@{update}!rtype::IGameState@{rtype::IGameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void rtype\+::\+IGame\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the game state. 
+
+
+
+Implemented in \mbox{\hyperlink{classrtype_1_1GameState_ab74eef592005aadecf18c9b8851d4c33}{rtype\+::\+Game\+State}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ab1b356c5159cb47acf6e121ec4f336a9}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ab1b356c5159cb47acf6e121ec4f336a9}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ab1b356c5159cb47acf6e121ec4f336a9}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a4917a039e284b3d0adafb620a7d4b7cc}{rtype\+::game\+::\+SMenu}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a4917a039e284b3d0adafb620a7d4b7cc}{rtype\+::game\+::\+SMenu}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IGame\+State.\+hpp\end{DoxyCompactItemize}

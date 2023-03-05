@@ -1,0 +1,35 @@
+\hypertarget{Bonus_8hpp}{}\doxysection{Bonus.\+hpp File Reference}
+\label{Bonus_8hpp}\index{Bonus.hpp@{Bonus.hpp}}
+
+
+This namespace is for herite from components.  
+
+
+{\ttfamily \#include \char`\"{}Engine/\+Engine.\+hpp\char`\"{}}\newline
+Include dependency graph for Bonus.\+hpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrtype_1_1components_1_1Bonus}{rtype\+::components\+::\+Bonus}}
+\begin{DoxyCompactList}\small\item\em This class is the base class for all the bonus in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacertype}{rtype}}
+\item 
+namespace \mbox{\hyperlink{namespacertype_1_1components}{rtype\+::components}}
+\begin{DoxyCompactList}\small\item\em This namespace is for herite from components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacertype_1_1components_a254af34ea7b30ccb4d9b828f23413861}{rtype\+::components\+::\+Bonus\+Traits}} \{ \mbox{\hyperlink{namespacertype_1_1components_a254af34ea7b30ccb4d9b828f23413861a605b9ba9d49591cdb2e13974d2c6233d}{rtype\+::components\+::\+SHIELD}}
+, \mbox{\hyperlink{namespacertype_1_1components_a254af34ea7b30ccb4d9b828f23413861a6469c2be9e32adc0763402cc4d4b259e}{rtype\+::components\+::\+SHOTGUN}}
+, \mbox{\hyperlink{namespacertype_1_1components_a254af34ea7b30ccb4d9b828f23413861a9db0a94afe4cf876841d84ce510bb623}{rtype\+::components\+::\+SLAVE}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum is for all bonus in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This namespace is for herite from components. 
+

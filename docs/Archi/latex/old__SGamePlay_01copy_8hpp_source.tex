@@ -1,0 +1,158 @@
+\hypertarget{old__SGamePlay_01copy_8hpp_source}{}\doxysection{old\+\_\+\+SGame\+Play copy.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ IGameState}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}system/gameStates/IGameState.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <Skaldi.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ SGAMEPLAY\_HPP\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ SGAMEPLAY\_HPP\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacertype}{rtype}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1game}{rtype::game}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay}{SGamePlay}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrtype_1_1GameState}{GameState}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay}{SGamePlay}}()}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>name\ =\ \textcolor{stringliteral}{"{}GamePlay"{}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay}{\string~SGamePlay}}()}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ init\_base(\textcolor{keywordtype}{int}\ nb\_players)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//players}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ !=\ nb\_players;\ i++)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_abe67303c48924aed78d21677fc985a30}{NewEntity}}(\textcolor{stringliteral}{"{}./assets/ovni.png"{}},\ \{100,\ 100\},\ \{0.1,\ 0.1\});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//FirstEntities}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_abe67303c48924aed78d21677fc985a30}{NewEntity}}(\textcolor{stringliteral}{"{}./assets/ovni.png"{}},\ \{600,\ 100\},\ \{0.2,\ 0.2\});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{init}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//init\ sprites;}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ init\_base(2);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{init}}(\textcolor{keywordtype}{int}\ pID)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//init\ sprites;}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a93a552058ac4de6601ada4a8d3acdbeb}{setPId}}(pID);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>pID\ =\ pID;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ init\_base(2);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ event\_queue.push(engine::NONE);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ab1b356c5159cb47acf6e121ec4f336a9}{update}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00057\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ update\ client\ to\ server\ data}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//pop\ event\ queue\ here\ after\ rework}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerProjectile.\mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aa3ee2b45a6c28fb0102967a18146ab8e}{update}}(EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(2).getGlobalBounds()))\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(2).setScale(sf::Vector2f(0,0));}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (serverProjectiles.\mbox{\hyperlink{classrtype_1_1components_1_1Bullets_aa3ee2b45a6c28fb0102967a18146ab8e}{update}}(EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(2).getGlobalBounds()))\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(2).setScale(sf::Vector2f(0,0));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clear()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00069\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};\textcolor{comment}{//later}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ pause()\textcolor{keyword}{\ override\ }\{\};\ \textcolor{comment}{//later}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ resume()\textcolor{keyword}{\ override\ }\{\};\ \textcolor{comment}{//later}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ int8\_t\ getLocalPlayerID()\ \{\textcolor{keywordflow}{return}\ this-\/>EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a3fbac4eaddd76b31a2005d28fc890a45}{getPId}}();\};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ playerEvent(\mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \&ev)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pID\ ==\ 1)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ev.\mbox{\hyperlink{classrtype_1_1engine_1_1Event_a40d262e1a6d44b1d8c093de750b6b15a}{MakeSpriteMovable\_Bis}}(EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(this-\/>pID));\ \textcolor{comment}{//\ idx\ 0\ ==\ player\ character}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ev.\mbox{\hyperlink{classrtype_1_1engine_1_1Event_aaaa10d73c15299d020592aadb04a665b}{MakeSpriteMovable}}(EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(this-\/>pID));\ \textcolor{comment}{//\ idx\ 0\ ==\ player\ character}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (this-\/>playerProjectile.ShootBullet(pID,\ EManager.getSprite(this-\/>pID))\ ==\ true)}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ev.sendMessage("{}fire"{})\ ;}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ serverEvents(\mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \&ev,\ std::string\ \&str)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout<<str<<"{}\ |\ start\ test\ tmp:"{}<<str<<"{}:"{}<<std::endl;}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ tmp\ =\ str.empty()?\ std::vector<std::string>()\ :\ \mbox{\hyperlink{classStringUtils}{StringUtils}}::split(str,\ \textcolor{stringliteral}{'\ '});}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tmp.size()\ <=\ 1\ ||\ tmp[1].compare(\textcolor{stringliteral}{"{}?"{}})\ ==\ \textcolor{keyword}{true})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ eID\ =\ (pID\ ==\ 1)\ ?\ 0:1;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (eID\ ==\ pID)\ return;}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<str<<\textcolor{stringliteral}{"{}\ |\ mid\ tmp:"{}}<<tmp[1]<<\textcolor{stringliteral}{"{}:"{}}<<std::endl;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::strcmp(tmp[1].c\_str()\ ,\textcolor{stringliteral}{"{}move"{}})\ ==\ 0)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tmp[2].compare(\textcolor{stringliteral}{"{}left"{}})\ ==\ 0)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(eID).move(sf::Vector2f\{-\/50,\ 0\});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ event\_queue.push(engine::MV\_LEFT);}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tmp[2].compare(\textcolor{stringliteral}{"{}right"{}})\ ==\ 0)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(eID).move(sf::Vector2f\{50,\ 0\});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ event\_queue.push(engine::MV\_RIGHT);}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tmp[2].compare(\textcolor{stringliteral}{"{}up"{}})\ ==\ 0)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(eID).move(sf::Vector2f\{0,\ -\/50\});}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ event\_queue.push(engine::MV\_UP);}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tmp[2].compare(\textcolor{stringliteral}{"{}down"{}})\ ==\ 0)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(eID).move(sf::Vector2f\{0,\ 50\});}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}direction:\ "{}}<<tmp[2]<<std::endl;}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (tmp[1].compare(\textcolor{stringliteral}{"{}fire"{}})\ ==\ 0)}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>serverProjectiles.\mbox{\hyperlink{classrtype_1_1components_1_1Bullets_af3019968c88c7d5a2e6bbc3033b82930}{ServerShootBullet}}(eID,\ EManager.\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(eID));}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//event\_queue.push(engine::FIRE);}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::cout<<eID<<"{}\ tmp:\ "{}<<tmp[1]<<std::endl;}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (!event\_queue.empty())\ \{}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ if\ (ev.ServerPlayerAction(EManager.getSprite(eID),\ event\_queue.front())\ ==\ engine::FIRE)}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ //\ event\_queue.pop();}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ //\ ev.ServerPlayerAction(EManager.getSprite(eID),\ event\_queue.front());}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_a221313b876696334d7f371a9ace54ad5}{handleEvent}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w,\ \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine::Event}}\ \&ev)}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//retrieve\ and\ handle\ server\ input\ here}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::string\ str\ =\ ev.getClientBuffer();}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ serverEvents(ev,\ str);}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playerEvent(ev);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_af5319ffc9888cf513ca2e77753208f39}{draw}}(\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype::engine::Window}}\ \&w)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00132\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//draw\ entities}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ w.\mbox{\hyperlink{classrtype_1_1engine_1_1Window_aeefb5e840f6aebf661d73d9717502141}{clear}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}draw"{}}<<std::endl;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ (auto\&\ e\ :\ this-\/>EManager.getIDs())}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ w.Draw(this-\/>EManager.getSprite(e));}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ (auto\&\ ammo\ :\ playerProjectile.getBulletList())}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ w.Draw(ammo);}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ (auto\&\ ammo\ :\ serverProjectiles.getBulletList())}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ w.Draw(ammo);}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ int8\_t\ pID;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ std::queue<rtype::engine::EventType>\ event\_queue;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets}{rtype::components::Bullets}}\ playerProjectile;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bullets}{rtype::components::Bullets}}\ serverProjectiles;}
+\DoxyCodeLine{00149\ \ \ \ \ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !SGAMEPLAY\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

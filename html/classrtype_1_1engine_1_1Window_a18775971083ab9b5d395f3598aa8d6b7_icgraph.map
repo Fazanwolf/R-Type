@@ -1,0 +1,6 @@
+<map id="rtype::engine::Window::getWindow" name="rtype::engine::Window::getWindow">
+<area shape="rect" id="node1" title="Function to render a window." alt="" coords="224,69,377,109"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SMenu.html#a1ea070b901d6eeab9ca5b05587960fa8" title="Draw the game state." alt="" coords="20,5,161,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1game_1_1SGamePlay.html#af5319ffc9888cf513ca2e77753208f39" title="Draw on the window." alt="" coords="5,69,176,109"/>
+<area shape="rect" id="node4" href="$classrtype_1_1game_1_1SMenu.html#a6d21f8711f8bbba96d23fe106747b5db" title="handle input events" alt="" coords="20,133,161,173"/>
+</map>

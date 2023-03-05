@@ -1,0 +1,4 @@
+<map id="rtype::components::Bullets::ServerShootBullet" name="rtype::components::Bullets::ServerShootBullet">
+<area shape="rect" id="node1" title="Function to shoot a bullet for the server." alt="" coords="224,5,399,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#a0f543f22a1448a6d875524eb40d887d6" title=" " alt="" coords="5,5,176,45"/>
+</map>

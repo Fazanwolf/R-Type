@@ -1,0 +1,186 @@
+\hypertarget{classrtype_1_1engine_1_1Window}{}\doxysection{rtype\+::engine\+::Window Class Reference}
+\label{classrtype_1_1engine_1_1Window}\index{rtype::engine::Window@{rtype::engine::Window}}
+
+
+This class is the base class for all the \mbox{\hyperlink{classrtype_1_1engine_1_1Window}{Window}}.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a672903dc2cf29149aecec38531347fb2}\label{classrtype_1_1engine_1_1Window_a672903dc2cf29149aecec38531347fb2}} 
+{\bfseries Window} ()
+\begin{DoxyCompactList}\small\item\em Constructor for class \mbox{\hyperlink{classrtype_1_1engine_1_1Window}{Window}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a0b015edd7409bb70c7e73a7b50b92624}\label{classrtype_1_1engine_1_1Window_a0b015edd7409bb70c7e73a7b50b92624}} 
+{\bfseries $\sim$\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destructor for class \mbox{\hyperlink{classrtype_1_1engine_1_1Window}{Window}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7796600a4a8e2be077ef2691fbf03f91}{Display\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Function to Display a window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a1a82d0c7ea0b16a6291691333e5f5211}{Draw\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Function to Draw a window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a1987ad69a46e3ea650e97db1338877f2}{Update\+Event}} (void)
+\begin{DoxyCompactList}\small\item\em Function to update the event in the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7df057835a5fe3673614790ffb5d65c1}{Is\+Open}} (void)
+\begin{DoxyCompactList}\small\item\em Function to check if the window is open. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7fb3e3de4cdec24273c1f840ca5ba1f8}{Is\+Closed}} (void)
+\begin{DoxyCompactList}\small\item\em Function to check if the window is open. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a536c271e6505d71b7bbac01d00d538eb}{Handle\+Event}} (const sf\+::\+Event\+::\+Event\+Type \&type)
+\begin{DoxyCompactList}\small\item\em Function to handle event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Window_ae49c0b10050f91bf937687831f4741f9}{Create\+Window}} (sf\+::\+Video\+Mode mode, std\+::string name)
+\begin{DoxyCompactList}\small\item\em Function to create a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_aeefb5e840f6aebf661d73d9717502141}\label{classrtype_1_1engine_1_1Window_aeefb5e840f6aebf661d73d9717502141}} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Function to clear a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a6478113a2be74ed64cee94d738aecbc6}\label{classrtype_1_1engine_1_1Window_a6478113a2be74ed64cee94d738aecbc6}} 
+void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em Function to close a window. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \& \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}{get\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Function to render a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_afc1270216213283340a2d1c4975afd4b}\label{classrtype_1_1engine_1_1Window_afc1270216213283340a2d1c4975afd4b}} 
+void {\bfseries t\+\_\+clock} ()
+\begin{DoxyCompactList}\small\item\em Simple clock for the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a2297bd7d62060d54b0fc637bcfef214d}{Draw}} (sf\+::\+Drawable \&en)
+\begin{DoxyCompactList}\small\item\em Function to draw on the windows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is the base class for all the \mbox{\hyperlink{classrtype_1_1engine_1_1Window}{Window}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_ae49c0b10050f91bf937687831f4741f9}\label{classrtype_1_1engine_1_1Window_ae49c0b10050f91bf937687831f4741f9}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!CreateWindow@{CreateWindow}}
+\index{CreateWindow@{CreateWindow}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{CreateWindow()}{CreateWindow()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Window\+::\+Create\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Video\+Mode}]{mode,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Function to create a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Video mode of the window \\
+\hline
+{\em name} & Name of the window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a7796600a4a8e2be077ef2691fbf03f91}\label{classrtype_1_1engine_1_1Window_a7796600a4a8e2be077ef2691fbf03f91}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!DisplayWindow@{DisplayWindow}}
+\index{DisplayWindow@{DisplayWindow}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{DisplayWindow()}{DisplayWindow()}}
+{\footnotesize\ttfamily int rtype\+::engine\+::\+Window\+::\+Display\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to Display a window. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 when end 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a2297bd7d62060d54b0fc637bcfef214d}\label{classrtype_1_1engine_1_1Window_a2297bd7d62060d54b0fc637bcfef214d}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!Draw@{Draw}}
+\index{Draw@{Draw}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void rtype\+::engine\+::\+Window\+::\+Draw (\begin{DoxyParamCaption}\item[{sf\+::\+Drawable \&}]{en }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to draw on the windows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em en} & Something to draw on the window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a1a82d0c7ea0b16a6291691333e5f5211}\label{classrtype_1_1engine_1_1Window_a1a82d0c7ea0b16a6291691333e5f5211}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!DrawWindow@{DrawWindow}}
+\index{DrawWindow@{DrawWindow}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{DrawWindow()}{DrawWindow()}}
+{\footnotesize\ttfamily int rtype\+::engine\+::\+Window\+::\+Draw\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to Draw a window. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 when end 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}\label{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window \& rtype\+::engine\+::\+Window\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to render a window. 
+
+\begin{DoxyReturn}{Returns}
+Return a window 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a536c271e6505d71b7bbac01d00d538eb}\label{classrtype_1_1engine_1_1Window_a536c271e6505d71b7bbac01d00d538eb}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!HandleEvent@{HandleEvent}}
+\index{HandleEvent@{HandleEvent}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{HandleEvent()}{HandleEvent()}}
+{\footnotesize\ttfamily bool rtype\+::engine\+::\+Window\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event\+::\+Event\+Type \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Function to handle event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{Event}} Type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return a Boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a7fb3e3de4cdec24273c1f840ca5ba1f8}\label{classrtype_1_1engine_1_1Window_a7fb3e3de4cdec24273c1f840ca5ba1f8}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!IsClosed@{IsClosed}}
+\index{IsClosed@{IsClosed}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{IsClosed()}{IsClosed()}}
+{\footnotesize\ttfamily bool rtype\+::engine\+::\+Window\+::\+Is\+Closed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to check if the window is open. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the window is close and false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a7df057835a5fe3673614790ffb5d65c1}\label{classrtype_1_1engine_1_1Window_a7df057835a5fe3673614790ffb5d65c1}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!IsOpen@{IsOpen}}
+\index{IsOpen@{IsOpen}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{IsOpen()}{IsOpen()}}
+{\footnotesize\ttfamily bool rtype\+::engine\+::\+Window\+::\+Is\+Open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to check if the window is open. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the window is open and false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1engine_1_1Window_a1987ad69a46e3ea650e97db1338877f2}\label{classrtype_1_1engine_1_1Window_a1987ad69a46e3ea650e97db1338877f2}} 
+\index{rtype::engine::Window@{rtype::engine::Window}!UpdateEvent@{UpdateEvent}}
+\index{UpdateEvent@{UpdateEvent}!rtype::engine::Window@{rtype::engine::Window}}
+\doxysubsubsection{\texorpdfstring{UpdateEvent()}{UpdateEvent()}}
+{\footnotesize\ttfamily bool rtype\+::engine\+::\+Window\+::\+Update\+Event (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to update the event in the window. 
+
+\begin{DoxyReturn}{Returns}
+Return a Boolean 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Window.\+hpp\end{DoxyCompactItemize}

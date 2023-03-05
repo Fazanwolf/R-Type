@@ -1,0 +1,9 @@
+\hypertarget{Actors_8hpp}{}\doxysection{include/\+Entities/\+Actors.hpp File Reference}
+\label{Actors_8hpp}\index{include/Entities/Actors.hpp@{include/Entities/Actors.hpp}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classActors}{Actors}}
+\begin{DoxyCompactList}\small\item\em This class is the base class for all the actors in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}

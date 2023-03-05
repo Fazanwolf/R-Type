@@ -1,0 +1,17 @@
+digraph "rtype::game::SGamePlay::handleEvent"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="rtype::game::SGamePlay\l::handleEvent",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handle the event."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="rtype::game::SGamePlay\l::playerEvent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1game_1_1SGamePlay.html#a3103c94497c54e5723275d96edc4168d",tooltip=" "];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="rtype::entities::Entities\lManager::getSprite",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88",tooltip="This function is used to get the sprite of an entity."];
+  Node2 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="rtype::engine::Event\l::MakeSpriteMovable",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Event.html#aaaa10d73c15299d020592aadb04a665b",tooltip="Function to make an sprite movable."];
+  Node2 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="rtype::engine::Event\l::MakeSpriteMovable_Bis",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Event.html#a40d262e1a6d44b1d8c093de750b6b15a",tooltip="Function to make an sprite movable (bis)"];
+}

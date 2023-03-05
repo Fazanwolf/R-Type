@@ -1,0 +1,5 @@
+<map id="rtype::engine::Window::clear" name="rtype::engine::Window::clear">
+<area shape="rect" id="node1" title="Function to clear a window." alt="" coords="224,37,377,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#af5319ffc9888cf513ca2e77753208f39" title="Draw the game state." alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1game_1_1SMenu.html#a1ea070b901d6eeab9ca5b05587960fa8" title="Draw the game state." alt="" coords="20,69,161,109"/>
+</map>

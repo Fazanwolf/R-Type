@@ -1,0 +1,4 @@
+<map id="rtype::game::SGamePlay::init_base" name="rtype::game::SGamePlay::init_base">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30" title="Create an entity with the fonction CreateEntities with an ID, this fonction is used for multiplayer g..." alt="" coords="224,5,379,45"/>
+</map>

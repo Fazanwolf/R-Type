@@ -1,0 +1,44 @@
+\hypertarget{String_8hpp_source}{}\doxysection{String.\+hpp}
+\label{String_8hpp_source}\index{include/Utils/String.hpp@{include/Utils/String.hpp}}
+\mbox{\hyperlink{String_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R-\/Type-\/client}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ String}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ STRING\_HPP\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ STRING\_HPP\_}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStringUtils}{StringUtils}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ std::list<std::string>\ \mbox{\hyperlink{classStringUtils_a5e91099d48d4c04e265f39687875cb4d}{split\_str}}(\textcolor{keywordtype}{size\_t}\ pos,\ std::string\&\ s,\ std::string\ delimiter)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::string\ token;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::list<std::string>\ parsed;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((pos\ =\ s.find(delimiter))\ !=\ std::string::npos)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ token\ =\ s.substr(0,\ pos);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ parsed.insert(parsed.cend(),\ token);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ s.erase(0,\ pos\ +\ delimiter.length());}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ parsed;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ \mbox{\hyperlink{classStringUtils_aaced9fe8e9f4888632792cff439e9497}{split}}(std::string\ \&s,\ \textcolor{keywordtype}{char}\ delim)}
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::vector<std::string>\ elems;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::stringstream\ ss(s);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::string\ item;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(ss,\ item,\ delim))\ elems.push\_back(item);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ elems;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !STRING\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

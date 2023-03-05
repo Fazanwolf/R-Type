@@ -1,0 +1,7 @@
+<map id="rtype::engine::Event::MakeSpriteMovable" name="rtype::engine::Event::MakeSpriteMovable">
+<area shape="rect" id="node1" title="Function to make an sprite movable." alt="" coords="443,37,585,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1game_1_1SGamePlay.html#a0a73ef31be41ff4af9cab9d2850d6cf4" title="Get the Input." alt="" coords="224,5,395,45"/>
+<area shape="rect" id="node4" href="$classrtype_1_1game_1_1SGamePlay.html#a3103c94497c54e5723275d96edc4168d" title=" " alt="" coords="224,69,395,109"/>
+<area shape="rect" id="node3" href="$classrtype_1_1game_1_1SGamePlay.html#a59cd95121c1bc67b23157f2fe1529331" title="Handle the event." alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node5" href="$classrtype_1_1game_1_1SGamePlay.html#a221313b876696334d7f371a9ace54ad5" title="Handle the event." alt="" coords="5,69,176,109"/>
+</map>

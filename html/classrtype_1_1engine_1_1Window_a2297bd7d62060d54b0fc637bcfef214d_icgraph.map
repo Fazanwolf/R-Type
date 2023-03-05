@@ -1,0 +1,5 @@
+<map id="rtype::engine::Window::Draw" name="rtype::engine::Window::Draw">
+<area shape="rect" id="node1" title="Function to draw on the windows." alt="" coords="224,37,377,77"/>
+<area shape="rect" id="node2" href="$classrtype_1_1components_1_1Bouton.html#a5ae1a99263e707ad9cdc84dec83e7985" title="Override draw." alt="" coords="21,5,160,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1game_1_1SGamePlay.html#af5319ffc9888cf513ca2e77753208f39" title="Draw on the window." alt="" coords="5,69,176,109"/>
+</map>

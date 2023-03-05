@@ -1,0 +1,124 @@
+\hypertarget{Bouton_8hpp_source}{}\doxysection{Bouton.\+hpp}
+\mbox{\hyperlink{Bouton_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ R-\/Type}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Bouton}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Engine/Engine.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ BOUTON\_HPP\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BOUTON\_HPP\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1components}{rtype::components}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1components_1_1IButton}{IButton}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a13c373949db78e8a2d6f2f55d6539bff}{OnClick}}()\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a5363194b2742c1217b6bccc03167daba}{OnHover}}()\ =\ 0;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a9528312cc8d09cf94a13550c9fb4d8a4}{OnLeave}}()\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1components_1_1IButton_a9a7b87f6d0e8e3c15d339aa15727f65c}{Draw}}(rtype::engine::Window\ \&w)\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1IButton_aec9e8ef9ecb571547af4c9a31c77ba7b}{isPointInside}}(sf::Vector2f\ point)\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574}{STATEBUTTONS}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//MAINSTATE\_substate}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574ab5f2119936f66f3f6b5748df5e22188f}{PLAY}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a4932a3edba2c82bdb0a635071c58a90f}{QUIT}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a34bc0f91163d78aa2dd8d17f5c226f31}{OPTION}},}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a1fa980389d31327421d812651425472e}{MENU}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a4f3ce4b9f2921e6590b563ec6732e5a1}{LOBBY}},}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a212068c485e946a93ca59036ac943d74}{WELCOME}},}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a2e89e8a371d7b54c2303b139ccac475c}{NONE}}}
+\DoxyCodeLine{00046\ \ \ \ \ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1components_1_1Bouton}{Bouton}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrtype_1_1components_1_1IButton}{IButton}}\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_acd77ec23e0b09e7d988a605d9163a5b0}{Bouton}}(sf::Color\ color,\ std::string\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}{text}},\ sf::Vector2f\ pos,\ sf::Vector2f\ size)\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>text.setString(\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}{text}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}}.setFillColor(color);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}}.setSize(size);\ \textcolor{comment}{//base\ test\ is\ 200,\ 60}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}}.setPosition(pos);\ \textcolor{comment}{//\ base\ pos\ is\ 440,\ 200}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a5351cbbdcd83c79c7689682db66b9332}{type}}\ =\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a2e89e8a371d7b54c2303b139ccac475c}{NONE}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_ad778c90d6e967abc58963e8c46416d32}{Bouton}}()\ \{\};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a347c5eac80477e0933764d65bd701731}{\string~Bouton}}()\ \{\};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a72e515b2009e25c4f42a0e34ae35ac64}{isPointInside}}(sf::Vector2f\ point)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}}.getGlobalBounds().contains(point);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ this-\/>rShape.getLocalBounds().contains(point);}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a5ae1a99263e707ad9cdc84dec83e7985}{Draw}}(rtype::engine::Window\ \&w)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ w.Draw(this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a833b2c87d6e35f96ea6123db9d26bfc1}{setPosition}}(sf::Vector2f\ nPos)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}}.move(nPos);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ template\ <typename\ T,\ typename\ fpara>}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bool\ execOnClick(fpara\ parameter,\ std::function<T(fpara)>\ func)\ \{}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ //update\ button\ appearance\ here}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ return\ func(parameter);}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a6d9e00da34ff1a42ba70518e15bebe1a}{OnLeave}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a85568630bad343228aa7d90a62b8ebd4}{OnClick}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ s(this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}{text}}.getString().toAnsiString());}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<s<<std::endl;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a0ae7889a4d7082b5c0976defbda3ca69}{OnHover}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//update\ button\ appearance\ here}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574}{STATEBUTTONS}}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a93d4cae85585fbbb913c2cbc4271acc9}{getType}}()}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ s(this-\/>\mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}{text}}.getString().toAnsiString());}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.compare(\textcolor{stringliteral}{"{}PLAY"{}})\ ==\ 0)}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574ab5f2119936f66f3f6b5748df5e22188f}{PLAY}};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.compare(\textcolor{stringliteral}{"{}QUIT"{}})\ ==\ 0)}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a4932a3edba2c82bdb0a635071c58a90f}{QUIT}};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.compare(\textcolor{stringliteral}{"{}OPTION"{}})\ ==\ 0)}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a34bc0f91163d78aa2dd8d17f5c226f31}{OPTION}};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.compare(\textcolor{stringliteral}{"{}WELCOME"{}})\ ==\ 0)}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a212068c485e946a93ca59036ac943d74}{WELCOME}};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.compare(\textcolor{stringliteral}{"{}MENU"{}})\ ==\ 0)}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a1fa980389d31327421d812651425472e}{MENU}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s.compare(\textcolor{stringliteral}{"{}LOBBY"{}})\ ==\ 0)}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a4f3ce4b9f2921e6590b563ec6732e5a1}{LOBBY}};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574a2e89e8a371d7b54c2303b139ccac475c}{NONE}};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacertype_1_1components_a4b715fdcd6f581e5f209b74dcd5a4574}{STATEBUTTONS}}\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a5351cbbdcd83c79c7689682db66b9332}{type}};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a928e15fa73da66b3f7cb09b31743cbe6}{rShape}};}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Text\ \mbox{\hyperlink{classrtype_1_1components_1_1Bouton_a4733f06c42947c59827fb3b0ce2e72d5}{text}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ sf::Texture\ texture;}}
+\DoxyCodeLine{00176\ \ \ \ \ \};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !BOUTON\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

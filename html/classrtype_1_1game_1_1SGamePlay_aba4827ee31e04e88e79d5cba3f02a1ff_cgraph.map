@@ -1,0 +1,4 @@
+<map id="rtype::game::SGamePlay::getLocalPlayerID" name="rtype::game::SGamePlay::getLocalPlayerID">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html#a3fbac4eaddd76b31a2005d28fc890a45" title="This function is used to get the player ID." alt="" coords="224,5,379,45"/>
+</map>

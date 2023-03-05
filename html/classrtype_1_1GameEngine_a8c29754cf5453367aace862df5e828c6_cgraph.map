@@ -1,0 +1,4 @@
+<map id="rtype::GameEngine::init" name="rtype::GameEngine::init">
+<area shape="rect" id="node1" title="Init the game engine." alt="" coords="5,13,165,38"/>
+<area shape="rect" id="node2" href="$classrtype_1_1engine_1_1Window.html#ae49c0b10050f91bf937687831f4741f9" title="Function to create a window." alt="" coords="213,5,367,45"/>
+</map>

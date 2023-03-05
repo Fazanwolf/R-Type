@@ -1,0 +1,13 @@
+digraph "rtype::game::SMenu::draw"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="rtype::game::SMenu\l::draw",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Draw the menu."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="rtype::engine::Window\l::clear",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Window.html#aeefb5e840f6aebf661d73d9717502141",tooltip="Function to clear a window."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="rtype::engine::Window\l::getWindow",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classrtype_1_1engine_1_1Window.html#a18775971083ab9b5d395f3598aa8d6b7",tooltip="Function to render a window."];
+}

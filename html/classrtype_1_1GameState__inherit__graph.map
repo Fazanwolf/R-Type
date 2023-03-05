@@ -1,0 +1,7 @@
+<map id="rtype::GameState" name="rtype::GameState">
+<area shape="rect" id="node1" title="The class of the game state." alt="" coords="177,79,303,104"/>
+<area shape="rect" id="node3" href="$classrtype_1_1NULLState.html" title="The class NULLState of the game state." alt="" coords="5,152,131,177"/>
+<area shape="rect" id="node4" href="$classrtype_1_1game_1_1SGamePlay.html" title="The class of the game state." alt="" coords="155,152,325,177"/>
+<area shape="rect" id="node5" href="$classrtype_1_1game_1_1SMenu.html" title="The class of the game state." alt="" coords="349,152,491,177"/>
+<area shape="rect" id="node2" href="$classrtype_1_1IGameState.html" title="The class of the game state." alt="" coords="175,5,305,31"/>
+</map>

@@ -1,0 +1,58 @@
+\hypertarget{EntitiesManager_8hpp_source}{}\doxysection{Entities\+Manager.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ EntitiesManager}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ENTITIESMANAGER\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ ENTITIESMANAGER\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../Engine/Engine.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1entities}{rtype::entities}}\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ int8\_t\ idx;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{EntitiesManager}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{EntitiesManager}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{\string~EntitiesManager}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a3931375bd881e8a29c84aceebc0ed803}{CreateEntitie}}(std::string\ filename,\ sf::Vector2f\ pos,\ sf::Vector2f\ scale);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_abe67303c48924aed78d21677fc985a30}{NewEntity}}(std::string\ fpath,\ sf::Vector2f\ pos,\ sf::Vector2f\ scale);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ std::list<int8\_t>\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a00013a40d5fc61c5c85319af009e0fcd}{getIDs}}()\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ IDs;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a93a552058ac4de6601ada4a8d3acdbeb}{setPId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{\ this-\/>pId\ =\ id;\}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ int8\_t\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a3fbac4eaddd76b31a2005d28fc890a45}{getPId}}()\ \{\textcolor{keywordflow}{return}\ this-\/>pId;\}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ std::array<sf::Sprite,\ 100>\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_af96a3f00db045751633db37af8d774a1}{getEntitiesList}}()\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entities;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Sprite\ \&\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_ad8f4837cb81e312fb190f5cd4ec00a88}{getSprite}}(int8\_t\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//check\ if\ valid}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>entities[id];}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_a3f8c60ba56f2a0f0f80a48e9031885f8}{Draw}}()}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<sf::Texture>\ \mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager_aebe05100420bdc1b8f88a839d2692362}{getTextureVector}}()\ \{\ \textcolor{keywordflow}{return}\ this-\/>textures;\}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ int8\_t\ pId;\ \textcolor{comment}{//player\ ID\ used\ to\ get\ local\ input\ relative\ to\ player\ pos\ in\ entity\ array}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ std::array<sf::Sprite,\ 100>\ entities;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Texture\ texture;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<sf::Texture>\ textures;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ std::list<int8\_t>\ IDs;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ sf::RenderWindow\ window;}
+\DoxyCodeLine{00098\ \ \ \ \ \};}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !ENTITIESMANAGER\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

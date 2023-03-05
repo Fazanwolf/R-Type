@@ -1,0 +1,233 @@
+\hypertarget{classrtype_1_1GameState}{}\doxysection{rtype\+::Game\+State Class Reference}
+\label{classrtype_1_1GameState}\index{rtype::GameState@{rtype::GameState}}
+
+
+The class of the game state.  
+
+
+
+
+{\ttfamily \#include $<$IGame\+State.\+hpp$>$}
+
+
+
+Inheritance diagram for rtype\+::Game\+State\+:
+% FIG 0
+
+
+Collaboration diagram for rtype\+::Game\+State\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classrtype_1_1GameState_a247860fe7ca26715b134e06d524e6a76}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1GameState_af01bcf061ab7881efe5b6af4300d4aee}{Game\+State}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Game State object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrtype_1_1GameState_a36f50e344165eb744ed418c724bfb3ec}{$\sim$\+Game\+State}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Game State object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameState_addd2de9d06b7fc31ec72d8b606a8015f}{init}} () override
+\begin{DoxyCompactList}\small\item\em Init the game state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameState_ab74eef592005aadecf18c9b8851d4c33}{update}} () override
+\begin{DoxyCompactList}\small\item\em Update the game state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrtype_1_1GameState_aa3540d88b205a3be32419d84e1b85be2}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$g) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrtype_1_1GameState_aefa431667bf7987b1633fd43eff2f64f}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w, \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&ev) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrtype_1_1GameState_a0c8ba731cfe6ac2ec9b51b508faa30b3}{draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w) override
+\begin{DoxyCompactList}\small\item\em Draw the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}{init}} ()=0
+\begin{DoxyCompactList}\small\item\em Init the game state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em Update the game state. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w, \mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&ev)=0
+\begin{DoxyCompactList}\small\item\em Get the Name object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}{handle\+Event}} (\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$g)=0
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}{draw}} (\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&w)=0
+\begin{DoxyCompactList}\small\item\em Draw the game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}{name}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classrtype_1_1IGameState}{rtype\+::\+IGame\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrtype_1_1entities_1_1EntitiesManager}{entities\+::\+Entities\+Manager}} \mbox{\hyperlink{classrtype_1_1IGameState_a1887ab1b681a3254d8ceead76e978ae5}{EManager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class of the game state. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrtype_1_1GameState_af01bcf061ab7881efe5b6af4300d4aee}\label{classrtype_1_1GameState_af01bcf061ab7881efe5b6af4300d4aee}} 
+\index{rtype::GameState@{rtype::GameState}!GameState@{GameState}}
+\index{GameState@{GameState}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{GameState()}{GameState()}}
+{\footnotesize\ttfamily rtype\+::\+Game\+State\+::\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Game State object. 
+
+\mbox{\Hypertarget{classrtype_1_1GameState_a36f50e344165eb744ed418c724bfb3ec}\label{classrtype_1_1GameState_a36f50e344165eb744ed418c724bfb3ec}} 
+\index{rtype::GameState@{rtype::GameState}!````~GameState@{$\sim$GameState}}
+\index{````~GameState@{$\sim$GameState}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameState()}{~GameState()}}
+{\footnotesize\ttfamily rtype\+::\+Game\+State\+::$\sim$\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Game State object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrtype_1_1GameState_a0c8ba731cfe6ac2ec9b51b508faa30b3}\label{classrtype_1_1GameState_a0c8ba731cfe6ac2ec9b51b508faa30b3}} 
+\index{rtype::GameState@{rtype::GameState}!draw@{draw}}
+\index{draw@{draw}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void rtype\+::\+Game\+State\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw the game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1IGameState_a738bf746c4eadcd4b084c94ed3358b40}{rtype\+::\+IGame\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_af5319ffc9888cf513ca2e77753208f39}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_af5319ffc9888cf513ca2e77753208f39}{rtype\+::game\+::\+SGame\+Play}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1ea070b901d6eeab9ca5b05587960fa8}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1GameState_a247860fe7ca26715b134e06d524e6a76}\label{classrtype_1_1GameState_a247860fe7ca26715b134e06d524e6a76}} 
+\index{rtype::GameState@{rtype::GameState}!getName@{getName}}
+\index{getName@{getName}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string rtype\+::\+Game\+State\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Name object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classrtype_1_1GameState_aefa431667bf7987b1633fd43eff2f64f}\label{classrtype_1_1GameState_aefa431667bf7987b1633fd43eff2f64f}} 
+\index{rtype::GameState@{rtype::GameState}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int rtype\+::\+Game\+State\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{rtype\+::engine\+::\+Window}} \&}]{w,  }\item[{\mbox{\hyperlink{classrtype_1_1engine_1_1Event}{engine\+::\+Event}} \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \\
+\hline
+{\em ev} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1IGameState_a6fbb7140ad94dd4fb4a7535ee283ec73}{rtype\+::\+IGame\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_a59cd95121c1bc67b23157f2fe1529331}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_a221313b876696334d7f371a9ace54ad5}{rtype\+::game\+::\+SGame\+Play}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a6d21f8711f8bbba96d23fe106747b5db}{rtype\+::game\+::\+SMenu}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classrtype_1_1GameState_aa3540d88b205a3be32419d84e1b85be2}\label{classrtype_1_1GameState_aa3540d88b205a3be32419d84e1b85be2}} 
+\index{rtype::GameState@{rtype::GameState}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int rtype\+::\+Game\+State\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrtype_1_1GameEngine}{rtype\+::\+Game\+Engine}} $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrtype_1_1IGameState_a2248e83d675b284ee20e7a328ff19b26}{rtype\+::\+IGame\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a0ee6adc16a4965f795dc640a198b4221}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1GameState_addd2de9d06b7fc31ec72d8b606a8015f}\label{classrtype_1_1GameState_addd2de9d06b7fc31ec72d8b606a8015f}} 
+\index{rtype::GameState@{rtype::GameState}!init@{init}}
+\index{init@{init}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void rtype\+::\+Game\+State\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Init the game state. 
+
+
+
+Implements \mbox{\hyperlink{classrtype_1_1IGameState_a5fe546a3ec50a5a6020fc6a7a8705f68}{rtype\+::\+IGame\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ad9f065a7c17c69786c5efa840795fa89}{rtype\+::game\+::\+SGame\+Play}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a1aaf50a66b3e13be36c4950168e96c49}{rtype\+::game\+::\+SMenu}}.
+
+\mbox{\Hypertarget{classrtype_1_1GameState_ab74eef592005aadecf18c9b8851d4c33}\label{classrtype_1_1GameState_ab74eef592005aadecf18c9b8851d4c33}} 
+\index{rtype::GameState@{rtype::GameState}!update@{update}}
+\index{update@{update}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void rtype\+::\+Game\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the game state. 
+
+
+
+Implements \mbox{\hyperlink{classrtype_1_1IGameState_a0d5288cd5661e68fd064d6698b876eb0}{rtype\+::\+IGame\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ab1b356c5159cb47acf6e121ec4f336a9}{rtype\+::game\+::\+SGame\+Play}}, \mbox{\hyperlink{classrtype_1_1game_1_1SGamePlay_ab1b356c5159cb47acf6e121ec4f336a9}{rtype\+::game\+::\+SGame\+Play}}, and \mbox{\hyperlink{classrtype_1_1game_1_1SMenu_a4917a039e284b3d0adafb620a7d4b7cc}{rtype\+::game\+::\+SMenu}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}\label{classrtype_1_1GameState_acfde68454052260091e01c9eff34e54e}} 
+\index{rtype::GameState@{rtype::GameState}!name@{name}}
+\index{name@{name}!rtype::GameState@{rtype::GameState}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string rtype\+::\+Game\+State\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/system/game\+States/\mbox{\hyperlink{IGameState_8hpp}{IGame\+State.\+hpp}}\end{DoxyCompactItemize}

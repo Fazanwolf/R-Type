@@ -1,0 +1,83 @@
+\hypertarget{Window_8hpp_source}{}\doxysection{Window.\+hpp}
+\label{Window_8hpp_source}\index{include/Engine/Window.hpp@{include/Engine/Window.hpp}}
+\mbox{\hyperlink{Window_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2023}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/CPP-\/500-\/RUN-\/5-\/2-\/rtype-\/lucas.miranville}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Window}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ WINDOW\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ WINDOW\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//SCREEN\ SIZE}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ WINDOWED\_SMALL\ sf::Vector2f(920,420)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ WINDOWED\ sf::Vector2f(0,0)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ WINDOWED\_BIG\ sf::Vector2f(0,0)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ FULLSCREEN\ sf::Vector2f(1920,1080)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Engine_8hpp}{Engine/Engine.hpp}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacertype_1_1engine}{rtype::engine}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrtype_1_1engine_1_1Window}{Window}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a672903dc2cf29149aecec38531347fb2}{Window}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a0b015edd7409bb70c7e73a7b50b92624}{\string~Window}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7796600a4a8e2be077ef2691fbf03f91}{DisplayWindow}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a1a82d0c7ea0b16a6291691333e5f5211}{DrawWindow}}(\textcolor{keywordtype}{void})\ \{this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a4ab940b85b06a12b3f12376d53ab2efd}{window}}.display();\ \textcolor{keywordflow}{return}\ 0;\};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a1987ad69a46e3ea650e97db1338877f2}{UpdateEvent}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7df057835a5fe3673614790ffb5d65c1}{IsOpen}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a7fb3e3de4cdec24273c1f840ca5ba1f8}{IsClosed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a536c271e6505d71b7bbac01d00d538eb}{HandleEvent}}(\textcolor{keyword}{const}\ sf::Event::EventType\ \&type);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_ae49c0b10050f91bf937687831f4741f9}{CreateWindow}}(sf::VideoMode\ mode,\ std::string\ name);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_aeefb5e840f6aebf661d73d9717502141}{clear}}()\ \{\ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a4ab940b85b06a12b3f12376d53ab2efd}{window}}.clear(sf::Color::Black);\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a6478113a2be74ed64cee94d738aecbc6}{close}}()\ \{this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a4ab940b85b06a12b3f12376d53ab2efd}{window}}.close();\};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ sf::RenderWindow\ \&\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a18775971083ab9b5d395f3598aa8d6b7}{getWindow}}()\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a4ab940b85b06a12b3f12376d53ab2efd}{window}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_afc1270216213283340a2d1c4975afd4b}{t\_clock}}()}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a5f5903f415da4e43c8f7f9243e5ae879}{winTimer}}\ =\ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_aa9cb8dd73846cb26f7c614c918d121c2}{winClock}}.getElapsedTime();}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr<<\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a5f5903f415da4e43c8f7f9243e5ae879}{winTimer}}.asSeconds()<<std::endl;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a5f5903f415da4e43c8f7f9243e5ae879}{winTimer}}.asSeconds()\ >\ 1.f)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_aa9cb8dd73846cb26f7c614c918d121c2}{winClock}}.restart();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a2297bd7d62060d54b0fc637bcfef214d}{Draw}}(sf::Drawable\ \&en)}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classrtype_1_1engine_1_1Window_a4ab940b85b06a12b3f12376d53ab2efd}{window}}.draw(en);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_abbe18d4a216dbdf58c623e0cb0e4e59b}{window\_name}};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ sf::VideoMode\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a43a5e36c0f2b765b0c9c62c7aaa69cd1}{window\_mode}};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Event\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a28ef259f5ad75636663511fe224c85a2}{window\_event}};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ sf::RenderWindow\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a4ab940b85b06a12b3f12376d53ab2efd}{window}};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Clock\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_aa9cb8dd73846cb26f7c614c918d121c2}{winClock}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Time\ \mbox{\hyperlink{classrtype_1_1engine_1_1Window_a5f5903f415da4e43c8f7f9243e5ae879}{winTimer}};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \};}
+\DoxyCodeLine{00144\ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !WINDOW\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

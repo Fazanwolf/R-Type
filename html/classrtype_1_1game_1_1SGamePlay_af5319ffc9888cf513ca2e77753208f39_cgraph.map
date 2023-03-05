@@ -1,0 +1,8 @@
+<map id="rtype::game::SGamePlay::draw" name="rtype::game::SGamePlay::draw">
+<area shape="rect" id="node1" title="Draw on the window." alt="" coords="5,133,176,173"/>
+<area shape="rect" id="node2" href="$classrtype_1_1engine_1_1Window.html#aeefb5e840f6aebf661d73d9717502141" title="Function to clear a window." alt="" coords="225,5,378,45"/>
+<area shape="rect" id="node3" href="$classrtype_1_1engine_1_1Window.html#a2297bd7d62060d54b0fc637bcfef214d" title="Function to draw on the windows." alt="" coords="225,69,378,109"/>
+<area shape="rect" id="node4" href="$classrtype_1_1entities_1_1EntitiesManager.html#a00013a40d5fc61c5c85319af009e0fcd" title="This function is used to get the list of all the entities." alt="" coords="224,133,379,173"/>
+<area shape="rect" id="node5" href="$classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88" title="This function is used to get the sprite of an entity." alt="" coords="224,197,379,237"/>
+<area shape="rect" id="node6" href="$classrtype_1_1engine_1_1Window.html#a18775971083ab9b5d395f3598aa8d6b7" title="Function to render a window." alt="" coords="225,261,378,301"/>
+</map>
