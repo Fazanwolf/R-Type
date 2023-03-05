@@ -10,11 +10,25 @@
 
 #include "Engine/Engine.hpp"
 
+/**
+* @brief This namespace is for herite from engine
+*/
 namespace rtype::engine {
 
+    /**
+    * @brief This class is the base class for all the Text
+    */
     class Text {
         public:
+
+            /**
+            * @brief Constructor for class Text
+            */
             Text();
+
+            /**
+            * @brief Destructor for class Text
+            */
             ~Text();
 
         protected:

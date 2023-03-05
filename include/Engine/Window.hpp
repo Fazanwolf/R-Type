@@ -16,25 +16,103 @@
 
 #include "Engine/Engine.hpp"
 
+
+/**
+* @brief This namespace is for herite from engine
+*/
 namespace rtype::engine {
 
+    /**
+    * @brief This class is the base class for all the Window
+    */
     class Window {
         public:
+
+            /**
+            * @brief Constructor for class Window
+            */
             Window();
+
+            /**
+            * @brief Destructor for class Window
+            */
             ~Window();
+
+            /**
+            * @brief Function to Display a window
+            *
+            * @return Return 0 when end
+            */
             int DisplayWindow(void);
+
+            /**
+            * @brief Function to Draw a window
+            *
+            * @return Return 0 when end
+            */
             int DrawWindow(void) {this->window.display(); return 0;};
+
+            /**
+            * @brief Function to update the event in the window
+            *
+            * @return Return a Boolean
+            */
             bool UpdateEvent(void);
+
+            /**
+            * @brief Function to check if the window is open
+            *
+            * @return Return true if the window is open and false if not
+            */
             bool IsOpen(void);
+
+            /**
+            * @brief Function to check if the window is open
+            *
+            * @return Return true if the window is close and false if not
+            */
             bool IsClosed(void);
+
+            /**
+            * @brief Function to handle event
+            *
+            * @param type Event Type
+            *
+            * @return Return a Boolean
+            */
             bool HandleEvent(const sf::Event::EventType &type);
+
+            /**
+            * @brief Function to create a window
+            *
+            * @param mode Video mode of the window
+            * @param name Name of the window
+            */
             void CreateWindow(sf::VideoMode mode, std::string name);
 
+
+            /**
+            * @brief Function to clear a window
+            */
             void clear() { this->window.clear(sf::Color::Black); };
+
+            /**
+            * @brief Function to close a window
+            */
             void close() {this->window.close();};
+
+            /**
+            * @brief Function to render a window
+            *
+            * @return Return a window
+            */
             sf::RenderWindow &getWindow() {
                 return this->window;
             }
+
+            /**
+            * @brief Simple clock for the window
+            */
             void t_clock()
             {
                 this->winTimer = this->winClock.getElapsedTime();
@@ -43,6 +121,11 @@ namespace rtype::engine {
                     winClock.restart();
             };
 
+            /**
+            * @brief Function to draw on the windows
+            *
+            * @param en Something to draw on the window
+            */
             void Draw(sf::Drawable &en)
             {
                 this->window.draw(en);

@@ -22,7 +22,6 @@ Event::~Event()
 
 EventType Event::ServerPlayerAction(sf::Transformable &obj_pos, EventType action)
 {
-    
     switch(action)
     {
         case(MV_UP):
@@ -64,7 +63,7 @@ void Event::MakeSpriteMovable(sf::Sprite &asset)
         asset.setPosition(sf::Vector2f(20, asset.getPosition().y));
         return;
     }
-    
+
     if (asset.getPosition().x > 840) {
         asset.setPosition(sf::Vector2f(840, asset.getPosition().y));
         return;

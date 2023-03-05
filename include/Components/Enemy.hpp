@@ -10,9 +10,19 @@
 
 #include "Entities/Properties.hpp"
 
+/**
+* @brief This class is the base class for all the enemy in the game
+*/
 class Enemy {
     public:
+        /**
+        * @brief Constructor for class Enemy
+        */
         Enemy();
+
+        /**
+        * @brief Destructor for class Enemy
+        */
         ~Enemy();
 
     protected:

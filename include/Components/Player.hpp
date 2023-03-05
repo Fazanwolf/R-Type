@@ -10,9 +10,20 @@
 
 #include "Entities/Properties.hpp"
 
+/**
+* @brief This class is the base class for all the player
+*/
 class Player {
     public:
+
+        /**
+        * @brief Constructor for class Player
+        */
         Player();
+
+        /**
+        * @brief Destructor for class Player
+        */
         ~Player();
 
     protected:

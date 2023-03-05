@@ -10,10 +10,25 @@
 
 #include "Engine/Engine.hpp"
 
+/**
+* @brief This namespace is for herite from engine
+*/
 namespace rtype::engine {
+
+    /**
+    * @brief This class is the base class for all the Map
+    */
     class Map {
         public:
+
+            /**
+            * @brief Constructor for class Map
+            */
             Map();
+
+            /**
+            * @brief Destructor for class Map
+            */
             ~Map();
 
         protected:
