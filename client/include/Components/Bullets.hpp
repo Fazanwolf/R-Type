@@ -9,6 +9,7 @@
 #define BULLETS_HPP_
 
 #include "Engine/Engine.hpp"
+#include "IComponents.hpp"
 #include "math.h"
 
 /**
@@ -30,7 +31,7 @@ namespace rtype::components {
     /**
     * @brief This class is the base class for all the bullets
     */
-    class Bullets {
+    class Bullets : public Component {
         public:
             /**
             * @brief Constructor for class Bullets
@@ -95,7 +96,11 @@ namespace rtype::components {
             *
             * @param win Window of the game
             */
-            void drawBullets(sf::Window &win);
+            void draw(sf::RenderWindow &win) override {
+                for (auto &b : bullets_list) {
+                    win.draw(b);
+                }
+            }
 
             /**
             * @brief Function to update the bullet

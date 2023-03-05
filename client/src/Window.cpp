@@ -19,7 +19,7 @@ Window::~Window()
 {
 }
 
-void Window::CreateWindow(sf::VideoMode mode, std::string name)
+void Window::nWindow(sf::VideoMode mode, std::string name)
 {
     this->window_mode = mode;
     this->window_name = name;

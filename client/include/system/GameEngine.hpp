@@ -56,7 +56,7 @@ namespace rtype
          */
         void init()
         {
-            win.CreateWindow({920, 620}, "R-Type");
+            win.nWindow({920, 620}, "R-Type");
             // event = engine::Event(this->clt);
             //std::string tmp = clt->client->getBuffer();
             //if (!tmp.empty()) std::cout<<"PID ? "<<tmp<<std::endl;

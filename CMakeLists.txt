@@ -24,7 +24,6 @@ add_executable(${PROJECT_NAME}
         client/src/main.cpp
         client/src/EntitiesManager.cpp
         client/src/Event.cpp
-        client/src/Player.cpp
         client/src/Window.cpp
 )
 

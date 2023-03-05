@@ -88,7 +88,7 @@ namespace rtype::engine {
             * @param mode Video mode of the window
             * @param name Name of the window
             */
-            void CreateWindow(sf::VideoMode mode, std::string name);
+            void nWindow(sf::VideoMode mode, std::string name);
 
 
             /**

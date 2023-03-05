@@ -9,6 +9,7 @@
 
 #include "IGameState.hpp"
 #include <queue>
+#include <array>
 #include <string>
 #include <cstring>
 #include <Skaldi.hpp>
@@ -17,6 +18,7 @@
 #define SGAMEPLAY_HPP_
 
 using namespace rtype;
+using namespace rtype::components;
 /**
  * @brief The namespace of the SGamePlay
  * 
@@ -55,6 +57,24 @@ namespace rtype::game {
             {
 
             };
+
+            void loadGameTexture(std::vector<std::string> paths)
+            {
+                int i = 0;
+                for (auto p : paths) {
+                    if (!textures[i++].loadFromFile(p))
+                        std::cout << "error" << std::endl;
+                }
+
+            }
+
+            void loadGameTexture()
+            {
+                if (!textures[0].loadFromFile("./assets/ovni.png"))
+                    std::cout << "error" << std::endl;
+
+            }
+
             /**
              * @brief Init the game state
              * 
@@ -62,11 +82,12 @@ namespace rtype::game {
             void init() override
             {
                 std::cout<<"Init Gameplay"<<std::endl;
+
+                loadGameTexture();
                 //init sprites;
+                this->EManager.NewEntity(std::vector<Component>{Default(textures[0], {20, 300}, {1.5, 1.5}), });
                 // for (int i = 0; i != 2; i++)
-                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
-                this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
-                // this->EManager.NewMobs("./assets/spaceship.png", {200, 500}, {0.1, 0.1});
+                // this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
                 //FirstEntities
                 // this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
             };
@@ -115,11 +136,8 @@ namespace rtype::game {
             {
                 //draw entities
                 w.clear();
-                w.Draw(this->BManager.getSprite());
-                for (auto& e : this->EManager.getIDs())
-                    w.Draw(this->EManager.getSprite(e));
-                // for (auto& m : this->EManager.getIDsMobs())
-                //     w.Draw(this->EManager.getSpriteMobs(m));
+                this->EManager.draw(w.getWindow() );
+                //     w.Draw(this->EManager.getSprite(e));
                 w.getWindow().display();
                 std::cout<<"draw"<<std::endl;
             };
@@ -145,13 +163,13 @@ namespace rtype::game {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) /*|| ready button pressed*/) {
                     //send ready  info
                 }
-                ev.MakeSpriteMovable(this->EManager.getSprite(0));
+                // ev.MakeSpriteMovable(this->EManager.getSprite(0));
                 return -1;
             }
 
         private:
             bool isMatchRunning; //when all player are ready set to true
-
+            std::array<sf::Texture, 100> textures;
     };
 
 }
