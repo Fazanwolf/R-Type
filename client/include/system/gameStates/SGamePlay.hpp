@@ -64,7 +64,9 @@ namespace rtype::game {
                 std::cout<<"Init Gameplay"<<std::endl;
                 //init sprites;
                 // for (int i = 0; i != 2; i++)
+                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
                 this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
+                // this->EManager.NewMobs("./assets/spaceship.png", {200, 500}, {0.1, 0.1});
                 //FirstEntities
                 // this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
             };
@@ -113,8 +115,11 @@ namespace rtype::game {
             {
                 //draw entities
                 w.clear();
+                w.Draw(this->BManager.getSprite());
                 for (auto& e : this->EManager.getIDs())
                     w.Draw(this->EManager.getSprite(e));
+                // for (auto& m : this->EManager.getIDsMobs())
+                //     w.Draw(this->EManager.getSpriteMobs(m));
                 w.getWindow().display();
                 std::cout<<"draw"<<std::endl;
             };

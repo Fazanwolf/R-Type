@@ -26,6 +26,7 @@
 #include "Engine/Event.hpp"
 #include "Entities/EntitiesManager.hpp"
 #include "Components/Bullets.hpp"
+#include "Components/Background.hpp"
 
 /**
 * @brief Function to create a rectangle shape at a position
