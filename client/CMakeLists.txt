@@ -38,6 +38,7 @@ target_include_directories(${PROJECT_NAME}
 )
 
 find_package(Skaldi 0.0.1.0 REQUIRED)
+find_package(SFML 2.6 REQUIRED COMPONENTS graphics window system audio)
 
 project(
         rtype-client
@@ -52,6 +53,7 @@ project(
 target_link_libraries(${PROJECT_NAME}
         PUBLIC
             Skaldi
+            sfml-graphics sfml-audio sfml-system sfml-window
 )
 
 target_compile_options(${PROJECT_NAME} PRIVATE
