@@ -20,19 +20,19 @@ option(USE_CLANG_TIDY_WITH_FIX "Use clang-tidy with fix" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF) # Fix dll issues on Windows
 
 add_executable(${PROJECT_NAME}
-        src/Bullets.cpp
-        src/main.cpp
-        src/EntitiesManager.cpp
-        src/Event.cpp
-        src/Player.cpp
-        src/Window.cpp
+        client/src/Bullets.cpp
+        client/src/main.cpp
+        client/src/EntitiesManager.cpp
+        client/src/Event.cpp
+        client/src/Player.cpp
+        client/src/Window.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
-            "${CMAKE_CURRENT_SOURCE_DIR}/src"
+            "${CMAKE_CURRENT_SOURCE_DIR}/client/src"
         PUBLIC
-            "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>"
+            "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/client/include>"
             "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
 
