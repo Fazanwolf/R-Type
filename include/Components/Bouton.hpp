@@ -42,7 +42,7 @@ namespace rtype::components
         MENU,
         LOBBY,
         WELCOME,
-        NONE
+        NONE = -1
     };
 
     /**

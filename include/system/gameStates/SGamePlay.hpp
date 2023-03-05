@@ -61,6 +61,7 @@ namespace rtype::game {
              */
             void init() override
             {
+                std::cout<<"Init Gameplay"<<std::endl;
                 //init sprites;
                 // for (int i = 0; i != 2; i++)
                 this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
@@ -87,18 +88,21 @@ namespace rtype::game {
              * @return int8_t 
              */
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
+
             /**
              * @brief Handle the event input
              * 
-             * @param w 
-             * @param ev 
+             * @param w
+             * @param ev
              * @return int 
              */
             int handleEvent(engine::Window &w, engine::Event &ev)
             {
-                LocalInput(ev);
-                return 0;
+                int resLocalInput = LocalInput(ev);
+                std::cout<<"handleEvent"<<std::endl;
+                return (resLocalInput != -1 ? resLocalInput:rtype::STATES::NONE);
             };
+
             /**
              * @brief Draw on the window
              * 
@@ -114,8 +118,9 @@ namespace rtype::game {
                 w.getWindow().display();
                 std::cout<<"draw"<<std::endl;
             };
+
             /**
-             * @brief check a input
+             * @brief check Local Player input
              * 
              * @param ev 
              * @return int 
@@ -126,8 +131,7 @@ namespace rtype::game {
                 //keyboard Input
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
                 {
-                    return 1;
-                    // return rtype::STATES::QUIT;
+                    return STATES::QUIT;
                 }
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
                 {
@@ -136,8 +140,8 @@ namespace rtype::game {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) /*|| ready button pressed*/) {
                     //send ready  info
                 }
-
                 ev.MakeSpriteMovable(this->EManager.getSprite(0));
+                return -1;
             }
 
         private:

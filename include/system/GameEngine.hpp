@@ -16,20 +16,7 @@
 
 namespace rtype
 {
-    /**
-     * @brief enum of the states
-     * 
-     */
-    enum STATES
-    {
-        PLAY,
-        QUIT, 
-        OPTION,
-        MENU,
-        LOBBY,
-        WELCOME,
-        NONE
-    };
+
     /**
      * @brief This function is if the object is an instance of the class
      * 
@@ -93,7 +80,7 @@ namespace rtype
                     // break;
                 case STATES::QUIT :
                     std::cout<<"QUIT"<<std::endl;
-                    isRunning = false;
+                    setIsRunning(false);
                     break;
                 case STATES::OPTION :
                     break;
@@ -119,17 +106,19 @@ namespace rtype
         bool loadState(GameState *new_state)
         {
             this->states.push(new_state);
-            std::cout << "loadstate" << std::endl;
-            if (this->states.empty()) {
-                return false;
-                }
-            if (this->states.size() > 1)
-                this->states.pop();
-            else {
-                this->states.front()->init();
-                std::cout << this->states.front()->getName() << std::endl;
-            }
-            this->isRunning = true;
+            std::cout << "START loadstate" << std::endl;
+
+            if (this->states.empty()) {return false;}
+
+            if (this->states.size() > 1) { this->states.pop();}
+            
+            this->states.front()->init();
+
+            // std::cout << this->states.front()->getName() << std::endl;
+
+            setIsRunning(true);
+
+            std::cout << "END loadstate" << std::endl;
             return true;
         };
         // void runState(GameState *state)
@@ -143,25 +132,27 @@ namespace rtype
             if (state != STATES::NONE) {
                 loadState(createState(state));
             }
-
+            std::cout << "POST loadstate" << std::endl;
             int swapState = STATES::NONE;
             while (this->isRunning && this->win.IsOpen()) {
 
                 if (states.empty()) {
                     return;
                 }
+                // std::cout << "1" << std::endl;
+
                 swapState = this->states.front()->handleEvent(win, event);
+                // std::cout << "2" << std::endl;
                 // swapState = this->states.front()->handleEvent(this);
-                // std::cout<<swapState<<std::endl;
+                std::cout<<swapState<<std::endl;
                 if (swapState == STATES::QUIT) {
-                    setIsRunning(false);    
+                    setIsRunning(false);
                 } else if (swapState != STATES::NONE) {
                     std::cout<<"runNew\n";
                     runState(swapState);
                 }
 
                 this->states.front()->update();
-                // std::cout << "2" << std::endl;
                 this->states.front()->draw(this->win);
                 // std::cout << "3" << std::endl;
             }

@@ -45,6 +45,7 @@ class SMenu : public GameState {
          * 
          */
         SMenu() {
+            std::cout<<"MENU PLAYING HERE\n";
             this->name = "Menu";
         };
         /**
@@ -59,6 +60,7 @@ class SMenu : public GameState {
         void init() override {
             //init Textures
             //init standard textureless buttons;
+            std::cout<<"INIT PLAYING HERE\n";
             sf::Vector2f pos({460-100, 200});
             btns.push_back(components::Bouton(sf::Color::Green, "PLAY", pos, {200,60}));
             btns.push_back(components::Bouton(sf::Color::Red, "QUIT", {pos.x, pos.y + 120}, {200,60}));

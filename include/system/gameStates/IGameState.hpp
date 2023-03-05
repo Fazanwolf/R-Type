@@ -22,6 +22,22 @@ class GameEngine;
  */
 namespace rtype
 {
+
+/**
+ * @brief enum of the states
+ * 
+ */
+enum STATES
+{
+    PLAY,
+    QUIT, 
+    OPTION,
+    MENU,
+    LOBBY,
+    WELCOME,
+    NONE = -1
+};
+
 class GameEngine;
 /**
  * @brief The class of the game state
@@ -120,7 +136,7 @@ class GameState : public IGameState {
             w;
             sf::Event ed;
             ev.GetMousePos(ed);
-            return 0;
+            return -1;
         };
         /**
          * @brief Draw the game state
