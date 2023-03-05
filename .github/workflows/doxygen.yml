@@ -33,7 +33,7 @@ jobs:
   doxygen:
 #    needs: doxygen_files_changed
 #   needs.doxygen_files_changed.outputs.files_changed == 'True' ||
-    if: always() && ( github.event_name == 'workflow_dispatch')
+#    if: always() && ( github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
