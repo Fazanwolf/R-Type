@@ -80,6 +80,8 @@ namespace rtype::components
 
             ~Component() {}
 
+            void printSMthing(std::string str) { std::cout<<str<<std::endl;}
+
             void draw(sf::RenderWindow &w) override {}
             void update() override {}
             void init() override {}
@@ -88,7 +90,7 @@ namespace rtype::components
             int8_t getOwnerId() { return OwnerId; }
     };
 
-    class Default : public Component
+    class DefaultComp : public Component
     {
         public:
             sf::Sprite asset;
@@ -98,18 +100,27 @@ namespace rtype::components
             sf::IntRect textRect;
 
         public:
-            Default() {}
-            ~Default() {}
+            DefaultComp() {}
+            ~DefaultComp() {}
 
-            Default(sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size) {
+            DefaultComp(sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size) {
 
-                this->assetTexture = tex;
+                // this->assetTexture = tex;
+                asset.setTexture(tex);
+                asset.setScale(this->scale);
+                asset.setPosition(this->pos);
+            }
+
+            DefaultComp(std::string tex, sf::Vector2f pos, sf::Vector2f size) {
+
+                // this->assetTexture = tex;
                 asset.setTexture(this->assetTexture);
                 asset.setScale(this->scale);
                 asset.setPosition(this->pos);
             }
 
-            void draw(sf::RenderWindow &w) {
+            void draw(sf::RenderWindow &w) override{
+                std::cout<<"fuck that\n";
                 w.draw(asset);
             }
     };

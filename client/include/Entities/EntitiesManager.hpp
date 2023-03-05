@@ -30,11 +30,10 @@ namespace rtype::entities {
                 addComponent(compn);
             };
 
-            Entity(int8_t idx, std::vector<rtype::components::Component> compList)
+            Entity(int8_t idx)
             {
                 this->Id = idx;
-                this->comps.setVector(compList);
-            };
+            }
 
             ~Entity() {};
 
@@ -67,7 +66,9 @@ namespace rtype::entities {
             void draw(sf::RenderWindow &w)
             {
                 for (auto &cmp : comps.getList()) {
+                    cmp.printSMthing("fuck me\n");
                     cmp.draw(w);
+                    std::cout<<"fuck this\n";
                 }
             }
 
@@ -166,17 +167,22 @@ namespace rtype::entities {
 
             void NewEntity(std::vector<rtype::components::Component> components)
             {
-                entities.push_back(Entity(e_idx, components));
+                std::cout<<entities.size()<<"\n";
+                // entities.push_back(Entity(e_idx, components));
                 e_idx = e_idx+1;
+                std::cout<<entities.size()<<" entity(ies)\n";
                 return;
             }
 
-            // void NewEntity(rtype::components::Component component)
-            // {
-            //     entities.push_back(Entity(e_idx, {component}));
-            //     e_idx = e_idx+1;
-            //     return;
-            // }
+            void NewEntity(sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size)
+            {
+                std::cout<<entities.size()<<"\n";
+                entities.push_back(Entity(e_idx));
+                entities.back().addComponent(rtype::components::DefaultComp(tex, pos, size));
+                e_idx = e_idx+1;
+                std::cout<<entities.size()<<" entity(ies)\n";
+                return;
+            }
 
         private:
             int8_t pId; //player ID used to get local input relative to player pos in entity array

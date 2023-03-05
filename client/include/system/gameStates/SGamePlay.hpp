@@ -85,11 +85,7 @@ namespace rtype::game {
 
                 loadGameTexture();
                 //init sprites;
-                this->EManager.NewEntity(std::vector<Component>{Default(textures[0], {20, 300}, {1.5, 1.5}), });
-                // for (int i = 0; i != 2; i++)
-                // this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
-                //FirstEntities
-                // this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
+                this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
             /**
              * @brief Update the game state
@@ -122,7 +118,7 @@ namespace rtype::game {
             int handleEvent(engine::Window &w, engine::Event &ev)
             {
                 int resLocalInput = LocalInput(ev);
-                std::cout<<"handleEvent"<<std::endl;
+                // std::cout<<"handleEvent"<<std::endl;
                 return (resLocalInput != -1 ? resLocalInput:rtype::STATES::NONE);
             };
 
@@ -145,7 +141,7 @@ namespace rtype::game {
             /**
              * @brief check Local Player input
              * 
-             * @param ev 
+             * @param ev
              * @return int 
              */
             //State Property

@@ -106,7 +106,6 @@ namespace rtype
         bool loadState(GameState *new_state)
         {
             this->states.push(new_state);
-            std::cout << "START loadstate" << std::endl;
 
             if (this->states.empty()) {return false;}
 
@@ -118,7 +117,6 @@ namespace rtype
 
             setIsRunning(true);
 
-            std::cout << "END loadstate" << std::endl;
             return true;
         };
         // void runState(GameState *state)
@@ -132,19 +130,14 @@ namespace rtype
             if (state != STATES::NONE) {
                 loadState(createState(state));
             }
-            std::cout << "POST loadstate" << std::endl;
             int swapState = STATES::NONE;
             while (this->isRunning && this->win.IsOpen()) {
 
                 if (states.empty()) {
                     return;
                 }
-                // std::cout << "1" << std::endl;
 
                 swapState = this->states.front()->handleEvent(win, event);
-                // std::cout << "2" << std::endl;
-                // swapState = this->states.front()->handleEvent(this);
-                std::cout<<swapState<<std::endl;
                 if (swapState == STATES::QUIT) {
                     setIsRunning(false);
                 } else if (swapState != STATES::NONE) {
@@ -154,7 +147,6 @@ namespace rtype
 
                 this->states.front()->update();
                 this->states.front()->draw(this->win);
-                // std::cout << "3" << std::endl;
             }
         }
         /**
