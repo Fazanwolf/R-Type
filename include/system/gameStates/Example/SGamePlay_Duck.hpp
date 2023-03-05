@@ -18,27 +18,48 @@
 
 using namespace rtype;
 
+/**
+ * @brief The namespace of the game
+ * 
+ */
 namespace rtype::game {
-
+    /**
+     * @brief The class of the game state
+     * 
+     */
     class SGamePlay : public GameState {
         public:
+            /**
+             * @brief Construct a new SGamePlay object
+             * 
+             */
             SGamePlay()
             {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
-
+            /**
+             * @brief Construct a new SGamePlay object
+             * 
+             * @param nb_players 
+             */
             SGamePlay(int nb_players)
             {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
-
+            /**
+             * @brief Destroy the SGamePlay object
+             * 
+             */
             ~SGamePlay()
             {
 
             };
-
+            /**
+             * @brief Init the game state
+             * 
+             */
             void init() override
             {
                 //init sprites;
@@ -47,7 +68,10 @@ namespace rtype::game {
                 //FirstEntities
                 // this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
             };
-
+            /**
+             * @brief Update the game state
+             * 
+             */
             void update() override
             {
                 if (!isMatchRunning) {
@@ -58,22 +82,40 @@ namespace rtype::game {
                 // update client to server data
                 //pop event queue here after rework
             };
-
+            /**
+             * @brief Get the Local Player I D object
+             * 
+             * @return int8_t of the pid
+             */
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
-
+            /**
+             * @brief Handle the event
+             * 
+             * @param w 
+             * @param ev 
+             * @return int 
+             */
             int handleEvent(engine::Window &w, engine::Event &ev)
             {
                 LocalInput(ev);
                 return 0;
             };
-
+            /**
+             * @brief Draw the game state
+             * 
+             * @param w 
+             */
             void draw(rtype::engine::Window &w) override
             {
                 //draw entities
                 w.clear();
                 std::cout<<"draw"<<std::endl;
             };
-
+            /**
+             * @brief Get the Input
+             * 
+             * @return Return a int
+             */
             //State Property
             int LocalInput(engine::Event &ev) //returns -1 if nothing to return
             {

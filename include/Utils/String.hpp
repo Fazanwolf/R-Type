@@ -13,6 +13,14 @@
 #define STRING_HPP_
 class StringUtils {
 public:
+    /**
+     * @brief Split a string
+     * 
+     * @param pos 
+     * @param s 
+     * @param delimiter 
+     * @return std::list<std::string> a list a str
+     */
     static std::list<std::string> split_str(size_t pos, std::string& s, std::string delimiter)
     {
         std::string token;
@@ -24,7 +32,13 @@ public:
         }
         return parsed;
     }
-
+    /**
+     * @brief Split a string
+     * 
+     * @param s 
+     * @param delim 
+     * @return std::vector<std::string> 
+     */
     static std::vector<std::string> split(std::string &s, char delim)
     {
         std::vector<std::string> elems;

@@ -16,6 +16,10 @@
 
 namespace rtype
 {
+    /**
+     * @brief enum of the states
+     * 
+     */
     enum STATES
     {
         PLAY,
@@ -26,20 +30,43 @@ namespace rtype
         WELCOME,
         NONE
     };
-
+    /**
+     * @brief This function is if the object is an instance of the class
+     * 
+     * @tparam Base 
+     * @tparam T 
+     * @param ptr 
+     * @return true 
+     * @return false 
+     */
     template<typename Base, typename T>
     inline bool instanceof(const T *ptr) {
         return dynamic_cast<const Base*>(ptr) != nullptr;
     }
-
+    /**
+     * @brief The class of the GameEngine
+     * 
+     */
     class GameEngine {
     public:
+        /**
+         * @brief Construct a new Game Engine object
+         * 
+         */
         GameEngine()
         {
         };
+        /**
+         * @brief Destroy the Game Engine object
+         * 
+         */
         ~GameEngine()
         {
         };
+        /**
+         * @brief Init the game engine
+         * 
+         */
         void init()
         {
             win.CreateWindow({920, 620}, "R-Type");
@@ -48,7 +75,12 @@ namespace rtype
             //if (!tmp.empty()) std::cout<<"PID ? "<<tmp<<std::endl;
         }
         //done
-
+        /**
+         * @brief Create a State object
+         * 
+         * @param state 
+         * @return GameState* A state
+         */
         GameState *createState(int state)
         {
             switch (state)
@@ -77,7 +109,13 @@ namespace rtype
             }
             return new rtype::NULLState();
         }
-
+        /**
+         * @brief Load a state
+         * 
+         * @param new_state 
+         * @return true 
+         * @return false 
+         */
         bool loadState(GameState *new_state)
         {
             this->states.push(new_state);
@@ -95,6 +133,11 @@ namespace rtype
             return true;
         };
         // void runState(GameState *state)
+        /**
+         * @brief Run a state
+         * 
+         * @param state 
+         */
         void runState(int state)
         {
             if (state != STATES::NONE) {
@@ -123,8 +166,18 @@ namespace rtype
                 // std::cout << "3" << std::endl;
             }
         }
-
+        /**
+         * @brief Get the Is Running object
+         * 
+         * @return true 
+         * @return false 
+         */
         bool getIsRunning() {return isRunning;}
+        /**
+         * @brief Set the Is Running object
+         * 
+         * @param state 
+         */
         void setIsRunning(bool state) {isRunning = state;}
 
         engine::Window win;

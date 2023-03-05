@@ -15,10 +15,16 @@
 #include "Components/Bouton.hpp"
 
 using namespace rtype;
-
+/**
+ * @brief The namespace of the game
+ * 
+ */
 namespace rtype::game
 {
-
+/**
+ * @brief The class of the game state
+ * 
+ */
 class SMenu : public GameState {
 
     public: //data declared here are suggested to behave differently in the next patch due to ECS updates
@@ -26,16 +32,30 @@ class SMenu : public GameState {
         std::vector<sf::Texture> textures;
 
     public:
+        /**
+         * @brief Get the Name object
+         * 
+         * @return std::string 
+         */
         std::string getName(){
             return name;
         }
-
+        /**
+         * @brief Construct a new SMenu object
+         * 
+         */
         SMenu() {
             this->name = "Menu";
         };
-
+        /**
+         * @brief Destroy the SMenu object
+         * 
+         */
         ~SMenu() {};
-
+        /**
+         * @brief Init the game state
+         * 
+         */
         void init() override {
             //init Textures
             //init standard textureless buttons;
@@ -45,9 +65,18 @@ class SMenu : public GameState {
         
             return;
         }
-
+        /**
+         * @brief Update the game state
+         * 
+         */
         void update() override {return;}
-
+        /**
+         * @brief handle input events
+         * 
+         * @param w 
+         * @param ev 
+         * @return int 
+         */
         int handleEvent(rtype::engine::Window &w, engine::Event &ev) override {
            if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
                 std::cout<<"Mouse Pressed"<<std::endl;
@@ -66,7 +95,12 @@ class SMenu : public GameState {
                 return components::QUIT;
             return components::NONE;
         };
-
+        /**
+         * @brief handle input events
+         * 
+         * @param g the state
+         * @return int 
+         */
         int handleEvent(rtype::GameEngine *g) override {
             //click handler
             if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
@@ -85,7 +119,11 @@ class SMenu : public GameState {
                 return components::QUIT;
             return components::NONE;
         };
-
+        /**
+         * @brief Draw the game state
+         * 
+         * @param w 
+         */
         void draw(rtype::engine::Window &w) override
         {
             w.clear();
