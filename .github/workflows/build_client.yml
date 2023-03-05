@@ -1,4 +1,4 @@
-name: Build Linux Action
+name: Build Client Action
 
 on:
   push:
