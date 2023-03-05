@@ -25,6 +25,18 @@
 var NAVTREE =
 [
   [ "R-Type", "index.html", [
+    [ "Description", "index.html#autotoc_md1", null ],
+    [ "Getting Started", "index.html#autotoc_md2", [
+      [ "Dependencies", "index.html#autotoc_md3", null ],
+      [ "Building", "index.html#autotoc_md4", [
+        [ "Manually", "index.html#autotoc_md5", null ],
+        [ "With docker", "index.html#autotoc_md6", null ]
+      ] ],
+      [ "Executing program", "index.html#autotoc_md7", null ]
+    ] ],
+    [ "Help", "index.html#autotoc_md8", null ],
+    [ "Contributors", "index.html#autotoc_md9", null ],
+    [ "License", "index.html#autotoc_md10", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
