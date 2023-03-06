@@ -8,11 +8,8 @@
 #pragma once
 
 #include "gameStates/States.hpp"
-
 // #include <Skaldi.hpp>
 #include <queue>
-#ifndef GAMEENGINE_HPP_
-#define GAMEENGINE_HPP_
 
 namespace rtype
 {
@@ -175,5 +172,3 @@ namespace rtype
         std::queue<GameState*> states;
     };
 }
-
-#endif /* !GAMEENGINE_HPP_ */

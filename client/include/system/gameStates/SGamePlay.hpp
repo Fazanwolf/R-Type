@@ -39,6 +39,7 @@ namespace rtype::game {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
+
             /**
              * @brief Construct a new SGamePlay object
              * 
@@ -49,6 +50,7 @@ namespace rtype::game {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
+
             /**
              * @brief Destroy the SGamePlay object
              * 
@@ -68,11 +70,10 @@ namespace rtype::game {
 
             }
 
-            void loadGameTexture()
+            void loadGameTexture(void)
             {
                 if (!textures[0].loadFromFile("./assets/ovni.png"))
                     std::cout << "error" << std::endl;
-
             }
 
             /**
@@ -85,8 +86,14 @@ namespace rtype::game {
 
                 loadGameTexture();
                 //init sprites;
-                this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
+                // this->shape.setFillColor(sf::Color::Green);
+                this->shape.setScale( {1.5,1.5} );
+                this->shape.setPosition( {20,30} );
+                this->shape.setTexture(textures[0]);
+                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
+                // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
+
             /**
              * @brief Update the game state
              * 
@@ -101,6 +108,7 @@ namespace rtype::game {
                 // update client to server data
                 //pop event queue here after rework
             };
+
             /**
              * @brief Get the Local Player I D object
              * 
@@ -133,9 +141,10 @@ namespace rtype::game {
                 //draw entities
                 w.clear();
                 this->EManager.draw(w.getWindow() );
+                // w.getWindow().draw(this->shape);
                 //     w.Draw(this->EManager.getSprite(e));
                 w.getWindow().display();
-                std::cout<<"draw"<<std::endl;
+                // std::cout<<"draw"<<std::endl;
             };
 
             /**
@@ -164,6 +173,7 @@ namespace rtype::game {
             }
 
         private:
+            sf::Sprite shape;
             bool isMatchRunning; //when all player are ready set to true
             std::array<sf::Texture, 100> textures;
     };

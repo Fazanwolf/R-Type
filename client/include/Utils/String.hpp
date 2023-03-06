@@ -11,6 +11,7 @@
 
 #ifndef STRING_HPP_
 #define STRING_HPP_
+
 class StringUtils {
 public:
     /**

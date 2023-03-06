@@ -44,12 +44,12 @@ sf::Sprite EntitiesManager::CreateMobs(std::string filename, sf::Vector2f pos, s
     // return assetMobs;
 }
 
-void EntitiesManager::NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
-{
-    // this->entities[idx] = this->CreateEntitie(fpath, pos, scale);
-    // IDs.push_back(idx);
-    // idx++;
-}
+// void EntitiesManager::NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+// {
+//     // this->entities[idx] = this->CreateEntitie(fpath, pos, scale);
+//     // IDs.push_back(idx);
+//     // idx++;
+// }
 
 void EntitiesManager::NewMobs(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
 {

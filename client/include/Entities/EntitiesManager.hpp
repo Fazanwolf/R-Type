@@ -5,14 +5,11 @@
 ** EntitiesManager
 */
 
-#ifndef ENTITIESMANAGER_HPP_
-#define ENTITIESMANAGER_HPP_
+#pragma once
 
 #include "../Engine/Engine.hpp"
 #include "../Components/IComponents.hpp"
-#include <array>
-#include <vector>
-#include <utility>
+#include "Utils/SparseArray.hpp"
 
 /**
  * @brief This namepace is used to manage all the entities in the game
@@ -24,7 +21,7 @@ namespace rtype::entities {
         public:
             Entity() {};
             
-            Entity(int8_t idx, rtype::components::Component compn)
+            Entity(int8_t idx, rtype::components::Component *compn)
             {
                 this->Id = idx;
                 addComponent(compn);
@@ -38,15 +35,16 @@ namespace rtype::entities {
             ~Entity() {};
 
             //setter
-            void addComponent(rtype::components::Component newComp) {
-                comps.addElem(newComp);
+            void addComponent(rtype::components::Component *newComp) {
+                this->comps.addElement(newComp);
+                // comps.addElement(newComp);
             }
 
             int getIndex(int k)
             {
                 auto tmp = this->comps.getList();
                 for (int i = 0; i < tmp.size(); i++) {
-                    if (tmp[i].getId() == k)
+                    if (tmp[i]->getId() == k)
                         return i;
                 }
                 return -1;
@@ -65,16 +63,21 @@ namespace rtype::entities {
 
             void draw(sf::RenderWindow &w)
             {
-                for (auto &cmp : comps.getList()) {
-                    cmp.printSMthing("fuck me\n");
-                    cmp.draw(w);
-                    std::cout<<"fuck this\n";
-                }
+                this->comps.back()->draw(w);
+                // this->comps.back().draw(w);
+
+            //     for (auto cmp : comps.getList()) {
+                    
+            //         cmp.pName();
+            //         cmp->draw(w);
+            //     }
             }
 
         protected:
             int8_t Id;
-            rtype::SparseArray<rtype::components::Component> comps;
+            Utils::SparseArray<rtype::components::Component*, 100> comps;
+            //rtype::SparseArray<rtype::components::Component*> comps;
+        
     };
 
     static int8_t idx;
@@ -88,6 +91,7 @@ namespace rtype::entities {
             EntitiesManager();
             ~EntitiesManager();
 
+            
             /**
             * @brief Create an entity and set it a sprite, set up the position of the entity and his scale
             * @param filemane path to your asset
@@ -106,16 +110,6 @@ namespace rtype::entities {
             */
 
             sf::Sprite CreateMobs(std::string filename, sf::Vector2f pos, sf::Vector2f scale);
-
-            /**
-             * @brief 
-             * 
-             * @param fpath 
-             * @param pos 
-             * @param scale 
-             */
-
-            void NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale);
 
             /**
              * @brief This function is used to get the list of all the entities
@@ -170,17 +164,30 @@ namespace rtype::entities {
                 std::cout<<entities.size()<<"\n";
                 // entities.push_back(Entity(e_idx, components));
                 e_idx = e_idx+1;
-                std::cout<<entities.size()<<" entity(ies)\n";
                 return;
             }
 
             void NewEntity(sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size)
             {
-                std::cout<<entities.size()<<"\n";
                 entities.push_back(Entity(e_idx));
-                entities.back().addComponent(rtype::components::DefaultComp(tex, pos, size));
+                entities.back().addComponent(new rtype::components::DefaultComp(tex, pos, size));
                 e_idx = e_idx+1;
-                std::cout<<entities.size()<<" entity(ies)\n";
+                return;
+            }
+
+            /**
+             * @brief 
+             * 
+             * @param fpath 
+             * @param pos 
+             * @param scale 
+             */
+
+            void NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+            {
+                entities.push_back(Entity(e_idx));
+                entities.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale));
+                e_idx = e_idx+1;
                 return;
             }
 
@@ -190,6 +197,4 @@ namespace rtype::entities {
             std::vector<Entity> entities;
 
     };
-};
-
-#endif /* !ENTITIESMANAGER_HPP_ */
+}

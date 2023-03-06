@@ -5,54 +5,56 @@
 ** Components
 */
 
-#ifndef COMPONENTS_HPP_
-#define COMPONENTS_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
 namespace rtype
 {
+    // template <typename T>
+    // class SparseArray
+    // {
+    //   protected:
+    //     std::vector<std::size_t> inUse;
+    //     std::vector<T> elems;
 
-    template <typename T>
-    class SparseArray
-    {
-      protected:
-        std::vector<T> elems;
+    //   public:
+    //     SparseArray() {}
+    //     ~SparseArray() {}
 
-      public:
-        SparseArray() {}
-        ~SparseArray() {}
+    //     void setVector(std::vector<T> newList) {
+    //       elems = newList;
+    //     }
 
-        void setVector(std::vector<T> newList) {
-          elems = newList;
-        }
+    //     void addElem(T elem) {
 
-        void addElem(T elem) {
-           elems.push_back(elem);
-        }
+    //        elems.push_back(elem);
+    //     }
 
-        void insertAt(T elem, int idx) {
-          // if (elems.size() = idx) //si
-          //   elems.insert
-          if (elems.size() < idx-1)
-              return;
-        }
+    //     void insertAt(T elem, int idx) {
+    //       // if (elems.size() = idx) //si
+    //       //   elems.insert
+    //         elems.insert(elems.begin()+idx);
+    //         if (elems.size() < idx-1)
+    //           return;
 
-        void removeElem(int idx) {
-          elems.erase(this->elems.begin()+idx);
-        }
+    //     }
 
-        void updateElem(T *elem, int idx) { elems[idx] = elem; }
+    //     void removeElem(int idx) {
+    //       elems.erase(this->elems.begin()+idx);
+    //     }
 
-        //getter
-        T getElemAt(int idx) { return elems[idx]; }
+    //     void updateElem(T *elem, int idx) { elems[idx] = elem; }
 
-        T front() { return elems.front(); }
+    //     //getter
+    //     T getElemAt(int idx) { return elems[idx]; }
 
-        T back() { return elems.back(); }
+    //     T front() { return elems.front(); }
 
-        std::vector<T> getList() { return this->elems; }
-    };
+    //     T back() { return elems.back(); }
+
+    //     std::vector<T> getList() { return this->elems; }
+    // };
 }
 
 namespace rtype::components
@@ -63,6 +65,8 @@ namespace rtype::components
             virtual void draw(sf::RenderWindow &w) = 0;
             virtual void update() = 0;
             virtual void init() = 0;
+            virtual int8_t getId() = 0;
+            virtual int8_t getOwnerId() = 0;
     
     };
 
@@ -71,20 +75,26 @@ namespace rtype::components
         public:
             int8_t Id;
             int8_t OwnerId;
+            std::string name;
             
             Component() {}
             Component(int8_t id, int8_t Oid) {
+                name = "default";
                 this->Id = id;
                 this->OwnerId = Oid;
             }
 
             ~Component() {}
 
+            void pName() {
+                std::cout<<this->name<<std::endl;
+            }
+
             void printSMthing(std::string str) { std::cout<<str<<std::endl;}
 
-            void draw(sf::RenderWindow &w) override {}
-            void update() override {}
-            void init() override {}
+            virtual void draw(sf::RenderWindow &w) override { std::cout<<"Fuck me\n";}
+            virtual void update() override {}
+            virtual void init() override {}
 
             int8_t getId() { return Id; }
             int8_t getOwnerId() { return OwnerId; }
@@ -94,6 +104,7 @@ namespace rtype::components
     {
         public:
             sf::Sprite asset;
+            sf::RectangleShape shape;
             sf::Texture assetTexture;
             sf::Vector2f pos;
             sf::Vector2f scale;
@@ -103,28 +114,47 @@ namespace rtype::components
             DefaultComp() {}
             ~DefaultComp() {}
 
-            DefaultComp(sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size) {
+            DefaultComp(sf::Texture &tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize) {
+                this->name = "DefComp";
+                this->scale = spawnSize;
+                this->pos = spawnPos;
 
-                // this->assetTexture = tex;
-                asset.setTexture(tex);
+                this->shape.setFillColor(sf::Color::Green);
+                this->shape.setPosition(this->pos);
+                this->shape.setSize(this->scale);
+
+                this->assetTexture = tex;
+                asset.setTexture(assetTexture); 
                 asset.setScale(this->scale);
                 asset.setPosition(this->pos);
             }
 
-            DefaultComp(std::string tex, sf::Vector2f pos, sf::Vector2f size) {
+            DefaultComp(std::string tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize) {
+                this->name = "DefComp";
+                this->scale = spawnSize;
+                this->pos = spawnPos;
 
-                // this->assetTexture = tex;
-                asset.setTexture(this->assetTexture);
-                asset.setScale(this->scale);
-                asset.setPosition(this->pos);
+                this->shape.setFillColor(sf::Color::Green);
+                this->shape.setPosition(this->pos);
+                this->shape.setSize(this->scale);
+
+                sf::Sprite tmp;
+
+                if (assetTexture.loadFromFile(tex))
+                    std::cout << "error" << std::endl;                
+
+                tmp.setTexture(this->assetTexture);
+                tmp.setScale(this->scale);
+                tmp.setPosition(this->pos);
+                this->asset = tmp;
+
             }
 
             void draw(sf::RenderWindow &w) override{
-                std::cout<<"fuck that\n";
-                w.draw(asset);
+                std::cout<<"fuck that in defComp\n";
+                // w.draw(this->shape);
+                w.draw(this->asset);
             }
     };
 
 } // namespace rtype::Components
-
-#endif /* !COMPONENTS_HPP_ */
