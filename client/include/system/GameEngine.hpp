@@ -19,40 +19,43 @@ namespace rtype
 
     /**
      * @brief This function is if the object is an instance of the class
-     * 
-     * @tparam Base 
-     * @tparam T 
-     * @param ptr 
-     * @return true 
-     * @return false 
+     *
+     * @tparam Base
+     * @tparam T
+     * @param ptr
+     * @return true
+     * @return false
      */
     template<typename Base, typename T>
     inline bool instanceof(const T *ptr) {
         return dynamic_cast<const Base*>(ptr) != nullptr;
     }
+
     /**
      * @brief The class of the GameEngine
-     * 
+     *
      */
     class GameEngine {
     public:
         /**
          * @brief Construct a new Game Engine object
-         * 
+         *
          */
         GameEngine()
         {
         };
+
         /**
          * @brief Destroy the Game Engine object
-         * 
+         *
          */
         ~GameEngine()
         {
         };
+
         /**
          * @brief Init the game engine
-         * 
+         *
          */
         void init()
         {
@@ -62,10 +65,11 @@ namespace rtype
             //if (!tmp.empty()) std::cout<<"PID ? "<<tmp<<std::endl;
         }
         //done
+
         /**
          * @brief Create a State object
-         * 
-         * @param state 
+         *
+         * @param state
          * @return GameState* A state
          */
         GameState *createState(int state)
@@ -96,12 +100,13 @@ namespace rtype
             }
             return new rtype::NULLState();
         }
+
         /**
          * @brief Load a state
-         * 
-         * @param new_state 
-         * @return true 
-         * @return false 
+         *
+         * @param new_state
+         * @return true
+         * @return false
          */
         bool loadState(GameState *new_state)
         {
@@ -110,7 +115,7 @@ namespace rtype
             if (this->states.empty()) {return false;}
 
             if (this->states.size() > 1) { this->states.pop();}
-            
+
             this->states.front()->init();
 
             // std::cout << this->states.front()->getName() << std::endl;
@@ -119,11 +124,12 @@ namespace rtype
 
             return true;
         };
+
         // void runState(GameState *state)
         /**
          * @brief Run a state
-         * 
-         * @param state 
+         *
+         * @param state
          */
         void runState(int state)
         {
@@ -149,17 +155,19 @@ namespace rtype
                 this->states.front()->draw(this->win);
             }
         }
+
         /**
          * @brief Get the Is Running object
-         * 
-         * @return true 
-         * @return false 
+         *
+         * @return true
+         * @return false
          */
         bool getIsRunning() {return isRunning;}
+
         /**
          * @brief Set the Is Running object
-         * 
-         * @param state 
+         *
+         * @param state
          */
         void setIsRunning(bool state) {isRunning = state;}
 
@@ -168,7 +176,7 @@ namespace rtype
         engine::Event event = nullptr;
         std::queue<std::string> server_updates;
         // sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
-            
+
     protected:
         bool isRunning;
         // GameEngine self() {return *this};

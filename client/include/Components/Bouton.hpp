@@ -50,6 +50,7 @@ namespace rtype::components
     */
     class Bouton : public IButton {
         public:
+
             /**
             * @brief Simple funtion to create a Button
             *
@@ -80,7 +81,7 @@ namespace rtype::components
             * @brief Function to check if coordinate is on a shape
             *
             * @param point Coordinate
-            * 
+            *
             * @return Return a Booleen
             */
             bool isPointInside(sf::Vector2f point) override
@@ -115,7 +116,7 @@ namespace rtype::components
 
             /**
             * @brief Override OnLeave
-            * 
+            *
             * @return Return a Booleen
             */
             bool OnLeave() override {
@@ -124,7 +125,7 @@ namespace rtype::components
 
             /**
             * @brief Override OnClick
-            * 
+            *
             * @return Return a Booleen
             */
             bool OnClick() override {
@@ -143,7 +144,7 @@ namespace rtype::components
 
             /**
             * @brief Get the type of the button
-            * 
+            *
             * @return Return the state of a button
             */
             STATEBUTTONS getType()

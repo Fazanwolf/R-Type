@@ -106,7 +106,7 @@ namespace rtype::components {
             * @brief Function to update the bullet
             *
             * @param bounds bounds to check if collide
-            * 
+            *
             * @return Return False when finish
             */
             bool update(sf::FloatRect bounds);

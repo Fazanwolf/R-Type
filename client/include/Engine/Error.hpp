@@ -40,7 +40,7 @@ class Error : std::exception {
 
         /**
         * @brief Function to return an error message
-        * 
+        *
         * @return Return a error message in char *
         */
         const char *what() const throw() {

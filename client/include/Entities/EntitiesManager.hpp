@@ -23,7 +23,13 @@ namespace rtype::entities {
     {
         public:
             Entity() {};
-            
+
+            /**
+             * @brief Construct a new Entity object with a new component
+             *
+             * @param idx index of the entity
+             * @param compn add a new component to the entity
+             */
             Entity(int8_t idx, rtype::components::Component compn)
             {
                 this->Id = idx;
@@ -42,6 +48,12 @@ namespace rtype::entities {
                 comps.addElem(newComp);
             }
 
+            /**
+             * @brief Get the Index object
+             *
+             * @param k
+             * @return int
+             */
             int getIndex(int k)
             {
                 auto tmp = this->comps.getList();
@@ -52,6 +64,11 @@ namespace rtype::entities {
                 return -1;
             }
 
+            /**
+             * @brief Remove the component
+             *
+             * @param id
+             */
             void removeComp(int8_t id)
             {
                 int idx = getIndex(id);
@@ -61,8 +78,20 @@ namespace rtype::entities {
             }
 
             //getter
+
+            /**
+             * @brief Get the entity id
+             *
+             * @param id
+             * @return an id of entity
+             */
             int8_t getEntityId() { return this->Id; }
 
+            /**
+             * @brief draw on the window
+             *
+             * @param id
+             */
             void draw(sf::RenderWindow &w)
             {
                 for (auto &cmp : comps.getList()) {
@@ -79,7 +108,6 @@ namespace rtype::entities {
 
     static int8_t idx;
     static int8_t e_idx;
-    static int8_t idxmobs;
     /**
     * @brief This class create an entity and set it a sprite, set up the position of the entity and his scale
     */
@@ -135,6 +163,10 @@ namespace rtype::entities {
              */
             int8_t getPId() {return this->pId;}
 
+            int8_t getEId() {
+                return e_idx;
+            }
+
             /**
              * @brief This function is used to get an entity
              * @param id The id of the entity
@@ -147,6 +179,10 @@ namespace rtype::entities {
                         return e;
                 }
             };
+            // sf::Sprite &getSprite(int8_t id) {
+            //     //check if valid
+            //     return this->entities[id];
+            // };
 
             /**
              * @brief This function draw all the entities
@@ -179,6 +215,7 @@ namespace rtype::entities {
                 std::cout<<entities.size()<<"\n";
                 entities.push_back(Entity(e_idx));
                 entities.back().addComponent(rtype::components::DefaultComp(tex, pos, size));
+                std::cout<<"allllllllllllllllllllllllllllll" << std::endl;
                 e_idx = e_idx+1;
                 std::cout<<entities.size()<<" entity(ies)\n";
                 return;

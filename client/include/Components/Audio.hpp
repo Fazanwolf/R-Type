@@ -13,7 +13,7 @@
 /**
 * @brief This namespace is for herite from engine
 */
-namespace rtype::engine {
+namespace rtype::components {
 
     /**
     * @brief This class is the base class for all the Audio
@@ -24,23 +24,15 @@ namespace rtype::engine {
             /**
             * @brief Constructor for class Button
             */
-            Audio();
+            Audio() {};
 
             /**
             * @brief Destructor for class Bullets
             */
-            ~Audio();
-
-            /**
-            * @brief Function to create a sound
-            *
-            * @param audio audio to be create
-            */
-            void CreateSound(sf::Sound audio);
+            ~Audio() {};
 
         protected:
         private:
-            sf::Sound a_sound;
     };
 }
 

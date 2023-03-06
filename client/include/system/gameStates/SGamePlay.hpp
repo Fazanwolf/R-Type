@@ -21,43 +21,51 @@ using namespace rtype;
 using namespace rtype::components;
 /**
  * @brief The namespace of the SGamePlay
- * 
+ *
  */
 namespace rtype::game {
     /**
      * @brief The class of the SGamePlay
-     * 
+     *
      */
     class SGamePlay : public GameState {
         public:
+
             /**
              * @brief Construct a new SGamePlay object
-             * 
+             *
              */
             SGamePlay()
             {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
+
             /**
              * @brief Construct a new SGamePlay object
-             * 
-             * @param nb_players 
+             *
+             * @param nb_players number of players
              */
             SGamePlay(int nb_players)
             {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
+
             /**
              * @brief Destroy the SGamePlay object
-             * 
+             *
              */
             ~SGamePlay()
             {
 
             };
 
+            /**
+             * @brief load a list of texture
+             *
+             * @param paths file path
+             */
             void loadGameTexture(std::vector<std::string> paths)
             {
                 int i = 0;
@@ -65,19 +73,21 @@ namespace rtype::game {
                     if (!textures[i++].loadFromFile(p))
                         std::cout << "error" << std::endl;
                 }
-
             }
 
+            /**
+             * @brief load a texture
+             *
+             */
             void loadGameTexture()
             {
-                if (!textures[0].loadFromFile("./assets/ovni.png"))
+                if (!test.loadFromFile("./assets/ovni.png"))
                     std::cout << "error" << std::endl;
-
             }
 
             /**
              * @brief Init the game state
-             * 
+             *
              */
             void init() override
             {
@@ -85,11 +95,19 @@ namespace rtype::game {
 
                 loadGameTexture();
                 //init sprites;
-                this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
+                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
+                this->Comps.DefaultCmp("./assets/spaceship.png", {50, 50}, {0.1, 0.1});
+                // this->EManager.NewEntity(test, {20, 100}, {10, 10});
+                // this->BManager.CreateSound("ff", 50, true);
+                // this->asset.setTexture(this->test);
+                // this->asset.setPosition({20, 100});
+                // this->asset.scale(0.5, 0.5);
+
             };
+
             /**
              * @brief Update the game state
-             * 
+             *
              */
             void update() override
             {
@@ -101,19 +119,20 @@ namespace rtype::game {
                 // update client to server data
                 //pop event queue here after rework
             };
+
             /**
              * @brief Get the Local Player I D object
-             * 
-             * @return int8_t 
+             *
+             * @return int8_t
              */
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
 
             /**
              * @brief Handle the event input
-             * 
+             *
              * @param w
              * @param ev
-             * @return int 
+             * @return int
              */
             int handleEvent(engine::Window &w, engine::Event &ev)
             {
@@ -124,15 +143,19 @@ namespace rtype::game {
 
             /**
              * @brief Draw on the window
-             * 
+             *
              * @param g the window
-             * @return int 
+             * @return int
              */
             void draw(rtype::engine::Window &w) override
             {
                 //draw entities
                 w.clear();
-                this->EManager.draw(w.getWindow() );
+                // this->EManager.draw(w.getWindow() );
+                w.Draw(this->BManager.getSprite());
+                this->Comps.draw(w.getWindow());
+                // this->Comps.draw(w.getWindow());
+                // w.Draw(this->asset);
                 //     w.Draw(this->EManager.getSprite(e));
                 w.getWindow().display();
                 std::cout<<"draw"<<std::endl;
@@ -140,9 +163,9 @@ namespace rtype::game {
 
             /**
              * @brief check Local Player input
-             * 
+             *
              * @param ev
-             * @return int 
+             * @return int
              */
             //State Property
             int LocalInput(engine::Event &ev) //returns -1 if nothing to return
@@ -166,6 +189,8 @@ namespace rtype::game {
         private:
             bool isMatchRunning; //when all player are ready set to true
             std::array<sf::Texture, 100> textures;
+            sf::Sprite asset;
+            sf::Texture test;
     };
 
 }

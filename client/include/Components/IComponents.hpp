@@ -56,14 +56,13 @@ namespace rtype
 }
 
 namespace rtype::components
-{   
+{
 
     class IComponents {
         public:
             virtual void draw(sf::RenderWindow &w) = 0;
             virtual void update() = 0;
             virtual void init() = 0;
-    
     };
 
     class Component : public IComponents
@@ -71,7 +70,7 @@ namespace rtype::components
         public:
             int8_t Id;
             int8_t OwnerId;
-            
+
             Component() {}
             Component(int8_t id, int8_t Oid) {
                 this->Id = id;
@@ -92,12 +91,6 @@ namespace rtype::components
 
     class DefaultComp : public Component
     {
-        public:
-            sf::Sprite asset;
-            sf::Texture assetTexture;
-            sf::Vector2f pos;
-            sf::Vector2f scale;
-            sf::IntRect textRect;
 
         public:
             DefaultComp() {}
@@ -107,22 +100,38 @@ namespace rtype::components
 
                 // this->assetTexture = tex;
                 asset.setTexture(tex);
-                asset.setScale(this->scale);
+                asset.scale(this->scale);
                 asset.setPosition(this->pos);
             }
 
-            DefaultComp(std::string tex, sf::Vector2f pos, sf::Vector2f size) {
+            void DefaultCmp(std::string file, sf::Vector2f pos, sf::Vector2f size) {
 
                 // this->assetTexture = tex;
-                asset.setTexture(this->assetTexture);
-                asset.setScale(this->scale);
-                asset.setPosition(this->pos);
+                std::cout<<"bon_èè-è-è_è_-è"<< std::endl;
+                if (!this->assetTexture.loadFromFile(file))
+                    std::cout << "error" << std::endl;
+                this->asset.setTexture(this->assetTexture);
+                this->asset.scale(size);
+                this->asset.setPosition(pos);
             }
 
-            void draw(sf::RenderWindow &w) override{
-                std::cout<<"fuck that\n";
-                w.draw(asset);
+            sf::Sprite &getSprite(void) {
+                std::cout << "fsdflsdnfjkdfnksjdfjkds " << std::endl;
+                return this->asset;
             }
+
+            void draw(sf::RenderWindow &w) {
+                std::cout<<"fuck that\n";
+                w.draw(this->asset);
+                std::cout << "DO SMGT" << std::endl;
+            }
+
+            private:
+                sf::Sprite asset;
+                sf::Texture assetTexture;
+                sf::Vector2f pos;
+                sf::Vector2f scale;
+                sf::IntRect textRect;
     };
 
 } // namespace rtype::Components
