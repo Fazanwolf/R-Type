@@ -9,5 +9,6 @@ var searchData=
   ['elems_6',['elems',['../classUtils_1_1SparseArray.html#a9caadb9529a50f6794eb434f9a844e5f',1,'Utils::SparseArray']]],
   ['emanager_7',['EManager',['../classrtype_1_1IGameState.html#a1887ab1b681a3254d8ceead76e978ae5',1,'rtype::IGameState']]],
   ['entities_8',['entities',['../classrtype_1_1entities_1_1EntitiesManager.html#a7a7935f7539d1fa5959b736057a8f429',1,'rtype::entities::EntitiesManager::entities()'],['../classrtype_1_1entities_1_1EntitiesManager.html#a336bef936215bc9da39fa5fa24a34db1',1,'rtype::entities::EntitiesManager::entities()']]],
-  ['event_5fqueue_9',['event_queue',['../classrtype_1_1game_1_1SGamePlay.html#af7e348530ccb21f0d610a4acb6279a07',1,'rtype::game::SGamePlay']]]
+  ['event_9',['event',['../classrtype_1_1GameEngine.html#a435dae9d701d85be173ee68f0a2b9730',1,'rtype::GameEngine']]],
+  ['event_5fqueue_10',['event_queue',['../classrtype_1_1game_1_1SGamePlay.html#af7e348530ccb21f0d610a4acb6279a07',1,'rtype::game::SGamePlay']]]
 ];

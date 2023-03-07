@@ -1,7 +1,8 @@
 var classrtype_1_1entities_1_1EntitiesManager =
 [
     [ "EntitiesManager", "classrtype_1_1entities_1_1EntitiesManager.html#a9cbf5fefd01c5f4dd40c0a6c1ee346a4", null ],
-    [ "~EntitiesManager", "classrtype_1_1entities_1_1EntitiesManager.html#ac5f86d24e05180dc08420e32f2bb489f", null ],
+    [ "EntitiesManager", "classrtype_1_1entities_1_1EntitiesManager.html#ae8a5687f4ba559363dde2d1d1783c2ff", null ],
+    [ "~EntitiesManager", "classrtype_1_1entities_1_1EntitiesManager.html#a62e916fd5245416f88258796348a8193", null ],
     [ "EntitiesManager", "classrtype_1_1entities_1_1EntitiesManager.html#ac421c3afc980bbcc5422dc5f1bff7574", null ],
     [ "~EntitiesManager", "classrtype_1_1entities_1_1EntitiesManager.html#ab02b7a9d4ffcefd03054d3198ffa1681", null ],
     [ "CreateEntitie", "classrtype_1_1entities_1_1EntitiesManager.html#a4da36712cb93a7816348d2b691827962", null ],
@@ -21,6 +22,8 @@ var classrtype_1_1entities_1_1EntitiesManager =
     [ "getSpriteMobs", "classrtype_1_1entities_1_1EntitiesManager.html#afebc45cfbac63337f824a01f4e874062", null ],
     [ "getTextureVector", "classrtype_1_1entities_1_1EntitiesManager.html#aebe05100420bdc1b8f88a839d2692362", null ],
     [ "handleEvent", "classrtype_1_1entities_1_1EntitiesManager.html#a38cde548bfd72e640477efc3e3e76ef0", null ],
+    [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#aeb1cabada81e071c716d9f823d7b03f4", null ],
+    [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#af97a131cb9b6a7f6a44f1c952ee47139", null ],
     [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#a27a83f1be226fb0f03bf50b72eaff48b", null ],
     [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30", null ],
     [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30", null ],

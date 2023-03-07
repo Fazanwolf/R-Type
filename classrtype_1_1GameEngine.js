@@ -8,9 +8,9 @@ var classrtype_1_1GameEngine =
     [ "loadState", "classrtype_1_1GameEngine.html#a2765771a67fd0413c06adf70d63f80b2", null ],
     [ "runState", "classrtype_1_1GameEngine.html#a3b9fa539d5aa4d1d5344b8f0d54aaa04", null ],
     [ "setIsRunning", "classrtype_1_1GameEngine.html#af1081200de81a574a8349e5cf332c11e", null ],
+    [ "event", "classrtype_1_1GameEngine.html#a435dae9d701d85be173ee68f0a2b9730", null ],
     [ "isRunning", "classrtype_1_1GameEngine.html#abc0b780be87b425f8312319685106461", null ],
     [ "server_updates", "classrtype_1_1GameEngine.html#a187773f036a044621ef959cefcff515e", null ],
     [ "states", "classrtype_1_1GameEngine.html#ad70895e55279595f870009578bf202ae", null ],
-    [ "win", "classrtype_1_1GameEngine.html#a2e82593867b975713a75849ce52aecf5", null ],
-    [ "nullptr", "classrtype_1_1GameEngine.html#a85549bbd745a29a92c753a265fd2ecff", null ]
+    [ "win", "classrtype_1_1GameEngine.html#a2e82593867b975713a75849ce52aecf5", null ]
 ];

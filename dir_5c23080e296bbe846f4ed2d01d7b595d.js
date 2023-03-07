@@ -6,5 +6,6 @@ var dir_5c23080e296bbe846f4ed2d01d7b595d =
     [ "Protocol", "dir_2829ef38eab859e0788acb22d79963e7.html", "dir_2829ef38eab859e0788acb22d79963e7" ],
     [ "system", "dir_fd718e888ae0e1c236b0d805e059ea35.html", "dir_fd718e888ae0e1c236b0d805e059ea35" ],
     [ "Utils", "dir_4d1be4222857c78a884b513c6db75374.html", "dir_4d1be4222857c78a884b513c6db75374" ],
+    [ "Global.hpp", "Global_8hpp.html", "Global_8hpp" ],
     [ "include.hpp", "include_8hpp.html", "include_8hpp" ]
 ];

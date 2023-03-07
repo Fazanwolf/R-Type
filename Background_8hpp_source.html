@@ -115,11 +115,11 @@ $(document).ready(function(){initNavTree('Background_8hpp_source.html',''); init
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Background</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef BACKGROUND_HPP_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define BACKGROUND_HPP_</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Engine_8hpp.html">Engine/Engine.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacertype_1_1components.html">   12</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacertype_1_1components.html">rtype::components</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacertype_1_1components.html">rtype::components</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classrtype_1_1components_1_1Background.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrtype_1_1components_1_1Background.html">Background</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span>:</div>
@@ -159,8 +159,6 @@ $(document).ready(function(){initNavTree('Background_8hpp_source.html',''); init
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    };</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif </span><span class="comment">/* !BACKGROUND_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aEngine_8hpp_html"><div class="ttname"><a href="Engine_8hpp.html">Engine.hpp</a></div></div>
 <div class="ttc" id="aclassrtype_1_1components_1_1Background_html"><div class="ttname"><a href="classrtype_1_1components_1_1Background.html">rtype::components::Background</a></div><div class="ttdoc">This class is used to create background.</div><div class="ttdef"><b>Definition:</b> Background.hpp:18</div></div>
 <div class="ttc" id="aclassrtype_1_1components_1_1Background_html_a159887d81eb1c4eab8a9cb2dc098cae1"><div class="ttname"><a href="classrtype_1_1components_1_1Background.html#a159887d81eb1c4eab8a9cb2dc098cae1">rtype::components::Background::music</a></div><div class="ttdeci">sf::Music music</div><div class="ttdef"><b>Definition:</b> Background.hpp:70</div></div>
@@ -172,14 +170,14 @@ $(document).ready(function(){initNavTree('Background_8hpp_source.html',''); init
 <div class="ttc" id="aclassrtype_1_1components_1_1Background_html_a5f68d33b3bd2d7ab4b3d1bd4cd329e45"><div class="ttname"><a href="classrtype_1_1components_1_1Background.html#a5f68d33b3bd2d7ab4b3d1bd4cd329e45">rtype::components::Background::CreateSound</a></div><div class="ttdeci">void CreateSound(std::string filename, int volume, bool islooping)</div><div class="ttdoc">This function is used to create a sound.</div><div class="ttdef"><b>Definition:</b> Background.hpp:51</div></div>
 <div class="ttc" id="aclassrtype_1_1components_1_1Background_html_a782e533541c085a5302d787a1c26a2c7"><div class="ttname"><a href="classrtype_1_1components_1_1Background.html#a782e533541c085a5302d787a1c26a2c7">rtype::components::Background::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;w)</div><div class="ttdef"><b>Definition:</b> Background.hpp:62</div></div>
 <div class="ttc" id="aclassrtype_1_1components_1_1Background_html_acc6cbf3395736155542e59fa087c54e4"><div class="ttname"><a href="classrtype_1_1components_1_1Background.html#acc6cbf3395736155542e59fa087c54e4">rtype::components::Background::texture</a></div><div class="ttdeci">sf::Texture texture</div><div class="ttdef"><b>Definition:</b> Background.hpp:68</div></div>
-<div class="ttc" id="anamespacertype_1_1components_html"><div class="ttname"><a href="namespacertype_1_1components.html">rtype::components</a></div><div class="ttdoc">This namespace is for herite from components.</div><div class="ttdef"><b>Definition:</b> Background.hpp:12</div></div>
+<div class="ttc" id="anamespacertype_1_1components_html"><div class="ttname"><a href="namespacertype_1_1components.html">rtype::components</a></div><div class="ttdoc">This namespace is for herite from components.</div><div class="ttdef"><b>Definition:</b> Bullets.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="dir_5c23080e296bbe846f4ed2d01d7b595d.html">include</a></li><li class="navelem"><a class="el" href="dir_8cd8a43aeb9f6152ea921227fa7c9e96.html">Components</a></li><li class="navelem"><a class="el" href="Background_8hpp.html">Background.hpp</a></li>
-    <li class="footer">Generated on Tue Mar 7 2023 11:15:39 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Tue Mar 7 2023 19:00:06 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

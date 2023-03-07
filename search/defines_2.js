@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sgameplay_5fhpp_5f_0',['SGAMEPLAY_HPP_',['../SGamePlay__Duck_8hpp.html#a27eff034e9723929825f1aeb1607d3d3',1,'SGAMEPLAY_HPP_():&#160;SGamePlay_Duck.hpp'],['../SGamePlay_8hpp.html#a27eff034e9723929825f1aeb1607d3d3',1,'SGAMEPLAY_HPP_():&#160;SGamePlay.hpp']]],
-  ['smenu_5fhpp_5f_1',['SMENU_HPP_',['../SMenu__Duck_8hpp.html#aec6be9b23c12b4c7015ea677e39d42a2',1,'SMENU_HPP_():&#160;SMenu_Duck.hpp'],['../SMenu_8hpp.html#aec6be9b23c12b4c7015ea677e39d42a2',1,'SMENU_HPP_():&#160;SMenu.hpp']]],
-  ['states_5fhpp_5f_2',['STATES_HPP_',['../States_8hpp.html#a5d565766453a7554505fe7923b8a0c82',1,'States.hpp']]]
+  ['windowed_0',['WINDOWED',['../Window_8hpp.html#a7f27a885aa886cf53de0227db855c1be',1,'Window.hpp']]],
+  ['windowed_5fbig_1',['WINDOWED_BIG',['../Window_8hpp.html#afbd93ebddcf58fe20d47ce9e1bc0fdb9',1,'Window.hpp']]],
+  ['windowed_5fsmall_2',['WINDOWED_SMALL',['../Window_8hpp.html#aab34b8b4df469ce5ff855bac800e5319',1,'Window.hpp']]]
 ];

@@ -115,31 +115,28 @@ $(document).ready(function(){initNavTree('Draw_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Draw</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef DRAW_HPP_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define DRAW_HPP_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Engine_8hpp.html">Engine/Engine.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacertype_1_1engine.html">rtype::engine</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Draw.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrtype_1_1engine_1_1Draw.html">Draw</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a7c808e2194e8659b401584773e26730e">Draw</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a206415ad169356614a4ab0cf51116215">~Draw</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            sf::RectangleShape <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a45637f10780a0050fe76e560e3fa8933">DrawRectangle</a>(<span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width, sf::Vector2f pos);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            sf::CircleShape <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a3f416b65b5ec00d8ef377fa125dbbb0e">DrawSphere</a>(<span class="keywordtype">int</span> radius);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Draw.html#ad51ae7c4b54fa7221eaf6f4ee736ba33">   21</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#ad51ae7c4b54fa7221eaf6f4ee736ba33">SetTextureToObject</a>(sf::Texture texture, sf::IntRect posRect);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a5475f9cc3d93755d1e2e21fe80779fa4">SetTextureToCircle</a>(sf::CircleShape circle, sf::Texture texture, sf::IntRect posRect);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a39b8e49e1e319e924af66267791db7e5">SetTextureToRectangle</a>(sf::RectangleShape rectangle, sf::Texture texture, sf::IntRect posRect);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">/* !DRAW_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Engine_8hpp.html">Engine/Engine.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacertype_1_1engine.html">rtype::engine</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Draw.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrtype_1_1engine_1_1Draw.html">Draw</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a7c808e2194e8659b401584773e26730e">Draw</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a206415ad169356614a4ab0cf51116215">~Draw</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            sf::RectangleShape <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a45637f10780a0050fe76e560e3fa8933">DrawRectangle</a>(<span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width, sf::Vector2f pos);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            sf::CircleShape <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a3f416b65b5ec00d8ef377fa125dbbb0e">DrawSphere</a>(<span class="keywordtype">int</span> radius);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Draw.html#ad51ae7c4b54fa7221eaf6f4ee736ba33">   20</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#ad51ae7c4b54fa7221eaf6f4ee736ba33">SetTextureToObject</a>(sf::Texture texture, sf::IntRect posRect);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a5475f9cc3d93755d1e2e21fe80779fa4">SetTextureToCircle</a>(sf::CircleShape circle, sf::Texture texture, sf::IntRect posRect);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Draw.html#a39b8e49e1e319e924af66267791db7e5">SetTextureToRectangle</a>(sf::RectangleShape rectangle, sf::Texture texture, sf::IntRect posRect);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
 <div class="ttc" id="aEngine_8hpp_html"><div class="ttname"><a href="Engine_8hpp.html">Engine.hpp</a></div></div>
-<div class="ttc" id="aclassrtype_1_1engine_1_1Draw_html"><div class="ttname"><a href="classrtype_1_1engine_1_1Draw.html">rtype::engine::Draw</a></div><div class="ttdef"><b>Definition:</b> Draw.hpp:15</div></div>
+<div class="ttc" id="aclassrtype_1_1engine_1_1Draw_html"><div class="ttname"><a href="classrtype_1_1engine_1_1Draw.html">rtype::engine::Draw</a></div><div class="ttdef"><b>Definition:</b> Draw.hpp:14</div></div>
 <div class="ttc" id="aclassrtype_1_1engine_1_1Draw_html_a206415ad169356614a4ab0cf51116215"><div class="ttname"><a href="classrtype_1_1engine_1_1Draw.html#a206415ad169356614a4ab0cf51116215">rtype::engine::Draw::~Draw</a></div><div class="ttdeci">~Draw()</div><div class="ttdef"><b>Definition:</b> Draw.cpp:16</div></div>
 <div class="ttc" id="aclassrtype_1_1engine_1_1Draw_html_a39b8e49e1e319e924af66267791db7e5"><div class="ttname"><a href="classrtype_1_1engine_1_1Draw.html#a39b8e49e1e319e924af66267791db7e5">rtype::engine::Draw::SetTextureToRectangle</a></div><div class="ttdeci">void SetTextureToRectangle(sf::RectangleShape rectangle, sf::Texture texture, sf::IntRect posRect)</div><div class="ttdef"><b>Definition:</b> Draw.cpp:41</div></div>
 <div class="ttc" id="aclassrtype_1_1engine_1_1Draw_html_a3f416b65b5ec00d8ef377fa125dbbb0e"><div class="ttname"><a href="classrtype_1_1engine_1_1Draw.html#a3f416b65b5ec00d8ef377fa125dbbb0e">rtype::engine::Draw::DrawSphere</a></div><div class="ttdeci">sf::CircleShape DrawSphere(int radius)</div><div class="ttdef"><b>Definition:</b> Draw.cpp:28</div></div>
@@ -154,7 +151,7 @@ $(document).ready(function(){initNavTree('Draw_8hpp_source.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="dir_5c23080e296bbe846f4ed2d01d7b595d.html">include</a></li><li class="navelem"><a class="el" href="dir_e444edeeb17b02c30347d65e329a3788.html">Engine</a></li><li class="navelem"><a class="el" href="Draw_8hpp.html">Draw.hpp</a></li>
-    <li class="footer">Generated on Tue Mar 7 2023 11:15:39 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Tue Mar 7 2023 19:00:06 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

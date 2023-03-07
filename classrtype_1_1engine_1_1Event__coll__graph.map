@@ -1,10 +1,9 @@
 <map id="rtype::engine::Event" name="rtype::engine::Event">
-<area shape="rect" id="node1" title="This class is the base class for all the Event." alt="" coords="171,343,354,603"/>
-<area shape="rect" id="node2" title=" " alt="" coords="49,233,212,273"/>
+<area shape="rect" id="node1" title="This class is the base class for all the Event." alt="" coords="105,328,287,559"/>
+<area shape="rect" id="node2" title=" " alt="" coords="49,225,212,265"/>
 <area shape="rect" id="node3" title=" " alt="" coords="28,123,111,163"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,5,133,60"/>
 <area shape="rect" id="node5" title=" " alt="" coords="135,123,249,163"/>
 <area shape="rect" id="node6" title=" " alt="" coords="173,13,211,53"/>
-<area shape="rect" id="node7" title=" " alt="" coords="237,233,288,273"/>
-<area shape="rect" id="node8" title=" " alt="" coords="313,225,434,280"/>
+<area shape="rect" id="node7" title=" " alt="" coords="237,225,288,265"/>
 </map>

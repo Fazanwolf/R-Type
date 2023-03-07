@@ -115,32 +115,29 @@ $(document).ready(function(){initNavTree('Audio_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Audio</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef AUDIO_HPP_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define AUDIO_HPP_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Engine_8hpp.html">Engine/Engine.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacertype_1_1engine.html">rtype::engine</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html">   21</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrtype_1_1engine_1_1Audio.html">Audio</a> {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#a68dcc1a7db70239db98e249b34ad34d4">   27</a></span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Audio.html#a68dcc1a7db70239db98e249b34ad34d4">Audio</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#a70df003a8c58cb8883922463c25bb1a3">   32</a></span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Audio.html#a70df003a8c58cb8883922463c25bb1a3">~Audio</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#aa1c9fc4c3a221fab257d8a3392339a29">   40</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Audio.html#aa1c9fc4c3a221fab257d8a3392339a29">CreateSound</a>(sf::Sound audio);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#a2771aeaefb353e1550e546d1605416a5">   44</a></span>            sf::Sound <a class="code hl_variable" href="classrtype_1_1engine_1_1Audio.html#a2771aeaefb353e1550e546d1605416a5">a_sound</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">/* !AUDIO_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Engine_8hpp.html">Engine/Engine.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacertype_1_1engine.html">rtype::engine</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html">   20</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrtype_1_1engine_1_1Audio.html">Audio</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#a68dcc1a7db70239db98e249b34ad34d4">   26</a></span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Audio.html#a68dcc1a7db70239db98e249b34ad34d4">Audio</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#a70df003a8c58cb8883922463c25bb1a3">   31</a></span>            <a class="code hl_function" href="classrtype_1_1engine_1_1Audio.html#a70df003a8c58cb8883922463c25bb1a3">~Audio</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#aa1c9fc4c3a221fab257d8a3392339a29">   39</a></span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classrtype_1_1engine_1_1Audio.html#aa1c9fc4c3a221fab257d8a3392339a29">CreateSound</a>(sf::Sound audio);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classrtype_1_1engine_1_1Audio.html#a2771aeaefb353e1550e546d1605416a5">   43</a></span>            sf::Sound <a class="code hl_variable" href="classrtype_1_1engine_1_1Audio.html#a2771aeaefb353e1550e546d1605416a5">a_sound</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
 <div class="ttc" id="aEngine_8hpp_html"><div class="ttname"><a href="Engine_8hpp.html">Engine.hpp</a></div></div>
-<div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html">rtype::engine::Audio</a></div><div class="ttdoc">This class is the base class for all the Audio.</div><div class="ttdef"><b>Definition:</b> Audio.hpp:21</div></div>
-<div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html_a2771aeaefb353e1550e546d1605416a5"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html#a2771aeaefb353e1550e546d1605416a5">rtype::engine::Audio::a_sound</a></div><div class="ttdeci">sf::Sound a_sound</div><div class="ttdef"><b>Definition:</b> Audio.hpp:44</div></div>
+<div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html">rtype::engine::Audio</a></div><div class="ttdoc">This class is the base class for all the Audio.</div><div class="ttdef"><b>Definition:</b> Audio.hpp:20</div></div>
+<div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html_a2771aeaefb353e1550e546d1605416a5"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html#a2771aeaefb353e1550e546d1605416a5">rtype::engine::Audio::a_sound</a></div><div class="ttdeci">sf::Sound a_sound</div><div class="ttdef"><b>Definition:</b> Audio.hpp:43</div></div>
 <div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html_a68dcc1a7db70239db98e249b34ad34d4"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html#a68dcc1a7db70239db98e249b34ad34d4">rtype::engine::Audio::Audio</a></div><div class="ttdeci">Audio()</div><div class="ttdoc">Constructor for class Button.</div></div>
 <div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html_a70df003a8c58cb8883922463c25bb1a3"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html#a70df003a8c58cb8883922463c25bb1a3">rtype::engine::Audio::~Audio</a></div><div class="ttdeci">~Audio()</div><div class="ttdoc">Destructor for class Bullets.</div></div>
 <div class="ttc" id="aclassrtype_1_1engine_1_1Audio_html_aa1c9fc4c3a221fab257d8a3392339a29"><div class="ttname"><a href="classrtype_1_1engine_1_1Audio.html#aa1c9fc4c3a221fab257d8a3392339a29">rtype::engine::Audio::CreateSound</a></div><div class="ttdeci">void CreateSound(sf::Sound audio)</div><div class="ttdoc">Function to create a sound.</div></div>
@@ -151,7 +148,7 @@ $(document).ready(function(){initNavTree('Audio_8hpp_source.html',''); initResiz
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="dir_5c23080e296bbe846f4ed2d01d7b595d.html">include</a></li><li class="navelem"><a class="el" href="dir_e444edeeb17b02c30347d65e329a3788.html">Engine</a></li><li class="navelem"><a class="el" href="Audio_8hpp.html">Audio.hpp</a></li>
-    <li class="footer">Generated on Tue Mar 7 2023 11:15:39 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Tue Mar 7 2023 19:00:06 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

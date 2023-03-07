@@ -3,7 +3,6 @@ var IGameState_8hpp =
     [ "rtype::GameState", "classrtype_1_1GameState.html", "classrtype_1_1GameState" ],
     [ "rtype::IGameState", "classrtype_1_1IGameState.html", "classrtype_1_1IGameState" ],
     [ "rtype::NULLState", "classrtype_1_1NULLState.html", "classrtype_1_1NULLState" ],
-    [ "IGAMESTATE_HPP_", "IGameState_8hpp.html#a19f273c5f89570dbb42d80dca34a9614", null ],
     [ "STATES", "IGameState_8hpp.html#adb8a61cb54691e579bf465f8f442faf2", [
       [ "PLAY", "IGameState_8hpp.html#adb8a61cb54691e579bf465f8f442faf2a8b75f488ee3d8b854b0893f5ee4cb028", null ],
       [ "QUIT", "IGameState_8hpp.html#adb8a61cb54691e579bf465f8f442faf2aaad58ee4ccb53268ce2141a4f0c96e1e", null ],

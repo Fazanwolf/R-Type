@@ -1,6 +1,6 @@
 <map id="rtype::IGameState" name="rtype::IGameState">
-<area shape="rect" id="node1" title="The class of the game state." alt="" coords="1663,2440,1793,2553"/>
-<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html" title="This class create an entity and set it a sprite, set up the position of the entity and his scale." alt="" coords="1067,1883,1218,2377"/>
+<area shape="rect" id="node1" title="The class of the game state." alt="" coords="1663,2484,1793,2597"/>
+<area shape="rect" id="node2" href="$classrtype_1_1entities_1_1EntitiesManager.html" title="This class create an entity and set it a sprite, set up the position of the entity and his scale." alt="" coords="1067,1883,1218,2421"/>
 <area shape="rect" id="node3" title=" " alt="" coords="793,453,933,493"/>
 <area shape="rect" id="node4" title=" " alt="" coords="836,181,895,221"/>
 <area shape="rect" id="node9" href="$classrtype_1_1entities_1_1Entity.html" title=" " alt="" coords="617,1281,757,1600"/>
@@ -31,6 +31,6 @@
 <area shape="rect" id="node33" href="$classrtype_1_1components_1_1Block.html" title=" " alt="" coords="1585,1399,1722,1483"/>
 <area shape="rect" id="node25" title=" " alt="" coords="1205,1421,1275,1461"/>
 <area shape="rect" id="node30" title=" " alt="" coords="1499,1421,1560,1461"/>
-<area shape="rect" id="node31" href="$classrtype_1_1components_1_1Centipede.html" title=" " alt="" coords="1823,2073,1961,2187"/>
+<area shape="rect" id="node31" href="$classrtype_1_1components_1_1Centipede.html" title=" " alt="" coords="1823,2095,1961,2209"/>
 <area shape="rect" id="node34" title=" " alt="" coords="1605,1061,1701,1101"/>
 </map>
