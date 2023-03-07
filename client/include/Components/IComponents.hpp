@@ -96,7 +96,7 @@ namespace rtype::components
             int handleEvent(rtype::engine::Event &handler) override {return -1;};
             int handleEvent() override {}
 
-            virtual void draw(sf::RenderWindow &w) override { std::cout<<"Fuck me\n";}
+            virtual void draw(sf::RenderWindow &w) override {}
             virtual void update() override {}
             virtual void init() override {}
 
@@ -157,7 +157,6 @@ namespace rtype::components
             }
 
             void draw(sf::RenderWindow &w) override{
-                // std::cout<<"fuck that in defComp\n";
                 // w.draw(this->shape);
                 w.draw(this->asset);
             }

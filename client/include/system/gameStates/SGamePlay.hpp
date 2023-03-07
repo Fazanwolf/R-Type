@@ -84,12 +84,14 @@ namespace rtype::game {
             {
                 std::cout<<"Init Gameplay"<<std::endl;
 
+                // this->clt->connect("?");
                 loadGameTexture();
                 //init sprites;
                 // this->MapManager.initMap(); // add a map
                 this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.2, 0.2});
                 // this->CManager.Centipedeinit(300, 600, 50); // add a centipede
                 this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
+                this->EManager.NewEntity("./assets/spaceship.png", {20, 300}, {0.3, 0.3});
                 // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
 
@@ -175,6 +177,7 @@ namespace rtype::game {
                 // ev.MakeSpriteMovable(this->EManager.getSprite(0));
                 return -1;
             }
+            sk::Client<sk::client::UDP> *clt;
 
         private:
             sf::Sprite shape;

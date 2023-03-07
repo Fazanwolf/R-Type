@@ -53,7 +53,7 @@ bool Window::HandleEvent(const sf::Event::EventType &type)
 
 int Window::DisplayWindow(void)
 {
-    float timeAsSeconds;
+    // float timeAsSeconds;
 //    engine::Event ev(this->window);
     entities::EntitiesManager entitie;
     components::Bullets bull;

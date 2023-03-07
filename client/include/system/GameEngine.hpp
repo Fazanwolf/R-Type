@@ -136,6 +136,7 @@ namespace rtype
 
                 swapState = this->states.front()->handleEvent(win, event);
                 if (swapState == STATES::QUIT) {
+                    // this->clt->disconnect();
                     setIsRunning(false);
                 } else if (swapState != STATES::NONE) {
                     std::cout<<"runNew\n";

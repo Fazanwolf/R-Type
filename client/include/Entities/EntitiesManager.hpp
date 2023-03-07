@@ -66,6 +66,7 @@ namespace rtype::entities {
              */
             void updates(sf::RenderWindow &w)
             {
+                (void)w;
                 for (int i : comps.getUsedId()) {
                     comps.getList()[i]->update();
                 // for (auto &e : comps.getList() ) {
@@ -109,7 +110,6 @@ namespace rtype::entities {
 
     static int8_t idx;
     static int8_t e_idx;
-    static int8_t idxmobs;
     /**
     * @brief This class create an entity and set it a sprite, set up the position of the entity and his scale
     */
@@ -243,6 +243,7 @@ namespace rtype::entities {
                 entities.push_back(Entity(e_idx));
                 entities.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale, true));
                 e_idx = e_idx+1;
+                std::cout << e_idx << std::endl;
                 return;
             }
 

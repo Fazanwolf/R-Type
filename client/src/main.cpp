@@ -15,6 +15,9 @@ int main(void)
         // rtype::engine::StateManager state;
         // rtype::engine::Window win;
         rtype::GameEngine g;
+        g.clt = new sk::Client<sk::client::UDP>("0.0.0.0", "5000");
+        g.clt->receive();
+        g.clt->run();
         g.init();
         g.runState(rtype::STATES::MENU);
         g.win.close();
