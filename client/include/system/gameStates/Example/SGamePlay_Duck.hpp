@@ -9,7 +9,6 @@
 
 #include "IGameState.hpp"
 #include <queue>
-#include <array>
 #include <string>
 #include <cstring>
 #include <Skaldi.hpp>
@@ -18,14 +17,14 @@
 #define SGAMEPLAY_HPP_
 
 using namespace rtype;
-using namespace rtype::components;
+
 /**
- * @brief The namespace of the SGamePlay
+ * @brief The namespace of the game
  * 
  */
 namespace rtype::game {
     /**
-     * @brief The class of the SGamePlay
+     * @brief The class of the game state
      * 
      */
     class SGamePlay : public GameState {
@@ -39,7 +38,6 @@ namespace rtype::game {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
-
             /**
              * @brief Construct a new SGamePlay object
              * 
@@ -50,7 +48,6 @@ namespace rtype::game {
                 this->name = "GamePlay";
                 isMatchRunning = false;
             };
-
             /**
              * @brief Destroy the SGamePlay object
              * 
@@ -59,42 +56,18 @@ namespace rtype::game {
             {
 
             };
-
-            {
-                int i = 0;
-                for (auto p : paths) {
-                    if (!textures[i++].loadFromFile(p))
-                        std::cout << "error" << std::endl;
-                }
-
-            }
-
-            void loadGameTexture(void)
-            {
-                if (!textures[0].loadFromFile("./assets/ovni.png"))
-                    std::cout << "error" << std::endl;
-            }
-
             /**
              * @brief Init the game state
              * 
              */
             void init() override
             {
-                std::cout<<"Init Gameplay"<<std::endl;
-
-                loadGameTexture();
                 //init sprites;
-                // this->shape.setFillColor(sf::Color::Green);
-                // this->shape.setScale( {1.5,1.5} );
-                // this->shape.setPosition( {20,30} );
-                // this->shape.setTexture(textures[0]);
-                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
-                this->CManager.Centipedeinit(300, 600, 50);
-                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
-                // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
+                // for (int i = 0; i != 2; i++)
+                this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
+                //FirstEntities
+                // this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
             };
-
             /**
              * @brief Update the game state
              * 
@@ -105,59 +78,43 @@ namespace rtype::game {
                     //update button appearance etc
                     //update Status
                 }
-                this->CManager.update();
                 //update match data & physics
                 // update client to server data
                 //pop event queue here after rework
             };
-
             /**
              * @brief Get the Local Player I D object
              * 
-             * @return int8_t 
+             * @return int8_t of the pid
              */
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
-
             /**
-             * @brief Handle the event input
+             * @brief Handle the event
              * 
-             * @param w
-             * @param ev
+             * @param w 
+             * @param ev 
              * @return int 
              */
             int handleEvent(engine::Window &w, engine::Event &ev)
             {
-                int resLocalInput = LocalInput(ev);
-                // std::cout<<"handleEvent"<<std::endl;
-                this->EManager.handleEvent(ev);
-                return resLocalInput;
-                // return (resLocalInput == -1 ? resLocalInput:rtype::STATES::NONE : resLocalInput);
+                LocalInput(ev);
+                return 0;
             };
-
             /**
-             * @brief Draw on the window
+             * @brief Draw the game state
              * 
-             * @param g the window
-             * @return int 
+             * @param w 
              */
             void draw(rtype::engine::Window &w) override
             {
                 //draw entities
                 w.clear();
-                this->BManager.draw(w.getWindow());
-                this->EManager.draw(w.getWindow());
-                this->CManager.draw(w.getWindow());
-                // w.getWindow().draw(this->shape);
-                //     w.Draw(this->EManager.getSprite(e));
-                w.getWindow().display();
-                // std::cout<<"draw"<<std::endl;
+                std::cout<<"draw"<<std::endl;
             };
-
             /**
-             * @brief check Local Player input
+             * @brief Get the Input
              * 
-             * @param ev
-             * @return int 
+             * @return Return a int
              */
             //State Property
             int LocalInput(engine::Event &ev) //returns -1 if nothing to return
@@ -174,14 +131,13 @@ namespace rtype::game {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) /*|| ready button pressed*/) {
                     //send ready  info
                 }
-                // ev.MakeSpriteMovable(this->EManager.getSprite(0));
-                return -1;
+
+                ev.MakeSpriteMovable(this->EManager.getSprite(0));
             }
 
         private:
-            sf::Sprite shape;
             bool isMatchRunning; //when all player are ready set to true
-            std::array<sf::Texture, 100> textures;
+
     };
 
 }

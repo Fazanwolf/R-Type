@@ -20,20 +20,40 @@ EntitiesManager::~EntitiesManager()
 
 sf::Sprite EntitiesManager::CreateEntitie(std::string filename, sf::Vector2f pos, sf::Vector2f scale)
 {
-    sf::Sprite asset;
+    // sf::Sprite asset;
 
-    if (!texture.loadFromFile(filename))
-        std::cout << "error" << std::endl;
-    asset.setTexture(texture);
-    asset.setPosition(pos);
-    asset.scale(scale);
+    // if (!texture.loadFromFile(filename))
+    //     std::cout << "error" << std::endl;
+    // asset.setTexture(texture);
+    // asset.setPosition(pos);
+    // asset.scale(scale);
 
-    return asset;
+    // return asset;
 }
 
-void EntitiesManager::NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+sf::Sprite EntitiesManager::CreateMobs(std::string filename, sf::Vector2f pos, sf::Vector2f scale)
 {
-    this->entities[idx] = this->CreateEntitie(fpath, pos, scale);
-    IDs.push_back(idx);
-    idx++;
+    // sf::Sprite assetMobs;
+
+    // if (!texture.loadFromFile(filename))
+    //     std::cout << "error" << std::endl;
+    // assetMobs.setTexture(textureMobs);
+    // assetMobs.setPosition(pos);
+    // assetMobs.scale(scale);
+
+    // return assetMobs;
+}
+
+// void EntitiesManager::NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+// {
+//     // this->entities[idx] = this->CreateEntitie(fpath, pos, scale);
+//     // IDs.push_back(idx);
+//     // idx++;
+// }
+
+void EntitiesManager::NewMobs(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+{
+    // this->mobs[idxmobs] = this->CreateMobs(fpath, pos, scale);
+    // IDsMobs.push_back(idxmobs);
+    // idxmobs++;
 }

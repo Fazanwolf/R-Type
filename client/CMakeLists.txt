@@ -21,11 +21,8 @@ endif()
 add_executable(${PROJECT_NAME}
         src/Bullets.cpp
         src/main.cpp
-        src/Draw.cpp
         src/EntitiesManager.cpp
         src/Event.cpp
-        src/Player.cpp
-        src/StateManager.cpp
         src/Window.cpp
 )
 

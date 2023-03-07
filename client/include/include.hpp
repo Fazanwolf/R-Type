@@ -13,8 +13,6 @@
 // Components
 #include "Components/Bonus.hpp"
 #include "Components/Bullets.hpp"
-#include "Components/Enemy.hpp"
-#include "Components/Player.hpp"
 
 //Engine
 #include "Engine/Engine.hpp"
@@ -23,6 +21,6 @@
 #include "Entities/Actors.hpp"
 #include "Entities/EntitiesManager.hpp"
 #include "Entities/ParticulesManager.hpp"
-#include "Entities/Properties.hpp"
+
 
 #endif /* !INCLUDE_HPP_ */
