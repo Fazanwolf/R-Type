@@ -8,7 +8,7 @@
 #pragma once
 
 #include "gameStates/States.hpp"
-// #include <Skaldi.hpp>
+#include <Skaldi.hpp>
 #include <queue>
 
 namespace rtype
@@ -164,8 +164,8 @@ namespace rtype
         // STATES gState;
         engine::Event event = nullptr;
         std::queue<std::string> server_updates;
-        // sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
-            
+        sk::Client<sk::client::UDP> *clt;
+
     protected:
         bool isRunning;
         // GameEngine self() {return *this};

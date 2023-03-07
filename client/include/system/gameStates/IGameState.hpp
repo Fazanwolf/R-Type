@@ -12,6 +12,7 @@
 #include "system/GameEngine.hpp"
 #include "Components/Background.hpp"
 #include "Components/Centipede.hpp"
+#include "Engine/Map.hpp"
 
 
 #ifndef IGAMESTATE_HPP_
@@ -86,6 +87,7 @@ class IGameState {
         entities::EntitiesManager EManager;
         components::Background BManager;
         components::Centipede CManager;
+        engine::Map MapManager;
 
 };
 /**

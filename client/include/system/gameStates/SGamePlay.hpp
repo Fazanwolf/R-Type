@@ -86,12 +86,9 @@ namespace rtype::game {
 
                 loadGameTexture();
                 //init sprites;
-                // this->shape.setFillColor(sf::Color::Green);
-                // this->shape.setScale( {1.5,1.5} );
-                // this->shape.setPosition( {20,30} );
-                // this->shape.setTexture(textures[0]);
-                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
-                this->CManager.Centipedeinit(300, 600, 50);
+                // this->MapManager.initMap(); // add a map
+                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.2, 0.2});
+                // this->CManager.Centipedeinit(300, 600, 50); // add a centipede
                 this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
                 // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
@@ -106,7 +103,8 @@ namespace rtype::game {
                     //update button appearance etc
                     //update Status
                 }
-                this->CManager.update();
+                // this->MapManager.update(); // add a map
+                // this->CManager.update(); // add centipede
                 //update match data & physics
                 // update client to server data
                 //pop event queue here after rework
@@ -147,9 +145,8 @@ namespace rtype::game {
                 w.clear();
                 this->BManager.draw(w.getWindow());
                 this->EManager.draw(w.getWindow());
-                this->CManager.draw(w.getWindow());
-                // w.getWindow().draw(this->shape);
-                //     w.Draw(this->EManager.getSprite(e));
+                // this->MapManager.render(w.getWindow()); // add a map
+                // this->CManager.draw(w.getWindow()); // add a centipede
                 w.getWindow().display();
                 // std::cout<<"draw"<<std::endl;
             };
