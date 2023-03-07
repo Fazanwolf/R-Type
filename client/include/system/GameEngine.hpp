@@ -70,6 +70,7 @@ namespace rtype
                     gClt = std::make_unique<sk::Client<sk::client::UDP>>(gIP, gPort);
                     gClt->setDebugging(true);
                     gClt->receive();
+                    gClt->connect("?");
                     gClt->run();
                     return new rtype::game::SGamePlay();
                     // isRunning = false;

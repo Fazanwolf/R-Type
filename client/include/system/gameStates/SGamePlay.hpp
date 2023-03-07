@@ -79,16 +79,22 @@ namespace rtype::game {
             void init() override
             {
                 std::cout<<"Init Gameplay"<<std::endl;
-                loadGameTexture();
 
-                gClt->connect("?");
+//                loadGameTexture();
+
                 std::string msg = gClt->getBuffer();
-                if (!msg.empty()) {
-                    std::cout << "msg: " << msg << std::endl;
-                    this->EManager.NewEntity(std::stoi(msg), "../assets/ovni.png", {20, 30}, {0.5, 0.5});
-                    msg = "";
+
+                while (msg.empty()) {
+                    msg = gClt->getBuffer();
+                    if (!msg.empty()) {
+                        int pid = std::stoi(msg);
+                        this->EManager.setPId(pid);
+                        this->EManager.NewEntity("../assets/ovni.png", {20, 30}, {0.5, 0.5});
+                        break;
+                    }
                 }
 
+                msg = "";
                 //init sprites;
                 // this->shape.setFillColor(sf::Color::Green);
                 // this->shape.setScale( {1.5,1.5} );
