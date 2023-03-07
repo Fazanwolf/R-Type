@@ -53,6 +53,7 @@ class SMenu : public GameState {
          * 
          */
         ~SMenu() {};
+
         /**
          * @brief Init the menu
          * 
@@ -67,11 +68,13 @@ class SMenu : public GameState {
         
             return;
         }
+    
         /**
          * @brief Update the menu
          * 
          */
-        void update() override {return;}
+        void update(/*rtype::engine::Window &w*/) override {return;}
+
         /**
          * @brief Handle the events of the menu
          * 
@@ -97,6 +100,7 @@ class SMenu : public GameState {
                 return components::QUIT;
             return components::NONE;
         };
+
         /**
          * @brief Handle the events of the menu
          * 
@@ -121,6 +125,7 @@ class SMenu : public GameState {
                 return components::QUIT;
             return components::NONE;
         };
+
         /**
          * @brief Draw the menu
          * 
@@ -130,7 +135,7 @@ class SMenu : public GameState {
         {
             w.clear();
             // this->EManager.Draw();
-            for (auto btn: btns) { btn.Draw(w);}
+            for (auto btn: btns) { btn.Draw(w.getWindow());}
             w.getWindow().display();
         };
 

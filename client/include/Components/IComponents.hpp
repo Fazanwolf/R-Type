@@ -67,6 +67,10 @@ namespace rtype::components
             virtual void init() = 0;
             virtual int8_t getId() = 0;
             virtual int8_t getOwnerId() = 0;
+            virtual sf::Transformable &getDrawable() = 0;
+            virtual int handleEvent(rtype::engine::Event &handler) = 0;
+            // virtual sf::Transformable getDrawable() = 0;
+
     
     };
 
@@ -94,7 +98,11 @@ namespace rtype::components
 
             virtual void draw(sf::RenderWindow &w) override { std::cout<<"Fuck me\n";}
             virtual void update() override {}
+            // virtual void update(rtype::engine::Event &ev) {};
             virtual void init() override {}
+            sf::Transformable &getDrawable() override {}
+
+            int handleEvent(rtype::engine::Event &handler) override {return -1;};
 
             int8_t getId() { return Id; }
             int8_t getOwnerId() { return OwnerId; }
@@ -110,12 +118,16 @@ namespace rtype::components
             sf::Vector2f scale;
             sf::IntRect textRect;
 
+            bool localPlayer;
+
         public:
             DefaultComp() {}
             ~DefaultComp() {}
 
-            DefaultComp(sf::Texture &tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize) {
+            void setLocalPlayer(bool status) { localPlayer = status; }
+            DefaultComp(sf::Texture &tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize, bool status) {
                 this->name = "DefComp";
+                this->localPlayer = status;
                 this->scale = spawnSize;
                 this->pos = spawnPos;
 
@@ -129,10 +141,11 @@ namespace rtype::components
                 asset.setPosition(this->pos);
             }
 
-            DefaultComp(std::string tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize) {
+            DefaultComp(std::string tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize, bool status) {
                 this->name = "DefComp";
                 this->scale = spawnSize;
                 this->pos = spawnPos;
+                this->localPlayer = status;
 
                 this->shape.setFillColor(sf::Color::Green);
                 this->shape.setPosition(this->pos);
@@ -155,6 +168,17 @@ namespace rtype::components
                 // w.draw(this->shape);
                 w.draw(this->asset);
             }
+
+            sf::Transformable &getDrawable() override {
+                return asset;
+            }
+
+            int handleEvent(rtype::engine::Event &handler) override {
+                if (localPlayer)
+                    handler.MakeObjectMovable(asset);
+                return -1;
+            };
+
     };
 
 } // namespace rtype::Components

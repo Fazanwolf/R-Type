@@ -26,7 +26,7 @@ namespace rtype::components
             virtual bool OnClick() = 0;
             virtual bool OnHover() = 0;
             virtual bool OnLeave() = 0;
-            virtual void Draw(rtype::engine::Window &w) = 0;
+            virtual void Draw(sf::RenderWindow &w) = 0;
             virtual bool isPointInside(sf::Vector2f point) = 0;
     };
 
@@ -94,8 +94,9 @@ namespace rtype::components
             *
             * @param w Windows to draw in
             */
-            void Draw(rtype::engine::Window &w) override {
-                w.Draw(this->rShape);
+            void Draw(sf::RenderWindow &w) override {
+                w.draw(this->rShape);
+                w.draw(this->text);
             };
 
             /**

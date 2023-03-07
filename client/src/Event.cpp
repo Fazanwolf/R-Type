@@ -55,6 +55,23 @@ void Event::MakeObjectMovable(sf::Transformable &obj_pos)
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         obj_pos.move(sf::Vector2f{0, 50});
     }
+
+    if (obj_pos.getPosition().x < 20) {
+        obj_pos.setPosition(sf::Vector2f(20, obj_pos.getPosition().y));
+        return;
+    }
+    if (obj_pos.getPosition().x > 840) {
+        obj_pos.setPosition(sf::Vector2f(840, obj_pos.getPosition().y));
+        return;
+    }
+    if (obj_pos.getPosition().y < 20) {
+        obj_pos.setPosition(sf::Vector2f(obj_pos.getPosition().x, 20));
+        return;
+    }
+    if (obj_pos.getPosition().y > 560) {
+        obj_pos.setPosition(sf::Vector2f(obj_pos.getPosition().x, 560));
+        return;
+    }
 }
 
 void Event::MakeSpriteMovable(sf::Sprite &asset)
@@ -63,7 +80,6 @@ void Event::MakeSpriteMovable(sf::Sprite &asset)
         asset.setPosition(sf::Vector2f(20, asset.getPosition().y));
         return;
     }
-
     if (asset.getPosition().x > 840) {
         asset.setPosition(sf::Vector2f(840, asset.getPosition().y));
         return;
