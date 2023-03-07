@@ -36,6 +36,7 @@ namespace rtype::engine {
             *
             * @param audio audio to be create
             */
+
             void CreateSound(sf::Sound audio);
 
         protected:

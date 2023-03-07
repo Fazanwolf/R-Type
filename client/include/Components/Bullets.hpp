@@ -79,6 +79,7 @@ namespace rtype::components {
             *
             * @return Return a true if collide ans false if not
             */
+
             bool collided(sf::FloatRect bounds)
             {
                 for (auto& ammo : this->bullets_list)

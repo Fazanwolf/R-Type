@@ -60,7 +60,6 @@ namespace rtype::game {
 
             };
 
-            void loadGameTexture(std::vector<std::string> paths)
             {
                 int i = 0;
                 for (auto p : paths) {

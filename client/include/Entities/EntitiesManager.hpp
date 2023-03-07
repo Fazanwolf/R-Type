@@ -118,7 +118,6 @@ namespace rtype::entities {
             EntitiesManager();
             ~EntitiesManager();
 
-            
             /**
             * @brief Create an entity and set it a sprite, set up the position of the entity and his scale
             * @param filemane path to your asset

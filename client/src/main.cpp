@@ -39,5 +39,6 @@ int main(void)
         return (84);
     }
     // g.win.CreateWindow({920, 620}, "R-Type");
+
     return (0);
 }
