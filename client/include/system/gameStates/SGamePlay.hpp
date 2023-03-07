@@ -91,6 +91,8 @@ namespace rtype::game {
                 // this->shape.setPosition( {20,30} );
                 // this->shape.setTexture(textures[0]);
                 this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
+                this->CManager.Centipedeinit(300, 600, 50);
+                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
                 // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
 
@@ -104,6 +106,7 @@ namespace rtype::game {
                     //update button appearance etc
                     //update Status
                 }
+                this->CManager.update();
                 //update match data & physics
                 // update client to server data
                 //pop event queue here after rework
@@ -142,7 +145,9 @@ namespace rtype::game {
             {
                 //draw entities
                 w.clear();
-                this->EManager.draw(w.getWindow() );
+                this->BManager.draw(w.getWindow());
+                this->EManager.draw(w.getWindow());
+                this->CManager.draw(w.getWindow());
                 // w.getWindow().draw(this->shape);
                 //     w.Draw(this->EManager.getSprite(e));
                 w.getWindow().display();

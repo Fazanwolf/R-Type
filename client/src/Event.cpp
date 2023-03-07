@@ -44,16 +44,16 @@ EventType Event::ServerPlayerAction(sf::Transformable &obj_pos, EventType action
 void Event::MakeObjectMovable(sf::Transformable &obj_pos)
 {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        obj_pos.move(sf::Vector2f{50, 0});
+        obj_pos.move(sf::Vector2f{10, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-        obj_pos.move(sf::Vector2f{-50, 0});
+        obj_pos.move(sf::Vector2f{-10, 0});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z)) {
-        obj_pos.move(sf::Vector2f{0, -50});
+        obj_pos.move(sf::Vector2f{0, -10});
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        obj_pos.move(sf::Vector2f{0, 50});
+        obj_pos.move(sf::Vector2f{0, 10});
     }
 }
 

@@ -11,6 +11,7 @@
 #include "Utils/String.hpp"
 #include "system/GameEngine.hpp"
 #include "Components/Background.hpp"
+#include "Components/Centipede.hpp"
 
 
 #ifndef IGAMESTATE_HPP_
@@ -84,6 +85,7 @@ class IGameState {
     protected:
         entities::EntitiesManager EManager;
         components::Background BManager;
+        components::Centipede CManager;
 
 };
 /**
