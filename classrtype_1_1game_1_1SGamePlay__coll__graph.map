@@ -1,8 +1,8 @@
 <map id="rtype::game::SGamePlay" name="rtype::game::SGamePlay">
-<area shape="rect" id="node1" title="The class of the game state." alt="" coords="1095,2980,1262,3533"/>
-<area shape="rect" id="node2" href="$classrtype_1_1GameState.html" title="The class of the game state." alt="" coords="1115,2760,1242,2917"/>
-<area shape="rect" id="node3" href="$classrtype_1_1IGameState.html" title="The class of the game state." alt="" coords="1277,2597,1408,2711"/>
-<area shape="rect" id="node4" href="$classrtype_1_1entities_1_1EntitiesManager.html" title="This class create an entity and set it a sprite, set up the position of the entity and his scale." alt="" coords="1397,1996,1547,2535"/>
+<area shape="rect" id="node1" title="The class of the game state." alt="" coords="1095,2951,1262,3504"/>
+<area shape="rect" id="node2" href="$classrtype_1_1GameState.html" title="The class of the game state." alt="" coords="1115,2731,1242,2888"/>
+<area shape="rect" id="node3" href="$classrtype_1_1IGameState.html" title="The class of the game state." alt="" coords="1277,2568,1408,2681"/>
+<area shape="rect" id="node4" href="$classrtype_1_1entities_1_1EntitiesManager.html" title="This class create an entity and set it a sprite, set up the position of the entity and his scale." alt="" coords="1397,1996,1547,2505"/>
 <area shape="rect" id="node5" title=" " alt="" coords="1517,453,1657,493"/>
 <area shape="rect" id="node6" title=" " alt="" coords="441,181,500,221"/>
 <area shape="rect" id="node11" href="$classrtype_1_1entities_1_1Entity.html" title=" " alt="" coords="2150,1296,2290,1615"/>
@@ -39,7 +39,7 @@
 <area shape="rect" id="node32" title=" " alt="" coords="1103,1435,1164,1475"/>
 <area shape="rect" id="node33" href="$classrtype_1_1components_1_1Centipede.html" title=" " alt="" coords="2041,1639,2178,1752"/>
 <area shape="rect" id="node36" title=" " alt="" coords="1387,181,1483,221"/>
-<area shape="rect" id="node37" title=" " alt="" coords="2100,2819,2151,2859"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2100,2789,2151,2829"/>
 <area shape="rect" id="node38" title=" " alt="" coords="120,445,259,500"/>
 <area shape="rect" id="node39" title=" " alt="" coords="179,181,266,221"/>
 <area shape="rect" id="node42" title=" " alt="" coords="705,453,764,493"/>

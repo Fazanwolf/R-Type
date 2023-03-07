@@ -22,8 +22,6 @@ var classrtype_1_1entities_1_1EntitiesManager =
     [ "getSpriteMobs", "classrtype_1_1entities_1_1EntitiesManager.html#afebc45cfbac63337f824a01f4e874062", null ],
     [ "getTextureVector", "classrtype_1_1entities_1_1EntitiesManager.html#aebe05100420bdc1b8f88a839d2692362", null ],
     [ "handleEvent", "classrtype_1_1entities_1_1EntitiesManager.html#a38cde548bfd72e640477efc3e3e76ef0", null ],
-    [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#aeb1cabada81e071c716d9f823d7b03f4", null ],
-    [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#af97a131cb9b6a7f6a44f1c952ee47139", null ],
     [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#a27a83f1be226fb0f03bf50b72eaff48b", null ],
     [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30", null ],
     [ "NewEntity", "classrtype_1_1entities_1_1EntitiesManager.html#abe67303c48924aed78d21677fc985a30", null ],
