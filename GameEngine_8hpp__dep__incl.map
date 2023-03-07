@@ -1,5 +1,12 @@
 <map id="/github/workspace/client/include/system/GameEngine.hpp" name="/github/workspace/client/include/system/GameEngine.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="73,5,287,45"/>
-<area shape="rect" id="node2" href="$StateManager_8cpp.html" title=" " alt="" coords="5,93,168,133"/>
-<area shape="rect" id="node3" href="$client_2src_2main_8cpp.html" title=" " alt="" coords="192,93,355,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="827,5,1041,45"/>
+<area shape="rect" id="node2" href="$IGameState_8hpp.html" title=" " alt="" coords="549,93,735,148"/>
+<area shape="rect" id="node9" href="$StateManager_8cpp.html" title=" " alt="" coords="759,101,922,141"/>
+<area shape="rect" id="node10" href="$client_2src_2main_8cpp.html" title=" " alt="" coords="946,101,1109,141"/>
+<area shape="rect" id="node3" href="$SGamePlay__Duck_8hpp.html" title=" " alt="" coords="5,196,215,251"/>
+<area shape="rect" id="node4" href="$SMenu__Duck_8hpp.html" title=" " alt="" coords="239,196,426,251"/>
+<area shape="rect" id="node5" href="$SGamePlay_8hpp.html" title=" " alt="" coords="450,196,637,251"/>
+<area shape="rect" id="node6" href="$States_8hpp.html" title=" " alt="" coords="646,299,833,353"/>
+<area shape="rect" id="node7" href="$SMenu_8hpp.html" title=" " alt="" coords="711,196,898,251"/>
+<area shape="rect" id="node8" href="$old__SGamePlay_01copy_8hpp.html" title=" " alt="" coords="922,196,1109,251"/>
 </map>

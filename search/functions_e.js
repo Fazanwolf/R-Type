@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['t_5fclock_0',['t_clock',['../classrtype_1_1engine_1_1Window.html#afc1270216213283340a2d1c4975afd4b',1,'rtype::engine::Window']]],
-  ['text_1',['Text',['../classrtype_1_1engine_1_1Text.html#adab1bd36bff1633ebe567a09b828b514',1,'rtype::engine::Text']]],
-  ['tolower_2',['toLower',['../classutilities_1_1Transform.html#a4480875654840beb85b0d81dff6d9e02',1,'utilities::Transform']]],
-  ['toupper_3',['toUpper',['../classutilities_1_1Transform.html#a0c20d9d2698b574ff65b42dbde1a52a7',1,'utilities::Transform']]],
-  ['trim_4',['trim',['../classutilities_1_1Transform.html#a1ad59957e48a52c54a5ac0440b02c0fb',1,'utilities::Transform']]]
+  ['removecomp_0',['removeComp',['../classrtype_1_1entities_1_1Entity.html#a9220390107734b804d55b7eb845d894f',1,'rtype::entities::Entity']]],
+  ['removeelem_1',['removeElem',['../classUtils_1_1SparseArray.html#a539e9283dadac558ffe2998a039c4981',1,'Utils::SparseArray']]],
+  ['resume_2',['resume',['../classrtype_1_1game_1_1SGamePlay.html#aa99f1b32503730b1a50997dc7ed029fa',1,'rtype::game::SGamePlay']]],
+  ['runstate_3',['runState',['../classrtype_1_1GameEngine.html#a3b9fa539d5aa4d1d5344b8f0d54aaa04',1,'rtype::GameEngine']]]
 ];

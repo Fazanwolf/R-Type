@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../client_2src_2main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main(void):&#160;main.cpp'],['../server_2src_2main_8cpp.html#a0c99d968a34e803d378692bde2e3f18f',1,'main(int ac, char **av):&#160;main.cpp']]],
-  ['makeobjectclickable_1',['MakeObjectClickable',['../classrtype_1_1engine_1_1Event.html#a371caa57d819462b4b83ea17bd3f5a58',1,'rtype::engine::Event']]],
-  ['makeobjectmovable_2',['MakeObjectMovable',['../classrtype_1_1engine_1_1Event.html#a936514795320a8f5d7dc020b3ccda90c',1,'rtype::engine::Event']]],
-  ['makespritemovable_3',['MakeSpriteMovable',['../classrtype_1_1engine_1_1Event.html#a46a9c1d801466e8e7b73ae2bfdb2d0bc',1,'rtype::engine::Event']]],
-  ['makespritemovable_5fbis_4',['MakeSpriteMovable_Bis',['../classrtype_1_1engine_1_1Event.html#a3763a88355fafbab1408abf7185557b8',1,'rtype::engine::Event']]],
-  ['map_5',['Map',['../classrtype_1_1engine_1_1Map.html#ab3db58d6781bb6297cdb5d586d488e9d',1,'rtype::engine::Map']]],
-  ['menu_6',['Menu',['../classrtype_1_1engine_1_1StateManager.html#a2718e61cd76b99067d5aa8da26bc8174',1,'rtype::engine::StateManager']]]
+  ['loaderror_0',['LoadError',['../classLoadError.html#aac46912a57d94bb9368663dd5a754f87',1,'LoadError']]],
+  ['loadgametexture_1',['loadGameTexture',['../classrtype_1_1game_1_1SGamePlay.html#aca34b0499a39c402254fc446d5302dbd',1,'rtype::game::SGamePlay']]],
+  ['loadstate_2',['loadState',['../classrtype_1_1GameEngine.html#a2765771a67fd0413c06adf70d63f80b2',1,'rtype::GameEngine']]],
+  ['localinput_3',['LocalInput',['../classrtype_1_1game_1_1SGamePlay.html#a0a73ef31be41ff4af9cab9d2850d6cf4',1,'rtype::game::SGamePlay::LocalInput(engine::Event &amp;ev)'],['../classrtype_1_1game_1_1SGamePlay.html#a0a73ef31be41ff4af9cab9d2850d6cf4',1,'rtype::game::SGamePlay::LocalInput(engine::Event &amp;ev)']]]
 ];

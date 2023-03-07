@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['sgameplay_0',['SGamePlay',['../classrtype_1_1game_1_1SGamePlay.html',1,'rtype::game']]],
-  ['statemanager_1',['StateManager',['../classrtype_1_1engine_1_1StateManager.html',1,'rtype::engine']]]
+  ['particulesmanager_0',['ParticulesManager',['../classrtype_1_1entities_1_1ParticulesManager.html',1,'rtype::entities']]],
+  ['player_1',['Player',['../classPlayer.html',1,'']]],
+  ['playerprotocol_2',['PlayerProtocol',['../classPlayerProtocol.html',1,'']]]
 ];

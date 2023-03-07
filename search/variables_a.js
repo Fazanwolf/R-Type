@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['selfclock_0',['selfClock',['../classrtype_1_1components_1_1Bullets.html#a9f6b414f1ca22c7e32e4f4317ec76a85',1,'rtype::components::Bullets']]],
-  ['server_5fupdates_1',['server_updates',['../classrtype_1_1engine_1_1Event.html#a6a03fa02926b32585c3ac151fa6c6831',1,'rtype::engine::Event::server_updates()'],['../classrtype_1_1GameEngine.html#a187773f036a044621ef959cefcff515e',1,'rtype::GameEngine::server_updates()']]],
-  ['serverprojectiles_2',['serverProjectiles',['../classrtype_1_1game_1_1SGamePlay.html#af72e24b53818e910997c3b3d7fcb433d',1,'rtype::game::SGamePlay']]]
+  ['pid_0',['pId',['../classrtype_1_1entities_1_1EntitiesManager.html#a2655ec1a6528b3164a2a07d198d7062a',1,'rtype::entities::EntitiesManager']]],
+  ['pid_1',['pID',['../classrtype_1_1game_1_1SGamePlay.html#aa7800fa96544e94ba6251ed43256b4ea',1,'rtype::game::SGamePlay']]],
+  ['playerprojectile_2',['playerProjectile',['../classrtype_1_1game_1_1SGamePlay.html#aaefd45f31126c1206b439cc5bd9506dd',1,'rtype::game::SGamePlay']]],
+  ['pos_3',['pos',['../classrtype_1_1components_1_1DefaultComp.html#a5ddbb79943eca026d5db4318e6530ce5',1,'rtype::components::DefaultComp']]],
+  ['pserverids_4',['pServerIds',['../classrtype_1_1entities_1_1EntitiesManager.html#ab79c5af43ef32229eee85c2a865d141c',1,'rtype::entities::EntitiesManager']]]
 ];

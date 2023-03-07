@@ -1,21 +1,7 @@
 var searchData=
 [
-  ['gameengine_0',['GameEngine',['../classrtype_1_1GameEngine.html#a242d1f0cf1172b2a40081897c6c0a523',1,'rtype::GameEngine']]],
-  ['gamerun_1',['GameRun',['../classrtype_1_1engine_1_1StateManager.html#a9e607c1b59e7d48852e33fee72c6f0d2',1,'rtype::engine::StateManager']]],
-  ['gamestate_2',['GameState',['../classrtype_1_1GameState.html#af01bcf061ab7881efe5b6af4300d4aee',1,'rtype::GameState']]],
-  ['getbulletlist_3',['getBulletList',['../classrtype_1_1components_1_1Bullets.html#aefefb2de136a97a473b078afc4817f16',1,'rtype::components::Bullets']]],
-  ['getclientbuffer_4',['getClientBuffer',['../classrtype_1_1engine_1_1Event.html#abb10157a6c064afc9725e43df0577189',1,'rtype::engine::Event']]],
-  ['getentitieslist_5',['getEntitiesList',['../classrtype_1_1entities_1_1EntitiesManager.html#af96a3f00db045751633db37af8d774a1',1,'rtype::entities::EntitiesManager']]],
-  ['getids_6',['getIDs',['../classrtype_1_1entities_1_1EntitiesManager.html#a00013a40d5fc61c5c85319af009e0fcd',1,'rtype::entities::EntitiesManager']]],
-  ['getlocalplayerid_7',['getLocalPlayerID',['../classrtype_1_1game_1_1SGamePlay.html#aba4827ee31e04e88e79d5cba3f02a1ff',1,'rtype::game::SGamePlay']]],
-  ['getmousepos_8',['GetMousePos',['../classrtype_1_1engine_1_1Event.html#aecf3eb6dc93534902909e4980635c045',1,'rtype::engine::Event']]],
-  ['getmousepressed_9',['GetMousePressed',['../classrtype_1_1engine_1_1Event.html#a65cbf00bc16e824f784e9c194621a415',1,'rtype::engine::Event']]],
-  ['getname_10',['getName',['../classActors.html#ac7fd651fd8c0cd1fba8132cb3555baab',1,'Actors']]],
-  ['getpid_11',['getPId',['../classrtype_1_1entities_1_1EntitiesManager.html#a3fbac4eaddd76b31a2005d28fc890a45',1,'rtype::entities::EntitiesManager']]],
-  ['getpos_12',['getPos',['../classrtype_1_1entities_1_1Entity.html#aaac1f031c55cc29441c2b67944ad9d15',1,'rtype::entities::Entity']]],
-  ['getsprite_13',['getSprite',['../classrtype_1_1entities_1_1EntitiesManager.html#ad8f4837cb81e312fb190f5cd4ec00a88',1,'rtype::entities::EntitiesManager']]],
-  ['gettag_14',['getTag',['../classActors.html#add697dca1ff186acc2c1a6a625be1d47',1,'Actors']]],
-  ['getvelocity_15',['getVelocity',['../classrtype_1_1entities_1_1Entity.html#a5181881c317aebfcdc4e6b97fd01c5db',1,'rtype::entities::Entity']]],
-  ['getx_16',['getX',['../classrtype_1_1entities_1_1Entity.html#ad35e0d477a8e28706b5ce1feb0151cd4',1,'rtype::entities::Entity']]],
-  ['gety_17',['getY',['../classrtype_1_1entities_1_1Entity.html#a2e99b4b740fe70a1fff1052c43fe4c6c',1,'rtype::entities::Entity']]]
+  ['findfirstmissing_0',['findFirstMissing',['../classUtils_1_1VectorUtils.html#a0c0cc172c46168f4eb0a0e95e3c12556',1,'Utils::VectorUtils']]],
+  ['findsmallestmissinginsortedarray_1',['findSmallestMissinginSortedArray',['../classUtils_1_1VectorUtils.html#ac1d1ae543faf66e1722925ba0e013032',1,'Utils::VectorUtils']]],
+  ['for_2',['for',['../classrtype_1_1game_1_1SGamePlay.html#a1e0f19fd25b1987f29e5462875abba5b',1,'rtype::game::SGamePlay']]],
+  ['front_3',['front',['../classUtils_1_1SparseArray.html#a616d887f5d2ea442fdddb9f230301c83',1,'Utils::SparseArray']]]
 ];

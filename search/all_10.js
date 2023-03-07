@@ -6,8 +6,12 @@ var searchData=
   ['game_3',['game',['../namespacertype_1_1game.html',1,'rtype']]],
   ['r_2dtype_4',['R-Type',['../index.html',1,'']]],
   ['readme_2emd_5',['README.md',['../README_8md.html',1,'']]],
-  ['resume_6',['resume',['../classrtype_1_1IGameState.html#ac7e161bf8c89048b2cb19c6aaa493268',1,'rtype::IGameState::resume()'],['../classrtype_1_1GameState.html#a846853eb60a177f2831fbea5652d7de5',1,'rtype::GameState::resume()'],['../classrtype_1_1game_1_1SGamePlay.html#aa99f1b32503730b1a50997dc7ed029fa',1,'rtype::game::SGamePlay::resume()']]],
-  ['right_7',['RIGHT',['../classPlayerProtocol.html#a3b3f08437063d5fb76cd9161e6b40ec6af9b59377c2305a6feec0407bae48308e',1,'PlayerProtocol']]],
-  ['rocket_8',['ROCKET',['../namespacertype_1_1components.html#af9e3c51721c56dac8f7e52beb06c6b22a98dbc91e7281d76a2948d3b93d42c29a',1,'rtype::components']]],
-  ['rtype_9',['rtype',['../namespacertype.html',1,'']]]
+  ['removecomp_6',['removeComp',['../classrtype_1_1entities_1_1Entity.html#a9220390107734b804d55b7eb845d894f',1,'rtype::entities::Entity']]],
+  ['removeelem_7',['removeElem',['../classUtils_1_1SparseArray.html#a539e9283dadac558ffe2998a039c4981',1,'Utils::SparseArray']]],
+  ['resume_8',['resume',['../classrtype_1_1game_1_1SGamePlay.html#aa99f1b32503730b1a50997dc7ed029fa',1,'rtype::game::SGamePlay']]],
+  ['right_9',['RIGHT',['../classPlayerProtocol.html#a3b3f08437063d5fb76cd9161e6b40ec6af9b59377c2305a6feec0407bae48308e',1,'PlayerProtocol']]],
+  ['rocket_10',['ROCKET',['../namespacertype_1_1components.html#af9e3c51721c56dac8f7e52beb06c6b22a98dbc91e7281d76a2948d3b93d42c29a',1,'rtype::components']]],
+  ['rshape_11',['rShape',['../classrtype_1_1components_1_1Bouton.html#a928e15fa73da66b3f7cb09b31743cbe6',1,'rtype::components::Bouton']]],
+  ['rtype_12',['rtype',['../namespacertype.html',1,'']]],
+  ['runstate_13',['runState',['../classrtype_1_1GameEngine.html#a3b9fa539d5aa4d1d5344b8f0d54aaa04',1,'rtype::GameEngine']]]
 ];

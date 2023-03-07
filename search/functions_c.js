@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['resume_0',['resume',['../classrtype_1_1IGameState.html#ac7e161bf8c89048b2cb19c6aaa493268',1,'rtype::IGameState::resume()'],['../classrtype_1_1GameState.html#a846853eb60a177f2831fbea5652d7de5',1,'rtype::GameState::resume()'],['../classrtype_1_1game_1_1SGamePlay.html#aa99f1b32503730b1a50997dc7ed029fa',1,'rtype::game::SGamePlay::resume()']]]
+  ['onclick_0',['OnClick',['../classrtype_1_1components_1_1IButton.html#a13c373949db78e8a2d6f2f55d6539bff',1,'rtype::components::IButton::OnClick()'],['../classrtype_1_1components_1_1Bouton.html#a85568630bad343228aa7d90a62b8ebd4',1,'rtype::components::Bouton::OnClick()']]],
+  ['onhover_1',['OnHover',['../classrtype_1_1components_1_1IButton.html#a5363194b2742c1217b6bccc03167daba',1,'rtype::components::IButton::OnHover()'],['../classrtype_1_1components_1_1Bouton.html#a0ae7889a4d7082b5c0976defbda3ca69',1,'rtype::components::Bouton::OnHover()']]],
+  ['onleave_2',['OnLeave',['../classrtype_1_1components_1_1IButton.html#a9528312cc8d09cf94a13550c9fb4d8a4',1,'rtype::components::IButton::OnLeave()'],['../classrtype_1_1components_1_1Bouton.html#a6d9e00da34ff1a42ba70518e15bebe1a',1,'rtype::components::Bouton::OnLeave()']]]
 ];

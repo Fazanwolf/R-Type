@@ -41,6 +41,7 @@ var NAVTREE =
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -52,7 +53,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
@@ -73,8 +74,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Actors_8cpp.html",
-"classrtype_1_1components_1_1Bullets.html#a1bf441b2c64f66d8c1afa3de7f308b71",
-"classrtype_1_1game_1_1SGamePlay.html#a221313b876696334d7f371a9ace54ad5"
+"classes.html",
+"classrtype_1_1components_1_1DefaultComp.html#adcf23a7e1ee496da0fc12a5de439330a",
+"classrtype_1_1entities_1_1EntitiesManager.html#a7a7935f7539d1fa5959b736057a8f429",
+"dir_2829ef38eab859e0788acb22d79963e7.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

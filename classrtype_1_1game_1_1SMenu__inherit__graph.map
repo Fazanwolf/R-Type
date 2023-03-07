@@ -1,0 +1,5 @@
+<map id="rtype::game::SMenu" name="rtype::game::SMenu">
+<area shape="rect" id="node1" title="The class of the game state." alt="" coords="5,431,144,749"/>
+<area shape="rect" id="node2" href="$classrtype_1_1GameState.html" title="The class of the game state." alt="" coords="11,211,138,383"/>
+<area shape="rect" id="node3" href="$classrtype_1_1IGameState.html" title="The class of the game state." alt="" coords="9,5,140,163"/>
+</map>

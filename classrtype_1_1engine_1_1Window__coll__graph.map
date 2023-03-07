@@ -1,5 +1,5 @@
 <map id="rtype::engine::Window" name="rtype::engine::Window">
-<area shape="rect" id="node1" title=" " alt="" coords="297,212,447,443"/>
+<area shape="rect" id="node1" title="This class is the base class for all the Window." alt="" coords="297,212,447,457"/>
 <area shape="rect" id="node2" title=" " alt="" coords="28,109,111,149"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,5,133,60"/>
 <area shape="rect" id="node4" title=" " alt="" coords="145,109,236,149"/>

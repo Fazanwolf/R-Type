@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pid_0',['pID',['../classrtype_1_1game_1_1SGamePlay.html#aa7800fa96544e94ba6251ed43256b4ea',1,'rtype::game::SGamePlay']]],
-  ['pid_1',['pId',['../classrtype_1_1entities_1_1EntitiesManager.html#a2655ec1a6528b3164a2a07d198d7062a',1,'rtype::entities::EntitiesManager']]],
-  ['playerprojectile_2',['playerProjectile',['../classrtype_1_1game_1_1SGamePlay.html#aaefd45f31126c1206b439cc5bd9506dd',1,'rtype::game::SGamePlay']]]
+  ['ownerid_0',['ownerID',['../classrtype_1_1components_1_1Bullets.html#a85e1085080d289b4405a67af3e3b578e',1,'rtype::components::Bullets']]],
+  ['ownerid_1',['OwnerId',['../classrtype_1_1components_1_1Component.html#ae153ac3c18af7b1dd61bc4f5e589669e',1,'rtype::components::Component']]]
 ];

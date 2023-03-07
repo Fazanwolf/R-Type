@@ -1,5 +1,5 @@
 <map id="rtype::game::SGamePlay" name="rtype::game::SGamePlay">
-<area shape="rect" id="node1" title=" " alt="" coords="5,431,172,735"/>
-<area shape="rect" id="node2" href="$classrtype_1_1GameState.html" title=" " alt="" coords="25,211,152,383"/>
-<area shape="rect" id="node3" href="$classrtype_1_1IGameState.html" title=" " alt="" coords="23,5,154,163"/>
+<area shape="rect" id="node1" title="The class of the game state." alt="" coords="5,431,172,1072"/>
+<area shape="rect" id="node2" href="$classrtype_1_1GameState.html" title="The class of the game state." alt="" coords="25,211,152,383"/>
+<area shape="rect" id="node3" href="$classrtype_1_1IGameState.html" title="The class of the game state." alt="" coords="23,5,154,163"/>
 </map>

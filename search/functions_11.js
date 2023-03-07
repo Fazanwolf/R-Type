@@ -1,28 +1,7 @@
 var searchData=
 [
-  ['_7eactors_0',['~Actors',['../classActors.html#a6581714f513082d0aa91724dc3f54734',1,'Actors']]],
-  ['_7eaudio_1',['~Audio',['../classrtype_1_1engine_1_1Audio.html#a70df003a8c58cb8883922463c25bb1a3',1,'rtype::engine::Audio']]],
-  ['_7ebonus_2',['~Bonus',['../classrtype_1_1components_1_1Bonus.html#a64b28e23607c8eba4bdc838c73a2113e',1,'rtype::components::Bonus']]],
-  ['_7ebullets_3',['~Bullets',['../classrtype_1_1components_1_1Bullets.html#a1bf441b2c64f66d8c1afa3de7f308b71',1,'rtype::components::Bullets']]],
-  ['_7edestroy_4',['~Destroy',['../classrtype_1_1engine_1_1Destroy.html#a92d472a9bf8aa9d780f95b6c725d26ba',1,'rtype::engine::Destroy']]],
-  ['_7edestroyerror_5',['~DestroyError',['../classDestroyError.html#a9306863b3a9a5462f5fc7df2bc800015',1,'DestroyError']]],
-  ['_7edraw_6',['~Draw',['../classrtype_1_1engine_1_1Draw.html#a206415ad169356614a4ab0cf51116215',1,'rtype::engine::Draw']]],
-  ['_7eenemy_7',['~Enemy',['../classEnemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
-  ['_7eengine_8',['~Engine',['../classrtype_1_1engine_1_1Engine.html#ab0a09ef19a54919d33b6a84f977f771f',1,'rtype::engine::Engine']]],
-  ['_7eentitiesmanager_9',['~EntitiesManager',['../classrtype_1_1entities_1_1EntitiesManager.html#ac5f86d24e05180dc08420e32f2bb489f',1,'rtype::entities::EntitiesManager']]],
-  ['_7eentity_10',['~Entity',['../classrtype_1_1entities_1_1Entity.html#a10d1e501858d08865ba31105159cf770',1,'rtype::entities::Entity']]],
-  ['_7eerror_11',['~Error',['../classError.html#aee7d800cc0eedf3a353730891803b6e0',1,'Error']]],
-  ['_7eevent_12',['~Event',['../classrtype_1_1engine_1_1Event.html#a7704ec01ce91e673885792054214b3d2',1,'rtype::engine::Event']]],
-  ['_7egameengine_13',['~GameEngine',['../classrtype_1_1GameEngine.html#abd89a4cb369cdae2230e906eac434d58',1,'rtype::GameEngine']]],
-  ['_7egamestate_14',['~GameState',['../classrtype_1_1GameState.html#a36f50e344165eb744ed418c724bfb3ec',1,'rtype::GameState']]],
-  ['_7eloaderror_15',['~LoadError',['../classLoadError.html#a122411c5c089e0386e9d600f21414ce2',1,'LoadError']]],
-  ['_7emap_16',['~Map',['../classrtype_1_1engine_1_1Map.html#a4914ef42780693ea0b9120b73cdd91b1',1,'rtype::engine::Map']]],
-  ['_7eparticulesmanager_17',['~ParticulesManager',['../classrtype_1_1entities_1_1ParticulesManager.html#a1ad9b7e23bf066b5e8e3fc4c16ef938a',1,'rtype::entities::ParticulesManager']]],
-  ['_7eplayer_18',['~Player',['../classPlayer.html#a749d2c00e1fe0f5c2746f7505a58c062',1,'Player']]],
-  ['_7eplayerprotocol_19',['~PlayerProtocol',['../classPlayerProtocol.html#aeaa51bd9e3fd1d39df52ddb9439e83aa',1,'PlayerProtocol']]],
-  ['_7esgameplay_20',['~SGamePlay',['../classrtype_1_1game_1_1SGamePlay.html#aa3de9060afba5108e7852e733ad0fa7a',1,'rtype::game::SGamePlay']]],
-  ['_7estatemanager_21',['~StateManager',['../classrtype_1_1engine_1_1StateManager.html#a05a43504a033f1befad5c5118249ec6f',1,'rtype::engine::StateManager']]],
-  ['_7etext_22',['~Text',['../classrtype_1_1engine_1_1Text.html#a83886bd26d0b4d52dacfd5c5c8b26bb1',1,'rtype::engine::Text']]],
-  ['_7ewindow_23',['~Window',['../classrtype_1_1engine_1_1Window.html#a245d821e6016fa1f6970ccbbedd635f6',1,'rtype::engine::Window']]],
-  ['_7ewindowerror_24',['~WindowError',['../classWindowError.html#a27bfe91e0dfb41189723cbe1339fd4a3',1,'WindowError']]]
+  ['update_0',['update',['../classrtype_1_1components_1_1Block.html#ac47858087097f6d11180a853d88c8564',1,'rtype::components::Block::update()'],['../classrtype_1_1game_1_1SMenu.html#a4917a039e284b3d0adafb620a7d4b7cc',1,'rtype::game::SMenu::update()'],['../classrtype_1_1game_1_1SGamePlay.html#ab1b356c5159cb47acf6e121ec4f336a9',1,'rtype::game::SGamePlay::update() override'],['../classrtype_1_1game_1_1SGamePlay.html#ab1b356c5159cb47acf6e121ec4f336a9',1,'rtype::game::SGamePlay::update() override'],['../classrtype_1_1GameState.html#ab74eef592005aadecf18c9b8851d4c33',1,'rtype::GameState::update()'],['../classrtype_1_1IGameState.html#a0d5288cd5661e68fd064d6698b876eb0',1,'rtype::IGameState::update()'],['../classrtype_1_1game_1_1SMenu.html#a4917a039e284b3d0adafb620a7d4b7cc',1,'rtype::game::SMenu::update()'],['../classrtype_1_1game_1_1SGamePlay.html#ab1b356c5159cb47acf6e121ec4f336a9',1,'rtype::game::SGamePlay::update()'],['../classrtype_1_1entities_1_1EntitiesManager.html#a56052d6e21f21d1c9b7f467f48f3afca',1,'rtype::entities::EntitiesManager::update()'],['../classrtype_1_1engine_1_1Event.html#a448fe413712fcade282d50f44eaeff1a',1,'rtype::engine::Event::update()'],['../classrtype_1_1components_1_1Mobs.html#a5e65f93ed53084d505ca56429a0f4633',1,'rtype::components::Mobs::update()'],['../classrtype_1_1components_1_1Component.html#a8f74e5883186f6598bc3588343244ea4',1,'rtype::components::Component::update()'],['../classrtype_1_1components_1_1IComponents.html#aec1b12823ed704dc819d05b670894557',1,'rtype::components::IComponents::update()'],['../classrtype_1_1components_1_1Centipede.html#ad61022235833a32bf88262beaeee0f3b',1,'rtype::components::Centipede::update()'],['../classrtype_1_1components_1_1Bullets.html#a3b66bb422aefd5a70310f79f57059d85',1,'rtype::components::Bullets::update()']]],
+  ['updateelem_1',['updateElem',['../classUtils_1_1SparseArray.html#a53e2759cadbaf707e909e2506263cfe5',1,'Utils::SparseArray']]],
+  ['updateevent_2',['UpdateEvent',['../classrtype_1_1engine_1_1Window.html#af36abe9b1a6b02df13dbe2c6ac3132c8',1,'rtype::engine::Window']]],
+  ['updates_3',['updates',['../classrtype_1_1entities_1_1Entity.html#a2ac11c8bfa1909222125c07815907291',1,'rtype::entities::Entity']]]
 ];

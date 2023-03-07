@@ -1,0 +1,4 @@
+<map id="rtype::components::Bouton" name="rtype::components::Bouton">
+<area shape="rect" id="node1" title="This class is the base class for all the bonus in the game." alt="" coords="5,181,143,427"/>
+<area shape="rect" id="node2" href="$classrtype_1_1components_1_1IButton.html" title="This class is the base class for all the button interface." alt="" coords="5,5,143,133"/>
+</map>

@@ -1,12 +1,16 @@
 <map id="rtype::components::Bullets" name="rtype::components::Bullets">
-<area shape="rect" id="node1" title=" " alt="" coords="188,328,335,515"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,211,64,251"/>
-<area shape="rect" id="node3" title=" " alt="" coords="95,211,150,251"/>
-<area shape="rect" id="node4" title=" " alt="" coords="175,211,233,251"/>
-<area shape="rect" id="node5" title=" " alt="" coords="257,211,433,251"/>
-<area shape="rect" id="node6" title=" " alt="" coords="243,108,339,148"/>
-<area shape="rect" id="node7" title=" " alt="" coords="363,108,461,148"/>
-<area shape="rect" id="node8" title=" " alt="" coords="393,5,431,45"/>
-<area shape="rect" id="node9" title=" " alt="" coords="457,211,532,251"/>
-<area shape="rect" id="node10" title=" " alt="" coords="571,211,621,251"/>
+<area shape="rect" id="node1" title="This class is the base class for all the bullets." alt="" coords="453,665,600,852"/>
+<area shape="rect" id="node2" href="$classrtype_1_1components_1_1Component.html" title=" " alt="" coords="138,357,275,588"/>
+<area shape="rect" id="node3" href="$classrtype_1_1components_1_1IComponents.html" title=" " alt="" coords="135,123,273,280"/>
+<area shape="rect" id="node4" title=" " alt="" coords="297,181,356,221"/>
+<area shape="rect" id="node5" title=" " alt="" coords="28,181,111,221"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,5,133,60"/>
+<area shape="rect" id="node7" title=" " alt="" coords="405,453,464,493"/>
+<area shape="rect" id="node8" title=" " alt="" coords="489,453,543,493"/>
+<area shape="rect" id="node9" title=" " alt="" coords="568,453,744,493"/>
+<area shape="rect" id="node10" title=" " alt="" coords="553,181,649,221"/>
+<area shape="rect" id="node11" title=" " alt="" coords="674,181,771,221"/>
+<area shape="rect" id="node12" title=" " alt="" coords="703,13,742,53"/>
+<area shape="rect" id="node13" title=" " alt="" coords="768,453,843,493"/>
+<area shape="rect" id="node14" title=" " alt="" coords="881,453,932,493"/>
 </map>

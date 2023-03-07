@@ -4,7 +4,7 @@ var classrtype_1_1components_1_1Bullets =
     [ "~Bullets", "classrtype_1_1components_1_1Bullets.html#a1bf441b2c64f66d8c1afa3de7f308b71", null ],
     [ "collided", "classrtype_1_1components_1_1Bullets.html#ae70a7e92dddf697c777af19ca5efcaf5", null ],
     [ "CreateBullet", "classrtype_1_1components_1_1Bullets.html#a03fedb3def45325aff61637ede124b0a", null ],
-    [ "drawBullets", "classrtype_1_1components_1_1Bullets.html#a555be70da0be170c4a8b93a029fc8c61", null ],
+    [ "draw", "classrtype_1_1components_1_1Bullets.html#a0a448a5760edec330e2cdd00ff9795d2", null ],
     [ "getBulletList", "classrtype_1_1components_1_1Bullets.html#aefefb2de136a97a473b078afc4817f16", null ],
     [ "ServerShootBullet", "classrtype_1_1components_1_1Bullets.html#a0b0051c19c1deed88fd60f9e1eca0bf0", null ],
     [ "ShootBullet", "classrtype_1_1components_1_1Bullets.html#a3f7e897b7ba4c1fcc8485092ab1245f2", null ],

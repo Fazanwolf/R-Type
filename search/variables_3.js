@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['clt_0',['clt',['../classrtype_1_1engine_1_1Event.html#a5747bd59e26e2ad2328c004f7a95d8b9',1,'rtype::engine::Event::clt()'],['../classrtype_1_1GameEngine.html#ad06003bad38de08e9e5d06833cf45726',1,'rtype::GameEngine::clt()']]],
-  ['cursstate_1',['cursState',['../classrtype_1_1GameEngine.html#a8fd7d543f31cb3956f5344a02fb6b6b9',1,'rtype::GameEngine']]]
+  ['clt_0',['clt',['../classrtype_1_1engine_1_1Event.html#a30f84b34999fcfbf13e88ed895a249bb',1,'rtype::engine::Event']]],
+  ['cmanager_1',['CManager',['../classrtype_1_1IGameState.html#a381ec9cbb812376aaa6abe52724465f5',1,'rtype::IGameState']]],
+  ['comps_2',['comps',['../classrtype_1_1entities_1_1Entity.html#a9105dde6c278696d744a7f485b3b623d',1,'rtype::entities::Entity']]]
 ];

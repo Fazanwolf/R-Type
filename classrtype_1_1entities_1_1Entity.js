@@ -1,16 +1,29 @@
 var classrtype_1_1entities_1_1Entity =
 [
     [ "Entity", "classrtype_1_1entities_1_1Entity.html#a1ce5ba5e741806868a0291ecabdc0bc0", null ],
+    [ "Entity", "classrtype_1_1entities_1_1Entity.html#a2c20ecdcd3069ee732ad4f7e51adc36c", null ],
+    [ "Entity", "classrtype_1_1entities_1_1Entity.html#a36db4fdc81513f7f01515ce1b845a637", null ],
     [ "~Entity", "classrtype_1_1entities_1_1Entity.html#a10d1e501858d08865ba31105159cf770", null ],
+    [ "Entity", "classrtype_1_1entities_1_1Entity.html#a1ce5ba5e741806868a0291ecabdc0bc0", null ],
+    [ "~Entity", "classrtype_1_1entities_1_1Entity.html#a10d1e501858d08865ba31105159cf770", null ],
+    [ "addComponent", "classrtype_1_1entities_1_1Entity.html#a23f0add343f694e64c636946237e8676", null ],
+    [ "draw", "classrtype_1_1entities_1_1Entity.html#ad8931275fd8c8058be82f49fe39386f3", null ],
+    [ "getEntityId", "classrtype_1_1entities_1_1Entity.html#a9c7f40b3d2cf2996a577d46358b423c3", null ],
+    [ "getIndex", "classrtype_1_1entities_1_1Entity.html#a107fa82c086f553851b49c9f345e8764", null ],
     [ "getPos", "classrtype_1_1entities_1_1Entity.html#aaac1f031c55cc29441c2b67944ad9d15", null ],
     [ "getVelocity", "classrtype_1_1entities_1_1Entity.html#a5181881c317aebfcdc4e6b97fd01c5db", null ],
     [ "getX", "classrtype_1_1entities_1_1Entity.html#ad35e0d477a8e28706b5ce1feb0151cd4", null ],
     [ "getY", "classrtype_1_1entities_1_1Entity.html#a2e99b4b740fe70a1fff1052c43fe4c6c", null ],
+    [ "handleEvent", "classrtype_1_1entities_1_1Entity.html#aaf8ad029153b99c71d898dd8fd17cdfe", null ],
+    [ "removeComp", "classrtype_1_1entities_1_1Entity.html#a9220390107734b804d55b7eb845d894f", null ],
     [ "setPosition", "classrtype_1_1entities_1_1Entity.html#a219411e35392dedf9f9d2e75839ee552", null ],
     [ "setVelocity", "classrtype_1_1entities_1_1Entity.html#aa6dede217a5afdd68a65ca602b9fe361", null ],
+    [ "updates", "classrtype_1_1entities_1_1Entity.html#a2ac11c8bfa1909222125c07815907291", null ],
+    [ "comps", "classrtype_1_1entities_1_1Entity.html#a9105dde6c278696d744a7f485b3b623d", null ],
     [ "e_asset", "classrtype_1_1entities_1_1Entity.html#a734dd47d5956c845906ebd0cd4d50c64", null ],
     [ "e_health", "classrtype_1_1entities_1_1Entity.html#a16d95b5e2d17d4bf2800ed0b9bc480f6", null ],
     [ "e_maxBonus", "classrtype_1_1entities_1_1Entity.html#a4ea34dd8f4f894aa9e1ca96deba9c0e2", null ],
     [ "e_position", "classrtype_1_1entities_1_1Entity.html#aea40632676bbbbf08246cb20f75849b8", null ],
-    [ "e_rect", "classrtype_1_1entities_1_1Entity.html#af39fb74c5631801f23813274c20150c2", null ]
+    [ "e_rect", "classrtype_1_1entities_1_1Entity.html#af39fb74c5631801f23813274c20150c2", null ],
+    [ "Id", "classrtype_1_1entities_1_1Entity.html#a6136ceb57158e865f2693bae73f98399", null ]
 ];

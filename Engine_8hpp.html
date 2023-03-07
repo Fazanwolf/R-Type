@@ -107,7 +107,8 @@ $(document).ready(function(){initNavTree('Engine_8hpp.html',''); initResizable()
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Engine.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -126,15 +127,14 @@ $(document).ready(function(){initNavTree('Engine_8hpp.html',''); initResizable()
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;exception&gt;</code><br />
 <code>#include &quot;<a class="el" href="Window_8hpp_source.html">Engine/Window.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Draw_8hpp_source.html">Engine/Draw.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Event_8hpp_source.html">Engine/Event.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="StateManager_8hpp_source.html">Engine/StateManager.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="EntitiesManager_8hpp_source.html">Entities/EntitiesManager.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Bullets_8hpp_source.html">Components/Bullets.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Background_8hpp_source.html">Components/Background.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Engine.hpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Engine_8hpp__incl.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="Engine_8hpp__incl.svg" width="100%" height="558"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -149,22 +149,67 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrtype_1_1engine_1_1Engine.html">rtype::engine::Engine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is the base class for all the <a class="el" href="classrtype_1_1engine_1_1Engine.html" title="This class is the base class for all the Engine.">Engine</a>.  <a href="classrtype_1_1engine_1_1Engine.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacertype"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacertype.html">rtype</a></td></tr>
+<tr class="memdesc:namespacertype"><td class="mdescLeft">&#160;</td><td class="mdescRight">The namespace of the game. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacertype_1_1engine"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacertype_1_1engine.html">rtype::engine</a></td></tr>
+<tr class="memdesc:namespacertype_1_1engine"><td class="mdescLeft">&#160;</td><td class="mdescRight">This namespace is for herite from engine. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a12d5ea61b2b8b857ba398ed4a0b05573"><td class="memItemLeft" align="right" valign="top">static sf::RectangleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Engine_8hpp.html#a12d5ea61b2b8b857ba398ed4a0b05573">createSmallRect</a> (sf::Vector2f pos)</td></tr>
+<tr class="memdesc:a12d5ea61b2b8b857ba398ed4a0b05573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to create a rectangle shape at a position.  <a href="Engine_8hpp.html#a12d5ea61b2b8b857ba398ed4a0b05573">More...</a><br /></td></tr>
+<tr class="separator:a12d5ea61b2b8b857ba398ed4a0b05573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a12d5ea61b2b8b857ba398ed4a0b05573" name="a12d5ea61b2b8b857ba398ed4a0b05573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d5ea61b2b8b857ba398ed4a0b05573">&#9670;&#160;</a></span>createSmallRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static sf::RectangleShape createSmallRect </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to create a rectangle shape at a position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position of the rectangle</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a rectangle shape </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="dir_5c23080e296bbe846f4ed2d01d7b595d.html">include</a></li><li class="navelem"><a class="el" href="dir_e444edeeb17b02c30347d65e329a3788.html">Engine</a></li><li class="navelem"><a class="el" href="Engine_8hpp.html">Engine.hpp</a></li>
-    <li class="footer">Generated on Sun Mar 5 2023 18:39:37 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Tue Mar 7 2023 11:15:21 for R-Type by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
