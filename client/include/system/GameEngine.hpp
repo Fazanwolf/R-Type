@@ -141,9 +141,8 @@ namespace rtype
                     std::cout<<"runNew\n";
                     runState(swapState);
                 }
-                std::cout<<"Failed here?\n";
-                this->states.front()->update(/*this->win*/);
-                std::cout<<"Failed after update?\n";
+
+                this->states.front()->update();
                 this->states.front()->draw(this->win);
             }
         }

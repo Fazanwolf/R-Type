@@ -72,12 +72,8 @@ namespace rtype::game {
 
             void loadGameTexture(void)
             {
-
-                std::cout << "loading...Ovni" << std::endl;
-                if (!textures[0].loadFromFile("./assets/ovni.png")) {
-                    std::cerr << "error" << std::endl;
-                    exit(84);
-                }
+                if (!textures[0].loadFromFile("./assets/ovni.png"))
+                    std::cout << "error" << std::endl;
             }
 
             /**
@@ -88,31 +84,26 @@ namespace rtype::game {
             {
                 std::cout<<"Init Gameplay"<<std::endl;
 
-                // loadGameTexture();
+                loadGameTexture();
                 //init sprites;
                 // this->shape.setFillColor(sf::Color::Green);
                 this->shape.setScale( {1.5,1.5} );
                 this->shape.setPosition( {20,30} );
                 this->shape.setTexture(textures[0]);
-                std::cout<<"Failed before ovni?\n";
-                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5} );
-                std::cout<<"Failed after ovni?\n";
-                // this->EManager.NewEntity(textures[0], {20, 30}, {0.5, 0.5});
+                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
+                // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
 
             /**
              * @brief Update the game state
-             * @param w window to ref
              * 
              */
-            void update(/*rtype::engine::Window &w*/) override
+            void update() override
             {
                 if (!isMatchRunning) {
                     //update button appearance etc
                     //update Status
                 }
-                std::cout<<"Failed ?\n";
-                // this->EManager.update(w.getWindow());
                 //update match data & physics
                 // update client to server data
                 //pop event queue here after rework
@@ -132,11 +123,10 @@ namespace rtype::game {
              * @param ev
              * @return int 
              */
-            int handleEvent(engine::Window &win, engine::Event &ev)
+            int handleEvent(engine::Window &w, engine::Event &ev)
             {
                 int resLocalInput = LocalInput(ev);
                 // std::cout<<"handleEvent"<<std::endl;
-                this->EManager.handleEvent(ev);
                 return (resLocalInput != -1 ? resLocalInput:rtype::STATES::NONE);
             };
 
@@ -148,7 +138,6 @@ namespace rtype::game {
              */
             void draw(rtype::engine::Window &w) override
             {
-
                 //draw entities
                 w.clear();
                 this->EManager.draw(w.getWindow() );
@@ -179,12 +168,11 @@ namespace rtype::game {
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) /*|| ready button pressed*/) {
                     //send ready  info
                 }
-                // ev.MakeObjectMovable(this->EManager.getLocalPlayer());
+                // ev.MakeSpriteMovable(this->EManager.getSprite(0));
                 return -1;
             }
 
         private:
-            // sf::RenderWindow w;
             sf::Sprite shape;
             bool isMatchRunning; //when all player are ready set to true
             std::array<sf::Texture, 100> textures;

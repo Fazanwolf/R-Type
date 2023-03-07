@@ -12,6 +12,10 @@
 #include "system/GameEngine.hpp"
 #include "Components/Background.hpp"
 
+
+#ifndef IGAMESTATE_HPP_
+#define IGAMESTATE_HPP_
+
 class GameEngine;
 /**
  * @brief The namespace of the game
@@ -51,7 +55,7 @@ class IGameState {
          * @brief Update the game state
          * 
          */
-        virtual void update(/*rtype::engine::Window &w*/) = 0;
+        virtual void update() = 0;
         // virtual void clear() = 0;
         // virtual void pause() = 0;
         // virtual void resume() = 0;
@@ -113,11 +117,9 @@ class GameState : public IGameState {
         void init() override { return;}
         /**
          * @brief Update the game state
-         * @param g 
          * 
          */
-        void update(/*rtype::engine::Window &w*/) override {return;}
-
+        void update() override {return;}
         /**
          * @brief Handle the event
          * 
@@ -171,3 +173,5 @@ class NULLState : public GameState
 };
 
 }
+
+#endif /* !IGAMESTATE_HPP_ */

@@ -61,27 +61,6 @@ namespace rtype::entities {
             //getter
             int8_t getEntityId() { return this->Id; }
 
-            /**
-             * @brief This function draw all the entities
-             */
-            void updates(sf::RenderWindow &w)
-            {
-                for (auto &e : comps.getList() ) {
-                    e->update();
-                }
-                return;
-            }
-
-            /**
-             * @brief This function draw all the entities
-             */
-            void handleEvent(rtype::engine::Event &ev)
-            {
-                for (auto &e : comps.getList()) {
-                    e->handleEvent(ev);
-                }
-                return;
-            }
             void draw(sf::RenderWindow &w)
             {
                 this->comps.back()->draw(w);
@@ -92,10 +71,6 @@ namespace rtype::entities {
             //         cmp.pName();
             //         cmp->draw(w);
             //     }
-            }
-
-            sf::Transformable getDrawable() {
-                return comps.front()->getDrawable();
             }
 
         protected:
@@ -177,29 +152,6 @@ namespace rtype::entities {
                 }
                 return;
             }
-
-            /**
-             * @brief This function draw all the entities
-             */
-            void update(sf::RenderWindow &w)
-            {
-                for (auto &e : entities) {
-                    e.draw(w);
-                }
-                return;
-            }
-
-            /**
-             * @brief This function draw all the entities
-             */
-            void handleEvent(rtype::engine::Event &handler)
-            {
-                for (auto &e : entities) {
-                    e.handleEvent(handler);
-                }
-                return;
-            }
-
             // /**
             //  * @brief Get the Texture Vector object
             //  * 
@@ -215,17 +167,10 @@ namespace rtype::entities {
                 return;
             }
 
-            /**
-             * @brief 
-             * 
-             * @param tex
-             * @param pos 
-             * @param size
-             */
             void NewEntity(sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size)
             {
                 entities.push_back(Entity(e_idx));
-                entities.back().addComponent(new rtype::components::DefaultComp(tex, pos, size, true));
+                entities.back().addComponent(new rtype::components::DefaultComp(tex, pos, size));
                 e_idx = e_idx+1;
                 return;
             }
@@ -237,23 +182,16 @@ namespace rtype::entities {
              * @param pos 
              * @param scale 
              */
+
             void NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
             {
                 entities.push_back(Entity(e_idx));
-                entities.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale, true));
+                entities.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale));
                 e_idx = e_idx+1;
                 return;
             }
 
-            sf::Transformable getLocalPlayer() {
-                for (auto e : entities) {
-                    if (e.getEntityId() == pId)
-                        return e.getDrawable();
-                }
-            }
-
         private:
-            std::vector<int8_t> pServerIds;
             int8_t pId; //player ID used to get local input relative to player pos in entity array
             sf::RenderWindow window;
             std::vector<Entity> entities;
