@@ -66,9 +66,10 @@ namespace Utils
         T &front() { return elems[VectorUtils::getXtremes(this->inUse, false)]; }
         T &back() { return elems[VectorUtils::getXtremes(this->inUse, true)]; }
 
-        std::vector<T> getUsedId() { return this->inUse; }
+        std::vector<int> getUsedId() { return this->inUse; }
 
-        std::array<T, N> getList() { return this->elems; }
+        std::array<T, N> &getList() { return this->elems; }
+
         T *getShortList() {
             T *Short;
             int sIdx = 0;

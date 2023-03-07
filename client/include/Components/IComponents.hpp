@@ -67,7 +67,9 @@ namespace rtype::components
             virtual void init() = 0;
             virtual int8_t getId() = 0;
             virtual int8_t getOwnerId() = 0;
-    
+            virtual int handleEvent(rtype::engine::Event &handler) = 0;
+            virtual int handleEvent() = 0;
+
     };
 
     class Component : public IComponents
@@ -91,6 +93,8 @@ namespace rtype::components
             }
 
             void printSMthing(std::string str) { std::cout<<str<<std::endl;}
+            int handleEvent(rtype::engine::Event &handler) override {return -1;};
+            int handleEvent() override {}
 
             virtual void draw(sf::RenderWindow &w) override { std::cout<<"Fuck me\n";}
             virtual void update() override {}
@@ -109,15 +113,16 @@ namespace rtype::components
             sf::Vector2f pos;
             sf::Vector2f scale;
             sf::IntRect textRect;
-
+            bool localPlayer;
         public:
             DefaultComp() {}
             ~DefaultComp() {}
 
-            DefaultComp(sf::Texture &tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize) {
+            DefaultComp(sf::Texture &tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize, bool status) {
                 this->name = "DefComp";
                 this->scale = spawnSize;
                 this->pos = spawnPos;
+                localPlayer = status;
 
                 this->shape.setFillColor(sf::Color::Green);
                 this->shape.setPosition(this->pos);
@@ -129,10 +134,11 @@ namespace rtype::components
                 asset.setPosition(this->pos);
             }
 
-            DefaultComp(std::string tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize) {
+            DefaultComp(std::string tex, sf::Vector2f spawnPos, sf::Vector2f spawnSize, bool status) {
                 this->name = "DefComp";
                 this->scale = spawnSize;
                 this->pos = spawnPos;
+                localPlayer = status;
 
                 this->shape.setFillColor(sf::Color::Green);
                 this->shape.setPosition(this->pos);
@@ -140,7 +146,7 @@ namespace rtype::components
 
                 sf::Sprite tmp;
 
-                if (assetTexture.loadFromFile(tex))
+                if (!assetTexture.loadFromFile(tex))
                     std::cout << "error" << std::endl;                
 
                 tmp.setTexture(this->assetTexture);
@@ -151,10 +157,20 @@ namespace rtype::components
             }
 
             void draw(sf::RenderWindow &w) override{
-                std::cout<<"fuck that in defComp\n";
+                // std::cout<<"fuck that in defComp\n";
                 // w.draw(this->shape);
                 w.draw(this->asset);
             }
+            
+            int handleEvent(rtype::engine::Event &handler) override {
+                handler.MakeObjectMovable(this->asset);
+                return 0;
+            }
+
+            int handleEvent() override {
+                std::cout<<"dang it\n";
+                return 0;
+            };
     };
 
 } // namespace rtype::Components

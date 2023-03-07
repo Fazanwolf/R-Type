@@ -87,9 +87,9 @@ namespace rtype::game {
                 loadGameTexture();
                 //init sprites;
                 // this->shape.setFillColor(sf::Color::Green);
-                this->shape.setScale( {1.5,1.5} );
-                this->shape.setPosition( {20,30} );
-                this->shape.setTexture(textures[0]);
+                // this->shape.setScale( {1.5,1.5} );
+                // this->shape.setPosition( {20,30} );
+                // this->shape.setTexture(textures[0]);
                 this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
                 // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
@@ -127,7 +127,9 @@ namespace rtype::game {
             {
                 int resLocalInput = LocalInput(ev);
                 // std::cout<<"handleEvent"<<std::endl;
-                return (resLocalInput != -1 ? resLocalInput:rtype::STATES::NONE);
+                this->EManager.handleEvent(ev);
+                return resLocalInput;
+                // return (resLocalInput == -1 ? resLocalInput:rtype::STATES::NONE : resLocalInput);
             };
 
             /**
