@@ -5,9 +5,7 @@
 ** Properties
 */
 
-#ifndef PROPERTIES_HPP_
-#define PROPERTIES_HPP_
-
+#pragma once
 #include "Engine/Engine.hpp"
 
 namespace rtype::entities {
@@ -58,5 +56,3 @@ namespace rtype::entities {
             int e_maxBonus;
     };
 }
-
-#endif /* !PROPERTIES_HPP_ */

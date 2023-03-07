@@ -5,8 +5,7 @@
 ** Map
 */
 
-#ifndef MAP_HPP_
-#define MAP_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
@@ -37,5 +36,3 @@ namespace rtype::engine {
             sf::Vector2f m_collision;
     };
 }
-
-#endif /* !MAP_HPP_ */

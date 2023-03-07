@@ -5,8 +5,7 @@
 ** Text
 */
 
-#ifndef TEXT_HPP_
-#define TEXT_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
@@ -38,5 +37,3 @@ namespace rtype::engine {
             sf::Font text_font;
     };
 }
-
-#endif /* !TEXT_HPP_ */

@@ -5,10 +5,9 @@
 ** EntitiesManager
 */
 
-#ifndef ENTITIESMANAGER_HPP_
-#define ENTITIESMANAGER_HPP_
+#pragma once
 
-#include "../Engine/Engine.hpp"
+#include "Engine/Engine.hpp"
 #include "Components/IComponents.hpp"
 #include <array>
 #include <vector>
@@ -134,6 +133,3 @@ namespace rtype::entities {
             std::list<int8_t> IDsMobs;
     };
 };
-
-#endif /* !ENTITIESMANAGER_HPP_ */
-:

@@ -5,8 +5,8 @@
 ** Background
 */
 
-#ifndef BACKGROUND_HPP_
-#define BACKGROUND_HPP_
+#pragma once
+
 #include "Engine/Engine.hpp"
 
 namespace rtype::components {
@@ -71,5 +71,3 @@ namespace rtype::components {
 
     };
 }
-
-#endif /* !BACKGROUND_HPP_ */

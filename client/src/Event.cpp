@@ -10,10 +10,8 @@
 
 using namespace rtype::engine;
 
-Event::Event(sk::Client<sk::client::UDP> *clt)
+Event::Event()
 {
-    // this->clt = clt;
-    // std::cout<<"client buffer = "<<this->clt->client->getBuffer()<<std::endl;
 }
 
 Event::~Event()

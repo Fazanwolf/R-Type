@@ -5,14 +5,13 @@
 ** IGameState
 */
 
+#pragma once
+
 #include "system/gameStates/IGameState.hpp"
 #include <queue>
 #include <string>
 #include <cstring>
-#include <Skaldi.hpp>
 
-#ifndef SGAMEPLAY_HPP_
-#define SGAMEPLAY_HPP_
 
 using namespace rtype;
 
@@ -149,5 +148,3 @@ namespace rtype::game {
     };
 
 }
-
-#endif /* !SGAMEPLAY_HPP_ */

@@ -5,8 +5,7 @@
 ** Actors
 */
 
-#ifndef ACTORS_HPP_
-#define ACTORS_HPP_
+#pragma once
 
 /**
  * @brief This class is the base class for all the actors in the game 
@@ -41,5 +40,3 @@ class Actors : public Entity
     protected:
     private:
 };
-
-#endif /* !ACTORS_HPP_ */

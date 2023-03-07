@@ -54,11 +54,7 @@ namespace rtype
         void init()
         {
             win.nWindow({920, 620}, "R-Type");
-            // event = engine::Event(this->clt);
-            //std::string tmp = clt->client->getBuffer();
-            //if (!tmp.empty()) std::cout<<"PID ? "<<tmp<<std::endl;
         }
-        //done
         /**
          * @brief Create a State object
          * 
@@ -71,6 +67,10 @@ namespace rtype
             {
                 case STATES::PLAY :
                     std::cout<<"PLAY"<<std::endl;
+                    gClt = std::make_unique<sk::Client<sk::client::UDP>>(gIP, gPort);
+                    gClt->setDebugging(true);
+                    gClt->receive();
+                    gClt->run();
                     return new rtype::game::SGamePlay();
                     // isRunning = false;
                     // exit(0);
@@ -162,7 +162,7 @@ namespace rtype
 
         engine::Window win;
         // STATES gState;
-        engine::Event event = nullptr;
+        engine::Event event;
         std::queue<std::string> server_updates;
         // sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
             

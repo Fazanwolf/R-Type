@@ -5,8 +5,7 @@
 ** Enemy
 */
 
-#ifndef ENEMY_HPP_
-#define ENEMY_HPP_
+#pragma once
 
 #include "Entities/Properties.hpp"
 
@@ -18,5 +17,3 @@ class Enemy {
     protected:
     private:
 };
-
-#endif /* !ENEMY_HPP_ */

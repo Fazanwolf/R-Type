@@ -5,8 +5,7 @@
 ** Bonus
 */
 
-#ifndef BONUS_HPP_
-#define BONUS_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
@@ -46,5 +45,3 @@ namespace rtype::components {
             sf::Vector2f bonus_pos;
     };
 }
-
-#endif /* !BONUS_HPP_ */

@@ -5,9 +5,7 @@
 ** StateManager
 */
 
-#ifndef STATEMANAGER_HPP_
-#define STATEMANAGER_HPP_
-
+#pragma once
 #include "Engine/Engine.hpp"
 #include "Engine/Window.hpp"
 
@@ -30,5 +28,3 @@ namespace rtype::engine {
         private:
     };
 }
-
-#endif /* !STATEMANAGER_HPP_ */

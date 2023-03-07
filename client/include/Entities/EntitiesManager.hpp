@@ -7,8 +7,8 @@
 
 #pragma once
 
-#include "../Engine/Engine.hpp"
-#include "../Components/IComponents.hpp"
+#include "Engine/Engine.hpp"
+#include "Components/IComponents.hpp"
 #include "Utils/SparseArray.hpp"
 
 /**
@@ -116,7 +116,10 @@ namespace rtype::entities {
     class EntitiesManager {
         public:
             EntitiesManager();
-            ~EntitiesManager();
+
+            EntitiesManager(int id);
+
+            ~EntitiesManager() = default;
 
             /**
             * @brief Create an entity and set it a sprite, set up the position of the entity and his scale
@@ -232,6 +235,22 @@ namespace rtype::entities {
             }
 
             /**
+             * @brief
+             *
+             * @param tex
+             * @param pos
+             * @param size
+             */
+            void NewEntity(int id, sf::Texture &tex, sf::Vector2f pos, sf::Vector2f size)
+            {
+                pId = id;
+                entities.push_back(Entity(e_idx));
+                entities.back().addComponent(new rtype::components::DefaultComp(tex, pos, size, true));
+                e_idx = e_idx+1;
+                return;
+            }
+
+            /**
              * @brief 
              * 
              * @param fpath 
@@ -240,6 +259,22 @@ namespace rtype::entities {
              */
             void NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
             {
+                entities.push_back(Entity(e_idx));
+                entities.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale, true));
+                e_idx = e_idx+1;
+                return;
+            }
+
+            /**
+             * @brief
+             *
+             * @param fpath
+             * @param pos
+             * @param scale
+             */
+            void NewEntity(int id, std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+            {
+                pId = id;
                 entities.push_back(Entity(e_idx));
                 entities.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale, true));
                 e_idx = e_idx+1;

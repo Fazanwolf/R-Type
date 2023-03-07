@@ -5,8 +5,7 @@
 ** Draw
 */
 
-#ifndef DRAW_HPP_
-#define DRAW_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
@@ -26,5 +25,3 @@ namespace rtype::engine {
         private:
     };
 }
-
-#endif /* !DRAW_HPP_ */

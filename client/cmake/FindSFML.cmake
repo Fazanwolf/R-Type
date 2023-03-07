@@ -15,7 +15,7 @@ endif()
 if (NOT ${LIBRARY_NAME}_FOUND)
     FetchContent_Declare(
             ${LIBRARY_NAME}
-            URL https://github.com/SFML/SFML/archive/refs/heads/2.6.x.zip
+            URL https://github.com/SFML/SFML/archive/refs/tags/2.5.1.zip
             #[[GIT_REPOSITORY https://github.com/SFML/SFML.git
             GIT_TAG 2.6.x
             GIT_SHALLOW 1 # Only fetch the head commit]]

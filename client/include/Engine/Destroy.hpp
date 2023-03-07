@@ -5,8 +5,7 @@
 ** Destroy
 */
 
-#ifndef DESTROY_HPP_
-#define DESTROY_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
@@ -24,5 +23,3 @@ namespace rtype::engine {
         private:
     };
 }
-
-#endif /* !DESTROY_HPP_ */

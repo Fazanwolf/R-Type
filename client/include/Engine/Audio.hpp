@@ -5,8 +5,7 @@
 ** Audio
 */
 
-#ifndef AUDIO_HPP_
-#define AUDIO_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 
@@ -44,5 +43,3 @@ namespace rtype::engine {
             sf::Sound a_sound;
     };
 }
-
-#endif /* !AUDIO_HPP_ */

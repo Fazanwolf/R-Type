@@ -13,9 +13,6 @@
 #include <cstring>
 #include <Skaldi.hpp>
 
-#ifndef SGAMEPLAY_HPP_
-#define SGAMEPLAY_HPP_
-
 using namespace rtype;
 
 /**
@@ -141,5 +138,3 @@ namespace rtype::game {
     };
 
 }
-
-#endif /* !SGAMEPLAY_HPP_ */

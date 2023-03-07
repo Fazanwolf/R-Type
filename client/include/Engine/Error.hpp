@@ -5,10 +5,9 @@
 ** Error
 */
 
-#ifndef ERROR_HPP_
-#define ERROR_HPP_
+#pragma once
 
-#include "Engine.hpp"
+#include "Engine/Engine.hpp"
 #include <exception>
 #include <iostream>
 #include <string>
@@ -16,7 +15,6 @@
 #include <fstream>
 #include <iosfwd>
 #include <regex>
-#include <stdbool.h>
 
 /**
 * @brief This class is the base class for all the Error
@@ -147,5 +145,3 @@ class DestroyError : std::exception {
     private:
         std::string _msg;
 };
-
-#endif /* !ERROR_HPP_ */

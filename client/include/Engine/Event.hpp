@@ -10,7 +10,6 @@
 #include "Engine/Engine.hpp"
 #include <list>
 #include <queue>
-#include <Skaldi.hpp>
 
 /**
 * @brief This namespace is for herite from engine
@@ -51,7 +50,7 @@ namespace rtype::engine {
             /**
             * @brief Constructor for class Button to set the server and the client
             */
-            Event(sk::Client<sk::client::UDP> *clt);
+            Event();
 
             /**
             * @brief Destructor for class Event
@@ -134,32 +133,11 @@ namespace rtype::engine {
             */
             void GetMousePressed(sf::Event event);
 
-            /**
-            * @brief Function to get the client buffer
-            *
-            * @return Return the client buffer in a string
-            */
-            std::string getClientBuffer()
-            {
-                return this->clt->getBuffer();
-            }
-
-            /**
-            * @brief Function to know send a message
-            *
-            * @param msg Message to send
-            */
-            void sendMessage(std::string msg)
-            {
-                this->clt->send(msg);
-            }
-
             // std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
             std::queue<std::string> server_updates;
 
         protected:
         private:
             float velocity;
-            sk::Client<sk::client::UDP> *clt;
     };
 }

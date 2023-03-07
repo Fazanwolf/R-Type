@@ -5,8 +5,7 @@
 ** Window
 */
 
-#ifndef WINDOW_HPP_
-#define WINDOW_HPP_
+#pragma once
 
 //SCREEN SIZE
 #define WINDOWED_SMALL sf::Vector2f(920,420)
@@ -142,5 +141,3 @@ namespace rtype::engine {
 
     };
 }
-
-#endif /* !WINDOW_HPP_ */

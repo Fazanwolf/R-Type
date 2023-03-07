@@ -12,10 +12,7 @@
 #include <array>
 #include <string>
 #include <cstring>
-#include <Skaldi.hpp>
-
-#ifndef SGAMEPLAY_HPP_
-#define SGAMEPLAY_HPP_
+#include "Global.hpp"
 
 using namespace rtype;
 using namespace rtype::components;
@@ -57,21 +54,21 @@ namespace rtype::game {
              */
             ~SGamePlay()
             {
-
+                gClt->disconnect();
             };
 
+            void loadGameTexture(std::vector<std::string> paths)
             {
                 int i = 0;
                 for (auto p : paths) {
                     if (!textures[i++].loadFromFile(p))
                         std::cout << "error" << std::endl;
                 }
-
             }
 
             void loadGameTexture(void)
             {
-                if (!textures[0].loadFromFile("./assets/ovni.png"))
+                if (!textures[0].loadFromFile("../assets/ovni.png"))
                     std::cout << "error" << std::endl;
             }
 
@@ -82,16 +79,24 @@ namespace rtype::game {
             void init() override
             {
                 std::cout<<"Init Gameplay"<<std::endl;
-
                 loadGameTexture();
+
+                gClt->connect("?");
+                std::string msg = gClt->getBuffer();
+                if (!msg.empty()) {
+                    std::cout << "msg: " << msg << std::endl;
+                    this->EManager.NewEntity(std::stoi(msg), "../assets/ovni.png", {20, 30}, {0.5, 0.5});
+                    msg = "";
+                }
+
                 //init sprites;
                 // this->shape.setFillColor(sf::Color::Green);
                 // this->shape.setScale( {1.5,1.5} );
                 // this->shape.setPosition( {20,30} );
                 // this->shape.setTexture(textures[0]);
-                this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.5, 0.5});
+
                 this->CManager.Centipedeinit(300, 600, 50);
-                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
+                this->BManager.initBackground("../assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
                 // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
 
@@ -117,6 +122,13 @@ namespace rtype::game {
              * @return int8_t 
              */
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
+
+            /**
+             * @brief Get the Local Player I D object
+             *
+             * @return int8_t
+             */
+            void setLocalPlayerID(int id) { this->EManager.setPId(id); };
 
             /**
              * @brief Handle the event input
@@ -169,9 +181,11 @@ namespace rtype::game {
                 }
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
                 {
+                    gClt->send(std::to_string(getLocalPlayerID()) + "fire");
                     //fire system
                 }
                 if (sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) /*|| ready button pressed*/) {
+                    gClt->send(std::to_string(getLocalPlayerID()) + "ready");
                     //send ready  info
                 }
                 // ev.MakeSpriteMovable(this->EManager.getSprite(0));
@@ -185,5 +199,3 @@ namespace rtype::game {
     };
 
 }
-
-#endif /* !SGAMEPLAY_HPP_ */

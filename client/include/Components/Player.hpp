@@ -5,8 +5,7 @@
 ** Player
 */
 
-#ifndef PLAYER_HPP_
-#define PLAYER_HPP_
+#pragma once
 
 #include "Entities/Properties.hpp"
 
@@ -18,5 +17,3 @@ class Player {
     protected:
     private:
 };
-
-#endif /* !PLAYER_HPP_ */

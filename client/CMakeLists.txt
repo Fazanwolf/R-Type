@@ -35,7 +35,7 @@ target_include_directories(${PROJECT_NAME}
 )
 
 find_package(Skaldi 0.0.1.0 REQUIRED)
-find_package(SFML 2.6 REQUIRED COMPONENTS graphics window system audio)
+find_package(SFML 2.5.1 REQUIRED COMPONENTS graphics window system audio)
 
 project(
         rtype-client

@@ -5,8 +5,7 @@
 ** Bullets
 */
 
-#ifndef BULLETS_HPP_
-#define BULLETS_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 #include "IComponents.hpp"
@@ -131,5 +130,3 @@ namespace rtype::components {
             float bullet_maxSpeed;
     };
 }
-
-#endif /* !BULLETS_HPP_ */

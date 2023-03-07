@@ -1,5 +1,4 @@
-#ifndef _CENTIPEDE_HPP_
-#define _CENTIPEDE_HPP_
+#pragma once
 
 #include "Engine/Engine.hpp"
 #include "Components/IComponents.hpp"
@@ -56,7 +55,3 @@ const float BLOCK_SPEED = 1;
         }
     };
 }
-
-
-
-#endif /* _CENTIPEDE_HPP_ */

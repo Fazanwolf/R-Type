@@ -14,8 +14,9 @@ EntitiesManager::EntitiesManager()
     this->setPId(-1);
 }
 
-EntitiesManager::~EntitiesManager()
+EntitiesManager::EntitiesManager(int id)
 {
+    this->setPId(id);
 }
 
 sf::Sprite EntitiesManager::CreateEntitie(std::string filename, sf::Vector2f pos, sf::Vector2f scale)

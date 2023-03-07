@@ -5,11 +5,10 @@
 ** Bouton
 */
 
+#pragma once
+
 #include "Engine/Engine.hpp"
 #include <functional>
-
-#ifndef BOUTON_HPP_
-#define BOUTON_HPP_
 
 /**
 * @brief This namespace is for herite from components
@@ -176,5 +175,3 @@ namespace rtype::components
     };
 
 };
-
-#endif /* !BOUTON_HPP_ */

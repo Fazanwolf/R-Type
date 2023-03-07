@@ -5,8 +5,7 @@
 ** ParticulesManager
 */
 
-#ifndef PARTICULESMANAGER_HPP_
-#define PARTICULESMANAGER_HPP_
+#pragma once
 
 /**
  * @brief This namepace is used to manage particles in the game
@@ -24,5 +23,3 @@ namespace rtype::entities {
         private:
     };
 }
-
-#endif /* !PARTICULESMANAGER_HPP_ */

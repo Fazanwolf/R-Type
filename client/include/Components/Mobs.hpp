@@ -5,6 +5,8 @@
 ** Mobs
 */
 
+#pragma once
+
 #include "Engine/Engine.hpp"
 #include <math.h>
 

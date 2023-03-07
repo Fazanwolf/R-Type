@@ -5,8 +5,7 @@
 ** Engine
 */
 
-#ifndef ENGINE_HPP_
-#define ENGINE_HPP_
+#pragma once
 
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
@@ -15,12 +14,10 @@
 #include <SFML/System.hpp>
 #include <iostream>
 #include <fstream>
-#include <string.h>
+#include <string>
 #include <unistd.h>
 #include <sys/types.h>
 #include <vector>
-#include <stdbool.h>
-#include <stdlib.h>
 #include <exception>
 #include "Engine/Window.hpp"
 #include "Engine/Event.hpp"
@@ -68,5 +65,3 @@ namespace rtype::engine {
         private:
     };
 }
-
-#endif /* !Engine_HPP_ */
