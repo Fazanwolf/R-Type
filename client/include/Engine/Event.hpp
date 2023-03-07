@@ -51,7 +51,7 @@ namespace rtype::engine {
             /**
             * @brief Constructor for class Button to set the server and the client
             */
-            Event(sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt);
+            Event(sk::Client<sk::client::UDP> *clt);
 
             /**
             * @brief Destructor for class Event
@@ -141,7 +141,7 @@ namespace rtype::engine {
             */
             std::string getClientBuffer()
             {
-                return this->clt->client->getBuffer();
+                return this->clt->getBuffer();
             }
 
             /**
@@ -151,7 +151,7 @@ namespace rtype::engine {
             */
             void sendMessage(std::string msg)
             {
-                this->clt->client->send(msg);
+                this->clt->send(msg);
             }
 
             // std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
@@ -160,6 +160,6 @@ namespace rtype::engine {
         protected:
         private:
             float velocity;
-            sk::Skaldi<sk::client::UDP, sk::server::UDP> *clt;
+            sk::Client<sk::client::UDP> *clt;
     };
 }

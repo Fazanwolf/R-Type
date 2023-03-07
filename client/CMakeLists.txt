@@ -1,15 +1,8 @@
 cmake_minimum_required(VERSION 3.17)
-project(
-        rtype
-        VERSION 0.0.1.0
-        DESCRIPTION "R-Type game"
-        HOMEPAGE_URL "https://github.com/Fazanwolf/R-Type"
-        LANGUAGES CXX
-)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+set(PROJECT_NAME rtype-client)
 
 option(RTYPE_BUILD_TESTS "Build tests" OFF)
 option(RTYPE_INSTALL "Install R-Type" ON)
@@ -19,24 +12,38 @@ option(USE_CLANG_TIDY_WITH_ERRORS "Use clang tidy but all warnings are errors" O
 option(USE_CLANG_TIDY_WITH_FIX "Use clang-tidy with fix" OFF)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF) # Fix dll issues on Windows
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+if(WIN32)
+    set(${PROJECT_NAME}_ICON cmake/assets/app.rc)
+endif()
+
 add_executable(${PROJECT_NAME}
-        client/src/Bullets.cpp
-        client/src/main.cpp
-        client/src/EntitiesManager.cpp
-        client/src/Event.cpp
-        client/src/Window.cpp
+        src/Bullets.cpp
+        src/main.cpp
+        src/EntitiesManager.cpp
+        src/Event.cpp
+        src/Window.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
         PRIVATE
-            "${CMAKE_CURRENT_SOURCE_DIR}/client/src"
+            "${CMAKE_CURRENT_SOURCE_DIR}/src"
         PUBLIC
-            "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/client/include>"
+            "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/include>"
             "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
 
 find_package(Skaldi 0.0.1.0 REQUIRED)
-find_package(SFML 2.6 REQUIRED COMPONENTS graphics window)
+find_package(SFML 2.6 REQUIRED COMPONENTS graphics window system audio)
+
+project(
+        rtype-client
+        VERSION 0.0.1.0
+        DESCRIPTION "R-Type client game"
+        HOMEPAGE_URL "https://github.com/Fazanwolf/R-Type"
+        LANGUAGES CXX
+)
 
 
 # Link all libraries

@@ -17,7 +17,7 @@ if (NOT ${LIBRARY_NAME}_FOUND)
     message(STATUS "Fetching Skaldi")
     FetchContent_Declare(
             ${LIBRARY_NAME}
-            URL https://github.com/Fazanwolf/Skaldi/zipball/mvp
+            URL https://github.com/Fazanwolf/Skaldi/archive/refs/tags/0.0.1.0.zip
     )
     FetchContent_MakeAvailable(${LIBRARY_NAME})
     FetchContent_GetProperties(${LIBRARY_NAME})
