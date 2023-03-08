@@ -23,6 +23,7 @@ int main(void)
         std::thread t([&]() {
             g.createWindow();
             g.init();
+            // g.runState(rtype::STATES::MENU);
             while (g.win.IsOpen())
             {
                 g.handleEvent();

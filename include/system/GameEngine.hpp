@@ -8,6 +8,7 @@
 #pragma once
 
 #include "system/gameStates/SGamePlay.hpp"
+#include "gameStates/SMenu.hpp"
 #include <Skaldi.hpp>
 #include <queue>
 
@@ -16,15 +17,6 @@
 
 namespace rtype
 {
-    enum STATES
-    {
-        PLAY,
-        LOBBY,
-        MENU,
-        QUIT,
-        NONE
-    };
-
     class GameEngine {
         public:
             GameEngine()
@@ -53,14 +45,41 @@ namespace rtype
             {
             };
 
-            void loadState(GameState new_state)
+            /**
+            * @brief Create a State object
+            *
+            * @param state
+            * @return GameState* A state
+            */
+            GameState *createState(int state)
             {
-                // if (!states.empty()) {
-                //     states.pop_back();
-                // }
-                // states.push_back(&new_state);
-                // states.back()->init();
-            };
+                switch (state)
+                {
+                    case STATES::PLAY :
+                        std::cout<<"PLAY"<<std::endl;
+                        // this->init();
+                        return new rtype::game::SGamePlay();
+                        // isRunning = false;
+                        // exit(0);
+                        // break;
+                    case STATES::QUIT :
+                        std::cout<<"QUIT"<<std::endl;
+                        setIsRunning(false);
+                        break;
+                    case STATES::OPTION :
+                        break;
+                    case STATES::WELCOME :
+                        break;
+                    case STATES::MENU :
+                        std::cout<<"MENU"<<std::endl;
+                        return new rtype::game::SMenu();
+                    case STATES::LOBBY :
+                        break;
+                default:
+                    break;
+                }
+                return new rtype::NULLState();
+            }
 
             void update()
             {
@@ -77,6 +96,79 @@ namespace rtype
                 cursState.draw(this->win);
                 this->win.DrawWindow();
             };
+
+            /**
+            * @brief Get the Is Running object
+            *
+            * @return true
+            * @return false
+            */
+            bool getIsRunning() {return isRunning;}
+
+            /**
+             * @brief Set the Is Running object
+             *
+             * @param state
+             */
+            void setIsRunning(bool state) {
+                isRunning = state;
+            }
+
+            /**
+            * @brief Load a state
+            *
+            * @param new_state
+            * @return true
+            * @return false
+            */
+            bool loadState(GameState *new_state)
+            {
+                this->states.push(new_state);
+
+                if (this->states.empty()) {return false;}
+
+                if (this->states.size() > 1) { this->states.pop();}
+
+                this->states.front()->init();
+
+                // std::cout << this->states.front()->getName() << std::endl;
+
+                setIsRunning(true);
+
+                return true;
+            };
+
+            /**
+            * @brief Run a state
+            *
+            * @param state
+            */
+            void runState(int state)
+            {
+                if (state != STATES::NONE) {
+                    loadState(createState(state));
+                }
+                int swapState = STATES::NONE;
+                while (this->isRunning && this->win.IsOpen()) {
+
+                    if (states.empty()) {
+                        return;
+                    }
+
+                    swapState = this->states.front()->handleEvent(win, event);
+                    if (swapState == STATES::QUIT) {
+                        setIsRunning(false);
+                        this->win.close();
+                        exit(0);
+                    } else if (swapState != STATES::NONE) {
+                        std::cout<<"runNew\n";
+                        runState(swapState);
+                    }
+
+                    this->states.front()->update();
+                    this->states.front()->draw(this->win);
+                }
+            }
 
             void handleEvent()
             {
@@ -103,6 +195,8 @@ namespace rtype
 
     protected:
         game::SGamePlay cursState;
+        bool isRunning;
+        std::queue<GameState*> states;
         // std::vector<GameState*> states; // level
     };
 }

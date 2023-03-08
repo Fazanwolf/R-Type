@@ -26,6 +26,7 @@ namespace rtype::components {
             Bullets();
             ~Bullets();
             sf::CircleShape CreateBullet(sf::Vector2f pos);
+            void CreateBullet(sf::Vector2f pos, std::string path);
             bool ShootBullet(int id, sf::Sprite sprite);
             bool ServerShootBullet(int id, sf::Sprite sprite);
             bool collided(sf::FloatRect bounds)
@@ -40,8 +41,21 @@ namespace rtype::components {
                 return false;
             };
 
+            bool collided(sf::CircleShape shape)
+            {
+                for (auto& ammo : this->bullets_list)
+                {
+                    if (ammo.getGlobalBounds().intersects(shape.getLocalBounds())) {
+                        // bullets_list.remove(ammo);
+                        return true;
+                    }
+                }
+                return false;
+            };
+
             void drawBullets(sf::Window &win);
             bool update(sf::FloatRect bounds);
+            bool update(sf::CircleShape shape);
 
             // void SetBullets(float radius, sf::Vector2f velocity, float maxSpeed);
             std::list<sf::CircleShape> getBulletList() {return this->bullets_list;};

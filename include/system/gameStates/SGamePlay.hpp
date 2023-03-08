@@ -22,7 +22,8 @@ namespace rtype::game {
         public:
             SGamePlay()
             {
-
+                this->name = "GamePlay";
+                this->isMatchRunning = false;
             };
 
             ~SGamePlay()
@@ -30,12 +31,18 @@ namespace rtype::game {
 
             };
 
+            SGamePlay(int nb_players)
+            {
+                this->name = "GamePlay";
+                isMatchRunning = false;
+            }
+
             void init_base(int nb_players) {
                 //players
                 for (int i = 0; i != nb_players; i++)
                     this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
                 //FirstEntities
-                this->EManager.NewEntity("./assets/ovni.png", {600, 100}, {0.2, 0.2});
+                this->EManager.NewEntity("./assets/ovni.png", {400, 400}, {0.1, 0.1});
             }
 
             void init() override
@@ -48,6 +55,8 @@ namespace rtype::game {
             {
                 //init sprites;
                 this->EManager.setPId(pID);
+                this->CManager.Centipedeinit(300, 600, 50);
+                this->BManager.initBackground("./assets/Nebula.png", {1.5, 1.5});
                 this->pID = pID;
                 init_base(2);
                 event_queue.push(engine::NONE);
@@ -63,15 +72,14 @@ namespace rtype::game {
                 if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
                     EManager.getSprite(2).setScale(sf::Vector2f(0,0));
                 }
+                // if (playerProjectile.update(BlManager.getShape())) {
+                //     BlManager.getShape().setRadius(0);
+                // }
+                // if (serverProjectiles.update(BlManager.getShape())) {
+                //     BlManager.getShape().setRadius(0);
+                // }
+                this->CManager.update();
             };
-
-            void clear() override
-            {
-                return;//later
-            };
-
-            void pause() override {}; //later
-            void resume() override {}; //later
 
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
 
@@ -125,22 +133,33 @@ namespace rtype::game {
                 std::string str = ev.getClientBuffer();
                 serverEvents(ev, str);
                 playerEvent(ev);
+                LocalInput(ev);
                 return 0;
             };
 
             void draw(rtype::engine::Window &w) override
             {
                 //draw entities
+                this->BManager.draw(w.getWindow());
                 for (auto& e : this->EManager.getIDs())
                     w.Draw(this->EManager.getSprite(e));
                 for (auto& ammo : playerProjectile.getBulletList())
                     w.Draw(ammo);
                 for (auto& ammo : serverProjectiles.getBulletList())
                     w.Draw(ammo);
+                this->CManager.draw(w.getWindow());
             };
+
+            int LocalInput(engine::Event &ev) {
+                if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+                    return STATES::QUIT;
+                }
+                return -1;
+            }
 
         private:
             int8_t pID;
+            bool isMatchRunning;
             std::queue<rtype::engine::EventType> event_queue;
             rtype::components::Bullets playerProjectile;
             rtype::components::Bullets serverProjectiles;

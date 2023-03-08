@@ -40,6 +40,10 @@ namespace rtype::engine {
                 this->window.draw(en);
             }
 
+            sf::RenderWindow &getWindow() {
+                return this->window;
+            }
+
         protected:
         private:
             std::string window_name;
