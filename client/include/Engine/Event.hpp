@@ -133,6 +133,11 @@ namespace rtype::engine {
             */
             void GetMousePressed(sf::Event event);
 
+            // std::string getClientBuffer()
+            // {
+            //     return gClt->getBuffer();
+            // }
+
             // std::list<sf::RectangleShape> ShotBullet(std::list<sf::RectangleShape> &bullets);
             std::queue<std::string> server_updates;
 

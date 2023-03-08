@@ -72,9 +72,21 @@ namespace rtype::game {
                     std::cout << "error" << std::endl;
             }
 
+            void init_base(int nb_players)
+            {
+                for (int i = 0; i != nb_players; i++) {
+                    this->EManager.NewEntity("./assets/ovni.png", {20, 30}, {0.3, 0.3});
+                }
+            }
+
+            std::string getClientBuffer()
+            {
+                return gClt->getBuffer();
+            }
+
             /**
              * @brief Init the game state
-             * 
+             *
              */
             void init() override
             {
@@ -87,9 +99,10 @@ namespace rtype::game {
                 while (msg.empty()) {
                     msg = gClt->getBuffer();
                     if (!msg.empty()) {
-                        int pid = std::stoi(msg);
-                        this->EManager.setPId(pid);
-                        this->EManager.NewEntity("../assets/ovni.png", {20, 30}, {0.5, 0.5});
+                        this->pID = std::stoi(msg);
+                        this->EManager.setPId(this->pID);
+                        std::cout << "Player ID: " << this->pID << std::endl;
+                        init_base(2);
                         break;
                     }
                 }
@@ -102,13 +115,13 @@ namespace rtype::game {
                 // this->shape.setTexture(textures[0]);
 
                 this->CManager.Centipedeinit(300, 600, 50);
-                this->BManager.initBackground("../assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
+                this->BManager.initBackground("./assets/Nebula_Aqua-Pink.png", {1.5, 1.5});
                 // this->EManager.NewEntity(textures[0], {20, 300}, {1.5, 1.5});
             };
 
             /**
              * @brief Update the game state
-             * 
+             *
              */
             void update() override
             {
@@ -124,8 +137,8 @@ namespace rtype::game {
 
             /**
              * @brief Get the Local Player I D object
-             * 
-             * @return int8_t 
+             *
+             * @return int8_t
              */
             int8_t getLocalPlayerID() {return this->EManager.getPId();};
 
@@ -138,25 +151,28 @@ namespace rtype::game {
 
             /**
              * @brief Handle the event input
-             * 
+             *
              * @param w
              * @param ev
-             * @return int 
+             * @return int
              */
             int handleEvent(engine::Window &w, engine::Event &ev)
             {
+                std::string str = getClientBuffer();
+
                 int resLocalInput = LocalInput(ev);
                 // std::cout<<"handleEvent"<<std::endl;
                 this->EManager.handleEvent(ev);
+                serverEvents(ev, str);
                 return resLocalInput;
                 // return (resLocalInput == -1 ? resLocalInput:rtype::STATES::NONE : resLocalInput);
             };
 
             /**
              * @brief Draw on the window
-             * 
+             *
              * @param g the window
-             * @return int 
+             * @return int
              */
             void draw(rtype::engine::Window &w) override
             {
@@ -165,6 +181,10 @@ namespace rtype::game {
                 this->BManager.draw(w.getWindow());
                 this->EManager.draw(w.getWindow());
                 this->CManager.draw(w.getWindow());
+                for (auto &ammo : this->playerProj.getBulletList())
+                    w.Draw(ammo);
+                for (auto &ammo : this->serverProj.getBulletList())
+                    w.Draw(ammo);
                 // w.getWindow().draw(this->shape);
                 //     w.Draw(this->EManager.getSprite(e));
                 w.getWindow().display();
@@ -173,9 +193,9 @@ namespace rtype::game {
 
             /**
              * @brief check Local Player input
-             * 
+             *
              * @param ev
-             * @return int 
+             * @return int
              */
             //State Property
             int LocalInput(engine::Event &ev) //returns -1 if nothing to return
@@ -198,10 +218,25 @@ namespace rtype::game {
                 return -1;
             }
 
+            void serverEvents(engine::Event &ev, std::string &str) {
+                auto tmp = str.empty()? std::vector<std::string>() : StringUtils::split(str, ' ');
+                if (tmp.size() <= 1 || tmp[1].compare("?") == true) return;
+                int eID = (this->pID == 1) ? 0:1;
+                if (tmp[1].compare("0fire") == 0) {
+                    // this->playerProj.ServerShootBullet(eID, )
+                    std::cout<< "ok on est la" << std::endl;
+                }
+                if (tmp[1].compare("1fire") == 0)
+                    std::cout << "2nd player shoot" << std::endl;
+            }
+
         private:
             sf::Sprite shape;
+            int pID;
             bool isMatchRunning; //when all player are ready set to true
             std::array<sf::Texture, 100> textures;
+            rtype::components::Bullets playerProj;
+            rtype::components::Bullets serverProj;
     };
 
 }
