@@ -12,16 +12,16 @@
 
 namespace rtype::entities {
 
-    class Entity {
+    class Props {
         public:
             /*
             * @brief Default constructor
             */
-            Entity();
+            Props();
             /*
             * @brief Default destructor
             */
-            ~Entity();
+            ~Props();
             /*
             * @brief Return the position of the entity in 2D
             */

@@ -15,6 +15,7 @@
 #define SGAMEPLAY_HPP_
 
 using namespace rtype;
+using namespace rtype::components;
 
 namespace rtype::game {
 
@@ -42,7 +43,7 @@ namespace rtype::game {
                 for (int i = 0; i != nb_players; i++)
                     this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
                 //FirstEntities
-                this->EManager.NewEntity("./assets/ovni.png", {400, 400}, {0.1, 0.1});
+                // this->EManager.NewEntity2("./assets/ovni.png", {400, 400}, {0.1, 0.1});
             }
 
             void init() override
