@@ -31,9 +31,30 @@ sf::Sprite EntitiesManager::CreateEntitie(std::string filename, sf::Vector2f pos
     return asset;
 }
 
+sf::Sprite EntitiesManager::CreateMobs(std::string filename, sf::Vector2f pos, sf::Vector2f scale)
+{
+    sf::Sprite asset;
+
+    if (!textureMobs.loadFromFile(filename))
+        std::cout << "error" << std::endl;
+    asset.setTexture(texture);
+    asset.setPosition(pos);
+    asset.scale(scale);
+
+    return asset;
+}
+
 void EntitiesManager::NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
 {
     this->entities[idx] = this->CreateEntitie(fpath, pos, scale);
     IDs.push_back(idx);
     idx++;
 }
+
+void EntitiesManager::NewMobs(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+{
+    this->entitiesM[idxM] = this->CreateEntitie(fpath, pos, scale);
+    IDsM.push_back(idxM);
+    idxM++;
+}
+

@@ -43,7 +43,11 @@ namespace rtype::game {
                 for (int i = 0; i != nb_players; i++)
                     this->EManager.NewEntity("./assets/ovni.png", {100, 100}, {0.1, 0.1});
                 //FirstEntities
-                // this->EManager.NewEntity2("./assets/ovni.png", {400, 400}, {0.1, 0.1});
+                this->EManager.NewMobs("./assets/ovni.png", {520, 480}, {0.2, 0.2});
+                this->EManager.NewMobs("./assets/ovni.png", {420, 500}, {0.2, 0.2});
+                this->EManager.NewMobs("./assets/ovni.png", {520, 420}, {0.2, 0.2});
+                this->EManager.NewMobs("./assets/ovni.png", {620, 320}, {0.2, 0.2});
+
             }
 
             void init() override
@@ -67,11 +71,13 @@ namespace rtype::game {
             {
                 // update client to server data
                 //pop event queue here after rework
-                if (playerProjectile.update(EManager.getSprite(2).getGlobalBounds())) {
-                    EManager.getSprite(2).setScale(sf::Vector2f(0,0));
-                }
-                if (serverProjectiles.update(EManager.getSprite(2).getGlobalBounds())) {
-                    EManager.getSprite(2).setScale(sf::Vector2f(0,0));
+                for (auto& e : this->EManager.getIDsM()) {
+                    if (playerProjectile.update(EManager.getSpriteM(e).getGlobalBounds())) {
+                        EManager.getSpriteM(e).setScale(sf::Vector2f(0,0));
+                    }
+                    if (serverProjectiles.update(EManager.getSpriteM(e).getGlobalBounds())) {
+                        EManager.getSpriteM(e).setScale(sf::Vector2f(0,0));
+                    }
                 }
                 // if (playerProjectile.update(BlManager.getShape())) {
                 //     BlManager.getShape().setRadius(0);
@@ -144,6 +150,8 @@ namespace rtype::game {
                 this->BManager.draw(w.getWindow());
                 for (auto& e : this->EManager.getIDs())
                     w.Draw(this->EManager.getSprite(e));
+                for (auto& e : this->EManager.getIDsM())
+                    w.Draw(this->EManager.getSpriteM(e));
                 for (auto& ammo : playerProjectile.getBulletList())
                     w.Draw(ammo);
                 for (auto& ammo : serverProjectiles.getBulletList())

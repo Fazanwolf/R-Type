@@ -17,6 +17,7 @@
 namespace rtype::entities {
 
     static int8_t idx;
+    static int8_t idxM;
     class Entity {
         public:
             Entity() {};
@@ -65,7 +66,7 @@ namespace rtype::entities {
             * @return return a sprite
             */
             sf::Sprite CreateEntitie(std::string filename, sf::Vector2f pos, sf::Vector2f scale);
-
+            sf::Sprite CreateMobs(std::string filename, sf::Vector2f pos, sf::Vector2f scale);
             /*
             * @brief Create an entity with the fonction CreateEntities with an ID, this fonction is used for multiplayer games
             * @param fpath path to your asset
@@ -73,9 +74,14 @@ namespace rtype::entities {
             * @param scale his scale in the window
             */
             void NewEntity(std::string fpath, sf::Vector2f pos, sf::Vector2f scale);
+            void NewMobs(std::string fpath, sf::Vector2f pos, sf::Vector2f scale);
 
             std::list<int8_t> getIDs() {
                 return IDs;
+            };
+
+            std::list<int8_t> getIDsM() {
+                return IDsM;
             };
 
             void setPId(int id) { this->pId = id;}
@@ -90,16 +96,21 @@ namespace rtype::entities {
                 return this->entities[id];
             };
 
-            void draw(sf::RenderWindow &w)
-            {
-                this->comps.back()->draw(w);
-            }
+            sf::Sprite &getSpriteM(int8_t id) {
+                //check if valid
+                return this->entitiesM[id];
+            };
 
-            void NewEntity2(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
-            {
-                ent.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale, true));
-                return;
-            }
+            // void draw(sf::RenderWindow &w)
+            // {
+            //     this->comps.back()->draw(w);
+            // }
+
+            // void NewEntity2(std::string fpath, sf::Vector2f pos, sf::Vector2f scale)
+            // {
+            //     ent.back().addComponent(new rtype::components::DefaultComp(fpath, pos, scale, true));
+            //     return;
+            // }
 
             /**
              * @brief This function draw all the entities
@@ -126,9 +137,12 @@ namespace rtype::entities {
         private:
             int8_t pId; //player ID used to get local input relative to player pos in entity array
             std::array<sf::Sprite, 100> entities;
+            std::array<sf::Sprite, 100> entitiesM;
             Utils::SparseArray<rtype::components::Component*, 100> comps;
             sf::Texture texture;
+            sf::Texture textureMobs;
             std::list<int8_t> IDs;
+            std::list<int8_t> IDsM;
             sf::RenderWindow window;
             std::vector<Entity> ent;
     };
